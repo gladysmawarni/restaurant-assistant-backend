@@ -37,7 +37,7 @@ elif env == 'DEV':
 
 
 # Specify the folder path
-folder_path = 'data'
+folder_path = '../data'
 # Get the current time
 current_time = time.time()
 # Define a time threshold (24 hours = 86400 seconds)
