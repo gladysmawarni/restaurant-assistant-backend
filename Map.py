@@ -12,7 +12,7 @@ import pydeck as pdk
 env = 'PROD'
 
 if env == 'PROD':
-    cred = credentials.Certificate(st.secrets["GOOGLE_CREDENTIALS"])
+    cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
     # Initialize the Firebase app with the credentials
     # Check if the app is already initialized to avoid errors in a Streamlit rerun
     if not firebase_admin._apps:
