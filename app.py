@@ -10,7 +10,8 @@ import pydeck as pdk
 # import folium
 # from streamlit_folium import st_folium
 
-st.title('Backend')
+st.set_page_config(page_title="Backend")
+st.title('Data')
 env = 'PROD'
 
 
