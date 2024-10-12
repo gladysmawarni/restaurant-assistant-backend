@@ -37,7 +37,7 @@ elif env == 'DEV':
 
 
 # Specify the folder path
-folder_path = '../data'
+folder_path = 'data'
 # Get the current time
 current_time = time.time()
 # Define a time threshold (24 hours = 86400 seconds)
@@ -86,4 +86,4 @@ for filename in os.listdir(folder_path):
 
 # Display the DataFrame in Streamlit
 st.dataframe(df[['Restaurant', 'Address', 'Appears on']])
-st.write(f'Total restaurants in database: {len(df)}')
+st.write(f'Total restaurant in database: {len(df)}')
