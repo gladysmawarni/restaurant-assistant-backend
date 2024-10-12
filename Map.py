@@ -5,7 +5,6 @@ from firebase_admin import credentials, firestore
 import pandas as pd
 import time
 import pydeck as pdk
-
 # import folium
 # from streamlit_folium import st_folium
 
@@ -22,6 +21,25 @@ except Exception as e:
 
 # Debug: Check Firebase initialization status
 st.write("Initializing Firebase app...")
+
+# Initialize the Firebase app with the credentials
+if not firebase_admin._apps:
+    try:
+        firebase_admin.initialize_app(cred)
+        st.write("Firebase app initialized successfully.")
+    except Exception as e:
+        st.error(f"Error initializing Firebase app: {e}")
+        st.stop()  # Stop the Streamlit script if there's an issue with initialization
+else:
+    st.write("Firebase app is already initialized.")
+
+# Now you can use Firestore
+try:
+    db = firestore.client()
+    st.write("Firestore client created successfully.")
+except Exception as e:
+    st.error(f"Error creating Firestore client: {e}")
+    st.stop()  # Stop the script if there's an issue with the Firestore client
 
 env = 'PROD'
 
