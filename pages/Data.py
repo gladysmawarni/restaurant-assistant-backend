@@ -1,6 +1,7 @@
 import streamlit as st
 import os
-from firebase_admin import firestore
+import firebase_admin
+from firebase_admin import credentials, firestore
 import pandas as pd
 import time
 
@@ -85,3 +86,4 @@ for filename in os.listdir(folder_path):
 
 # Display the DataFrame in Streamlit
 st.dataframe(df[['Restaurant', 'Address', 'Appears on']])
+st.write(f'Total restaurants in database: {len(df)}')
