@@ -1,0 +1,1635 @@
+,Restaurant,Address,Appears on,latitude,longitude
+0,KOL,"9 Seymour St, London W1H 7JW",Forbes,51.5147644,-0.1575224
+1,BRIX LDN,"16 Great Guildford St, London SE1 0HS",Forbes,51.5048296,-0.097166
+2,Trishna,"15-17 Blandford St, London W1U 3DG",Forbes,51.5182792,-0.1530514
+3,Chuku’s,"274 High Rd, London N15 4AJ","Infatuation, Forbes",51.58592429999999,-0.0713549
+4,The Forest Menu at Mauro Colagreco,"Raffles London at The OWO, Whitehall, London SW1A 2BX",Forbes,51.5051333,-0.1256631
+5,Café Francois,"Borough Yards-14-16 Stoney Street, London SE1 9AD",Hot Dinners,51.505783,-0.09192299999999999
+6,Sesta,"Hackney-52 Wilton Way, London E8 1BG","Hot Dinners, Infatuation",51.5455406,-0.06111200000000001
+7,: Junk,"Soho-49 Old Compton St, London W1D 6HL",Hot Dinners,51.5126541,-0.1323859
+8,oodle Inn,"Soho-4-6 Old Compton St, London W1D 4TA",Hot Dinners,51.5120178,-0.1343517
+9,Marcelin,"Canary Wharf-Wood Wharf, 10 Water St, London E14 5GX",Hot Dinners,51.5021546,-0.0131462
+10,Goodbye Horses,"Islington-21 Halliford St, London, N1 3HB","Hot Dinners, Infatuation",51.5401636,-0.0897314
+11,Lolo,"Bermondsey-102 Bermondsey Street, London SE1 3UB","Hot Dinners, Infatuation",51.5008816,-0.0820221
+12,Cornus,"Belgravia-27 Eccleston Pl, London SW1W 9NF","Hot Dinners, Infatuation",51.4939077,-0.147794
+13,Alley Cats Pizza,"Chelsea-342 King's Rd, London SW3 5UR","Hot Dinners, Infatuation",51.4852167,-0.1746163
+14,Ibai,"City of London-92 Bartholomew Cl, London EC1A 7BN",Hot Dinners,51.5178545,-0.09879330000000001
+15,Miga,"Hackney-1 Mare St, London E8 4RP","Hot Dinners, Infatuation",51.5345336,-0.0576598
+16,Plates,"Shoreditch-320 Old Street, London EC1V 9DR","Hot Dinners, Infatuation",51.5265887,-0.08200969999999999
+17,The Park,"Bayswater-123 Bayswater Rd, London W2 3JH",Hot Dinners,51.5104658,-0.1865913
+18,Tollington's,"Finsbury Park-172 Tollington Park, London N4 3AJ",Hot Dinners,51.5682954,-0.1109584
+19,Julie's,"Holland Park-135 Portland Rd, London W11 4LW",Hot Dinners,51.51012979999999,-0.2105266
+20,The Hero,"Maida Vale-55 Shirland Rd, London W9 2JD",Hot Dinners,51.5243638,-0.1887319
+21,Oma and Agora,"Borough Market-2-4 Bedale St, London SE1 9AL",Hot Dinners,51.5050373,-0.09080819999999999
+22,The Devonshir,"Soho-17 Denman Street, London W1D 7HW",Hot Dinners,51.5106403,-0.1353012
+23,Ikoyi,"180 Strand, London, United Kingdom WC2R 1EA",Infatuation,51.5124516,-0.1150753
+24,Roji,"56B S Molton Street, London, null W1K 5SH",Infatuation,51.513632,-0.1474282
+25,Kurisu Omakase,"58D Atlantic Rd, London,  SW9 8PY",Infatuation,51.46130309999999,-0.1114052
+26,Zeret Kitchen,"216-218 Camberwell Rd, Camberwell, Greater London SE5 0ED",Infatuation,51.4786911,-0.09468979999999999
+27,Master Wei,"13 Cosmo Pl, London, Greater London WC1N 3AP",Infatuation,51.5212072,-0.1225902
+28,Rochelle Canteen,"16 Playground Gardens, London, null  E2 7FA","Infatuation, Timeout",51.52577609999999,-0.0741237
+29,Core By Clare Smyth,"92 Kensington Park Rd, London, Greater London W11 2PN",Infatuation,51.5127908,-0.2031245
+30,Kaieteur Kitchen,"335-336 Elephant Castle , London,  SE1 6TB",Infatuation,51.4938161,-0.0997115
+31,Normah's,"23-25 Queensway Market, London,  W2 4QJ",Infatuation,51.5110561,-0.1874584
+32,Bouchon Racine,"66 Cowcross St, London, Greater London EC1M 6BP","Infatuation, Timeout",51.5200142,-0.1038793
+33,Taste of Pakistan,"369 Hanworth Rd, Hounslow, null TW4 5LF",Infatuation,51.45879249999999,-0.3709295
+34,Crisp Pizza W6 at The Chancellors,"25 Crisp Rd., London, Greater London W6 9RL",Infatuation,51.4885586,-0.2269192
+35,Tasty Jerk,"88 Whitehorse Ln, London, Greater London SE25 6RQ",Infatuation,51.3986858,-0.08850129999999999
+36,St. John,"26 St John St, London, Greater London EC1M 4AY",Infatuation,51.52048199999999,-0.1014579
+37,The Devonshire,"17 Denman St, London, England W1D 7HW",Infatuation,51.5106403,-0.1353012
+38,Sonora Taquería,"Stoke Newington High St, London, United Kingdom N16","Infatuation, Timeout",51.5605505,-0.0739228
+39,Singburi,"593 High Rd Leytonstone, London,  E11 4PA","Infatuation, Timeout",51.56163919999999,0.0085962
+40,Chishuru,"3 Great Titchfield St, London, England W1W 8AU","Infatuation, Timeout",51.5166188,-0.1399187
+41,Dim Sum & Duck,"124 King's Cross Road, London, Greater London WC1X 9HS",Infatuation,51.5302333,-0.1163992
+42,Trullo,"300 St. Paul's Rd, Islington, Greater London N1 2LH","Infatuation, Timeout",51.5462871,-0.1015598
+43,Alhaji Suya,"15 Peckham Park Road, London, Greater London SE15 6TR",Infatuation,51.4826677,-0.06535140000000002
+44,Eat Vietnam Bar-B-Grill,"232-234 Evelyn Street, London, Greater London SE8 5BZ",Infatuation,51.48384,-0.032291
+45,Bibi,"42 N Audley Street, London, Greater London W1K 6ZR","Infatuation, Timeout",51.5123823,-0.1533582
+46,Kiln,"58 Brewer Street, London, Greater London W1F 9TL","Infatuation, Timeout",51.5114064,-0.1360622
+47,Tamila,"39 Northcote Road, London, null SW11 1NJ",Infatuation,51.4596722,-0.1662462
+48,Yari Club,"57 St Martin's Lane, London, null WC2N 4EA",Infatuation,51.5109714,-0.1268712
+49,Fonda,"12 Heddon St, London, null W1B 4BZ",Infatuation,51.5112,-0.1396217
+50,De Nadas,"117 Stoke Newington Church Street, London, null N16 0UD",Infatuation,51.5620308,-0.0799902
+51,Med Salleh Viet,"32-36 Hogarth Road, London, England SW5 0PU",Infatuation,51.4932729,-0.1919486
+52,Panadera Marylebone,"7 Picton Place, London, England W1U 1BN",Infatuation,51.5153646,-0.1515619
+53,Crumb,"8 Charlton Place, London, England N1 8AJ",Infatuation,51.5350067,-0.1039252
+54,Noodle Inn,"4-6 Old Compton Street, London, England W1D 4TB",Infatuation,51.51385149999999,-0.1297458
+55,Junk Soho,"49 Old Compton Street, London, England W1D 6HL",Infatuation,51.5126541,-0.1323859
+56,Home Kitchen,"130 Regent's Park Road, London, England NW1 8XL",Infatuation,51.54068299999999,-0.1572624
+57,Café François,"The Warehouse, 14-16 Stoney Street, London, England SE1 9AD",Infatuation,51.5058611,-0.0917041
+58,Sael,"1 St James's Market, London, England SW1Y",Infatuation,51.5091577,-0.1334785
+59,Soul Mama,"40 Celebration Drive, Sandton, Gauteng 2191",Infatuation,-26.01702,28.00567
+60,"The Barbary, Notting Hill","112 Westbourne Grove, London, England W2 5RU",Infatuation,51.51524509999999,-0.1949189
+61,"Tofu Vegan, Charlotte Street","32 Charlotte Street, London, England W1T 2NQ",Infatuation,51.5190574,-0.1350817
+62,Goldies,"10 Kingly Ct, London, England W1B 5PW",Infatuation,51.5125533,-0.1388642
+63,Brother Marcus,"23 Slingsby Place, London, England WC2E 9AB",Infatuation,51.5126448,-0.1269413
+64,Leydi,"15 Old Bailey, London, England EC4M 7EF",Infatuation,51.5159891,-0.1025116
+65,Mignonette Bistro,"109 Gloucester Court, Kew Road, Richmond, England TW9 3DZ",Infatuation,51.48155999999999,-0.287613
+66,Lussmanns,"2 Highgate High Street, London, England N6 5JL",Infatuation,51.5703651,-0.145455
+67,Little Baobab - The Africa Centre,"66 Great Suffolk Street, London, England SE1 0BL",Infatuation,51.50306740000001,-0.1011779
+68,Dang’s,"60-62 Commercial Street, London, England E1 6LT",Infatuation,51.5178624,-0.073664
+69,Jazu Bar,"2 Deptford High Street, London, England SE8 4AF",Infatuation,51.4749648,-0.025753
+70,Uchi Bake,"140 Clarence Road, London, England E5",Infatuation,51.5536097,-0.05598579999999999
+71,Oriole,"7 Slingsby Place, London, England WC2E 9AB",Infatuation,51.5126431,-0.1262996
+72,Sunday In Brooklyn,"10 The Nag's Head Public House, James Street, London, England WC2E 8BT",Infatuation,51.5129135,-0.1236797
+73,Mary’s,"8-10 Pollen Street, London, England W1S 1YQ",Infatuation,51.5133282,-0.1423548
+74,Albers,"23A Englefield Road, London, England N1 4JX",Infatuation,51.542593,-0.080064
+75,Ambassadors Clubhouse,"25-27 Heddon Street, London, England W1B 4BH",Infatuation,51.5111056,-0.1403264
+76,Andy’s Burgers,"242 Hoe Street, London, England E17 3AX",Infatuation,51.5839815,-0.0193076
+77,You Call The Shots,"13 Morning Lane, London, England E9 6ND",Infatuation,51.5462024,-0.0545591
+78,KöD,"2 St Annes Court, Stanley Road, Sutton, England SM2 6RX",Infatuation,51.3566602,-0.1973075
+79,Parker’s,"21 Lowndes Street, London, England SW1X 9ES",Infatuation,51.4993302,-0.1577753
+80,Rusty Rabbit,"50 Westbourne Grove, London, England W2 5SH",Infatuation,51.5156337,-0.1916346
+81,Kricket,"Unit 6 Frobisher Psge, London, England null",Infatuation,51.5059669,-0.0206983
+82,It’s Bagels,"120 Kensington Park Road, London, England W11 2PW",Infatuation,51.5131277,-0.2039652
+83,Kolamba East,"12 Blossom Street, London, England E1",Infatuation,51.5209594,-0.0778434
+84,Smashd & Buttered,"17&Central, Selborne Rd, London, England E17",Infatuation,51.5834059,-0.0234761
+85,Hot Dogs by Three Darlings,"87-135 Brompton Road, London, England SW1X 7XL",Infatuation,51.4988912,-0.1628657
+86,Eat Momo,"1 Bank End, London, England SE1 9BU",Infatuation,51.50694550000001,-0.09269089999999999
+87,Chatsworth Bakehouse,"116 Anerley Road, London, England SE19 2AN",Infatuation,51.4157114,-0.07218229999999999
+88,Marceline,"10 Water St, London, England E14 5GX",Infatuation,51.5031287,-0.0141717
+89,Alley Cats Pizza Chelsea,"342 King's Road, London, England SW3 5UR",Infatuation,51.4852167,-0.1746163
+90,Mauby,"1 Harefield Road, London, England SE4 1LW",Infatuation,51.46370890000001,-0.0357487
+91,Bern’s And The Beans,"37 Orford Road, London, England E17 9NL",Infatuation,51.58267610000001,-0.0121179
+92,Piraña,"7 St James's Place, London, England SW1A 1NP",Infatuation,51.50580739999999,-0.1396672
+93,Holy Carrot,"156 Portobello Road, London, England W11 2EB",Infatuation,51.5151789,-0.2043253
+94,Lahpet Larder,"39-45 Bermondsey Street, London, England SE1 3XF",Infatuation,51.502188,-0.0822434
+95,Bonoo,"Unit 4, 5 Fortis Green Road, London, England N10 3HP",Infatuation,51.5909017,-0.1537233
+96,Kanpai Classic Soho,"147 Wardour Street, London, England W1F 8WD",Infatuation,51.5141892,-0.1347479
+97,Araw Ice Cream Soho,"4 Rupert House, Tisbury Court, London, England W1D 6BG",Infatuation,51.5123257,-0.1335759
+98,Milk Run,"16-18 Ritherdon Road, London, England SW17 8QD",Infatuation,51.4381871,-0.1553272
+99,Aavo Café,"193 Wood Street, London, England E17 3NU",Infatuation,51.58576919999999,-0.0017121
+100, Sandwich Sandwich,"1 St. Martins House, Gresham Street, London, England EC2V 7BX",Infatuation,51.515481,-0.0965319
+101, Lucia's,"43 Queens Yard, White Post Lane, London, England E9 5EN",Infatuation,51.5429843,-0.0231411
+102,The Hound,"210 Chiswick High Road, London, England W4 1PD",Infatuation,51.4928225,-0.2568205
+103,Sol's,"25 Leinster Terrace, London, England W2 3ET",Infatuation,51.5116927,-0.1832536
+104,Ukiyo Handroll Bar,"8 Slingsby Place, London, England WC2E 9AB",Infatuation,51.5126448,-0.1269413
+105,Dez Amore,"273 Fulham Road, London, England SW10 9PZ",Infatuation,51.4875769,-0.1781141
+106, Xi Home Dumplings Bay,"10 Blossom Street, London, England E1",Infatuation,51.5216437,-0.07734139999999999
+107,Kleinsky’s,"39 North Audley Street, London, England W1K 6ZW",Infatuation,51.5124836,-0.1534026
+108,Carnívoro Grill,"182 Jamaica Road, London, England SE16 4RT",Infatuation,51.498188,-0.061947
+109,Wood Street Bear,"135 Wood Street, London, England E17 3LX",Infatuation,51.5876791,-0.0036186
+110,Vicky’s,"176 Victoria Park Road, London, England E9 7HD",Infatuation,51.538217,-0.043988
+111,The Italian Bakery,"9 Market Parade, Forest Road, London, England E17 6DY",Infatuation,51.5889032,-0.0306049
+112,Camden Courtyard,"23 Kentish Town Road, London, England NW1 8NH",Infatuation,51.5404263,-0.1423305
+113,Jang at The Royal Exchange,"Royal Exchange Avenue, London, England EC3V",Infatuation,51.5138694,-0.0862381
+114,Engel at The Royal Exchange,"Royal Exchange Avenue, London, England EC3V",Infatuation,51.5138694,-0.0862381
+115,Albert's Schloss,"20-24 Shaftesbury Avenue, London, England W1D 7EU",Infatuation,51.510763,-0.1334584
+116,High Road Social,"178 Greenwich High Road, London, England SE10 8NN",Infatuation,51.4794305,-0.009722999999999999
+117,123V Browns,"39 Brook Street, London, England W1K 4HW",Infatuation,51.5128219,-0.1467001
+118,Bobo Social,"Filmworks Walk, London, England W5",Infatuation,51.51216,-0.3064848
+119,Common Breads,"110 Buckingham Palace Road, London, England SW1W 9NE",Infatuation,51.49413149999999,-0.1469867
+120,Agora,"2-4 Bedale St, London, England SE1 9AL",Infatuation,51.505369,-0.08999159999999999
+121,"The Hero, Maida Vale","55 Shirland Road, London, England W9 2JD",Infatuation,51.5243638,-0.1887319
+122,Tollington’s,"172 Tollington Park, London, England N4 3AJ",Infatuation,51.5682954,-0.1109584
+123,Morchella,"34-36 Exmouth Market, London, England EC1R 4QE",Infatuation,51.525873,-0.1089986
+124,Bunhead Bakery,"145 Dulwich Road, London, England SE24 0NG",Infatuation,51.4525653,-0.1023475
+125,Akoko,"21 Berners St, London,  W1T 3LP","Infatuation, Timeout",51.5177079,-0.13684
+126,Dumpling Shack,"Old Spitalfields Market, London, Greater London E1 6EW",Infatuation,51.5196569,-0.0755469
+127,Crumbs & Doilies,"1 Kingly Court, London, Greater London W1B 5PW",Infatuation,51.5125542,-0.1388523
+128,Ottolenghi Spitalfields,"55 Artillery Ln, Spitalfields, Greater London E1 7LJ",Infatuation,51.5182249,-0.0768383
+129,The Clarence Tavern,"102 Stoke Newington Church St, London, Greater London N16 0LA",Infatuation,51.5622956,-0.07893119999999999
+130,Patty & Bun,"18 Old Compton St, Soho, Greater London W1D 4TN",Infatuation,51.5136525,-0.1302735
+131,Cavita,"56-60 Wigmore St, London, Greater London W1U 2RZ",Infatuation,51.5163507,-0.1496233
+132,Batch Baby,"43 De Beauvoir Rd, London, England N1 5SY",Infatuation,51.5390484,-0.08160819999999999
+133,Dozo Sushi,"68 Old Brompton Rd, Kensington, Greater London SW7 3LQ",Infatuation,51.4929231,-0.1769251
+134,Cookdaily,"Arch 358 Westgate Street, London, Greater London E8 3RN",Infatuation,51.5378739,-0.05846879999999999
+135,La Petite Ferme,"104, 102 Farringdon Rd, London, Greater London EC1R 3EA",Infatuation,51.5249223,-0.1102605
+136,Madame Pigg,"480 Kingsland Road, London, Greater London E8 4AE",Infatuation,51.5432735,-0.0758204
+137,Chunnel Bar,"133 Lower Marsh, London, Greater London SE1 7AE",Infatuation,51.5003838,-0.1139229
+138,Bistro Freddie,"74 Luke St, London, England EC2A 4PY",Infatuation,51.5242121,-0.0815926
+139,Saponara,"23 Prebend St, Islington, Greater London N1 8PF",Infatuation,51.5367498,-0.0952693
+140,Koya Ko,"10-12 Broadway Market Mews, London, Greater London E8 4TS",Infatuation,51.5365434,-0.062225
+141,Gold,"95 - 97 Portobello Road, London,  W11 2QB",Infatuation,51.5129718,-0.2026503
+142,Chang's Noodle,"36-38 New Oxford St, Greater London, Greater London WC1A 1EP",Infatuation,51.5172302,-0.1256535
+143,Patron Cave à Manger,"26 Fortess Rd, London, Greater London null",Infatuation,51.55267380000001,-0.1408352
+144,Bar Pepito,"3 Varnishers Yard, The Regent Quarter, London, Greater London N1 9DF",Infatuation,51.5312584,-0.1218957
+145,Vasiniko,"7-9 Burleigh St, London, Greater London WC2E 7PW",Infatuation,51.51147419999999,-0.12127
+146,Temper Soho,"25 Broadwick Street, London, Greater London W1F",Infatuation,51.513483,-0.1357118
+147,Cafe Murano,"34-36 Tavistock St, London, Greater London WC2E 7PB",Infatuation,51.512136,-0.1201098
+148,Ugly Dumpling,"1 Newburgh Street, London, Greater London W1F 7RB",Infatuation,51.5133682,-0.1384192
+149,Trattoria N16,"44-45 Newington Green, London,  N16 9QH",Infatuation,51.5519916,-0.0859742
+150,Orient London,"15 Wardour St, London, Greater London W1D 6PH",Infatuation,51.5108667,-0.1320446
+151,Jay Dees,"28 Lancaster Road, London, Greater London W11 1QP",Infatuation,51.5182622,-0.2035268
+152,Manna,"103-105 New Oxford St, London, null WC1A 1DB",Infatuation,51.5162697,-0.1292638
+153,Dark Habit,"72A Salusbury Road, London, Greater London NW6 6NU",Infatuation,51.5368,-0.2065717
+154,La Fromagerie,"52 Lamb’s Conduit Street, London, Greater London WC1N 3LL",Infatuation,51.5217963,-0.1182878
+155,Tashas,"3 Prospect Way, London, England SW11",Infatuation,51.4807717,-0.1437122
+156,Ta’mini Lebanese Bakery,"null, London, Greater London SW6 5UU",Infatuation,51.4766643,-0.2031361
+157,Yauatcha,"15-17 Broadwick St, London, Greater London W1F 0DL",Infatuation,51.5136327,-0.1352299
+158,Park Chinois,"17 Berkeley St, London, Greater London W1J 8EA",Infatuation,51.50869900000001,-0.143485
+159,Hash E8,"170 Dalston Lane, London, Greater London E8 1NG",Infatuation,51.5481586,-0.0653473
+160,Mao Chow,"159A Mare St, London, Greater London E8 3SH",Infatuation,51.5396958,-0.0562599
+161,The Chesham Arms,"15 Mehetabel Rd, London, Greater London E9 6DU",Infatuation,51.5475909,-0.0501435
+162,Mac And Wild,"9A Devonshire Square, London, Greater London EC2M 4AE",Infatuation,51.516936,-0.0790292
+163,Theo's Pizzeria,"Draper House, 17-19 Elephant and Castle, London, Greater London SE1 6TH",Infatuation,51.4937138,-0.09862989999999999
+164,Pastaio,"19 Ganton St, London, Greater London W1F 7BU",Infatuation,51.51288779999999,-0.1390604
+165,Uchi,"144 Clarence Rd, London, Greater London E5 8DY",Infatuation,51.5537098,-0.05597899999999999
+166,Good Friend,"14 Little Newport St, London, Greater London WC2H 7JJ",Infatuation,51.5118368,-0.1287987
+167,Fatt Pundit,"6 Maiden Lane, London,  WC2E 7ND",Infatuation,51.51078589999999,-0.1226805
+168,Pappa Roma,"6 Glendower Place, Greater London, Greater London SW7 3DP",Infatuation,51.4937926,-0.1755648
+169,Kapihan,"13A Parkgate Rd, London, Greater London SW11 4NL",Infatuation,51.4786039,-0.1691421
+170,Rovi,"59 Wells Street, London,  W1A 3AE",Infatuation,51.5176218,-0.1386031
+171,Atis,"145 City Road, London, Greater London EC1V 1AZ",Infatuation,51.5274352,-0.0881391
+172,The Tastebox,"N5 1LN, London, United Kingdom N5 1LN",Infatuation,51.5601042,-0.1007779
+173,St John's Tavern,"91 Junction Rd., Junction, Greater London N19 5QU",Infatuation,51.5630147,-0.1356628
+174,Honey & Spice,"52 Warren St, London, Greater London W1T 5NJ",Infatuation,51.5241204,-0.1402273
+175,Cafe Helen,"105A Edgware Rd, Tyburnia, London W2 2HX, London, England W2 2HX",Infatuation,51.516373,-0.1651058
+176,Abeno,"47 Museum St, London, Greater London WC1A 1LY",Infatuation,51.5175436,-0.1252299
+177,The Heron,"Norfolk Crescent, London, Greater London W2 2DN",Infatuation,51.5162857,-0.1668081
+178,Vardo,"9 Duke Of York Square, London,  SW3 4LY",Infatuation,51.491443,-0.1593924
+179,Jíxíang Baozi,"27 Newport Ct, London, England WC2H 7JS",Infatuation,51.5119423,-0.1293752
+180,Kudu Grill,"57 Nunhead Ln, London,  SE15 3TR",Infatuation,51.4639866,-0.06199059999999999
+181,The Cadogan Arms,"298 King's Rd, London,  SW3 5UG",Infatuation,51.4859969,-0.1729432
+182,Toklas,"1 Surrey St, London, Greater London WC2R 1AB",Infatuation,51.5120856,-0.115292
+183,Old Compton Brasserie,"34 Old Compton Street, London, Greater London W1D 4TP",Infatuation,51.513367,-0.1311072
+184,Sushi Show,"28 Camden Passage, London,  N1 8ED",Infatuation,51.5353126,-0.1033751
+185,Dan’s,"2-4 Tottenham Road, Dalston, Greater London N1 4BZ",Infatuation,51.5451914,-0.0763589
+186,Meatliquor W1,"37 - 38 Margaret Street, London,  W1G 0JF",Infatuation,51.51624959999999,-0.1428484
+187,Birria Taco ,"75 Chamberlayne Rd, London, United Kingdom NW10 5RU",Infatuation,51.53385170000001,-0.2185761
+188,Hideaway,"100 Mount St, London, Greater London W1K 2PH",Infatuation,51.5096347,-0.1504745
+189,Lumberjack,"70 Camberwell Church Street, London, Greater London SE5 8QZ",Infatuation,51.4734736,-0.0882505
+190,Spicy Grill,"122 Golders Green Road, London, England NW11 8HB",Infatuation,51.5739877,-0.2006974
+191,The Eagle,"159 Farringdon Rd, Clerkenwell, Greater London EC1R 3AL",Infatuation,51.52414470000001,-0.1097427
+192,Bake Street,"58 Evering Rd, London, Greater London N16 7SR",Infatuation,51.5587244,-0.066617
+193,Viet Grill,"58 Kingsland Rd, London, Greater London E2 8DP",Infatuation,51.5290359,-0.077585
+194,Ozone Coffee,"Emma Street, London,  E2 9AP",Infatuation,51.5325772,-0.0606562
+195,Thattukada,"241B High Street North, East Ham, Greater London E12 6SJ",Infatuation,51.540625,0.0504383
+196,215 Hackney,"215 Stoke Newington High Street, London, England N16 0LH",Infatuation,51.5633018,-0.0733957
+197,Gifto's Lahore Karahi,"162-164 The Broadway, Southall, Greater London UB1 1NN",Infatuation,51.5123596,-0.3835071
+198,Acme Fire Cult,"Abbot Street, London, null E8 3DP",Infatuation,51.5472045,-0.0744055
+199,Iran Restaurant,"27 Shepherd Market, Mayfair, Greater London W1J 7PR",Infatuation,51.5063644,-0.1469763
+200,Darby's,"3 Viaduct Gdns, London,  SW11 7AY",Infatuation,51.4820465,-0.130733
+201,Old Town 97,"19 Wardour St, Chinatown, Greater London W1D 6PF",Infatuation,51.5110115,-0.132023
+202,Coya London,"118 Piccadilly, London, Greater London W1J 7NW",Infatuation,51.5044524,-0.1479357
+203,Nobu Shoreditch,"10-50 Willow Street, London, Greater London EC2A 4BH",Infatuation,51.5250393,-0.0828762
+204,JB's Soul Food,"27A Peckham High St, London,  SE15 5EB",Infatuation,51.473688,-0.07235079999999999
+205,NAC,"41 North Audley St, London, Greater London W1K 6ZP",Infatuation,51.5124121,-0.1534507
+206,Albertine,"1 Wood Ln, Shepherds Bush, Greater London W12 7DP",Infatuation,51.50542309999999,-0.2247446
+207,Sola Soho,"64 Dean Street, London,  W1A 4QQ",Infatuation,51.5131386,-0.1322393
+208,Bluebelles of Portobello,"320 Portobello Rd, London, Greater London W10 5RU",Infatuation,51.5213593,-0.2099582
+209,Perilla,"1-3 Green Lanes, London, Greater London N16 9BS",Infatuation,51.55216189999999,-0.08577159999999999
+210,La Crêperie de Hampstead,"77 Hampstead High St, London, Greater London NW3 1RE",Infatuation,51.5557255,-0.1768248
+211,Ploussard,"97 St John's Road, London, United Kingdom SW11 1QY",Infatuation,51.4608989,-0.1666914
+212,Bao,"53 Lexington St, London, Greater London W1F 9AS",Infatuation,51.5132002,-0.1365948
+213,E. Pellicci,"332 Bethnal Green Rd, London, Greater London E2 0AG",Infatuation,51.5264757,-0.06342919999999999
+214,Change Please,"131 Walworth Road, London, England SE17 1RW",Infatuation,51.4925069,-0.09822099999999999
+215,Franco's,"67 Rivington St, London, Greater London EC2A 3AY",Infatuation,51.5262921,-0.0797737
+216,Goldfinch,"145 Mitcham Road, London, Greater London SW17 9PE",Infatuation,51.4248365,-0.1634064
+217,Opera Tavern,"23 Catherine St, London, Greater London WC2B 5JS",Infatuation,51.5124931,-0.1204019
+218,Royal China Club,"40 Baker St, London, Greater London W1U 7AJ",Infatuation,51.5183846,-0.1555513
+219,Forno,"322 Andrews Road, London, United Kingdom E8",Infatuation,51.5346029,-0.05777329999999999
+220,Swift,"12 Old Compton St, Soho, Greater London W1D 4TQ",Infatuation,51.5138413,-0.1300969
+221,Satay House,"13 Sale Place, Paddington, Greater London W2 1PX",Infatuation,51.5176169,-0.1694944
+222,Stir Coffee,"111 Brixton Hill, London, Greater London SW2 1AA",Infatuation,51.4544617,-0.1195075
+223,Sticks'n'Sushi,"11 Henrietta St, London, Greater London WC2E 8NA",Infatuation,51.5110108,-0.1236158
+224,The Wolseley,"160 Piccadilly, London, Greater London W1J 9EB",Infatuation,51.50741379999999,-0.1408844
+225,Circolo Popolare,"40 - 41 Rathbone Place, London,  W1T 1HX",Infatuation,51.5174607,-0.1337883
+226,La Luna Di Luca,"46C Friars Stile Road, Richmond, Greater London TW10 6NQ",Infatuation,51.455273,-0.296755
+227,Patara,"15 Greek St, London , null W1D 4DP",Infatuation,51.5141717,-0.1307608
+228,Tooting Broadway Market,"29 Tooting High Street, London, Greater London SW17 0SG",Infatuation,51.4283384,-0.1665127
+229,Durak Tantuni,"390 West Green Rd, West Green, Greater London N15 3PX",Infatuation,51.5863619,-0.0948873
+230,Dapur,"13 Lambs Conduit Passage, London, Greater London WC1R 4RH",Infatuation,51.5200719,-0.1178441
+231,Three Little Birds,"412 Coldharbour Lane, London,  SW9 8LF",Infatuation,51.4617231,-0.1134988
+232,107 Wine Shop & Bar,"107 Lower Clapton Road, London, London E5 0NP",Infatuation,51.552093,-0.0525645
+233,64 Goodge Street,"64 Goodge St, London, England W1T 4NF",Infatuation,51.5190656,-0.1369085
+234,Titu,"1A Shepherd Street, London, Greater London W1J 7HJ",Infatuation,51.5062273,-0.1463034
+235,Launceston Place,"1A Launceston Pl, Kensington, Greater London W8 5RL",Infatuation,51.4991967,-0.1854357
+236,Royal Mahal,"32-36 Upper Tooting Road, London, United Kingdom SW17 7PD",Infatuation,51.43501029999999,-0.1614406
+237,Aqua,"Level 31 The Shard, London, Greater London SE1 9RY",Infatuation,51.5045,-0.0865
+238,City Social,"Tower 42, 25 Old Broad St, London, Greater London EC2N 1HQ",Infatuation,51.5153629,-0.0843135
+239,The Pineapple,"51 Leverton St, Kentish Town, Greater London NW5 2NX",Infatuation,51.5529654,-0.1396054
+240,Little Mercies,"20 Broadway Parade, London, Greater London N8 9DE",Infatuation,51.5806516,-0.122198
+241,Sushi Atelier,"114 Great Portland Street, London, Greater London W1W 6PH",Infatuation,51.5194953,-0.142235
+242,Lao Dao,"305 Walworth Road, London, England SE17 2TG",Infatuation,51.4870984,-0.09484469999999999
+243,Colbert,"50-52 Sloane Sq, Chelsea, Greater London SW1W 8AX",Infatuation,51.4928128,-0.1566021
+244,Pophams Hackney,"197 Richmond Road, London,  E8 3NJ",Infatuation,51.5436216,-0.05765579999999999
+245,Westerns Laundry,"34 Drayton Park, London, Greater London N5 1PB",Infatuation,51.5515584,-0.1072278
+246,Tokyo Pizza,"47 Maida Vale , London,  W9 1SD",Infatuation,51.5260763,-0.1790621
+247,The Waterman's Arms,"375 Lonsdale Road, London, England SW13 9PY",Infatuation,51.4736249,-0.2510814
+248,Amazing Grace,"9a St Thomas Street, London,  SE1 9RY",Infatuation,51.5049991,-0.0884359
+249,Wong Kei,"41-43 Wardour St, City of Westminster, Greater London W1D 6PY",Infatuation,51.5114898,-0.1323808
+250,Brindisa Chorizo Grill,"Borough Market, Greater London, Greater London SE1",Infatuation,51.5055826,-0.09048080000000001
+251,Bar Termini,"7 Old Compton St, London, Greater London W1D 5JE",Infatuation,51.5136774,-0.1297975
+252,Mere,"74 Charlotte Street, London, Greater London W1T 4QJ",Infatuation,51.5205138,-0.1365833
+253,The Gallery At Sketch,"9 Conduit St, London, Greater London W1S 2XG",Infatuation,51.5127667,-0.1415637
+254,Persepolis,"Peckham High St., Peckham, Greater London SE15 5DT",Infatuation,51.4735856,-0.0724717
+255,Antepliler Restaurant,"46 Green Lanes, Harringay, Greater London N4 1AG",Infatuation,51.5793037,-0.09886810000000001
+256,Passione Vino,"85 Leonard Street, London,  EC2A 4QS",Infatuation,51.52479690000001,-0.082408
+257,Maya's Bakehouse,"37 Tulse Hill, London, England SW2 2TJ",Infatuation,51.4540788,-0.1129544
+258,Prufrock Coffee,"23-25 Leather Ln, London, Greater London EC1N 7TE",Infatuation,51.5199071,-0.1094542
+259,Andrew Edmunds,"46 Lexington St, London, Greater London W1F 0LW",Infatuation,51.5131439,-0.1361955
+260,Tacos Mx,"337 Lillie Road, London, Greater London SW6 7NR",Infatuation,51.4825958,-0.214373
+261,Disrepute,"4 Kingly Court, Soho, Greater London W1B 5PW",Infatuation,51.5123462,-0.1387397
+262,Tramshed,"32 Rivington St, Shoreditch, Greater London EC2A 3LX",Infatuation,51.525923,-0.0816885
+263,Old Chang Kee,"15 New Row, London,  WC2N 4LD",Infatuation,51.51121389999999,-0.1256608
+264,Balance,"42-43 Lower Marsh, London, Greater London SE1 7RG",Infatuation,51.5013842,-0.1112119
+265,Corrochio's Cocina,"76 Stoke Newington Road, London, England N16 7XB",Infatuation,51.5527678,-0.0746136
+266,Beam,"103 Westbourne Grove, London,  W2 4UW",Infatuation,51.5151233,-0.1933516
+267,Asher's Africana,"224 Ealing Road, Wembley, England HA0 4QL",Infatuation,51.5439957,-0.2972457
+268,Murger Han Mayfair,"Sackville St, London, Greater London W1S 3DF",Infatuation,51.5094089,-0.1382328
+269,Bone Daddies," 63-97 Kensington High St, London , Kensington W8 6SG",Infatuation,51.5016915,-0.1906795
+270,Oie Truly Thai ,"The Arcade, Liverpool Street Station, London,  EC2M 7PD",Infatuation,51.517237,-0.0830592
+271,Quality Chop House,"94 Farringdon Rd, London, Greater London EC1R 3EA","Infatuation, Timeout",51.5247854,-0.1100312
+272,The Windsor Castle,"114 Campden Hill Rd, Kensington, Greater London W8 7AR",Infatuation,51.50629559999999,-0.1986193
+273,Chicken Kitchen,"120 Goldhawk Rd, London, Greater London W12 8EJ",Infatuation,51.5019157,-0.2300011
+274,Violet Cakes,"47 Wilton Way, London, United Kingdom E8 1BX",Infatuation,51.5454888,-0.0641009
+275,Panadera,"83 Kentish Town Rd, London,  NW1 8NY",Infatuation,51.5432986,-0.1418999
+276,Evelyn's Table,"28 Rupert Street, London, Greater London W1D 6DJ",Infatuation,51.5111277,-0.1325908
+277,The Castle,"38 Tooting High St, Tooting, Greater London SW17 0RG",Infatuation,51.4285732,-0.1677041
+278,The River Café,"Thames Wharf, Rainville Rd, London, Greater London W6 9HA",Infatuation,51.4828761,-0.2232634
+279,Langan's Brasserie,"Stratton St., London, Greater London W1J 8LB",Infatuation,51.5074663,-0.1438167
+280,Alain Ducasse At The Dorchester,"53 Park Lane, London, Greater London W1K 1QA",Infatuation,51.5075201,-0.1530778
+281,Lagom,"17 Bohemia Pl, London, England E8 1DU",Infatuation,51.5473807,-0.0523768
+282,Farang,"72 Highbury Park, London, Greater London N5 2XE","Infatuation, Timeout",51.55701149999999,-0.097729
+283,Artusi,"161 Bellenden Rd, London, Greater London SE15 4DH",Infatuation,51.466663,-0.0727244
+284,Cocomelt,"132 Wardour St, London, Greater London W1F 8ZS",Infatuation,51.514394,-0.1344994
+285,Hjem,"3 Launceston Place, Kensington, Greater London W8 5RL",Infatuation,51.4991361,-0.185317
+286,Lanzhou Lamian Noodle Bar ,"33 Cranbourn St., London, Greater London WC2H 7AD",Infatuation,51.51148389999999,-0.1277215
+287,Sessions Arts Club,"24 Clerkenwell Green, London,  EC1R 0NA",Infatuation,51.5226427,-0.1060103
+288,The Dusty Knuckle Bakery,"Abbot St Car Park, London, Greater London E8 3DP",Infatuation,51.5472045,-0.0744055
+289,Narenj Persian Restaurant,"54 High Street, Kingston, Greater London KT1 1HN",Infatuation,51.4071033,-0.3081036
+290,Forza Wine at the National Theatre,"National Theatre, SE1 9PX, London, England SE1 9PX","Infatuation, Timeout",51.5072194,-0.1143667
+291,Kricket White City,"101 Wood Lane, London,  W12 7FR",Infatuation,51.511249,-0.225037
+292,Zia Lucia,"157 Holloway Rd, London,  N7 8LX",Infatuation,51.54959760000001,-0.1086153
+293,Caffeinate N8,"140 Crouch Hill, London, Greater London N8 9DX",Infatuation,51.5779989,-0.1234986
+294,Dishoom Shoreditch,"7 Boundary St, London, Greater London E2 7JE",Infatuation,51.5245241,-0.0766727
+295,Planque,"322 - 324 Acton Mews, London, Greater London E8 4DG",Infatuation,51.5383798,-0.0758253
+296,Blacklock Soho,"24 Great Windmill St, London, Greater London W1D 7LG",Infatuation,51.5117973,-0.1346001
+297,Zoilo,"9 Duke St, London, Greater London W1U 3EG",Infatuation,51.5160668,-0.1521171
+298,Korean Dinner Party,"Top Floor, Kingly Court, London,  W1B 5PW",Infatuation,51.5126053,-0.1387819
+299,Cadet,"56 Newington Green, London, Greater London N16 9PX",Infatuation,51.5513795,-0.0859824
+300,Gladwell’s Deli & Grocery,"2 Camberwell Church St, London, England SE5 8QU",Infatuation,51.4740442,-0.0919421
+301,Saravanaa Bhavan,"300 High Street North, London, London E12 6SA",Infatuation,51.5424255,0.0504359
+302,Mayfair 1 Cafe,"2a White Horse St., London, Greater London W1J 7LB",Infatuation,51.5061513,-0.146138
+303,Pearl Liang,"8 Sheldon Sq, London, Greater London W2 6EZ",Infatuation,51.5192779,-0.1804098
+304,Mio Yatai,"129a Pritchard's Road, London,  E2 9AP",Infatuation,51.5354104,-0.0627228
+305,Three Sheets,"510b Kingsland Rd, London, Greater London E8 4AB",Infatuation,51.5438646,-0.0759038
+306,Old Spike Roastery,"54 Peckham Rye, London, Greater London SE15 4JJ",Infatuation,51.4651655,-0.0666498
+307,Doughnut Time,"96 Shaftesbury Ave, London, Greater London W1D 5EE",Infatuation,51.5121805,-0.131195
+308,The Cheese Bar,"Unit 93 North Yard, Chalk Farm, Greater London NW1 8AH",Infatuation,51.54233929999999,-0.1477383
+309,The Winemakers Club Deptford,"211 Deptford High Street, London, Greater London SE8 3NT",Infatuation,51.4808396,-0.026487
+310,Sexy Fish,"Berkeley Square,Berkeley Square House, London, Greater London W1J 6BR",Infatuation,51.5099371,-0.1454782
+311,Antidote Wine Bar,"12A Newburgh St, London, Greater London W1F 7RR",Infatuation,51.51367219999999,-0.1388663
+312,Zen Mondo,"326 Upper St, London, Greater London N1 2XQ",Infatuation,51.5369931,-0.1029903
+313,Wave,"11 Dispensary Lane, London, England E8 1FT",Infatuation,51.54887739999999,-0.0546374
+314,The Place,"58 High Street, New Malden, Greater London KT3 4EZ",Infatuation,51.401761,-0.2559298
+315,Lost Souls Pizza,"245 Eversholt St, London, Greater London NW1 1BE",Infatuation,51.5336043,-0.1378535
+316,Bar Américain,"20 Sherwood St, London, Greater London W1F 7ED",Infatuation,51.510608,-0.1355507
+317,Four Hundred Rabbits,"The Lido Cafe, London, Greater London SE24 0PA",Infatuation,51.4532779,-0.1060916
+318,Kolamba,"21 Kingly Court, London,  W1B 5QA",Infatuation,51.5130238,-0.1395708
+319,The Apple Blue,"212 Balham High Road, London, Greater London SW12 9BT",Infatuation,51.4430708,-0.1535433
+320,40FT Brewery & Taproom,"18 Ashwin Street, London, Greater London E8 3DL",Infatuation,51.5469105,-0.0745778
+321,Reverend J W Simpson,"32 Goodge St, London, Greater London W1T 2QJ",Infatuation,51.5197314,-0.135236
+322,The Garden Museum Cafe,"Lambeth Palace, London, Greater London null",Infatuation,51.4957797,-0.1198461
+323,Pidgin,"52 Wilton Way, London, Greater London E8 1BG",Infatuation,51.5455406,-0.06111200000000001
+324,Kampai Kensington,"127A Hammersmith Rd,, London, Greater London W14 0QL",Infatuation,51.4943242,-0.2129578
+325,Da Mario,"15 Gloucester Rd, London, Greater London SW7 4PP",Infatuation,51.498721,-0.1835082
+326,Beer + Burger,"1a Arthouse, 1 York Way, London, Greater London N1 0BU",Infatuation,51.5359415,-0.1226584
+327,Maggie Jones's,"6 Old Court Place, London, Greater London W8 4PL",Infatuation,51.5028117,-0.1911613
+328,Wine N Rind,"Holcombe Market, London,  N17 9AA",Infatuation,51.5929553,-0.0694538
+329,Café TPT,"21 Wardour St., Chinatown, Greater London W1D 6PN",Infatuation,51.5110349,-0.1320274
+330,Diogenes The Dog,"96 Rodney Road, London,  SE17 1BG",Infatuation,51.4915191,-0.091073
+331,Unico,"St John’s Wood High Street, London, Greater London NW8 7SE",Infatuation,51.5337302,-0.1709555
+332,Ducksoup,"41 Dean St., Soho, Greater London W1D 4PY",Infatuation,51.5133217,-0.1321019
+333,Wild Honey,"8 Pall Mall, London,  SW1Y 5NG",Infatuation,51.5074839,-0.132159
+334,Wild Grains Bakery,"3 Lockwood Way, London, England E17 5RB",Infatuation,51.595456,-0.04197340000000001
+335,Trampoline,"27 Camden Psge, London, null N1 8EA",Infatuation,51.5349713,-0.1037844
+336,Mukbap,"91 Worship St, London, England EC2A 2BG",Infatuation,51.5221434,-0.0818897
+337,Caravel,"172 Shepherdess Walk, London, Greater London N1 7ED","Infatuation, Timeout",51.5338306,-0.0937944
+338,Barrafina Soho,"26-27 Dean St, London, Greater London W1D 3LL",Infatuation,51.5139796,-0.1325483
+339,Legare,"31 Shad Thames, London,  SE1 2YR",Infatuation,51.5036002,-0.07412160000000001
+340,Night Tales,"14 Bohemia Place, Mare Street, London, Greater London E8 1DU",Infatuation,51.547358,-0.0528211
+341,Sông Quê,"134 Kingsland Rd, London, Greater London E2 8DY",Infatuation,51.5307813,-0.0768191
+342,Dovetale,"1 Dover Yd, London, England W1J 8DL",Infatuation,51.50801569999999,-0.1420922
+343,Army & Navy,"Unit 1, 3 Matthias Road, London, England N16 8NT",Infatuation,51.55185239999999,-0.07984039999999999
+344,Maramia Cafe,"48 Golbourne Rd, London, Greater London W10 5PR",Infatuation,51.522645,-0.2076836
+345,Briciole,"20 Homer St, Marylebone, Greater London W1H 4NA",Infatuation,51.519144,-0.1639051
+346,The Culpeper,"40 Commercial St, Spitalfields, Greater London E1 6LP",Infatuation,51.5169011,-0.0729295
+347,Hakata Ramen,"177 Bermondsey Street, London, null SE1 3UW",Infatuation,51.4988277,-0.0809482
+348,Ottolenghi,"287 Upper Street, London,  N1 2TZ",Infatuation,51.5397566,-0.1021863
+349,Nostos Coffee,"10a Battersea Park Road, London, null SW8 4FF",Infatuation,51.4772709,-0.1470662
+350,Babylon,"76-78 Coombe Lane, London, Greater London SW20 0QY",Infatuation,51.409617,-0.2318807
+351,Bruno's,"172 Shepherdess Walk, London, null N1 7JL",Infatuation,51.5338306,-0.0937944
+352,Lyle's,"56 Shoreditch High St, London, Greater London E1 6JJ",Infatuation,51.5238052,-0.0769164
+353,Vins,"93 Grosvenor Avenue, London, Greater London N5 2NS",Infatuation,51.5490675,-0.09226469999999999
+354,Qima Cafe,"21 Warren St, London, England W1T 5LT",Infatuation,51.523978,-0.1399175
+355,Bellanger,"9 Islington Green, London, Greater London N1 2XH",Infatuation,51.53652599999999,-0.102689
+356,Roti King,"40 Doric Way, London, Greater London NW1 1LH",Infatuation,51.52909769999999,-0.1320304
+357,Amols Vada Pav,"181 Ealing Road, Wembley, England HA0 4LW",Infatuation,51.5413092,-0.2975396
+358,The Crabtree,"60 Rainville Rd, Fulham, Greater London W6 9HA",Infatuation,51.4845552,-0.2244742
+359,Hai Cafe,"120b Lower Clapton Rd, London, Greater London E5 0QR",Infatuation,51.554025,-0.0535384
+360,Trisha's,"57 Greek St, London, England W1D 3DX",Infatuation,51.5144951,-0.1312945
+361,Roka,"37 Charlotte St, London, Greater London W1T 1RR",Infatuation,51.51893219999999,-0.1354015
+362,The Lecture Room And Library At Sketch,"9 Conduit St, London, Greater London W1S 2XG",Infatuation,51.5127667,-0.1415637
+363,Limin Southbank,"56 Gabriels Wharf, Upper Ground, London, England SE1 9PP",Infatuation,51.5080522,-0.1103565
+364,Sake No Hana,"23 St James's St, London, Greater London SW1A 1HA",Infatuation,51.5066352,-0.1391577
+365,Kolae,"6-8 Park St, SE1 9AB , London, England SE1 9AB",Infatuation,51.5054489,-0.0916352
+366,Pollen Street Social,"8-10 Pollen St, London, Greater London W1S 1NQ",Infatuation,51.5133282,-0.1423548
+367,Nagare Coffee,"40 Brushfield Street, London, England E1 6AG",Infatuation,51.51894550000001,-0.0769362
+368,Saltine,"11 Highbury Park, London, England N5 1QJ",Infatuation,51.553846,-0.098382
+369,Leroy,"18 Phipp Street, London, Greater London EC2A 4NU",Infatuation,51.5240312,-0.0815515
+370,Jolene Hornsey Road (aka Big Jo),"318-326 Hornsey Rd, London,  N7 7HE",Infatuation,51.563125,-0.1177961
+371,Fairuz,"3 Blandford St, London, Greater London W1U 3DA",Infatuation,51.5182296,-0.151947
+372,Trivet,"36 Snowsfields, London, Greater London SE1 3SX",Infatuation,51.5023695,-0.0847605
+373,Sweeties,"10 Argyle Street, London, null WC1H 8EG",Infatuation,51.5295373,-0.1243078
+374,Al Dente,"65 Old Brompton Road, London, United Kingdom SW7 3JS",Infatuation,51.4928475,-0.1762022
+375,Coal Rooms,"11a Station Way, Peckham Rye, Greater London null",Infatuation,51.4700651,-0.0694246
+376,Tanakatsu,"10 Wakley Street, London,  EC1V 7LT",Infatuation,51.5302756,-0.102049
+377,Hélène Darroze at the Connaught,"16 Carlos Pl, London, Greater London W1K 2AL",Infatuation,51.5101843,-0.1497608
+378,Bancone,"Golden Square 8-10 Lower James Street, London, Greater London W1F 9EL",Infatuation,51.5117852,-0.136607
+379,Toad Bakery,"44 Peckham Road, London, null SE5 8PX",Infatuation,51.4737017,-0.0797904
+380,La Patagonia,"31 Camden High St, London, Greater London NW1 7JE",Infatuation,51.5353277,-0.1394945
+381,Layla Bakery,"332 Portobello Road, London, England W10 5RU",Infatuation,51.5216931,-0.210489
+382,The 10 Cases,"16 Endell Street, London,  WC2H 9BD",Infatuation,51.514484,-0.1242451
+383,Gloria,"54-56 Great Eastern Street, London, Greater London EC2A 3HS",Infatuation,51.5251057,-0.08135139999999999
+384,Bob Bob Ricard City,"Leadenhall Building, London, Greater London EC3V 4AB",Infatuation,51.51386189999999,-0.0823131
+385,Cheeky  Pea,"Eden Walk Shopping Centre, Kingston, Greater London KT1 1BU",Infatuation,51.4091775,-0.3036699
+386,The Barbary,"16 Neal's Yard, London, Greater London null",Infatuation,51.51445649999999,-0.1262762
+387,Brasserie Zédel,"20 Sherwood St, London, Greater London W1F 7ED","Infatuation, Timeout",51.510608,-0.1355507
+388,Gunpowder,"4 Duchess Walk, London, Greater London SE1 2RY",Infatuation,51.5036942,-0.07720289999999999
+389,Berners Tavern,"10 Berners St, Fitzrovia, Greater London W1T 3NP",Infatuation,51.5167826,-0.135958
+390,Granger & Co.,"7 Pancras Sq, London, Greater London N1C 4AG",Infatuation,51.5326424,-0.1256538
+391,The Scolt Head,"107a Culford Rd, Islington, Greater London N1 4HT",Infatuation,51.5433366,-0.0816152
+392,Gothic Bar,"St. Pancras Renaissance Hotel, Euston Rd, London, England NW1 2AR",Infatuation,51.52973249999999,-0.1259119
+393,Trattoria Brutto,"35-37 Greenhill Rents, London,  EC1M 6BN",Infatuation,51.5198142,-0.102394
+394,Saporitalia,"222 Portobello Rd, London, Greater London W11 1LJ",Infatuation,51.5170351,-0.2057182
+395,Miznon,"8-12 Broadwick St, London, Greater London W1F 8HW",Infatuation,51.51406979999999,-0.1348273
+396,Xi'an Impression,"117 Benwell Rd, London, Greater London N7 7BW",Infatuation,51.5538384,-0.1103746
+397,Granger & Co Notting Hill,"175 Westbourne Grove, London, Greater London W11 2SB",Infatuation,51.5145745,-0.1977745
+398,Supernova,"25 Peter St, London, England W1F 0AH",Infatuation,51.5125764,-0.1343709
+399,M Manze,"105 High St, Peckham, Greater London SE15 5RS",Infatuation,51.47380949999999,-0.0693589
+400,Caravan,"11 Exmouth Market, Clerkenwell, Greater London EC1R 4QD",Infatuation,51.5255727,-0.109976
+401,The Painter's Room,"Claridge's, London,  W1K 4HR",Infatuation,51.5125404,-0.1478631
+402,Towpath,"42 De Beauvoir Crst., London, Greater London N1 5SB",Infatuation,51.5374038,-0.08125410000000001
+403,Gurmani Cafe Georgian Restaurant,"238 Langham Road, London, England N15 3NB",Infatuation,51.59067169999999,-0.1009317
+404,Rita’s,"49 Lexington Street, London, Greater London W1F 9AP",Infatuation,51.51311099999999,-0.1365095
+405,Atari Ya Kingston,"44 Coombe Road, London, null KT2 7AF",Infatuation,51.4122967,-0.2873951
+406,Tendril,"5 Princes St, London, England W1B 2LQ",Infatuation,51.51461219999999,-0.1427628
+407,Bibo,"45 Curtain Road, London,  EC2A 3PT",Infatuation,51.52367839999999,-0.08056139999999999
+408,Mr Bao,"293 Rye Ln, London, Greater London SE15 4UA",Infatuation,51.4657628,-0.0657874
+409,Sager + Wilde,"Arch 250 Paradise Row, London, Greater London E2 9LE",Infatuation,51.52827019999999,-0.0561781
+410,The Plimsoll,"52 St Thomas's R, London,  N4 2QW",Infatuation,51.5619683,-0.1050448
+411,Healthy Eaters,"17 Electric Ave, London, Greater London SW9 8JP",Infatuation,51.4622983,-0.1134824
+412,10 Greek Street,"10 Greek St, Soho, Greater London W1D 4DH",Infatuation,51.5144562,-0.1309969
+413,Hoppers - St. Christopher's Place,"77 Wigmore Street, London,  W1U 1QE",Infatuation,51.5159428,-0.1508222
+414,Sourdough Sophia,"24 Middle Lane, London, Greater London N8 8PJ",Infatuation,51.5812771,-0.1235016
+415,Burro e Salvia,"52 Redchurch St, London, Greater London E2 7DP",Infatuation,51.5242847,-0.07465229999999999
+416,Diyarbakır Kitchen,"52-53 Grand Parade, Harringay, Greater London N4 1AG",Infatuation,51.5789739,-0.09893679999999999
+417,Lemonia,"89 Regent's Park Rd, London, Greater London NW1 8UY",Infatuation,51.5416284,-0.156985
+418,Mazi,"12-14 Hillgate St, London, Greater London W8 7SR",Infatuation,51.5081842,-0.197774
+419,Brunswick East,"3d Stamford Works Gillett Square, London, Greater London N16 8AZ",Infatuation,51.5491949,-0.0768933
+420,London Shell Co,"Sheldon Square, London, Greater London W2 6EP",Infatuation,51.5190538,-0.1797173
+421,Duck & Waffle,"Heron Tower, London, Greater London EC2N 4AY",Infatuation,51.5162529,-0.0809449
+422,Bluebird,"350 King's Rd, Chelsea, Greater London SW3 5UU",Infatuation,51.4848305,-0.175513
+423,Hoppers,"49 Frith St, London,  W1D 4SG",Infatuation,51.5135941,-0.1316588
+424,Udaya Kerala,"105 Katherine Road, London, null E6 1ES",Infatuation,51.5350534,0.0463136
+425,Zelman Meats,"109-125 Knightsbridge, London,  SW1X 7RJ",Infatuation,51.5015131,-0.1597348
+426,Farina Pizzeria Napoletana,"19-21 Notting Hill Gate, London,  W11 3JQ",Infatuation,51.5092546,-0.1944439
+427,Jam Delish,"1 Tolpuddle St, London, United Kingdom N1 0XT",Infatuation,51.534451,-0.1087896
+428,CDMX Tacos,"1 Green's Court, London, England W1F 0HA",Infatuation,51.5123731,-0.1343823
+429,Berenjak,"27 Romilly Street, London, Greater London W1D 5DH",Infatuation,51.5130389,-0.1307823
+430,Spice Village,"121 Upper Tooting Rd, London, Greater London SW17 7TJ",Infatuation,51.4327516,-0.1634904
+431,Andy's  Greek Taverna,"23 Pratt St, London, Greater London NW1 0BE",Infatuation,51.53774689999999,-0.139848
+432,Kova Patisserie South Kensington,"16 Old Brompton Road, London, Greater London SW7 3DL",Infatuation,51.4938363,-0.175032
+433,Kothu Sri Lankan Restaurant & Bar,"114 Tooting High St, London, null SW17 0RR",Infatuation,51.4261704,-0.1700556
+434,La Chingada Euston,"160 Eversholt St, London, null NW1 1BL",Infatuation,51.53193839999999,-0.1355692
+435,Poor Boys,"5 Griffin Centre, Kingston, Greater London KT1 1JT",Infatuation,51.4091405,-0.3064809
+436,Noodle & Beer,"31 Bell Ln, London,  E1 7LA",Infatuation,51.517691,-0.0763206
+437,Stanley's,"151 Sydney St, London,  SW3 6NT",Infatuation,51.4876875,-0.1691053
+438,Lady Of The Grapes,"16 Maiden Lane, London,  WC2E 7NJ",Infatuation,51.5105792,-0.1232793
+439,Blankita,"235 High Rd, London, Greater London N15",Infatuation,51.5831966,-0.0727583
+440,Noci,"4-6 Islington Green, London, Greater London N1 2XA",Infatuation,51.5366696,-0.1029423
+441,Dishoom King's Cross,"5 Stable St, London, London N1C 4PW",Infatuation,51.5361753,-0.1254859
+442,Chaconia,"26 Deptford High St, London, Greater London SE8 4AF",Infatuation,51.4757113,-0.0257618
+443,Roni's Bagel Bakery,"250 West End Lane, London,  NW6 1RD",Infatuation,51.5513594,-0.1914595
+444,Quince Bakery,"267 New North Road, London, England N1 7AA",Infatuation,51.5372031,-0.0911467
+445,Vine Bar,"Unit 7 St George Wharf, London, Greater London SW8 2AU",Infatuation,51.4851494,-0.126533
+446,Ria's,"29 All Saints Road, London, England W11 1HE",Infatuation,51.5184484,-0.2042592
+447,Hand,"10-11 Victory Parade, London, Greater London E20 1FS",Infatuation,51.54699,-0.0116499
+448,Henny’s,"195C Balham High Rd, London, United Kingdom SW17",Infatuation,51.4415318,-0.1541079
+449,TT,"17 Kingsland Rd, London, Greater London E2 8DA",Infatuation,51.5285015,-0.07827189999999999
+450,The French House,"49 Dean St, London, Greater London W1D 5BG",Infatuation,51.5127472,-0.1317317
+451,The Camberwell Arms,"65 Camberwell Church St, Peckham, Greater London SE5 8TR",Infatuation,51.4737396,-0.0884225
+452,Beaten By A Whisker,"E17 7FJ, London, United Kingdom E17 7FJ",Infatuation,51.580426,-0.031429
+453,Other Side Fried,"3 Atlantic Road, London, Greater London SW9 8HE",Infatuation,51.4632804,-0.1145917
+454,The Vault,"Greek Street, London, Greater London W1D 4DN",Infatuation,51.5142253,-0.1307893
+455,Haringey Corbacisi,"7 Salisbury Promenade, Harringay, Greater London N8 0RX",Infatuation,51.5827798,-0.09943030000000001
+456,Supawan,"38 Caledonian Road, London,  N1 9DT",Infatuation,51.53195239999999,-0.1204478
+457,Facing Heaven,"1a Bayford Street, London, null E8 3SE",Infatuation,51.5397374,-0.0565684
+458,Ain't Nothin But The Blues Bar,"20 Kingly St, Soho, Greater London W1B 5PZ",Infatuation,51.5129711,-0.1396153
+459,P. Franco,"107 Clapton Road, London, Greater London E5 0NP",Infatuation,51.552093,-0.0525645
+460,Sushisamba,"110 Bishopsgate, London, Greater London EC2N 4AY",Infatuation,51.5162529,-0.0809449
+461,Dilara,"27 Blackstock Road, Islington, Greater London N4 2JF",Infatuation,51.56410589999999,-0.103147
+462,Carousel,"19-23 Charlotte Street, London, Greater London W1T 1TA",Infatuation,51.5186059,-0.1350628
+463,Yi-Ban,"1010 Dockside Rd, London, Greater London E16 2QT",Infatuation,51.5078351,0.0429462
+464,Quartieri,"300 Kilburn High Rd, London, Greater London NW6 2BY",Infatuation,51.5442735,-0.2006612
+465,Daylesford Organic,"76-82 Sloane Avenue, London,  SW3 3DZ",Infatuation,51.4933253,-0.1680508
+466,Little Georgia,"14 Barnsbury Rd, London, Greater London N1 0HB",Infatuation,51.5343205,-0.1112513
+467,The Kati Roll Company,"24 Poland St, Soho, Greater London W1F 8QL",Infatuation,51.5151862,-0.1372264
+468,Gökyüzü Restaurant,"26-27 Grand Parade, Green Lanes, Harringay, Greater London N4 1LG",Infatuation,51.5805454,-0.0991069
+469,Pergola Paddington Central,"5 Kingdom St, Paddington, Greater London W2 6PY",Infatuation,51.5192864,-0.1833625
+470,Speedboat Bar,"30 Rupert St, London, Greater London W1D 6DL","Infatuation, Timeout",51.5111755,-0.1326545
+471,Evernight ,"3 Ravine Way, London, null SW11 7BH",Infatuation,51.481576,-0.1306121
+472,Scott’s Richmond,"4 Whittaker Ave, Richmond, United Kingdom TW9 1EH",Infatuation,51.45859830000001,-0.3076036
+473,The Tiroler Hut,"27 Westbourne Grove, London, England W2 4UA",Infatuation,51.5155316,-0.1895438
+474,Queen of Hoxton,"1-5 Curtain Rd, London, Greater London EC2A 3JX",Infatuation,51.5222659,-0.0811886
+475,Zeit & Zaatar,"354 Uxbridge Rd, London, Greater London W12 7LL",Infatuation,51.5065815,-0.2338017999999999
+476,Gordon's Wine Bar,"47 Villiers St, London, Greater London WC2N 6NE",Infatuation,51.5079311,-0.123342
+477,Hide,"85 Piccadilly, London,  W1J 7NB",Infatuation,51.5061983,-0.1443822
+478,67 Sourdough,"82-92 Great North Road, London, England N2 0NL",Infatuation,51.5852557,-0.1621864
+479,The Landor,"70 Landor Rd., London, Greater London SW9 9PH",Infatuation,51.4656406,-0.126143
+480,Moro,"34-36 Exmouth Market, Clerkenwell, Greater London EC1R 4QE",Infatuation,51.525873,-0.1089986
+481,Tongue & Brisket,"24-26 Leather Ln, London, Greater London EC1N 7SU",Infatuation,51.5197222,-0.1091667
+482,Pulp,"20 St Mary's Road, London, England W5 5ES",Infatuation,51.50727120000001,-0.3053472
+483,Koya City,"10-12 Bloomberg Arcade, London,  EC4N 8AR",Infatuation,51.51224999999999,-0.0915797
+484,Suzi Tros,"18 Hillgate Street, London,  W8 7SR",Infatuation,51.5080557,-0.1977168
+485,Vagabond,"25 Charlotte St, London, Greater London W1T 1RW",Infatuation,51.5186979,-0.1351833
+486,Frigideira,"37 Chamberlayne Road, London, England NW10 3NB",Infatuation,51.53185209999999,-0.217212
+487,Frog by Adam Handling,"34-38 Southampton Street, London, Greater London WC2E 7HG",Infatuation,51.5108052,-0.1220551
+488,Shree Krishna Vada Pav,"55 Station Rd, Harrow on the Hill, Greater London HA1 2TY",Infatuation,51.587378,-0.3323991000000001
+489,Bao Borough,"13 Stoney Street, London, London SE1 9AD",Infatuation,51.5057455,-0.09168110000000002
+490,Fortitude Bakehouse,"35 Colonnade, London, Greater London W C1N",Infatuation,51.52283629999999,-0.1241247
+491,Sadaf Restaurant (Garden),"3-5 Campden Hill Rd, London, Greater London W8 7DU",Infatuation,51.5008418,-0.1948249
+492,Cecconi's Pizza Bar,"19-21 Old Compton Street, London,  W1D 5JJ",Infatuation,51.51326719999999,-0.1307186
+493,Koya Soho,"50 Frith St, Soho, Greater London W1D 4SQ",Infatuation,51.5136433,-0.1316949
+494,Juliet’s Quality Foods,"110 Mitcham Road, London, Greater London SW17 9NG",Infatuation,51.4254188,-0.1648109
+495,Restaurant Gordon Ramsay,"68 Royal Hospital Rd, London, Greater London SW3 4HP",Infatuation,51.4853968,-0.1620078
+496,Gymkhana,"42 Albemarle St, London, Greater London W1S 4JH",Infatuation,51.5084859,-0.1414684
+497,Assa,"23 Romilly St, London, England W1D 5AG",Infatuation,51.5128503,-0.1313416
+498,Namaaste Kitchen,"64 Parkway, London, Greater London NW1 7AH",Infatuation,51.5379877,-0.1450114
+499,The Selkirk,"60 Selkirk Road, London, United Kingdom SW17 0ES",Infatuation,51.4303245,-0.1694857
+500,Nightjar Carnaby ,"49 - 51 Carnaby Street, London, null W1F 9PY",Infatuation,51.51274739999999,-0.1385105
+501,Day Trip,"21 Halliford Street, London, England N1 3HB",Infatuation,51.5401636,-0.0897314
+502,Artisan Coffee School,"32 The New Broadway, London, England W5 2XA",Infatuation,51.513211,-0.306726
+503,Abd El Wahab,"1-3 Pont Street, London, Greater London SW1X 9EJ",Infatuation,51.4973706,-0.1565311
+504,Grounded,"9 Whitechapel Rd, London, Greater London E1 1DU",Infatuation,51.5163848,-0.0693066
+505,Campania & Jones,"95 Columbia Road, Bethnal Green, Greater London E2  7RG",Infatuation,51.5299168,-0.0687478
+506,Algerian Coffee Stores,"52 Old Compton St, Soho, Greater London W1D 4QE",Infatuation,51.5129365,-0.1322289
+507,Restaurante Trevi,"16-18 Highbury Corner, London, Greater London N51  RD",Infatuation,51.5466578,-0.1037891
+508,The Anchor & Hope,"36 The Cut, London, Greater London SE1 8LP",Infatuation,51.5034825,-0.1065838
+509,Paradise Soho,"61 Rupert Street, London, Greater London W1D 7PJ",Infatuation,51.5121987,-0.1337868
+510,Bébé Bob,"37 Golden Sq, London, England W1F 9LA",Infatuation,51.5120526,-0.1372379
+511,Naughty Piglets,"28 Brixton Water Lane, London, Greater London SW2 1PE",Infatuation,51.4550784,-0.1131702
+512,Lucky & Joy,"95 Lower Clapton Road, London,  E5 0NP",Infatuation,51.5518479,-0.052317
+513,The Flask,"77 Highgate West Hill, Highgate, Greater London N6 6BU",Infatuation,51.56991960000001,-0.1508868
+514,Ombra,"1 Vyner St, Hackney, Greater London E2 9DG",Infatuation,51.53421909999999,-0.05698210000000001
+515,The Effra Hall Tavern,"38 Kellett Rd., Brixton, Greater London SW2 1EB",Infatuation,51.4598925,-0.1131066
+516,Sofreh ,"103 High St, London, null KT3 4BP",Infatuation,51.4005668,-0.2560354
+517,Meraki,"80-82 Great Titchfield St, London, Greater London W1W 7PR",Infatuation,51.51888899999999,-0.1405294
+518,Balady,"31 Leather Lane, London, null EC1N 7TE",Infatuation,51.52011410000001,-0.1094983
+519,Chinese Tapas House,"15 Little Newport St, London, Greater London WC2H 7JJ",Infatuation,51.5118072,-0.1287224
+520,Kêu,"9 Poland St, London, Greater London W1F 8PY",Infatuation,51.5143589,-0.1368617
+521,Attendant Coffee Roasters,"74 Great Eastern St, London, Greater London EC2A 3JL",Infatuation,51.52566119999999,-0.08246819999999999
+522,BúnBúnBún Vietnamese Food,"134B Kingsland Rd, London, Greater London E13 9NU",Infatuation,51.5271366,0.0375505
+523,City Càphê,"17 Ironmonger Ln., London, Greater London E C2V",Infatuation,51.5147816,-0.0916322
+524,Apple Butter Cafe,"32-34 Monmouth Street, London,  WC2H 9HA",Infatuation,51.51359309999999,-0.1272656
+525,Cédric Grolet At The Berkeley ,"Wilton Place, London, null SW1X 7RL",Infatuation,51.5015741,-0.1563236
+526,Burnt Smokehouse,"161A Midland Road, London, England E10 6JT",Infatuation,51.5695331,-0.007010599999999999
+527,The Shoreditch Stop,"53 Great Eastern Street, London, Greater London EC2A 3HP",Infatuation,51.5244636,-0.08079829999999999
+528,The Deli Downstairs,"211 Victoria Park Rd, Hackney, Greater London E9 7JN",Infatuation,51.5382628,-0.0452596
+529,The Twenty Two,"22 Grosvenor Square, London, null W1K 6LF",Infatuation,51.5120498,-0.153097
+530,Satan's Whiskers,"343 Cambridge Heath Rd, London, Greater London E2 9RA",Infatuation,51.5294985,-0.05616699999999999
+531,Dobar,"324a Green Lanes, London, Greater London N8 9BT",Infatuation,51.5714571,-0.0961769
+532,Ridley Road Market Bar,"49 Ridley Rd, Dalston, Greater London E8 2NP",Infatuation,51.54834409999999,-0.0725632
+533,Tabac,"16 Fortess road, London, Greater London NW5 2HB",Infatuation,51.5524254,-0.1407821
+534,Min Jiang,"2-24 Kensington High St, London, Greater London W8 4PT",Infatuation,51.50270219999999,-0.1882164
+535,London Grind,"2 London Bridge, London, Greater London SE1 9RA",Infatuation,51.5066994,-0.0884235
+536,Bob Bob Ricard,"1 Upper James St., Soho, Greater London W1F 9DF",Infatuation,51.5123407,-0.1372259
+537,Sabor,"35-37 Heddon Street, London, Greater London W1B 4BR",Infatuation,51.5114015,-0.139689
+538,Dishoom Carnaby,"22 Kingly St, London, Greater London W1B 5QP",Infatuation,51.5130974,-0.1396476
+539,Primeur,"Barnes Motors, 116 Petherton Rd, London, Greater London N5 2RT",Infatuation,51.5544761,-0.0900344
+540,Dinings SW3,"Lennox Mews, London, Greater London SW3 2JB",Infatuation,51.4952346,-0.1641765
+541,Manteca,"49 - 51 Curtain Road, London,  EC2A PT",Infatuation,51.52399279999999,-0.0806547
+542,Gogi,"451 Edgware Rd, London, Greater London W2 1TH",Infatuation,51.5243645,-0.1768502
+543,The Palomar,"34 Rupert St, London, Greater London W1D 6DN",Infatuation,51.5112303,-0.1326831
+544,The Mayflower,"117 Rotherhithe St, London, Greater London SE16 4NF",Infatuation,51.5018269,-0.0536031
+545,Hawksmoor Seven Dials,"11 Langley St, London, Greater London WC2H 9JG",Infatuation,51.513442,-0.1257524
+546,Lumi,"82 Camden High Street, London, Greater London NW1 0LT",Infatuation,51.53682879999999,-0.1403567
+547,Costa del Tottenham,"Ashley Rd, London,  N17 9LZ",Infatuation,51.5912652,-0.0608
+548,Soutine,"60 St John's Wood High Street, London,  NW8 7SH",Infatuation,51.5322654,-0.1688946
+549,Din Tai Fung,"5-6 Henrietta St, London, Greater London WC2E 8NA",Infatuation,51.5112402,-0.123221
+550,The Good Egg,"Kingly Court, Soho, Greater London W1B 5PW",Infatuation,51.5126053,-0.1387819
+551,Glass Coffee,"192 Camden High Street, London, England NW1 8QP",Infatuation,51.54003119999999,-0.1432343
+552,Whitecross Street Market,"Whitecross Street, London,  EC1Y 8JR",Infatuation,51.5229897,-0.0928458
+553,Allpress Espresso Bar,"58 Redchurch St, London, Greater London E2 7DJ",Infatuation,51.52444209999999,-0.0742505
+554,Hacha,"378 Kingsland Road, London,  E8 4AA",Infatuation,51.5409727,-0.07611269999999999
+555,Mr Ji,"63-65 Parkway, London, Greater London NW1 7PP",Infatuation,51.5375439,-0.1450591
+556,Buster Mantis,"3 Resolution Way, London, Greater London SE8 4NT",Infatuation,51.4788562,-0.025656
+557,Mac & Wild,"65 Great Titchfield St, London,  W1W 7PS",Infatuation,51.5188554,-0.1409748
+558,Heart Of Balham,"113 Balham High Rd, Balham, Greater London SW12 9AP",Infatuation,51.4451867,-0.151056
+559,Allpress Espresso Roastery & Cafe,"55 Dalston Ln, London, Greater London E8 2NG",Infatuation,51.5464602,-0.07060709999999999
+560,Viet Cafe,"75 Denmark Hill, London, Greater London SE5 8RS",Infatuation,51.4710263,-0.09271689999999999
+561,Levan,"12 Blenheim Grove, ,  SE15 4QL",Infatuation,51.4695922,-0.0692005
+562,Baan Thai,"18, London, Greater London NW5 2HB",Infatuation,51.55281369999999,-0.1407783
+563,Roti King Battersea,"Battersea Power Station, 16 Arches Ln, London, null SW11 8AB",Infatuation,51.482686,-0.1469156
+564,The Golden Chippy,"62 Greenwich High Road, London, England SE10 8LF",Infatuation,51.4758545,-0.0185222
+565,Kokum,"58-60 East Dulwich Road, London, England SE22 9AX",Infatuation,51.4618396,-0.07057950000000002
+566,Popolo,"26 Rivington St, London, Greater London EC2A 3DU",Infatuation,51.5260389,-0.0817866
+567,Antipode,"28 Fulham Palace Rd, London, Greater London W6 9PH",Infatuation,51.4909999,-0.2239808
+568,Casa Do Frango,"2 King John Court, London,  EC2A 3EZ",Infatuation,51.5239957,-0.07906200000000001
+569,Humble Chicken,"54 Frith Street, London, Greater London W1D 4RN",Infatuation,51.51383269999999,-0.1317855
+570,Rubedo,"35 Stoke Newington Church Street, London, Greater London N16 0NX",Infatuation,51.5620057,-0.0753861
+571,Brigadiers,"1-5 Bloomberg Arcade, London, Greater London EC4N 8AR",Infatuation,51.512421,-0.0916732
+572,Silk Road,"49 Camberwell Church St, Camberwell, Greater London SE5 8TR",Infatuation,51.4739395,-0.08927349999999999
+573,Ciao Bella,"86-90 Lamb's Conduit St, London, Greater London WC1N 3LZ","Infatuation, Timeout",51.5230441,-0.118803
+574,Ergon Deli,"15 Maddox St, London, Greater London W1S 2QQ",Infatuation,51.51318939999999,-0.1416244
+575,Duck & Waffle Local,"52 Haymarket, London, Greater London SW1Y 4RP",Infatuation,51.509284,-0.1330166
+576,Old Spitalfields Market,"16 Horner Square, ,  E1 6EW",Infatuation,51.5198027,-0.0756299
+577,Belvedere Restaurant,"Off Abbotsbury Road, London, Greater London W8 6LU",Infatuation,51.5020291,-0.2065341
+578,St. John Bread And Wine,"94-96 Commercial St, London, Greater London E1 6LZ",Infatuation,51.5197158,-0.07424689999999999
+579,Leather Lane Street Market,"Leather Lane, London,  EC1N 7TJ",Infatuation,51.5205336,-0.1095346
+580,The Goring Dining Room,"Beeston Pl., London, Greater London SW1W 0JW",Infatuation,51.4974988,-0.1458833
+581,Llewelyn's,"293- 295 Railton Rd, London, Greater London SE24 0JP",Infatuation,51.4532882,-0.1027412
+582,Gibney's London,"70 City Road, London, England EC1Y 2AS",Infatuation,51.5247138,-0.0878402
+583,Monmouth Coffee Company,"2 Park Street, London SE1 9AB, Southwark, London, Greater London SW6 2FN",Infatuation,51.5054969,-0.0914562
+584,CERU South Kensington,"7-9 Bute St, Queen's Gate, Greater London SW7 3EY",Infatuation,51.4934326,-0.176333
+585,Lena's Cafe,"83 Praed St, Paddington, Greater London W2 1NT",Infatuation,51.51744859999999,-0.1720344
+586,Noble Rot,"51 Lamb’s Conduit St, London, Greater London WC1N 3NB","Infatuation, Timeout",51.5218678,-0.1187361
+587,Ayam Zaman,"258 Uxbridge Rd, London, Greater London W12 7JA",Infatuation,51.50621539999999,-0.2293297
+588,Flavourtown Bakery,"771 Fulham Road, London, Greater London SW6 5HA",Infatuation,51.4765173,-0.2038345
+589,Claridge's,"Brook Street, London,  W1K 4HR",Infatuation,51.5127226,-0.1477449
+590,Bilmonte,"null, London, Greater London W1D 7LN",Infatuation,51.5116586,-0.1348312
+591,L'Eto Caffè,"155 Wardour St, London, Greater London W1F 8WG",Infatuation,51.5144195,-0.1347164
+592,Chapati & Karak,"144 Brompton Rd, London, Greater London SW3 1HY",Infatuation,51.4985544,-0.1661424
+593,Patogh,"8 Crawford Place, London, Greater London W1H 1PS",Infatuation,51.5179207,-0.1664437
+594,Farzi Cafe,"8 Haymarket, London, Greater London SW1Y 4DG",Infatuation,51.5086811,-0.1315451
+595,Lurra,"9 Seymour Place, London, Greater London W1H 5BA",Infatuation,51.5147057,-0.1612726
+596,Daddy Bao,"113 Mitcham Road, London, Greater London SW17 9PE",Infatuation,51.4255733,-0.1643192
+597,Kofteci Metin,"553 Green Lanes, Harringay Ladder, N8 0RL, London, England N8 0RL",Infatuation,51.58265189999999,-0.0999548
+598,Cinnamon Village,"112 Fortess Rd, Kentish Town, Greater London NW5 2HL",Infatuation,51.5553775,-0.1391576
+599,Nandine Camberwell Church Street,"45 Camberwell Church Street, London,  SE5 8TR",Infatuation,51.4739307,-0.08945059999999999
+600,Royal China,"24-26 Baker St, London, London W1U 3BZ",Infatuation,51.5177934,-0.1553155
+601,Crate Brewery,"Unit 7, White Building, London, Greater London E9 5EN",Infatuation,51.5428953,-0.0221585
+602,Pub On The Park,"19 Martello St, London, Greater London E8 3PE",Infatuation,51.542066,-0.0583054
+603,Andu Café,"528 Kingsland Rd , London, Greater London E8 4AH",Infatuation,51.5444855,-0.07575480000000001
+604,Mildreds Camden,"Jamestown Rd, London,  NW1 7BW",Infatuation,51.5403367,-0.1454281
+605,The Railway Tavern,"7 Station Rise, London, Greater London SE27 9BW",Infatuation,51.4401117,-0.1053041
+606,Arôme Bakery,"9 Mercer St, London, Greater London WC2H 9QJ",Infatuation,51.51300990000001,-0.1262086
+607,Dose Espresso,"70 Long Ln, London, Greater London EC1A 9EJ",Infatuation,51.5194359,-0.09925329999999999
+608,Le Péché Mignon,"6 Ronalds Rd, London, Greater London N5 1XH",Infatuation,51.5500688,-0.107739
+609,Mahdi Restaurant,"217 King St, London, Greater London W6 9JT",Infatuation,51.4927936,-0.2350698
+610,Nightjar,"129 City Rd, London, Greater London EC1V 1JB",Infatuation,51.5265157,-0.08772339999999999
+611,Apollo Banana Leaf,"188-190 Tooting High St, Tooting, Greater London SW17 9RT",Infatuation,51.4241355,-0.1721384
+612,Hector's," London, Greater London N1 4HS",Infatuation,51.5439199,-0.082703
+613,Brunswick House Restaurant,"30 Wandsworth Rd., London, Greater London SW8 2LG",Infatuation,51.4847537,-0.1265278
+614,Kerridge's Bar And Grill,"Whitehall Place, Westminster, London,  SW1A 2BD",Infatuation,51.5060123,-0.1253409
+615,Dr.Noodle,"187 Lewisham Way, London, England SE4 1UY",Infatuation,51.4709394,-0.0293777
+616,Well & Bucket,"143 Bethnal Green Rd, Shoreditch, Greater London E2 7DG",Infatuation,51.5253543,-0.0710349
+617,The Cow,"89 Westbourne Park Rd, London, Greater London W2 5QH",Infatuation,51.5191883,-0.1953531
+618,People's Choice,"51B Chatsworth Rd, London, Greater London E5 0LH",Infatuation,51.5531113,-0.0449438
+619,Little Duck The Picklery,"68 Dalston Road, London, Greater London E8 3AH",Infatuation,51.5461549,-0.0706137
+620,The German Gymnasium,"1 King's Boulevard, London, Greater London N1C 4BU",Infatuation,51.5323757,-0.1254543
+621,Morito Hackney Road,"195 Hackney Road, London, Greater London E2 8JL",Infatuation,51.5310751,-0.0719901
+622,Bar des Prés,"16 Albemarle St, London, Greater London W1S 4JA",Infatuation,51.5093262,-0.1418747
+623,Chick King,"755 High Rd, Tottenham, Greater London N17 8AH",Infatuation,51.6044765,-0.0682316
+624,Regency Cafe,"17-19 Regency St., City of Westminster, Greater London SW1P 4BY",Infatuation,51.4939991,-0.1321879
+625,Gridiron,"19 Old Park Lane, London,  W1K 1LB",Infatuation,51.5050799,-0.1499236
+626,Delfino,"121a Mount St, London, Greater London W1K 3NW",Infatuation,51.51006690000001,-0.1483808
+627,Bean & Hop,"424 Garratt Ln, London, Greater London SW18 4HN",Infatuation,51.4398182,-0.1870543
+628,Little Kudu,"133 Queen's Road, London, Greater London SE15 2ND",Infatuation,51.4737068,-0.0584074
+629,Lisboeta,"30 Charlotte Street, London,  W1T 2NG",Infatuation,51.5190239,-0.1350558
+630,Kaipiras by Barraco,"10 Kingsgate Pl, London, England NW6 4TA",Infatuation,51.5408647,-0.1960728
+631,Maison François,"34 Duke Street, London, Greater London SW1Y 6DB",Infatuation,51.5075599,-0.1381832
+632,Roof East,"45a Broadway, London,  E15 1XD",Infatuation,51.5413528,0.0020909
+633,Lita,"7-9 Paddington St, London, England W1U 5QH",Infatuation,51.52096239999999,-0.1527414
+634,Metcha Matcha,"205B Philip Lane, London, England N15 4HL",Infatuation,51.5883328,-0.08368869999999999
+635,Pillars Brewery,"Unit 2 Ravenswood Industrial Estate, Walthamstow, Greater London null",Infatuation,51.5838698,-0.0082688
+636,Mamuśka! Polish Kitchen And Bar,"9 Addington St, London, Greater London SE1 7RY",Infatuation,51.5010929,-0.1152505
+637,Leila's Shop,"15-17 Calvert Ave, Shoreditch, Greater London E2 7JP",Infatuation,51.5262928,-0.0757127
+638,George Inn,"George Inn Yard, London, Greater London SE1 1NH",Infatuation,51.5043549,-0.090207
+639,Maureen's Pie & Mash,"6 Market Way, London, England E14 6AH",Infatuation,51.513184,-0.0152045
+640,Karachi Cuisine,"1113-1115 London Road, London, United Kingdom SW16 4XD",Infatuation,51.4020177,-0.1188551
+641,Hijazi Corner,"332 Old Marylebone Rd, London, Greater London null",Infatuation,51.5184559,-0.1673986
+642,Pretty Decent Beer Co,"Unit 10, Uplands Business Park, London, Greater London E17 5QJ",Infatuation,51.5922241,-0.0410249
+643,St. John Marylebone,"98 Marylebone Lane, London, null W1U 2JE",Infatuation,51.51759389999999,-0.1505784
+644,Ho-ja,"39 Goldhawk Road, London, Greater London W12 8QQ",Infatuation,51.5025357,-0.224876
+645,Rambutan,"10 Stoney St, London, United Kingdom SE1 9AD",Infatuation,51.50556090000001,-0.0915199
+646,Tacos Padre,"Winchester Walk, Jubilee Place, London, Greater London SE1 9AG",Infatuation,51.5062176,-0.0910203
+647,Four Seasons | 文興酒家,"23 Wardour St, Chinatown, Greater London W1D 6PW",Infatuation,51.5110872,-0.1320852
+648,Los Compadres,"119A Stoke Newington Church Street, London, null N16 0UD",Infatuation,51.5620108,-0.0800665
+649,Story Cellar,"17 Neal's Yard, London, United Kingdom WC2H 9DP",Infatuation,51.5142538,-0.1262084
+650,The Laundry,"374 Coldharbour Lane, London,  SW9 8PL",Infatuation,51.4625904,-0.1114387
+651,Tea House Chinese,"13A Deptford High Street, London, Greater London SE8 4AD",Infatuation,51.4754643,-0.0261324
+652,Little Blue Door,"871-873 Fulham Road, London, Greater London SW6 5HD",Infatuation,51.4739909,-0.2070546
+653,19 Numara Bos Cirrik 2,"194 Stoke Newington High Street, Hackney, Greater London N16 7JD",Infatuation,51.56222899999999,-0.0733273
+654,Chisou,"31 Beauchamp Pl, London, Greater London SW3 1NQ",Infatuation,51.4971356,-0.1640402
+655,Lavo,"The BoTree, 30 Marylebone Ln, London W1U 2DR, London, England W1U 2DR",Infatuation,51.5156125,-0.1489338
+656,Tumnan Thai,"167 lavender hill, London, Greater London Sw11 5QH",Infatuation,51.4647796,-0.1589737
+657,Yada's,"115a Rye Lne, London, Greater London null",Infatuation,51.470463,-0.0687255
+658,Norfolk Arms,"28 Leigh St, London, Greater London WC1H 9EP",Infatuation,51.5266568,-0.1251668
+659,Canton Arms,"177 South Lambeth Rd, London, Greater London SW8 1XP",Infatuation,51.4771576,-0.1230203
+660,The Baring," 55 Baring St, London, null N1 3DS",Infatuation,51.53710239999999,-0.08850469999999999
+661,Sushi Kanesaka,"45 Park Lane, City of Westminster, London W1K 1PN",Infatuation,51.50639,-0.15162
+662,Hopper Coffee Shop,"81b Roger St, London, Greater London W C1X",Infatuation,51.5228946,-0.1147299
+663,Öz Erciyes Restaurant,"477 High Road, London, England N17 6QA",Infatuation,51.592678,-0.0699495
+664,Plateau Restaurant,"4th Floor Canada Place, London, Greater London E14 5ER",Infatuation,51.5048204,-0.0167926
+665,Moko,"39b Markfield Rd, Tottenham, Greater London N15 4QA",Infatuation,51.5832215,-0.06432929999999999
+666,Barbie Green,"2 London Wall Place, London,  EC2Y 5AU",Infatuation,51.5177579,-0.0924676
+667,Carmel,"23-25 Lonsdale Road, London, Greater London NW6 6RA",Infatuation,51.5371512,-0.2033708
+668,15Grams Coffee House,"28 Greenwich Church Street, London, null SE10 9BJ",Infatuation,51.48128579999999,-0.009637699999999999
+669,Pique-Nique,"Tanner St Park, London, Greater London SE1",Infatuation,51.5001394,-0.0809733
+670,The Palm,"197 Philip Lane, London, Greater London N15 4HQ",Infatuation,51.5883415,-0.08299609999999999
+671,Petersham Nurseries,"Church Lane, Petersham Road, Richmond, Surrey TW10 7AB",Infatuation,51.4463324,-0.3013819
+672,F*ckoffee,"167 Bermondsey St, Bermondsey, Greater London SE1 3UW",Infatuation,51.4992512,-0.0810872
+673,Johnny Schnitzel,"25a Lloyd Baker St, London, Greater London WC1X 9AT",Infatuation,51.5290388,-0.1104519
+674,N5 Kitchen,"68 Mountgrove Road, London, England N5 2LT",Infatuation,51.5613276,-0.0961805
+675,Toconoco,"28 Hertford Rd, London, Greater London N1 5QT",Infatuation,51.5385253,-0.0781834
+676,Lilienblum,"80 City Road, London, United Kingdom EC1Y 2AS",Infatuation,51.5248591,-0.0877401
+677,Santo Remedio Shoreditch,"Great Eastern St, London, Greater London EC2A 3HP",Infatuation,51.5246832,-0.0808408
+678,Temper City,"Angel Court, London, Greater London EC2R 7HB",Infatuation,51.5150804,-0.0875231
+679,Lockdown Bakehouse," London, Greater London SW18 1SN",Infatuation,51.4602651,-0.1893268
+680,Jihwaja,"353 Kennington Lane, London, Greater London SE11 5QY",Infatuation,51.4862619,-0.1194844
+681,Needoo Grill,"87 New Rd, London, Greater London E1 1HH",Infatuation,51.51701680000001,-0.06264549999999999
+682,Alfi,"3 Crispin Place, London, England E1 6DW",Infatuation,51.5198116,-0.07637569999999999
+683,Que Chimba,"10 West Green Road, London, England N15 5NN",Infatuation,51.58404280000001,-0.0729179
+684,Wolkite Restaurant,"82 Hornsey Road, London, Greater London N7 7NN",Infatuation,51.5560722,-0.1111129
+685,Darling's Eatery and Studio,"455 Wick Lane, London, England E3 2TB",Infatuation,51.5347085,-0.0206679
+686,Eric's,"20 Upland Road, London, United Kingdom SE22 9EF",Infatuation,51.45712,-0.0691984
+687,Hearth,"86B Wallis Road, London, England E9 5LN",Infatuation,51.5437167,-0.0235359
+688,Goddard & Gibbs,"100 Shoreditch High Street, London,  E1 6JQ",Infatuation,51.5254162,-0.07728489999999999
+689,Landseer Arms,"37 Landseer Road, London, England N19 4JU",Infatuation,51.56292029999999,-0.1227402
+690,Bala Baya,"Arch 25 Old Union Yard Arches, London, London SE1 0LR",Infatuation,51.5034565,-0.1019156
+691,The Auld Shillelagh,"105 Stoke Newington Church St, London, England N16 0UD",Infatuation,51.56204779999999,-0.07945310000000001
+692,Sodo Pizza Clapton,"126 Upper Clapton Rd, Greater London, Greater London E5 9JY",Infatuation,51.5633559,-0.05820189999999999
+693,Harwood Arms,"Walham Grove, London, Greater London SW6 1QP",Infatuation,51.4822404,-0.1978714
+694,Barge East,"Whitepost Ln, London, Greater London E9 5EN",Infatuation,51.54288099999999,-0.0236708
+695,Bun & Sum,"224 Graham Road, London, England E8 1BP",Infatuation,51.5465199,-0.05620340000000001
+696,Flour & Grape,"214 Bermondsey St, London, Greater London SE1",Infatuation,51.49808300000001,-0.0815114
+697,Sinabro,"28 Battersea Rise, London, Greater London SW11 1EE",Infatuation,51.46107079999999,-0.1644541
+698,Pavilion Mentmore Studios,"11 Mentmore Studios, Argall Ave, London, England E10 7QE",Infatuation,51.5701705,-0.0390651
+699,Suuyar,"150C Rye Ln, Choumert Rd, London, England SE15 4RZ",Infatuation,51.4682967,-0.0675558
+700,Doña,"92 Stoke Newington High Street, London, null N16 7NY",Infatuation,51.5595054,-0.0739247
+701,Locanda Locatelli,"8 Seymour St, London, Greater London W1H 7JZ",Infatuation,51.5151228,-0.1572866
+702,Proper Tacos,"22 Nags Head Covered Market, Seven Sisters Road, London, England N7 6AG",Infatuation,51.5593471,-0.1163309
+703,OkonomiHeads,"230 Kingsland Rd, London, England E2 8AX",Infatuation,51.5356278,-0.0767836
+704,Knowhere Special,"296 Kentish Town Rd, London, Greater London NW5 2TG",Infatuation,51.5510595,-0.1404184
+705,Goddards at Greenwich,"22 King William Walk, London, England SE10 9HU",Infatuation,51.4814034,-0.0083739
+706,PizzaExpress,"London Gatwick Airport, Gatwick, England RH6 ONP",Infatuation,51.1579247,-0.1639171
+707,Hash Hut,"WC2H 9LX, London, England WC2H 9LX",Infatuation,51.51407889999999,-0.125883
+708,Camden Market Stables,"Chalk Farm Rd, London, London NW1 8AH",Infatuation,51.542701,-0.1479482
+709,Joyau,"353 Winchelsea Road, London, United Kingdom E7 0AQ",Infatuation,51.555484,0.0188575
+710,E5 Bakehouse,"Arch 395, Mentmore Terrace, London, Greater London E8 3PH",Infatuation,51.5411837,-0.0576921
+711,Norman’s,"167 Junction Road, London, Greater London N19 5PZ",Infatuation,51.5606541,-0.1369367
+712,Dream Xi'an,"Tower Place, EC3R 5BU, London, England EC3R 5BU",Infatuation,51.5088958,-0.07974049999999999
+713,Eat Beirut,"177 New Kings Road, London, England SW6 4SW",Infatuation,51.4735975,-0.1967255
+714,Faros,"57 Gray's Inn Road, London, Greater London WC1X 8PP",Infatuation,51.5222255,-0.1140647
+715,Mu,"432-434 Kingsland Rd, London, Greater London E8 4AA",Infatuation,51.5421793,-0.0758792
+716,Som Saa,"43A Commercial St, London, Greater London E1 6BD",Infatuation,51.5172463,-0.0737796
+717,"The Sea, The Sea","174 Pavilion Road, London,  SW1X 0AW",Infatuation,51.4934015,-0.1588873
+718,Baltic Sea Food,"Enfield Lock, London, England EN3 6HR",Infatuation,51.6682711,-0.0420368
+719,Juma Kitchen,"Winchester Walk, London, United Kingdom SE1 9AG",Infatuation,51.5062176,-0.0910203
+720,Mineiro Cafe 63,"63 Station Road, London, England NW10 4UX",Infatuation,51.5329651,-0.2463157
+721,O Cantinho De Portugal,"137 Stockwell Rd, London, Greater London SW9 9TN",Infatuation,51.4671206,-0.1174881
+722,The Summer House,"60 Blomfield Rd, City of Westminster, Greater London W9 2PA",Infatuation,51.52230789999999,-0.1860364
+723,Barrafina Drury Lane,"43 Drury Ln, Covent Garden, Greater London WC2B 5AJ",Infatuation,51.5143311,-0.1218874
+724,il Pampero,"20 Chesham Pl, London, Greater London SW1X 8HQ",Infatuation,51.4973971,-0.1559464
+725,Darcie & May Green,"Grand Union Canal, Paddington, Greater London W2 6DS",Infatuation,51.5192336,-0.1791045
+726,The Travel Café,"139 Westminster Bridge Rd, London, Greater London SE1 7HR",Infatuation,51.4995393,-0.1142074
+727,Black Sheep Coffee,"North Terminal, Airside, Horley, Gatwick RH6 0NP, London, England RH6 0NP",Infatuation,51.171965,-0.1646066
+728,G Kelly,"526 Roman Road, London, England E3 5ES",Infatuation,51.5323459,-0.0314512
+729,Oyster Shack & Seafood Bar,"Waltham Abbey, Waltham Abbey, United Kingdom null",Infatuation,51.685034,0.002723
+730,Eko Wine Bar & Restaurant,"160 Homerton High Road , London,  E9 6JA",Infatuation,51.54790449999999,-0.04383509999999999
+731,Hola Guacamole,"6 Merchant Sq, London, Greater London SE1 9PP",Infatuation,51.5188779,-0.1731531
+732,Barrafina,"Coal Drops Yard, King's Cross, Greater London N1C 4PL",Infatuation,51.5360313,-0.1265524
+733,Aunty Jenny's Kitchen,"5-7 Wembley Hill Rd, London, Wembley HA9 6QU",Infatuation,51.5533948,-0.2867512
+734,Lulu's,"291 Railton Road, London, United Kingdom SE24 0JP",Infatuation,51.45327529999999,-0.102732
+735,Wolfox Avenue,"56 St James's Street, Brighton, Brighton BN2 1RB",Infatuation,50.8203692,-0.1305355
+736,Vicoli Di Napoli,"125 Stoke Newington Church St, London, Greater London N16 0UH",Infatuation,51.5619476,-0.0804913
+737,Pahli Hill Bandra Bhai,"79-81 Mortimer St, London, Greater London W1W 7SJ",Infatuation,51.5175875,-0.14083
+738,The Original Caribbean Spice,"Unit 19 Castle Square, 1st Floor, London, Greater London SE17 1AY",Infatuation,51.4938401,-0.09819309999999999
+739,The Hill,"89 Royal Hill, London, England SE10",Infatuation,51.4755618,-0.0105232
+740,Mountain View,"160 Trafalgar Road, London, England SE10 9TZ",Infatuation,51.48477579999999,0.0040308
+741,T4 Paddington,"4B Praed Street, London, England W2 1JX",Infatuation,51.5184686,-0.1708282
+742,Fred Coffee & Bakery,"1 Northington Street, London, England WC1N 2JE",Infatuation,51.52219669999999,-0.1141465
+743,Chakra,"33C Holland St, London, England W8 4LX",Infatuation,51.5027531,-0.1938917
+744,Little Tapería,"143 Tooting High Street, London, Greater London SW17 0SY",Infatuation,51.4254573,-0.1701053
+745,Brick Brewery,"Arch 209 Blenheim Grove, London, Greater London SE15 4QL",Infatuation,51.4697213,-0.07028
+746,Gracey’s Pizza,"339 Watford Road, St Albans, England AL2 3DA",Infatuation,51.7269666,-0.3593987
+747,Ristorante Rossella,"103 Highgate Road, London, Greater London NW5 1TR",Infatuation,51.5550188,-0.1452581
+748,The Coral Room,"16-22 Great Russell St, Bloomsbury, Greater London WC1B 3NN",Infatuation,51.51711359999999,-0.128892
+749,Al Forno,"2a Kings Rd, Wimbledon, Greater London SW19 8QN",Infatuation,51.4199322,-0.2020339
+750,Seoul Bakery,"Great Russell St, London, Greater London WC1B 3NH",Infatuation,51.5173487,-0.1296717
+751,Sorella,"148 Clapham Manor St, London, Greater London SW4 6DR",Infatuation,51.4637778,-0.1351132
+752,Sourdough Sophia - Essex Road,"119 Essex Road, London, England N1 2SN",Infatuation,51.5392971,-0.09829829999999999
+753,Ayannas London,"2 Yabsley St, Greater London, Greater London E14 9RG",Infatuation,51.5051783,-0.007128700000000001
+754,Alex's Cypriot Sandwiches,"N14 5PA, London, United Kingdom N14 5PA",Infatuation,51.6331582,-0.1292868
+755,Sista Barista,"114 Westminster Bridge Road, London, Greater London SE1 7RU",Infatuation,51.4991719,-0.1133576
+756,Kossoff's,"259 Kentish Town Road, London, Greater London NW5 2JT",Infatuation,51.5485337,-0.1412914
+757,Neden Urfa,"2A Southwold Road, London,  E5 8PT",Infatuation,51.56264040000001,-0.05310819999999999
+758,Mr Falafel,"T4-T5 New Shepherds Bush Market, Shepherds Bush, Greater London W12 8LH",Infatuation,51.50501620000001,-0.2267138
+759,Thao Thao,"18 King Street, Margate, England CT9 1DA",Infatuation,51.3898735,1.3826865
+760,Plaza Khao Gaeng,"103-105 Oxford Street, London, null WC1A 1DB",Infatuation,51.5163929,-0.128994
+761,Wandercrust Pizza at The Pelton Arms,"23 Sir Francis Drake Court, Pelton Road, London, England SE10 0FG",Infatuation,51.4871621,0.0014142
+762,Borough Market,"8 Southwark St, London, London SE1 1LZ",Infatuation,51.5056902,-0.09125939999999999
+763,The Hero Of Maida,"55 Shirland Road, London,  W9 2JD",Infatuation,51.5243638,-0.1887319
+764,The Dog & Bell,"116 Prince St, Deptford, Greater London SE8 3JD",Infatuation,51.4833301,-0.0258433
+765,Flat Iron Square,"68 Union St, ,  SE1 1TD",Infatuation,51.50414,-0.0950927
+766,Xu,"30 Rupert Street, London, Greater London W1D 6DL",Infatuation,51.5111755,-0.1326545
+767,Good Vibez Jerk Centre,"219 Deptford High St, London, United Kingdom SE8 3NT",Infatuation,51.4811271,-0.0265586
+768,Bar La Rampa,"7/8 Market Place, London,  W1W 8AG",Infatuation,51.5164188,-0.1401572
+769,Imperial Treasure Fine Chinese Cuisine,"9 Waterloo Place, London, Greater London SW1Y 4AU",Infatuation,51.5078767,-0.132881
+770,Tehran_Berlin,"20 Roseberry Avenue, London,  EC1R 4SX",Infatuation,51.5235394,-0.1111125
+771,Angels Bakery,"136 Plumstead High St, London, United Kingdom SE18 1JQ",Infatuation,51.4873028,0.09223529999999999
+772,Waakye Joint,"80A West Green Road, London, Greater London N15 5NS",Infatuation,51.584701,-0.0763721
+773,Mystic Burek,"227 Dartmouth Road, London, England SE26 4QY","Infatuation, Timeout",51.4324091,-0.0599421
+774,Faros Oxford Circus,"22 Great Portland St, London, England W1W",Infatuation,51.5166109,-0.1410267
+775,Tab x Tab,"Westbourne House, 14-16, Westbourne Grove, London, Greater London W2 5RH",Infatuation,51.5157553,-0.189608
+776,My Neighbours The Dumplings,"165 Lower Clapton Road, London, Greater London E5 8EQ",Infatuation,51.5542248,-0.0543125
+777,Korean Grill Kensington,"SW7 4LH, London, England SW7 4LH",Infatuation,51.4933729,-0.183305
+778,Madhu’s of Mayfair,"The Dilly Hotel, 21 Piccadilly, London, Greater London W1J 0BH",Infatuation,51.5094289,-0.1362927
+779,Berenjak Borough,"1 Bedale St, London , null SE1 9AL",Infatuation,51.5052927,-0.08991819999999999
+780,Café Kitsuné,"19 Motcomb Street, London, Greater London SW1X 8JT",Infatuation,51.4991723,-0.1572172
+781,Ben Venuti,"34 Upper Tachbrook St, London, United Kingdom SW1V 1SW",Infatuation,51.4926828,-0.1392693
+782,The Counter,"108 Golborne Rd, London, Greater London W10 5NR",Infatuation,51.52138009999999,-0.2095951
+783,Bistrotheque,"23-27 Wadeson St, London, Greater London E2 9DR",Infatuation,51.5341701,-0.0559454
+784,Yemanes',"Atwell Road, London,  SE15 4TW",Infatuation,51.4682918,-0.0670335
+785,Roe,"5 Park Drive, London, England E14 9GG",Infatuation,51.5023452,-0.0152119
+786,Macellaio RC Union Street,"Arch 24, 229 Union Street, London, Greater London null",Infatuation,51.5031628,-0.101845
+787,Lower Marsh Market,"Lower Marsh, London, Greater London SE1 7AD",Infatuation,51.5009655,-0.1125115
+788,Patara Fine Thai Cusine,"18 High Street, Wimbledon, Greater London SW19 5DX",Infatuation,51.4249133,-0.2169059
+789,A Portuguese Love Affair,"326 Hackney Rd, Hackney, Greater London E2 7AX",Infatuation,51.5310549,-0.066652
+790,Lorne,"76 Wilton Rd, London, Greater London SW1V 1DE",Infatuation,51.49277739999999,-0.1403064
+791,Laughing Gravy,"154 Blackfriars Rd., Greater London, Greater London SE1 8EN",Infatuation,51.5010406,-0.1040976
+792,Villages Brewery,"Units 21-22, Resolution Way., Deptford, Greater London SE8 4NT",Infatuation,51.4784511,-0.0241697
+793,Scully,"4 St James's Market, London, Greater London SW1Y 4AH",Infatuation,51.50939109999999,-0.1331647
+794,Elliot's,"12 Stoney St, London, Greater London SE1 9AD",Infatuation,51.5056574,-0.0916313
+795,No 11 Pimlico Road,"11 Pimlico Rd, London, Greater London SW1W 8NA",Infatuation,51.4907891,-0.1508322
+796,Swallow Coffee Shop,"75 Goldhawk Road, London, Greater London W12 8EH",Infatuation,51.5020848,-0.227373
+797,The Black Lab Coffee House,"18 Clapham Common Southside, London, Greater London SW4 7AB",Infatuation,51.4610452,-0.1386268
+798,Velvet By Salvatore Calabrese,"10 Corinthia Residences, Whitehall Place, London, England SW1A 2BD",Infatuation,51.5064478,-0.1244012
+799,Malaysian Deli,"338 Brockley Road, London, England SE4 2BT",Infatuation,51.4557806,-0.0367871
+800,Olby's Soul Cafe,"3-5 King St, Margate, Kent CT9 1DD",Infatuation,51.390179,1.3821736
+801,Provisions,"167 Holloway Road, London,  N7 8LX",Infatuation,51.54980279999999,-0.108869
+802,Oi Spaghetti + Tiramisù,"133 Copeland Rd, Peckham, null SE15 3SN",Infatuation,51.4700724,-0.0660678
+803,Bar Douro,"85B Southwark Bridge Rd, London, Greater London SE1 0AB",Infatuation,51.5043821,-0.0955296
+804,The Drapers Arms,"44 Barnsbury St, Islington, Greater London N1 1ER",Infatuation,51.5405262,-0.1084261
+805,Decimo,"The Standard London, London, Greater London WC1H 8EG",Infatuation,51.5295373,-0.1243078
+806,Fresko Yogurt Bar,"44 Bedford Street, London, England WC2E 9HA",Infatuation,51.5101513,-0.1237789
+807,Aline Lebanese Kitchen,"14 Maddox St, London, England W1S 1PQ",Infatuation,51.51342959999999,-0.1418368
+808,The Best Turkish Kebab,"125 Stoke Newington Rd, London, Greater London N16 8BT",Infatuation,51.5560389,-0.07474739999999999
+809,Villa Mamas,"25-27 Elystan St, Chelsea, Greater London SW3 3NT",Infatuation,51.4912705,-0.1672297
+810,Saray Broadway Cafe,"58 Broadway Market, Hackney, Greater London E8 4QJ",Infatuation,51.5371506,-0.06123489999999999
+811,O Tino,"1 Plender St, London, Greater London NW1 0JS",Infatuation,51.5360858,-0.1394116
+812,Seoul Tokyo,"168 Borough High St, London , null SE1 1LB",Infatuation,51.5019584,-0.0927981
+813,Baccalà,"null, London, Greater London SE1 3TQ",Infatuation,51.4982695,-0.08137849999999999
+814,Mori Mori,"80 Northdown Rd, Margate, Kent CT9 2RE",Infatuation,51.3895732,1.39081
+815,The Bull & Last,"168 Highgate Rd, London, Greater London NW5 1QS",Infatuation,51.5589066,-0.1486461
+816,The Cheese Barge,"Sheldon Square, London, Greater London W2 6DL",Infatuation,51.5190538,-0.1797173
+817,Eden’s Cottage,"264 Seven Sisters Road, London,  N4 2HY",Infatuation,51.5641748,-0.1050716
+818,The Eight,"68-70 Shaftesbury Avenue, London, Greater London W1D 6EY",Infatuation,51.51182619999999,-0.1320442
+819,Collective,"Kennington Park, 4 St Agnes Pl, London, England SE11 4BE",Infatuation,51.48314120000001,-0.1083844
+820,Sunday,"169 Hemingford Rd, London, Greater London N1 1DA",Infatuation,51.542673,-0.1135489
+821,Ground Coffee Society,"79 Lower Richmond Rd, ,  SW15 1ET",Infatuation,51.4671661,-0.2193745
+822,Crypto Burgers,"2 North End Road, London, England W14",Infatuation,51.4947197,-0.2112473
+823,Il Giardino,"7 Blenheim Grove, Peckham, Greater London SE15 4QS",Infatuation,51.4691941,-0.06923979999999999
+824,Made In Italy,"249 King's Rd, London, Greater London SW3 5EL",Infatuation,51.4860935,-0.1718525
+825,Deluxe Manna,"135-137 High Cross Rd, London,  N17 9NU ",Infatuation,51.588895,-0.06454939999999999
+826,Rustique Cafe,"142 Fortess Rd, Tufnell Park, Greater London NW5 2HP",Infatuation,51.5562093,-0.1386207
+827,Fladda Fish & Chips,"55 Camberwell Church St, London, Greater London SE5 8TR",Infatuation,51.4738286,-0.0888085
+828,Sushi Revolution,"240 Ferndale Rd, London,  SW9 8FR",Infatuation,51.46410669999999,-0.1162439
+829,The Union Tavern,"45 Woodfield Road, London, Greater London W9 2BA",Infatuation,51.52284539999999,-0.2013213
+830,Banh Mi Aha!,"39 Lamb's Conduit St, London, United Kingdom WC1N 3NG",Infatuation,51.5215283,-0.1184318
+831,The Best Broasted,"18-F The High Road, London,  NW10 2QD",Infatuation,51.5476178,-0.2262353
+832,Forza Win,"31 Camberwell Church Street, London, null SE5 8TR",Infatuation,51.4740516,-0.0902263
+833,Dive,"Margate Harbour Arm, Margate, England CT9 1AP",Infatuation,51.3909084,1.3783711
+834,Naroon,"65 Great Titchfield St, London, England W1W 7PS",Infatuation,51.5188554,-0.1409748
+835,Sale E Pepe,"9-15 Pavilion Rd, London, London SW1X 0HD",Infatuation,51.5004593,-0.1605042
+836,Tunisian Street Kitchen,"12 Lower Marsh, London, England SE1 7RJ",Infatuation,51.5003081,-0.1134295
+837,Vincenzo's Pizza,"42 High Street, Bushey, England WD23 3HL",Infatuation,51.64507889999999,-0.3669061
+838,Hiden,"Stable St, London,  N1C 4DR",Infatuation,51.535681,-0.1259788
+839,Antepliler Künefe & Patisserie,"443 Green Lanes, London, England N4 1HA",Infatuation,51.5792833,-0.09932669999999999
+840,Smiths of Smithfield,"67-77 Charterhouse St, Clerkenwell, Greater London EC1M 6HJ",Infatuation,51.5195218,-0.1027168
+841,Morito,"32 Exmouth Market, London, Greater London EC1R 4QE",Infatuation,51.5258169,-0.1090681
+842,Kurumaya,"74 - 75 Long Lane, London,  EC1A 9ET",Infatuation,51.51955359999999,-0.09894929999999999
+843,Pho Viet 101,"101 Stoke Newington High Street, London, Greater London N16 0PH",Infatuation,51.5599053,-0.0742311
+844,The Champion,"12-13 Wells St, Fitzrovia, Greater London W1T 3PA",Infatuation,51.51687829999999,-0.1372769
+845,Lina Stores King's Cross,"20 Stable Street, London,  N1C 4DR",Infatuation,51.5372028,-0.1249748
+846,The Proof,"Dalston Square, London, null E8 3BQ",Infatuation,51.5457256,-0.0738293
+847,Berber & Q,"Arch 338 Acton Mews, London, Greater London E8 4EA",Infatuation,51.5368711,-0.0758674
+848,Bengal Lancer,"253 Kentish Town Road, London, Greater London NW5 2JT",Infatuation,51.54846149999999,-0.1414811
+849,Lá Kitchen,"17 Clerkenwell Road, London, Greater London EC1M 5RD",Infatuation,51.5224896,-0.1015514
+850,Pizzeria Pappagone,"131 Stroud Green Rd, Stroud Green, Greater London N4 3PX",Infatuation,51.5695221,-0.1128439
+851,Greenwich Market,"5b Greenwich Market, London, Greater London SE10 9HZ",Infatuation,51.4815373,-0.0090864
+852,The Dover,"33 Dover St, London, England W1S 4NF",Infatuation,51.5088886,-0.14298
+853,Roof Garden,"19 Motcomb St, London, Greater London SW1X 8LB",Infatuation,51.4991723,-0.1572172
+854,Firin,"140 York Way, London, England N1 0AX",Infatuation,51.53676,-0.12185
+855,Bocconi,"5 Goldhawk Rd, London, Greater London W12 8QQ",Infatuation,51.5030311,-0.2234536
+856,Wild Flor,"Western Rd, Hove, East Sussex BN3 2BB",Infatuation,50.8254882,-0.1573913
+857,Yildiz Restaurant,"163 Blackstock Rd, Islington, Greater London N4 2JS",Infatuation,51.5612088,-0.09879629999999999
+858,Paul Rothe & Son Delicatessen,"35 Marylebone Lane, London, Greater London W1U 2NN",Infatuation,51.5168311,-0.1508054
+859,Hanar,"Arch 163 Peckham Rye, London, Greater London SE15 4ST",Infatuation,51.4609401,-0.0615144
+860,"The Hoxton, Holborn","199-206 High Holborn, London, England WC1V 7BD",Infatuation,51.5171816,-0.1221666
+861,Noci Battersea,"Battersea Power Station, London, United Kingdom SW11 8BN",Infatuation,51.4808137,-0.1405796
+862,Murger Han,"62 Eversholt Street, London, Greater London NW1 1DA",Infatuation,51.5294824,-0.1329246
+863,Xing Fu Tang,"29 Frith St, Soho, Greater London W1D 5LG",Infatuation,51.5127876,-0.1308256
+864,Papi,"1F Mentmore Terrace, London, Greater London E8 3DQ",Infatuation,51.5403742,-0.05728949999999999
+865,Patron,"Blackstock Rd, London, Greater London N5",Infatuation,51.5606594,-0.0985877
+866,Fine Cut Butchers,"51 Blue Anchor Lane, London, England SE16 3UL",Infatuation,51.4925813,-0.0628054
+867,El Guambra,"Castle Square, Southwark, London null",Infatuation,51.493806,-0.0977944
+868,Queen of Sheba,"12 Fortess Rd., London, Greater London NW5 2EU",Infatuation,51.5521959,-0.1406641
+869,Page Common Coffee House,"7-8 St Martin's Pl, London, England WC2N 4JH",Infatuation,51.50928330000001,-0.126639
+870,Pappa Ciccia,"41 Fulham High St, London, Greater London SW6 3JJ",Infatuation,51.47052919999999,-0.2103604
+871,Em Sherif,"Harrods, 135 Brompton Rd, London, null SW1X 7XL",Infatuation,51.4991812,-0.1629924
+872,Daniel's Bakery," Barnet, Greater London NW11 0DL",Infatuation,51.58545609999999,-0.2001597
+873,Namak Mandi,"25 Upper Tooting Rd, Tooting, Greater London SW17 7TS",Infatuation,51.4350642,-0.1607072
+874,The Tamil Crown,"16 Elia St, London, England N1 8DE",Infatuation,51.5320027,-0.1018477
+875,Kuro Coffee,"3 Hillgate St, London, Greater London W8 7SP",Infatuation,51.50858969999999,-0.1976056
+876,Dotori,"3 Stroud Green Road, London, Greater London N4 2DQ",Infatuation,51.5646755,-0.1051875
+877,Thai Tho,"20 High St Wimbledon, London, London SW19 5DX",Infatuation,51.4249917,-0.2170094
+878,Singapulah,"53 Shaftesbury Ave, London, England W1D 6LD",Infatuation,51.5115934,-0.1325373
+879,The Farrier,"Camden Stables Market, 87/88 North Yard, London,  NW1 8AH",Infatuation,51.5420455,-0.1469688
+880,Brickwood Coffee & Bread,"16 Clapham Common South Side, London, Greater London SW4 7AB",Infatuation,51.461184,-0.1383552
+881,B.J's Pie & Mash,"330 Barking Road, London, England E13 8HL",Infatuation,51.521274,0.0207211
+882,Paladar,"4-5 London Rd, London, Greater London SE1 6JZ",Infatuation,51.4981401,-0.104369
+883,Mullins Brasserie,"6 Market Pl, Margate, Kent CT9 1EN",Infatuation,51.3895733,1.3822993
+884,Costa Azul,"102 Rockingham St, Southwark, London SE1 6PG",Infatuation,51.495307,-0.09613669999999999
+885,La Salumeria,"184 Trafalgar Road, London, England SE10 9TZ",Infatuation,51.4851023,0.004995900000000001
+886,Gouqi,"25 Cockspur St, London, United Kingdom SW1Y 5BN",Infatuation,51.5074328,-0.1296542
+887,Gadz Coffee Shop,"44 Clifton Terrace, London,  N4 3JP",Infatuation,51.5664325,-0.1087271
+888,Dough Hands,"The Spurstowe Arms, 68 Greenwood Rd, London, England null",Infatuation,51.5453895,-0.0631891
+889,Koyn,"38 Grosvenor St, London, null W1K 4QA",Infatuation,51.51147169999999,-0.1490042
+890,Queen Of Sheba,"3-4 Bouverie Pl, London, England W2 1RE",Infatuation,51.5173978,-0.1716317
+891,VQ,"325 Fulham Rd, London, Greater London SW10 9QL",Infatuation,51.4863496,-0.1800105
+892,Dalston Superstore,"117 Kingsland High St, London, London E8 2PB",Infatuation,51.55010499999999,-0.0755077
+893,Nando's Gatwick,"London Road, Gatwick, England RH6",Infatuation,51.1453314,-0.1734977
+894,Exale Brewery and Taproom,"Uplands Business Park, London, United Kingdom null",Infatuation,51.5922241,-0.0410249
+895,Honey & Co Bloomsbury,"54 Lamb's Conduit Street, London, Greater London WC1N 3LW",Infatuation,51.5219606,-0.1182885
+896,Franco Manca Victoria,"9 Sir Simon Milton Square, 7 Victoria St, London,  SW1E 5DJ",Infatuation,51.4966332,-0.1417265
+897,Bisha,"544 Holloway Road, London, United Kingdom N7 6JP",Infatuation,51.559734,-0.121998
+898,The Clerkenwell Kitchen,"The Clerkenwell Workshops, 27-31 Clerkenwell Cl, Clerkenwell, Greater London EC1R 0AT",Infatuation,51.52420919999999,-0.1066913
+899,Made In Italy 3.0,"59 Northcote Road, London, Greater London E17 7EB",Infatuation,51.5844666,-0.0329365
+900,Yucatan Bar,"121 Stoke Newington Rd., Stoke Newington, Greater London N16 8BT",Infatuation,51.55594490000001,-0.0748359
+901,Common,"17 The Pavement, London, Greater London SW4 0HY",Infatuation,51.4619825,-0.1396225
+902,Ognisko,"55 Exhibition Rd, London, Greater London SW7 2PN",Infatuation,51.4990971,-0.1738865
+903,Taste Of Lahore,"Tigris House, 256 Edgware Road, London, United Kingdom W2 1DS",Infatuation,51.519336,-0.1685098
+904,El Pastor Battersea,"Circus Road West, London, England SW11 8EZ",Infatuation,51.4819473,-0.1460095
+905,Sudu,"30 Salusbury Rd, London, null NW6 6NL",Infatuation,51.5343487,-0.2048454
+906,Royal Vauxhall Tavern,"372 Kennington Lane, London, London SE11 5HY",Infatuation,51.4863391,-0.1217784
+907,Phat Phuc Noodle Bar,"151 Sydney St, Chelsea, Greater London SW3 6NT",Infatuation,51.4876875,-0.1691053
+908,Dory's,"24 High Street, Margate,  CT9 1DS",Infatuation,51.3890576,1.3799626
+909,Wright Brothers Spitalfields,"8a Lamb Street, Old Spitalfields Market, London,  E1 6EA",Infatuation,51.5201279,-0.0756728
+910,Yasar's Kitchen,"8 Blackhorse Lane, London, England E17 6HJ",Infatuation,51.5874089,-0.0402713
+911,Over Under Coffee,"181A Earls Court Road, London, Greater London SW5 9RB",Infatuation,51.4924062,-0.1929477
+912,Temple of Seitan,"103A Camley St, London, Greater London N1C 4PF",Infatuation,51.53792499999999,-0.1306326
+913,Empire Empire,"16 All Saints Road, London, United Kingdom W11 1HH",Infatuation,51.5179723,-0.2035558
+914,Tom's Pasta,"Hackney Downs Studios, 17 Amhurst Terrace, London, England E8 2BT",Infatuation,51.5547934,-0.06726979999999999
+915,Cuppacha Bubble Tea,"23 Newport Ct, London, Greater London WC2H 7JS",Infatuation,51.5118776,-0.1290286
+916,Sappho Meze Bar,"9 High St., Clapham, Greater London SW4 7TS",Infatuation,51.4649167,-0.1298846
+917,Rogues,"460 Hackney Rd, London, England E2 9EG",Infatuation,51.5321836,-0.05893399999999999
+918,Endo at the Rotunda,"101 Wood Lane, London, Greater London NW9 7NA",Infatuation,51.5729383,-0.251667
+919,Volta Do Mar,"13-15 Tavistock St, London, Greater London WC2E 7PS",Infatuation,51.5122866,-0.1204266
+920,The Woodbine,"215 Blackstock Road, London, England N5 2LL",Infatuation,51.5594586,-0.0983857
+921,Bleecker Burger,"205 Victoria St, Victoria, Greater London SW1E 5NE",Infatuation,51.4965135,-0.144651
+922,Nijū,"20 Berkeley St, London, England W1J 8EE",Infatuation,51.5088284,-0.1438313
+923,Anima e Cuore,"129 Kentish Town Rd, London, Greater London NW1 8PB",Infatuation,51.5445703,-0.1416316
+924,Princess of Wales,"22 Chalcot Rd, London, Greater London NW1 8LL",Infatuation,51.5402733,-0.153711
+925,Café Petiole,"South Wing, Somerset House, The Strand, London, England WC2R 1LA",Infatuation,51.511059,-0.117148
+926,Rowley's Restaurant,"113 Jermyn St, London, null SW1Y 6HJ",Infatuation,51.50890219999999,-0.1349479
+927,Esarn Kheaw,"314 Uxbridge Rd., Shepherds Bush, Greater London W12 7LJ",Infatuation,51.506434,-0.2321162
+928,Toklas Bakery,"1 Surrey St, London, United Kingdom WC2R 2ND",Infatuation,51.5120856,-0.115292
+929,Mouse Tail Coffee,"Arch 3, Deptford Railway Station, Deptford High St, London, United Kingdom SE8",Infatuation,51.4788823,-0.0267169
+930,The Camel,"277 Globe Rd, Bethnal Green, Greater London E2 0JD",Infatuation,51.5289286,-0.0520935
+931,Kibou Japanese Kitchen and Bar,"175-177 Northcote Road, London,  SW11 6QF",Infatuation,51.4540107,-0.1637411
+932,Big Smoke Taphouse & Kitchen,"London Gatwick Airport, Gatwick, England RH6 0NP",Infatuation,51.1579247,-0.1639171
+933,Yamas Deli,"Westfield London Shopping Centre, London,  W12 7GB",Infatuation,51.506045,-0.219061
+934,Romeo & Giulietta,"137 Albion Rd, London, Greater London N16 9JU",Infatuation,51.5573451,-0.0830622
+935,Pizza Sophia,"50 Tavistock Pl, King's Cross, Greater London WC1H 9RG",Infatuation,51.5256918,-0.1251232
+936,Diddy's,"69 Mare St, Greater London, Greater London E8 4RG",Infatuation,51.53675370000001,-0.0571303
+937,Oma,"2-4 Bedale St, London, England SE1 9AL","Infatuation, Timeout",51.505369,-0.08999159999999999
+938,Bobby Fitzpatrick,"273 West End Lane, London,  NW6 1QS",Infatuation,51.5505992,-0.191598
+939,Mood,"3 Artillery Row, London, United Kingdom SW1P 1RH",Infatuation,51.4971927,-0.1354323
+940,Spence Bakery,"Stoke Newington Church Street, N16, London, Greater London N16 0UL",Infatuation,51.5613162,-0.0824729
+941,Il Trillo,"4 Hollywood Rd, London, Greater London SW10 9HY",Infatuation,51.4858871,-0.1844168
+942,Bubala,"65 Commercial Street, London, Greater London E1 6BW",Infatuation,51.5178254,-0.0741521
+943,Rita's Chilli Chaat Corner,"Southall, London, null UB1 1QF",Infatuation,51.5117886,-0.3809762
+944,101 Thai Kitchen,"352 King St, Hammersmith, Greater London W6 0RX",Infatuation,51.4936292,-0.244128
+945,Arabica King's Cross,"7 Lewis Cubitt Walk, London,  N1C 4DT",Infatuation,51.5382831,-0.1249452
+946,Terry's Cafe,"158 Great Suffolk St, Greater London, Greater London SE1 1PE",Infatuation,51.5006806,-0.0983672
+947,The River Café Café,"Thames Wharf, London, England W6 9HA",Infatuation,51.4828761,-0.2232634
+948,Lasdun,"SE1 9PX, London, United Kingdom SE1 9PX",Infatuation,51.5068661,-0.1140601
+949,Wright Brothers,"26 Circus Village, London, Greater London SE11 8EZ",Infatuation,51.48179560000001,-0.1461537
+950,Kimura,"167 Priory Road, London, Greater London N8 8NB",Infatuation,51.5872068,-0.1325038
+951,Takahashi,"228 Merton Road, London,  SW19 1EQ",Infatuation,51.4163054,-0.1922745
+952,The Genet Cafe,"4 Victoria Rd, Greater London, Greater London N15 4PS",Infatuation,51.5841731,-0.067263
+953,Chick 'N' Sours,"390 Kingsland Rd, London, Greater London E8 2AA",Infatuation,51.5412469,-0.0760206
+954,Maureen's Brixton Kitchen,"52 Railton Road, London, England SE24 0LF",Infatuation,51.45885029999999,-0.1096509
+955,Beza Ethiopian Food,"8A Sayer St, London, Greater London SE17 1FH",Infatuation,51.4919146,-0.0963329
+956,Mario’s Cafe,"6 Kelly Street, London, Greater London NW 8PH",Infatuation,51.5457778,-0.1420962
+957,Ishbilia,"8-9 William St, Knightsbridge, Greater London SW1X 9HL",Infatuation,51.5017416,-0.1582549
+958,Arks of Deptford,"1 Deptford Broadway, London, United Kingdom SE8 4PA",Infatuation,51.4750392,-0.0258356
+959,The Three Crowns,"175 Stoke Newington High St, Stoke Newington, Greater London N16 0LH",Infatuation,51.5620834,-0.0738374
+960,The Royal Oak,"73 Columbia Rd, London, Greater London E2 7RG",Infatuation,51.52955009999999,-0.0692491
+961,Tavolino,"2 More London Riverside, London, Greater London SE1 2DB",Infatuation,51.5052017,-0.08053969999999999
+962,Kioku By Endo,"57 Whitehall, London, England SW1A 2BX",Infatuation,51.50564499999999,-0.1267055
+963,Fink's Salt And Sweet,"70 Mountgrove Road, London,  N5 2LT",Infatuation,51.56129620000001,-0.09636549999999999
+964,Bibi's Kitchen,"25 Rose St, London, England WC2E 9EA",Infatuation,51.51197310000001,-0.1261924
+965,Bottle + Rye,"404-406 Market Row, London SW9 8LD, Brixton, Greater London SW9 8LZ",Infatuation,51.4612794,-0.1156148
+966,Vijaya Krishna,"114 Mitcham Rd., London, Greater London SW17 9NG",Infatuation,51.4253574,-0.164696
+967,The Holy Tavern,"55 Britton St, London, London EC1M 5UQ",Infatuation,51.5217488,-0.1040539
+968,Bumbuu,"39 Station Road, London, England NW10 4UP",Infatuation,51.5336823,-0.2473551
+969,The Southampton Arms,"139 Highgate Rd, Highgate, Greater London NW5 1LE",Infatuation,51.5560675,-0.1462027
+970,Howl At The Moon,"178 Hoxton St, London, England N1 5LH",Infatuation,51.53311369999999,-0.0798227
+971,Brat x Climpson’s Arch,"374 Helmsley Place, London, Greater London E8 3SB",Infatuation,51.53957579999999,-0.05839340000000001
+972,Palmyra’s Kitchen,"N4 3JU, London, United Kingdom N4 3JU",Infatuation,51.5652524,-0.1082828
+973,Top Cuvée,"177B Blackstock Rd, London, Greater London N5 2LL",Infatuation,51.560801,-0.0982609
+974,Italo,"13 Bonnington Sq, London, Greater London SW8 1TE",Infatuation,51.48450279999999,-0.1203208
+975,Cromwell Place Café,"4 Cromwell Pl, London, England SW7 2JE",Infatuation,51.4950887,-0.1746188
+976,Acuarela,"62 Randolph St, London, United Kingdom NW1",Infatuation,51.54180100000001,-0.1368591
+977,Al Waha,"75 Westbourne Grove, London, Greater London W2 4UL",Infatuation,51.515262,-0.1920455
+978,Picnic Deli,"3 Northdown Parade, Price's Ave, Cliftonville, Margate CT9 2NR",Infatuation,51.3869618,1.3990946
+979,Arments Pie & Mash,"7 Westmoreland Rd, London, England SE17 2AX",Infatuation,51.4844319,-0.0930051
+980,Aso Rock Restaurant,"10 Bradbury Street, London,  N16 8JN",Infatuation,51.548767,-0.0766881
+981,Yasar Halim,"491 Green Lanes, London, England N4 1AL",Infatuation,51.5808887,-0.0996536
+982,Lucky Yu,"Hamilton Road, London, England E17 6EH",Infatuation,51.5931937,-0.0328452
+983,Parrillan At Barrafina,"Coal Drops Yard, King's Cross, London,  N1C 4AB",Infatuation,51.5360313,-0.1265524
+984,Heytea (Soho),"93-107 Wingate House, Shaftesbury Avenue, London, England W1D 5BT",Infatuation,51.5131071,-0.1293727
+985,Appetite London,"9 W Park Walk, East Village, London E20 1DH, London, England E20 1DH",Infatuation,51.5470056,-0.0104884
+986,Winter Garden Restaurant at The Landmark London,"222 Marylebone Road, London, England NW1 6JQ",Infatuation,51.5214552,-0.162636
+987,Trevi Italian Tiramisu,"29 Bute St, London, Greater London SW7 3EY",Infatuation,51.49379099999999,-0.1766677
+988,Natura,"30 Felstead St, Wick, Greater London E9 5LG",Infatuation,51.5440781,-0.028106
+989,Margate Off Licence,"1 Ethelbert Terrace, Margate, England CT9 1RX",Infatuation,51.39198340000001,1.3902174
+990,Pedro’s Wine Bar,"128 Druid St, London, England SE1 2HH",Infatuation,51.49854010000001,-0.0731251
+991,Dukes Bar,"35 St. James's Pl, London, Greater London SW1A 1NY",Infatuation,51.5055381,-0.1396885
+992,The Old Queens Head,"44 Essex Rd, London, Greater London N1 8LN",Infatuation,51.5372268,-0.1004112
+993,Okan South Bank,"Belvedere Road, London, England SE1",Infatuation,51.5036102,-0.1172992
+994,Chapter 72,"72 Bermondsey Street, London, Greater London SE1 3UD",Infatuation,51.50144299999999,-0.0822009
+995,Bird & Tie,"3 The Pavement, London, null SW4 7UD",Infatuation,51.46199780000001,-0.1378897
+996,Jin Kichi,"73 Heath St, London, Greater London NW3 6UF",Infatuation,51.5573021,-0.1783969
+997,The Midland Grand Dining Room,"St Pancras Renaissance Hotel, Euston Rd., London, NW1 2AR, London, England NW1 2AR",Infatuation,51.52973249999999,-0.1259119
+998,Foubert's,"2 Turnham Green Terrace, Chiswick, Greater London W4 1PP",Infatuation,51.4930385,-0.2551589
+999,Bandol,"6 Hollywood Rd, Kensington, Greater London SW10 9HY",Infatuation,51.48617100000001,-0.1846534
+1000,The Guildford Arms,"55 Guildford Grove, London, England SE10 8JY",Infatuation,51.4743434,-0.0149409
+1001,Llama Inn,"81 Great Eastern Street, London, England EC2A 3HU",Infatuation,51.5255266,-0.0829058
+1002,Half Cut Market,"396 York Way, London, England N7 9LW",Infatuation,51.548527,-0.1280388
+1003,Follow The Swirl,"12A King Street, Margate, England CT9 1DA",Infatuation,51.390002,1.3823143
+1004,Prince Of Peckham,"1 Clayton Rd, London, Greater London SE15 5JA",Infatuation,51.47364899999999,-0.0654251
+1005,Cafe Boheme,"13 Old Compton St, London, Greater London W1D 5JQ",Infatuation,51.51333109999999,-0.1305958
+1006,Antepliler Doner,"43 Grand Parade, London, Greater London N4 1AG",Infatuation,51.5795599,-0.0989451
+1007,The Pelican,"45 All Saints Rd, London, Greater London W11 1he",Infatuation,51.518799,-0.2046721
+1008,Da Terra,"8 Patriot Sq, London, England E2 9AN",Infatuation,51.53047979999999,-0.0557422
+1009,Lowcountry,"71 Nile Street, London, England N1 7RD",Infatuation,51.5295001,-0.08793859999999999
+1010,Sète,"238 Northdown Road, Margate, Kent CT9 2QD",Infatuation,51.38736309999999,1.3987588
+1011,Buk,"Castlehaven Road Hawley Wharf 1st floor Waterside Hall East, London NW1 8JZ, United Kingdom, London, Greater London NW1 8TT",Infatuation,51.53146839999999,0.1619994
+1012,Jolene,"21 Newington Green, London, Greater London N1 4RG",Infatuation,51.5513088,-0.0844365
+1013,The Sun Tavern,"441 Bethnal Green Rd, London, Greater London E2 0AN",Infatuation,51.5273017,-0.0584114
+1014,Sichuan Popo,"35 Earls Court Road, London, England W8 6ED",Infatuation,51.4977512,-0.197528
+1015,Running Late Coffee,"249B Mare Street, London, England E8 3NS",Infatuation,51.5425802,-0.05545369999999999
+1016,Buoy And Oyster,"44 High St, Margate, Kent CT9 1DS",Infatuation,51.3885457,1.3799139
+1017,Mihan,"104 Highbury Park, London, England N5 2XE",Infatuation,51.5579481,-0.0983579
+1018,Caphe House,"null, London, Greater London SE1 3DG",Infatuation,51.49862479999999,-0.0772718
+1019,Enish,"330A Coldharbour Ln, London,  SW9 8QH",Infatuation,51.4629479,-0.1082711
+1020,Polka Kitchen,"Unit 25 Dickens Yard, London, null W5 2TD",Infatuation,51.5135142,-0.3054638
+1021,Jaffna House,"90 Tooting High St, London , null SW17 0RN",Infatuation,51.4268884,-0.1695407
+1022,Oren,"89 Shacklewell Lane, London, London E8 2EB",Infatuation,51.5526631,-0.0706517
+1023,Dilpasand Restaurant,"111-113 Commercial Road, London, Greater London E1 1RD",Infatuation,51.5149943,-0.0638818
+1024,Arancini Brothers,"115 Kentish Town Rd, London, Greater London NW1 8PB",Infatuation,51.5442993,-0.1417438
+1025,Grasso,"81 Dean St, London, England W1D 3SW",Infatuation,51.515137,-0.1335857
+1026,Kindling,"69 East Street, Brighton BN1 1HQ, Brighton, East Sussex BN1 1HQ",Infatuation,50.8203268,-0.1391523
+1027,Kissa Wa Café,"15 Corsica Street, London, England N5 1JT",Infatuation,51.5478113,-0.101202
+1028,Tao Tao Ju,"15 Lisle St, London, England WC2H 7BE",Infatuation,51.5115163,-0.1306887
+1029,Quaglino's,"16 Bury St, Mayfair, Greater London SW1Y 6AJ",Infatuation,51.5074651,-0.1389614
+1030,Chamisse,"55 Grays Inn Rd., London, Greater London WC1X 8PP",Infatuation,51.5221772,-0.1139637
+1031,Japes,"15 Nelson Road, London, England SE10 9JB",Infatuation,51.4808197,-0.008944299999999999
+1032,Colina Restaurant,"18 Fort Road, Margate, England CT9 1HF",Infatuation,51.3909964,1.3830941
+1033,Bab Al-Yemen,"236 North End Road, London, England W14 9NU",Infatuation,51.48553769999999,-0.2027785
+1034,Yatay,"21 Wardour St, London, Greater London W1D 6PN",Infatuation,51.5110349,-0.1320274
+1035,Zen Washoku,"Unit 10, Nag's Head Market, 22 Seven Sisters Road, London, Greater London N7 6AG",Infatuation,51.5583333,-0.1183333
+1036,El Pastor,"7 Stoney Street, London, Greater London SE1",Infatuation,51.5052741,-0.0911297
+1037,Watch House Tower Bridge,"37 Shad Thames, London,  SE1 2NJ",Infatuation,51.5037657,-0.0746574
+1038,The Hive of Vyner St,"286-290 Cambridge Heath Rd, London, Greater London E2 9DA",Infatuation,51.53359589999999,-0.0571089
+1039,Café Britaly,"191 Rye Lane, London, England SE15 4TP",Infatuation,51.4679422,-0.0668956
+1040,Anda House,"87 Ealing Road, Wembley, England HA0",Infatuation,51.5473969,-0.2972306
+1041,Mohsen,"152 Warwick Road, London, England W14 8PS",Infatuation,51.4951436,-0.2029294
+1042,Crispin at Studio Voltaire,"1A Nelsons Row, London, England SW4 7JR",Infatuation,51.4619157,-0.1342092
+1043,Danclair's,"67-68 Granville Arcade, London,  SW9 8PS",Infatuation,51.4624931,-0.1118135
+1044,Officina 00,"152 Old Street, London,  EC1V 9BW",Infatuation,51.5250871,-0.0913273
+1045,The Herne Tavern,"2 Forest Hill Rd, East Dulwich, Greater London SE22 0RR",Infatuation,51.45409739999999,-0.0632047
+1046,Hutong,"Level 33 The Shard, 31 St. Thomas Street, London, Greater London SE1 9RY",Infatuation,51.50431,-0.0867845
+1047,Bánh Mì Hội-An,"242 Graham Rd, London, Greater London E8 1BP",Infatuation,51.5465613,-0.0555605
+1048,Dalloway Terrace,"16-22 Great Russell St, Bloomsbury, Greater London WC1B 3NN",Infatuation,51.51711359999999,-0.128892
+1049,Yashin Sushi,"1A Argyll Rd., London, Greater London W8 7DB",Infatuation,51.5005817,-0.1954978
+1050,Sabor Peruano,"103 Newington Butts, London, Greater London SE1 6SF",Infatuation,51.49260169999999,-0.1009553
+1051,Ice Cream Union,"Unit 1 Discovery Business Park, St James's Road, Southwark, London SE16 4RA",Infatuation,51.4957731,-0.0659477
+1052,Cecconi's,"27 Poultry, London, Greater London EC2R 8AJ",Infatuation,51.5139059,-0.08961319999999999
+1053,Princess Louise,"208 High Holborn, Holborn, Greater London WC1V 7BW",Infatuation,51.5173267,-0.1215879
+1054,The Umbrella Workshop,"10 Cleeve Workshops, London, Greater London E2 7JD",Infatuation,51.52624059999999,-0.07709669999999999
+1055,Dosa Street,"87 Ealing Road, Wembley, England HA0 4BN",Infatuation,51.5473969,-0.2972306
+1056,Noble Rot Mayfair,"5 Trebeck St, London, United Kingdom W1J 7LT",Infatuation,51.50649809999999,-0.1471595
+1057,Padella,"6 Southwark St, London, Greater London SE1 1TQ",Infatuation,51.5051001,-0.0899709
+1058,Knoops,"1 George St, Richmond, England TW9 1JY",Infatuation,51.45961519999999,-0.306142
+1059,Max's Sandwich Shop,"19 Crouch Hill, Crouch End, Greater London N4 4AP",Infatuation,51.5707276,-0.1164285
+1060,Four Seasons Hotel London At Ten Trinity Square,"10 Trinity Square, London,  EC3N 4AJ",Infatuation,51.5098378,-0.0774324
+1061,Milk,"20 Bedford Hill, ,  SW12 9RG",Infatuation,51.4444691,-0.1508229
+1062,Brooklands By Claude Bosi,"1 Grosvenor Pl, London, England SW1X 7HJ",Infatuation,51.5017541,-0.1518136
+1063,Passyunk Avenue," London, Greater London E20 1EE",Infatuation,51.54411990000001,-0.0088674
+1064,Mixed Blessings Bakery,"118 Mitcham Road, Tooting, Greater London S W17",Infatuation,51.4250434,-0.1641872
+1065,Trejo’s Tacos,"299 Portobello Road, London, England W10 5TD",Infatuation,51.51922760000001,-0.2077699
+1066,Tayyabs,"83-89 Fieldgate St, Whitechapel, Greater London E1 1JU",Infatuation,51.5172403,-0.0634757
+1067,Cafe Mama Pho,"24 Evelyn St, London, United Kingdom SE8 5DG",Infatuation,51.4889371,-0.0406568
+1068,Sichuan Folk,"32 Hanbury St, London, Greater London E1 6QR",Infatuation,51.52015950000001,-0.0724112
+1069,Roti King Waterloo,"97 Lower Marsh, London, England SE1 7AB",Infatuation,51.5013828,-0.1118438
+1070,Sweetings,"39 Queen Victoria St., London, Greater London EC4N 4SF","Infatuation, Timeout",51.5124824,-0.0927224
+1071,The Morgan Arms,"43 Morgan St, London, Greater London E3 5AA",Infatuation,51.5279201,-0.031063
+1072,Sakonis,"127-129 Ealing Road, Wembley, England HA0 4BP",Infatuation,51.5455083,-0.2968194
+1073,Plaquemine Lock,"139 Graham St, ,  N1 8LB",Infatuation,51.532637,-0.10055
+1074,Hiba Express,"113 High Holborn, London, Greater London WC1V 6JQ",Infatuation,51.517838,-0.1197823
+1075,Compose Coffee,"15 Whitcomb Street, London, England WC2H 7HA",Infatuation,51.50876650000001,-0.1303647
+1076,Banh Mi Town,"29 Hanson Street, London, Greater London null",Infatuation,51.52031179999999,-0.1407616
+1077,Arcade Food Hall Battersea,"Battersea Power Station, 330 The Power Station, Circus Rd S, London, England SW11 8DD",Infatuation,51.4818235,-0.1443983
+1078,La Barra,"147, Eagle Yard Arch, Walworth, London,  SE1  6SP",Infatuation,51.4928762,-0.0990875
+1079,Lahpet,"58 Bethnal Green Road, London,  E1 6JW",Infatuation,51.524154,-0.0729949
+1080,FM Mangal,"54 Camberwell Church St, Camberwell, Greater London SE5 8QZ",Infatuation,51.4736519,-0.0894914
+1081,14 Hills,"120 Fenchurch St, London, Greater London EC3M 5JJ",Infatuation,51.5123926,-0.08120899999999999
+1082,Bennys Broadway,"51 Broadway Market, London, England E8 4PH",Infatuation,51.5370532,-0.0616772
+1083,Fitz's,"1-8 Russell Sq, London, Greater London WC1H 0DB",Infatuation,51.5226841,-0.1247126
+1084,Danieru Sushi,"13 Cale Street, London, England SW3 3QS",Infatuation,51.4904741,-0.1664462
+1085,Lahore Kebab House,"2 Umberston St, Whitechapel, Greater London E1 1PY",Infatuation,51.51461339999999,-0.062942
+1086,Voodoo Chicken,"Lower Marsh, London, England SE1",Infatuation,51.5008831,-0.1126816
+1087,Three Sheets Soho,"13 Manette St, London, England W1D 4AP",Infatuation,51.51474349999999,-0.130965
+1088,Roti Stop,"36B Stamford Hill, London,  N16 6XZ",Infatuation,51.56504289999999,-0.0729076
+1089,El Cenote,"2 Inverness Street, London, England NW1 7HJ",Infatuation,51.5397689,-0.1436352
+1090,Scott's,"20 Mount Street, London, Greater London W1K 2HE",Infatuation,51.5098891,-0.1508911
+1091,Homies On Donkeys,"686 High Road Leytonstone, London, Greater London E11 3AA",Infatuation,51.5690136,0.0120631
+1092,Temaki,"12 Market Row, London,  SW19 8LB",Infatuation,51.46195489999999,-0.1134287
+1093,Sambal Shiok,"171 Holloway Road, London, Greater London N7 8JE","Infatuation, Timeout",51.54988239999999,-0.1089787
+1094,South London Louie,"67 Peckham Road, London, England SE5 8UH",Infatuation,51.4742456,-0.07964299999999999
+1095,Arches Cafe E2,"202 Three Colts Lane, London, Greater London E2 6JN",Infatuation,51.5243057,-0.05773089999999999
+1096,Straker's,"91 Golborne Road, London, United Kingdom W10 5NL",Infatuation,51.5215206,-0.2087091
+1097,Vauxhall Food & Beer Garden,"6A S Lambeth Pl, London,  SW8 1SP",Infatuation,51.485904,-0.1236695
+1098,Caravan Bankside,"30 Great Guildford Street, London,  SE1 0HS",Infatuation,51.5045827,-0.0970634
+1099,Cloth,"44 Cloth Fair, London, England EC1A 7JQ",Infatuation,51.518895,-0.1000822
+1100,Samad Al Iraqi,"284 Kenbrook House, Kensington High St, London, England W14 8NY",Infatuation,51.4982124,-0.2020286
+1101,Homeboy,"108 Essex Road, London, England N1 8LX",Infatuation,51.5389323,-0.0982835
+1102,Little Baobab,"95A Rye Lane, London, England SE15 4ST",Infatuation,51.4708982,-0.06748019999999999
+1103,Gopal’s Corner Victoria,"Market Halls, 191 Victoria St, London, United Kingdom SW1E 5NE",Infatuation,51.4963701,-0.1443178
+1104,Chai Thali,"146 Wandsworth Brg Rd, London , null SW6 2UH",Infatuation,51.4717976,-0.1916724
+1105,Zheng,"4 Sydney St, London, United Kingdom SW3 6PP",Infatuation,51.4915556,-0.171814
+1106,Taiyakiya,"20 Newport Ct, London, Greater London WC2H 7PQ",Infatuation,51.5119038,-0.1288899
+1107,Carlotta,"77 Marylebone High St, London, United Kingdom W1U 5JX",Infatuation,51.520972,-0.1521222
+1108,Jumbi,"Unit 4.1, Copeland Park, 133 Copeland Rd, London, Greater London SE15 3SN",Infatuation,51.470019,-0.06627129999999999
+1109,One Love Kitchen,"9A Crouch Hill, London,  N4 4AP",Infatuation,51.5706822,-0.1160984
+1110,Caviar House & Prunier,"London Gatwick Airport, Gatwick, England RH6 0NP",Infatuation,51.1579247,-0.1639171
+1111,Kissaten,"72 Old Compton Street, London, England W1D 4UN",Infatuation,51.5126594,-0.1329339
+1112,Daquise,"20 Thurloe St, Queen's Gate, Greater London SW7 2LT",Infatuation,51.4944238,-0.1733661
+1113,Yashin Ocean House,"117-119 Old Brompton Rd, Queen's Gate, Greater London SW7 3RN",Infatuation,51.4910723,-0.1804015
+1114,Skylight Rooftop Bar,"Pennington St, London, Greater London E1W 2SF",Infatuation,51.5087858,-0.0608332
+1115,Guanabana,"85 Kentish Town Rd, London, Greater London Nw1 8ny",Infatuation,51.5433457,-0.1420047
+1116,Emy's Kitchen,"21 Crouch Hill, London, England N4 4AP",Infatuation,51.5706822,-0.1165483
+1117,Charlie's,"59 Virginia Road, London, null E2 7NF",Infatuation,51.5274,-0.0738004
+1118,Quality Wines,"88 - 94 Farringdon Road, London, Greater London EC1R 3EA",Infatuation,51.5247229,-0.1099478
+1119,Jerk Yard,"Arch 10, 4 Market Yard, London, United Kingdom SE8 4BX",Infatuation,51.4785786,-0.0268644
+1120,The Nags Head,"9 Orford Road, London, United Kingdom E17 9LP",Infatuation,51.5840717,-0.0111265
+1121,Tram Store,"38 Upper Clapton Rd, London, Greater London E5 8BQ",Infatuation,51.5598433,-0.0558406
+1122,Shawarma Bar,"46 Exmouth Market, London, Greater London EC1R 4QE",Infatuation,51.5259783,-0.1086809
+1123,Sushi Tetsu,"12 Jerusalem Passage, London, Greater London EC1V 4JP",Infatuation,51.5233159,-0.1040501
+1124,Streets,"220-228 Northdown Road, Cliftonville West Ward, Margate CT9 2RP",Infatuation,51.3874633,1.3982302
+1125,The Shoap,"406 St John St, London, England EC1V 4ND",Infatuation,51.5311588,-0.1058173
+1126,Josephine Bouchon,"315 Fulham Road, London, England SW10 9QH",Infatuation,51.4865618,-0.1794704
+1127,Milk Beach," London, Greater London NW6 6RA",Infatuation,51.537065,-0.2035405
+1128,Ishtar,"10-12 Crawford St, London, Greater London W1U 6AZ",Infatuation,51.5201672,-0.1582677
+1129,Dalla,"120 Morning Lane, London, England E9 6LH",Infatuation,51.54699309999999,-0.0494932
+1130,Yamagoya,"49 The Cut, London, Greater London SE1 8LF",Infatuation,51.5029791,-0.1070295
+1131,Patio Pizza,"53 Cambridge Road, Kingston Upon Thames, England KT1 3NS",Infatuation,51.4084788,-0.2851632
+1132,Bar Daskal,"Borough Yards, South Bank, Greater London SE1 9DG",Infatuation,51.505783,-0.09192299999999999
+1133,The Exhibit,"12 Balham Station Rd., Balham, Greater London SW12 9SG",Infatuation,51.4433096,-0.1514068
+1134,Azou,"375 King St, London, Greater London W6 9NJ",Infatuation,51.4933218,-0.243191
+1135,Bokan 39 (Bokan),"40 Marsh Wall, London, Greater London E14 9TP",Infatuation,51.50119429999999,-0.0232983
+1136,Shalamar Kebab House,"95 New Rd, London, Whitechapel E1 1HH",Infatuation,51.5171925,-0.0626729
+1137,Coach & Horses,"42 Wellington St, London, England WC2E 7BD",Infatuation,51.5125697,-0.1208983
+1138,Trap Kitchen Camden,"74 - 75 Chalk Farm Road, London, Greater London NW1 8AN",Infatuation,51.5434598,-0.1510489
+1139,Maries Thai Cafe,"90 Lower Marsh, London, Greater London SE1 7AB",Infatuation,51.5015165,-0.1114336
+1140,Thali,"166 Old Brompton Road, London, London SW5",Infatuation,51.4909294,-0.1835893
+1141,Taca Tacos,"Deptford Market Yard, London, United Kingdom SE8",Infatuation,51.4783807,-0.0267939
+1142,Chew Fun,"3 Bell Ln, London,  E1 7LA",Infatuation,51.5168703,-0.07548379999999999
+1143,Adulis,"44 Brixton Rd, London, Greater London SW9 6BT",Infatuation,51.4794864,-0.1118945
+1144,Stag City,"291 Finchley Road, London, Greater London NW3 6ND",Infatuation,51.5493873,-0.1819298
+1145,Bronek's Fish Restaurant,"149 Northfield Ave, London, Greater London W13 9QT",Infatuation,51.5025807,-0.3162384
+1146,The Lighthouse,"441 Battersea Park Rd, London, Greater London SW11 4LR",Infatuation,51.4726455,-0.1625879
+1147,Mud,"141 Mitcham Rd, London, Greater London SW17 9PE",Infatuation,51.4249336,-0.1635191
+1148,Sub Rosa,"24 King Street, Margate, England CT9 1DA",Infatuation,51.3898936,1.3828346
+1149,Koji,"58 New King's Road, London, Greater London SW6 4LS",Infatuation,51.4725999,-0.2012522
+1150,Oranj ,"14 Bacon Street, London, null E1 6LF",Infatuation,51.52395569999999,-0.07203609999999999
+1151,Juniper & Co,"North Terminal, Gatwick, England null",Infatuation,51.1604723,-0.1778582
+1152,Naija High Street,"Lower Marsh Market, London, United Kingdom SE1 7AB",Infatuation,51.5012091,-0.1119428
+1153,Sumi,"157 Westbourne Grove, London,  W11 2RS",Infatuation,51.51465870000001,-0.1965329
+1154,Taste Of Yemen,"17 High St, London, England W3 6NG",Infatuation,51.5063583,-0.2647477
+1155,Seabird,"40 Blackfriars Road, 14th Floor, South Bank, Southwark, London, Greater London SE1 8PB",Infatuation,51.5058894,-0.1048681
+1156,Whipped London,"65 Brixton Village, Brixton, Greater London null",Infatuation,51.4624931,-0.1118135
+1157,Pasero,"120a W Green Rd, London , null N15 5AA",Infatuation,51.5853146,-0.0783106
+1158,Chet's,"65 Shepherd's Bush Green, London, United Kingdom W12 8QE",Infatuation,51.5047417,-0.2248481
+1159,Bambi,"Netil House, 1 Westgate St, London, England E8 3RL",Infatuation,51.5375837,-0.0577234
+1160,Amarte,"10 Cale Street, London, England SW3 3QU",Infatuation,51.4904005,-0.1664981
+1161,Signature Brew,"Uplands Business Park, London, Greater London E17",Infatuation,51.5922241,-0.0410249
+1162,Florencio Pizza,"14 Seymour Pl, London, England W1H 7NF",Infatuation,51.5148873,-0.1609722
+1163,The George Tavern,"373 Commercial Road, London,  E1 0LA",Infatuation,51.5143314,-0.05302
+1164,Mezza Me,"432 Coldharbour Lane, London, Greater London SW9 8FN",Infatuation,51.4615988,-0.1143563
+1165,The Wheatsheaf,"2 Upper Tooting Rd, London, Greater London SW17 7PG",Infatuation,51.4356878,-0.1599126
+1166,WatchHouse Covent Garden,"28-29 Southampton St, London, Greater London WC2E 7PG",Infatuation,51.5111047,-0.1224397
+1167,Isla Ray,"37 Deptford High St, London, Greater London SE8 4AD",Infatuation,51.475921,-0.0261489
+1168,The Begging Bowl,"168 Bellenden Rd, Peckham, Greater London SE15 4BW",Infatuation,51.4673352,-0.0726136
+1169,Flute,"20 Broadwick Street, London, England W1F 8HT",Infatuation,51.5138372,-0.135404
+1170,Forza Wine,"133a Rye Ln, London, Greater London SE15 4ST",Infatuation,51.469811,-0.06821239999999999
+1171,Bombay Palace,"50 Connaught Street, London, Greater London W2 2AA",Infatuation,51.5142919,-0.1677399
+1172,Gola Restaurant,"787 Fulham Rd, London, Greater London SW6 5HD",Infatuation,51.4761585,-0.2045043
+1173,The Lighterman,"3 Granary Sq, London, Greater London N1C 4BH",Infatuation,51.5352933,-0.1243555
+1174,Esters,"55 Kynaston Rd, Stoke Newington, Greater London N16 0EB",Infatuation,51.560026,-0.0780149
+1175,Someday,"6 City N Pl, London, Greater London N4 3JU",Infatuation,51.5646706,-0.1074768
+1176,Fallow,"52 Haymarket, London, Greater London SW1Y 4RP",Infatuation,51.509284,-0.1330166
+1177,Walthamstow Trades Hall,"61-63 Tower Hamlets Road, London, England E17 4RQ",Infatuation,51.5889663,-0.0192377
+1178,Unwined In Waterloo,"137 Lower Marsh, London, Greater London SE1 7AF",Infatuation,51.50020960000001,-0.1141453
+1179,Falafel & Shawarma,"27 Camberwell Church St, London, Greater London SE5 8TR",Infatuation,51.4740261,-0.0902972
+1180,Bank of Friendship,"224 Blackstock Road, Highbury, Greater London N5 1EA",Infatuation,51.558481,-0.0985718
+1181,Hawker's Kitchen,"64 Caledonian Rd, London,  N1 9DP",Infatuation,51.53246,-0.1198381
+1182,Pollini at Ladbroke Hall,"79 Barlby Road, London, England W10 6AZ",Infatuation,51.5232509,-0.2201255
+1183,Hong Kong Restaurant,"Upper Street, London, Greater London N1 2TU",Infatuation,51.5384781,-0.1023115
+1184,Beluga Restaurant & Bar,"147 Notting Hill Gate, London, England W11 3LF",Infatuation,51.5084718,-0.1998662
+1185,The Dusty Knuckle Harringay,"429 Green Lanes, London,  N4 1HA",Infatuation,51.578876,-0.0994588
+1186,Mangal 1,"10 Arcola St, London, Greater London E8 2DJ",Infatuation,51.5519714,-0.0742467
+1187,Gong Cha Goodge Street,"22 Goodge Street, London, England W1T 2QE",Infatuation,51.5198293,-0.1349247
+1188,London Chocolate,"17 Connaught St, London, England W2 2AY",Infatuation,51.5145444,-0.1651088
+1189,Nico's Bar,"Unit 1-28 Echo Building East Bay Lane, London, England E15 2SJ",Infatuation,51.5450473,-0.0214128
+1190,Melt Chocolates,"59 Ledbury Road, London, England W11 2AA",Infatuation,51.5141413,-0.1992833
+1191,Abu Afif,"352 Edgware Road, London, United Kingdom NW8",Infatuation,51.5212195,-0.1714995
+1192,Paddy Cakes,"129 Fortess Road, London, England NW5 2HR",Infatuation,51.5559441,-0.139352
+1193,Dawat Restaurant & Take Away,"200 Upper Tooting Road, Wandsworth, Greater London null",Infatuation,51.431311,-0.1649183
+1194,Franco Manca Brixton,"4 Market Row, Brixton, Greater London SW9 8LD",Infatuation,51.4617538,-0.1132681
+1195,Kkini,"131 Fortess Road, London, England NW5 2HR",Infatuation,51.5559923,-0.1393166
+1196,Le Relais De Venise L'Entrecôte,"120 Marylebone Ln, Marylebone, Greater London W1U 2QG",Infatuation,51.5182181,-0.1510784
+1197,Italia Uno,"91 Charlotte Street, London, Greater London W1T 4PX",Infatuation,51.5205038,-0.1371097
+1198,Pilpel,"38 Brushfield St., London, Greater London E1 6AT",Infatuation,51.5189454,-0.0771198
+1199,With Milk,"124 Philip Lane, London, Greater London N15 4JP",Infatuation,51.5895196,-0.0765763
+1200,Lahore Karahi,"1 Tooting High St, Tooting, Greater London SW17 0SN",Infatuation,51.4295578,-0.1661655
+1201,Duke of Wellington,"260 Haggerston Rd, London, Greater London E8 4EP",Infatuation,51.54015159999999,-0.0745792
+1202,The Black Cab Coffee Co,"1 Riverlight Quay, Battersea, Greater London SW11 8AU",Infatuation,51.4824742,-0.1363204
+1203,The Duke of Sussex,"75 South Parade, Chiswick, Greater London W4 5LF",Infatuation,51.49658669999999,-0.2641703
+1204,No Drama.,"199 Old Oak Road, London, null W3 7HH",Infatuation,51.5133973,-0.2486718
+1205,Leo’s,"59 Chatsworth Road, London, United Kingdom E5 0LH",Infatuation,51.5534389,-0.04493929999999999
+1206,Authentique,"114a - 116 Fortess Road, London,  NW5 2HL",Infatuation,51.5555543,-0.1392292
+1207,The Wild Card Brewery Barrel Store,"Shernhall St, Waltham Forest, London E17",Infatuation,51.5846425,-0.0075965
+1208,Dammikas Sri Lankan Restaurant Victoria,"3 Lower Grosvenor Place, Victoria, London, Greater London SW1W 0EJ",Infatuation,51.4980594,-0.1443889
+1209,The Cavendish,"35 New Cavendish Street, London, England W1G 9TR",Infatuation,51.5190406,-0.1498659
+1210,Brothers Cafe & Restaurant,"552 High Rd, London,  N17 9SY",Infatuation,51.5952042,-0.06886289999999999
+1211,Yamany Corner,"8-9 Sale Pl, London, England W2 1PH",Infatuation,51.5179311,-0.1699439
+1212,Coal Shed,"One Tower Bridge, 4 Crown Square, London, Greater London SE1 2RZ",Infatuation,51.5035386,-0.0770073
+1213,Canova Hall,"250 Ferndale Rd, London, Greater London SW9 8BQ",Infatuation,51.464083,-0.1152698
+1214,Bento Ramen,"29-31 Parkway, London, Greater London NW1 7PN",Infatuation,51.5383237,-0.1440411
+1215,Reem's,"3 Brixton Station Road, London, England SW9 8PA",Infatuation,51.4635454,-0.114212
+1216,Daebak,"Herbert House, 316-318 Kennington Lane, London, Greater London SE11 5HY",Infatuation,51.4864875,-0.1194274
+1217,Viet Alley,"207 Deptford High St, London, United Kingdom SE8 3NT",Infatuation,51.4807561,-0.0265592
+1218,Giacobazzi's Delicatessen,"150 Fleet Rd, London,  NW3 2QX",Infatuation,51.5540251,-0.164305
+1219,F. Mondays,"112a Brixton Hill, London,  SW2 1AH",Infatuation,51.4539707,-0.1204992
+1220,The Black Pig,"Borough Market Kitchen, Winchester Walk, London, England SE1 9AG",Infatuation,51.50608339999999,-0.0905566
+1221,The Elder Press Cafe,"3 South Black Lion Lane, London, England W6 9TJ",Infatuation,51.4901863,-0.2420918
+1222,East London Liquor Company,"221 Grove Road, London, Greater London E3 5SN",Infatuation,51.5320142,-0.0413387
+1223,Carmona Steak & Tapas,"91 High Street Wimbledon, Merton, London SW19 5EG",Infatuation,51.4248023,-0.2162558
+1224,Sunny Beach ,"8 Westbury Avenue, London, null N22 6BN",Infatuation,51.5908556,-0.1022445
+1225,Terroni of Clerkenwell,"Clerkenwell Road, London,  null",Infatuation,51.5223117,-0.1056328
+1226,M&D Japanese,"117 Deptford High St, London, United Kingdom SE8 4NS",Infatuation,51.4778141,-0.0261058
+1227,From The Ashes BBQ,"Unit 19, London, Greater London E3 2NT",Infatuation,51.5473846,-0.0520719
+1228,Autograf,"488 West Green Rd, West Green, Greater London N15 3DA",Infatuation,51.5877954,-0.09912589999999999
+1229,Veg & Tings,"4 Granville Arcade, Brixton Village, London, England SW9 8PR",Infatuation,51.4624931,-0.1118135
+1230,Pham Sushi,"Heron, 5 Moor Lane, London, Greater London EC2Y 9AP",Infatuation,51.5199554,-0.09011179999999999
+1231,Akub,"27 Uxbridge St, London, United Kingdom W8 7TQ","Infatuation, Timeout",51.5084652,-0.1983637
+1232,Casse-Croûte,"109 Bermondsey St, London, Greater London SE1 3XB",Infatuation,51.5005326,-0.0815909
+1233,Angela's,"21 The Parade, Margate, Kent CT9 1EX",Infatuation,51.3893782,1.3805885
+1234,F.K.A.B.A.M,"156 Canonbury Rd, London, Greater London N1 2UP",Infatuation,51.5459125,-0.1019831
+1235,Tsiakkos & Charcoal,"5 Marylands Road, London, England W9 2DU","Infatuation, Timeout",51.5234337,-0.194632
+1236,Salt Leicester Square,"20-21 Leicester Square, London, England WC2H 7JX",Infatuation,51.5107606,-0.1294865
+1237,Ferry Boat Inn Tottenham,"Ferry Lane, London, England N17 9NG",Infatuation,51.5875625,-0.0555292
+1238,Boulestin,"5 St. James's St, London, Greater London SW1A 1EF",Infatuation,51.50566509999999,-0.1381516
+1239,Bready Delights,"The Avenue, Brighton, East Sussex BN2 4FZ",Infatuation,50.8465465,-0.1149096
+1240,Carmelli Bakery,"116A Golders Green Rd., London, Greater London NW11 8HB",Infatuation,51.57387199999999,-0.2005099
+1241,Cafe Mai,"4 Schwartz Wharf, London, England E9 5AA",Infatuation,51.5418098,-0.0224453
+1242,The Watch House,"199 Bermondsey St, London, Greater London SE1 3UW",Infatuation,51.4980106,-0.0812388
+1243,Blackhorse Workshop Cafe,"1-2 Sutherland Road Path, London, Greater London E17 6BX",Infatuation,51.591601,-0.0390717
+1244,Sporting Clube De Londres,"27 Elkstone Road, London, London W10 5NT",Infatuation,51.5222965,-0.202793
+1245,Kung Fu Burger,"104 Shaftesbury Avenue, London, England W1D 5EF",Infatuation,51.5122479,-0.130987
+1246,Mambow,"78 Lower Clapton Road, London, England E5 0RN","Infatuation, Timeout",51.5528436,-0.0527743
+1247,Efes,"1 Whitechapel Rd, Whitechapel, Greater London E1 6TY",Infatuation,51.51641979999999,-0.06923019999999999
+1248,Mae + Harvey,"414 Roman Rd, London, Greater London E3 5LU",Infatuation,51.5317843,-0.0351723
+1249,The Bagel Guys,"Netil Market, 13-23 Westgate Street, London, Greater London E8 3RL",Infatuation,51.53754379999999,-0.0588714
+1250,Yasmin Soho,"1 Warwick Street, London, England W1B 5LR",Infatuation,51.51067090000001,-0.137565
+1251,Formative,"4 Butler Pl, London, Greater London SW1H 0RH",Infatuation,51.49793210000001,-0.1348943
+1252,Junction Tavern,"101 Fortess Road, London, Greater London NW5 1AG",Infatuation,51.55507859999999,-0.1399959
+1253,The Stag,"67 Fleet Rd, London, Greater London NW3 2QU",Infatuation,51.5533008,-0.1616295
+1254,Frequency,"Camden Passage, London, Greater London N1 8EG",Infatuation,51.5347317,-0.1039693
+1255,Turpan Uyghur Restaurant,"108 Great Russell St, London, Greater London WC1B 3NA",Infatuation,51.5175051,-0.1292986
+1256,Scarfes Bar,"252 High Holborn, London, Greater London WC1V 7EN",Infatuation,51.5176982,-0.1178235
+1257,Papo’s Bagels,"73-75 Shacklewell Lane, London, United Kingdom E8 2EB",Infatuation,51.5525048,-0.07124079999999999
+1258,Al Kahf,"112-114 Vine Court, London,  E1 1JE",Infatuation,51.5179448,-0.0639372
+1259,Tsunami,"5-7 Voltaire Rd, London, Greater London SW4 6DQ",Infatuation,51.464703,-0.1314118
+1260,Estrela Bar,"113 South Lambeth Road, London,  SW8 1UZ",Infatuation,51.4792813,-0.123329
+1261,Lemongrass,"243 Royal College St., Camden Town, Greater London NW1",Infatuation,51.542516,-0.1391846
+1262,La Cantina,"8 Broad Street, Margate, England CT9",Infatuation,51.3899582,1.3823087
+1263,Shuk;,"Borough Market Kitchen, Jubilee Pl, Winchester Walk, London, Greater London SE1 9AG",Infatuation,51.50608339999999,-0.0905566
+1264,The Sheephaven Bay,"2 Mornington St, London, England NW1 7QD",Infatuation,51.5351915,-0.1416897
+1265,K Kitchen,"9 Woolwich Road, London, England SE10 0RA",Infatuation,51.4862406,0.007807700000000001
+1266,Slowburn,"114B Dowsett House, Blackhorse Lane, London, England E17 6AA",Infatuation,51.5915615,-0.0395876
+1267,Perkyn's,"10 Vicarage Parade, London,  N15 3BL",Infatuation,51.5861001,-0.0901609
+1268,The Duke of Richmond,"316 Queensbridge Road, London,  E8 3NH",Infatuation,51.5429469,-0.0696869
+1269,The Allotment Kitchen,"Stepney City Farm, Stepney High St, London, Greater London E1 3DG",Infatuation,51.5171734,-0.0432744
+1270,Potter & Reid,"20 Toynbee Street, London, England E1 7NE",Infatuation,51.51764009999999,-0.07450409999999999
+1271,Saba Convenience Store,"29 Kensington High St, London, England W8 5NP",Infatuation,51.5022279,-0.1886667
+1272,An's Oriental Supermarket,"599 Holloway Road, London, Greater London N19 4DJ",Infatuation,51.5634271,-0.1285045
+1273,Greenberry Cafe,"101 Regents Park Rd, Primrose Hill, Greater London NW1 8UR",Infatuation,51.5420236,-0.1564314
+1274,Santa Maria Chelsea,"92-94 Waterford Road, London, Greater London SW6 2HA",Infatuation,51.477383,-0.1904729
+1275,La Tazza,"143 Praed St, Paddington, Greater London W2 1RL",Infatuation,51.5163241,-0.1740451
+1276,Hainan House,"88 Upper St, London, England N1 0NP",Infatuation,51.5370096,-0.1034609
+1277,The Garrison,"99-101 Bermondsey St, London, Greater London SE1 3XB",Infatuation,51.5007398,-0.0816794
+1278,Umut 2000,"551 Green Lanes, London, Greater London N8 0RL",Infatuation,51.5826005,-0.09994309999999999
+1279,Shree Krishna Vada Pav - Wembley,"87 Ealing Road, Wembley, England HA0 4BD",Infatuation,51.5467254,-0.2973276
+1280,Carnival Pot,"Kiosk 3, Blackfriars Road Road Railway Bridge, London, England SE1 8NN",Infatuation,51.5079645,-0.1047892
+1281,Xi’an Biang Biang Noodles,"36 Wellington St, London, Greater London WC2E 7BD",Infatuation,51.5124427,-0.1207599
+1282,Chin Chin Labs,"49-50 Camden Lock Pl, London, Greater London NW1 8AF",Infatuation,51.5409714,-0.1465647
+1283,The Breakfast Club,"North Terminal Approach Road, Crawley, England RH6",Infatuation,51.1612577,-0.1732109
+1284,The Parakeet,"256 Kentish Town Road, London, United Kingdom NW5 2AA","Infatuation, Timeout",51.5497679,-0.1405781
+1285,Mascara Bar,"72 Stamford Hill, Stoke Newington, Greater London N16 6XS",Infatuation,51.5668109,-0.0726886
+1286,Plants Of Roselyn,"102 Tooley Street, London, Greater London SE1 2BY",Infatuation,51.50428220000001,-0.0826263
+1287,Hoa Phuong,"4 Hampton St, London, Greater London SE1 6SN",Infatuation,51.4924492,-0.0988105
+1288,Burnt,"163 Askew Road, London, England W12 9AU",Infatuation,51.5019032,-0.2416234
+1289,Maru's Bhajia House,"230 Ealing Rd, London, Wembley HA0 4QL",Infatuation,51.5438926,-0.2973137
+1290,Bad Manners,"Lower Clapton Road, London, null E5 0PD",Infatuation,51.5506629,-0.0531248
+1291,805 Restaurants,"805 Old Kent Road, London, Greater London SE15 1DZ",Infatuation,51.4798679,-0.05684810000000001
+1292,Zuma,"5 Raphael St, Knightsbridge, Greater London SW7 1DL",Infatuation,51.5007399,-0.1631232
+1293,Bar Italia,"22 Frith St, Soho, Greater London W1D 4RF",Infatuation,51.5134285,-0.1311994
+1294,Minnow,"21 The Pavement, London, Greater London SW4 0HY",Infatuation,51.46212449999999,-0.139886
+1295,Detroit Pizza Islington,"137 Upper St, London, England N1 1QP",Infatuation,51.5392394,-0.1028131
+1296,Nardulli,"29 Trinity Close, The Pavement, London, England SW4 0JD",Infatuation,51.4628342,-0.1399779
+1297,The Snapery East,"373 Helmsley Pl, London, United Kingdom E8 3SB",Infatuation,51.5394175,-0.05848569999999999
+1298,District - Battersea Park,"49 Parkgate Road, London, England SW11 4NP",Infatuation,51.4791929,-0.1670538
+1299,40 Maltby Street,"40 Maltby St, Camberwell, Greater London SE1 3PA",Infatuation,51.49968699999999,-0.0764585
+1300,La Casbah,"47 Blackstock Road, London,  N4 2JF",Infatuation,51.5637372,-0.1026054
+1301,Lume Restaurant And Wine Shop,"Primrose Hill Road, London, Greater London NW3 3AD",Infatuation,51.5429851,-0.1626186
+1302,Burger & Beyond,"Giant Robot, London, Greater London E14",Infatuation,51.5059122,-0.0160091
+1303,Dosa Express,"547 Harrow Road, Wembley, England HA0 2DJ",Infatuation,51.5520135,-0.3025765
+1304,Zayna,"25 New Quebec St, London, Greater London W1H 7SF",Infatuation,51.5149651,-0.1582752
+1305,Bardsley's Fish Restaurant,"22-23a Baker St., Brighton, East Sussex BN1 4JN",Infatuation,50.8319415,-0.134694
+1306,Mamasons,"91 Kentish town road, London,  NW1 8NY",Infatuation,51.5434509,-0.1418874
+1307,Bellefields,"9 Stockwell Avenue, London, Greater London SW9 8BQ",Infatuation,51.4643413,-0.1154834
+1308,La Chingada,"10-12 Rotherhithe New Road, London, England SE16 2AA",Infatuation,51.491905,-0.0454675
+1309,Bar D4100,"143 Evelina Road, London, England SE15 3HB",Infatuation,51.4657639,-0.05739830000000001
+1310,Gourmet Pizza Co.,"56 Upper Ground, London, Greater London SE1 9PP",Infatuation,51.5081015,-0.1100768
+1311,Beavertown Brewery & Taproom,"Mill Mead Road, London,  N17 9QP",Infatuation,51.5900786,-0.056106
+1312,Floozie Cookies,"WC2E 8RE, London, England WC2E 8RE",Infatuation,51.5120624,-0.1229393
+1313,Uzumaki,"107 Great Russell Street, London, null WC1B 3NA",Infatuation,51.51758220000001,-0.1292137
+1314,Konditor,"46 Gray's Inn Rd, London, Greater London WC1X 8LR",Infatuation,51.519417,-0.112071
+1315,Bang Bang Oriental Foodhall,"399 Edgware Rd, London,  NW9 0FH",Infatuation,51.5934488,-0.2604074
+1316,The Cross Keys,"1 Lawrence St, Kensington, Greater London SW3 5NB",Infatuation,51.4834711,-0.1705722
+1317,Gurkhas Diner,"1 The Boulevard, London, Greater London SW17 7BW",Infatuation,51.4408311,-0.1546958
+1318,Grilandia - Wimbledon,"108 The Broadway, London, Greater London SW19 1RH",Infatuation,51.4194067,-0.2005864
+1319,Ace Cafe,"NW10 7UD, London, England NW10 7UD",Infatuation,51.5405893,-0.2784907
+1320,Kula,"21 James St, Mayfair, Greater London W1U 1DS",Infatuation,51.5150915,-0.1507546
+1321,Oi Vita Pizzeria,"67 Newington Green Rd, London, Greater London N1 4QU",Infatuation,51.5486537,-0.08763080000000001
+1322,Bao Noodle Shop,"1 Redchurch Street, London, Greater London E2 7HX",Infatuation,51.5243908,-0.07701709999999999
+1323,"Oxo Tower Restaurant, Bar and Brasserie","OXO Tower Wharf, South Bank, Greater London SE1 9PH",Infatuation,51.5084683,-0.1082717
+1324,Kinkally,"43 Charlotte St., London, England W1T 1RS",Infatuation,51.5191335,-0.135706
+1325,The Winemakers Club,"41a Farringdon St, London, Greater London EC4A 4AN",Infatuation,51.5169481,-0.1047699
+1326,Roti Joupa Finsbury Park,"22 Nags Head Covered Market, Seven Sisters Road, London, England N7 6AG",Infatuation,51.5593471,-0.1163309
+1327,Café Deco,"43 Store St., London, null WC1E 7DB",Infatuation,51.52018349999999,-0.1305243
+1328,A. Wong,"70 Wilton Rd, Victoria, Greater London SW1V 1DE",Infatuation,51.49299730000001,-0.140627
+1329,Fen Hand Pulled Noodles,"Spitalfield Market, London, Greater London E1 6EW",Infatuation,51.5197441,-0.07606879999999999
+1330,Jacuzzi,"94 High St, Kensington, Greater London W8 4SJ",Infatuation,51.50165699999999,-0.1919925
+1331,C&R Café Restaurant,"4-5 Rupert Court, Chinatown, Greater London W1D 6DY",Infatuation,51.5111876,-0.1323559
+1332,Browns of Brockley,"5 Coulgate St, London, Greater London SE4 2RW",Infatuation,51.46448950000001,-0.0369317
+1333,Stereo,"35 The Piazza, London, United Kingdom null",Infatuation,51.511658,-0.1221291
+1334,Bubble Magik,"Unit 20 The Broadway, London,  W5 5JY",Infatuation,51.5139264,-0.3022991
+1335,Broken Eggs,"24-25 Foley St, London, United Kingdom W1W 6DX",Infatuation,51.5193515,-0.1405349
+1336,My Old Place,"88 Middlesex St, London, Greater London E1 7EZ",Infatuation,51.5168781,-0.0768963
+1337,Heaven,"9 The Arches, Charing Cross, Greater London WC2N 6NG",Infatuation,51.5079353,-0.1243194
+1338,The Wet Fish Cafe,"242 West End Ln., West Hampstead, Greater London NW6 1LG",Infatuation,51.5511952,-0.1913432
+1339,Bianca Road Brew Co.,"83 Enid St, London, Greater London SE16 3RA",Infatuation,51.4972521,-0.0716536
+1340,The George,"55 Great Portland St, London, Greater London W1W 7LQ",Infatuation,51.5176713,-0.141813
+1341,Tonkotsu Bankside,"4 Canvey Street, London, Greater London SE1 9AN",Infatuation,51.5058021,-0.09884169999999999
+1342,Satta Kitchen,"25 St John's Rd, Wembley, London, England HA9 7HU",Infatuation,51.55357979999999,-0.2966607000000001
+1343,Barsito,"57 Venn St, London, Greater London SW4 0BD",Infatuation,51.4627923,-0.137939
+1344,The Plotting Parlour,"6 Steine St, Brighton, East Sussex BN2 1TE",Infatuation,50.82024819999999,-0.1359464
+1345,Ramo's Turkish Kitchen,"140A London Rd, London, null KT2 6QL ",Infatuation,51.41114229999999,-0.2907919
+1346,But First Coffee,"43 Quernmore Rd, London, Greater London N4 4QP",Infatuation,51.5775842,-0.1062574
+1347,Marugame Udon,"114 Middlesex St, London, Greater London E1 7ES",Infatuation,51.5180093,-0.0784479
+1348,Oast,"68 Northdown Road, Margate, England CT9 2RL",Infatuation,51.3896713,1.3903499
+1349,Funchal Bakery,"144 Stockwell Road, London, England SW9 9TQ",Infatuation,51.4673184,-0.118057
+1350,Ustun Lahmacun,"107 Green Lanes, London, Greater London N16 9BX",Infatuation,51.5544914,-0.08919959999999999
+1351,La Pizzica,"764-766 Fulham Rd, London, null SW6 5SJ",Infatuation,51.47238189999999,-0.2100905
+1352,Dulwich Picture Gallery Cafe,"Gallery Rd, Southwark, London, London SE21 7AD",Infatuation,51.444051,-0.0880217
+1353,Andina Spitalfields,"60-62 Commercial St,, London, Greater London E1 6LT",Infatuation,51.5178624,-0.073664
+1354,Shake Shack,"172 Victoria St, Victoria, Greater London SW1E 5LB",Infatuation,51.49687309999999,-0.1443428
+1355,Bear + Wolf,"153 Fortress Road, London, Greater London NW5 2HR",Infatuation,51.5565167,-0.1389122
+1356,Hannah Japanese Restaurant,"Belvedere Road, London, Greater London SE1 7GL",Infatuation,51.5036102,-0.1172992
+1357,Guido's,"10 Kingsway, London, England WC2B 6LH",Infatuation,51.51393419999999,-0.1176002
+1358,Giant Robot,"Garden Level, Crossrail Place, Canary Wharf, London,  E14 5AR",Infatuation,51.5059834,-0.0177816
+1359,Bánh,"592 Kingsland Road, London, England E2",Infatuation,51.5458928,-0.0755404
+1360,Pizarro,"194-204 Bermondsey St, London, Greater London SE1 3TQ",Infatuation,51.4984124,-0.0813361
+1361,Dulwich Woodhouse,"39 Sydenham Hill, Dulwich, Greater London SE26 6RS",Infatuation,51.4328027,-0.0726372
+1362,Yucca,"496 Fulham Road, London, Greater London SW6 5NH",Infatuation,51.4802598,-0.1985626
+1363,Riddle & Finns The Beach,"65 Kings Rd, Brighton and Hove, Brighton BN1 1NA",Infatuation,50.8203244,-0.1449782
+1364,Shikumen,"Dorsett Hotel, 58 Shepherd’s Bush Green, Shepherds Bush, Greater London W12 8QE",Infatuation,51.5039786,-0.2244224
+1365,Ken's,"51 Exmouth Market, London, England EC1R 4QL",Infatuation,51.526139,-0.1088053
+1366,Loft Coffee,"4 Canfield Gardens, London, Greater London NW6 3BS",Infatuation,51.5466631,-0.180563
+1367,GoBong," London, Greater London N19 3JH",Infatuation,51.5651369,-0.1330613
+1368,Shoryu Liverpool Street,"33 Broadgate Cir, London,  EC2M 2QS",Infatuation,51.5187971,-0.0837984
+1369,Happy Lemon,"24A Newport Ct, London, Greater London WC2H 7JS",Infatuation,51.5119183,-0.1293504
+1370,Maria's Market Cafe,"9 Stoney St, London, England SE1 9AA",Infatuation,51.50535559999999,-0.0913085
+1371,F Cooke Pie & Mash,"150 Hoxton St, London, England N1 6SH",Infatuation,51.5322611,-0.0800408
+1372,Banner's,"21 Park Rd, London, Greater London N8 8TE",Infatuation,51.5807104,-0.1249841
+1373,Le Baobab Cuisine,"8 Trafalgar St, Brighton and Hove, Brighton BN1 4EQ",Infatuation,50.8279501,-0.1363874
+1374,Peeld Poké & Açai,"69 Orford Road, London, United Kingdom E17 9NJ",Infatuation,51.5822765,-0.013407
+1375,Kêu City,"168 London Wall, London, Greater London EC2M 5QD",Infatuation,51.5173981,-0.0874667
+1376,Carmel Fitzrovia,"7-8 Market Pl, London, England W1W 8AG",Infatuation,51.5165053,-0.1401243
+1377,Filishack,"130 Peckham Hill Street, London, England SE15 5JT",Infatuation,51.4741097,-0.0688712
+1378,Mexican Seoul,"Bow Wharf, 221 Grove Rd., London, England E3 5SN",Infatuation,51.5320037,-0.0421073
+1379,Hill & Szrok,"60 Broadway Market, London, Greater London E8 4QJ",Infatuation,51.5371506,-0.06123489999999999
+1380,Flying Horse Coffee,"112 Golborne Road, London, England W10 5PS",Infatuation,51.5213107,-0.2096356
+1381,Indian Masala,"330 Bethnal Green Rd, London,  E2 0AG",Infatuation,51.5264311,-0.0634783
+1382,Oslo Court,"Charlbert St., London, Greater London NW8 7EN",Infatuation,51.5340245,-0.1676796
+1383,Buenos Aires Argentine Steakhouse,"62 Wimbledon Hill Road, London, England SW19 7PA",Infatuation,51.42269049999999,-0.2095898
+1384,Brioche Coffee & Brunch,"10, Station Parade, Balham High Rd, London, England SW12 9AZ",Infatuation,51.4420481,-0.1540431
+1385,Crust Bros Pizza,"111 Waterloo Rd, Waterloo, Greater London SE1 8UL",Infatuation,51.502978,-0.1109629
+1386,The Table Café,"83 Southwark St, London, Greater London SE1 0HX",Infatuation,51.5054594,-0.099799
+1387,Obon - Sushi & Udon,"42 Richmond Road, Kingston, Greater London KT2 5EE",Infatuation,51.4141193,-0.300494
+1388,Arancino Of Sicily,"216 Shaftesbury Avenue, London, England WC2H 8EB",Infatuation,51.5164105,-0.1261344
+1389,Doctor Dough Pizza,"Outsider Tart Lyric Square, London, England W6 0QL",Infatuation,51.4932246,-0.2260519
+1390,Copper Chimney,"Southern Terrace, Westfield, London,  W12 7GA",Infatuation,51.5072023,-0.2232423
+1391,Chicken Shop,"79 Highgate Rd, London, Greater London NW5 1TL",Infatuation,51.5540562,-0.1447438
+1392,Suba Bakery,"368A Hoe St, London, England E17 9AA",Infatuation,51.5794724,-0.0182463
+1393,Pavilion Cafe,"Victoria Park, Bow, Greater London E9 7DE",Infatuation,51.5334526,-0.041905
+1394,Beit El Zaytoun,"15 Barretts Green Rd, London, Greater London NW10 7AE",Infatuation,51.5343344,-0.2616668
+1395,Rinkoffs Bakery,"224 Jubilee St, Whitechapel, Greater London E1 3BS",Infatuation,51.51988559999999,-0.05285579999999999
+1396,The Coach,"26-28 Ray Street, London, Greater London EC1R 3DJ",Infatuation,51.5230708,-0.1092645
+1397,Ku Sheng Peng Caribbean Cuisine,"39 High Street, London, England W3 6ND",Infatuation,51.5064844,-0.2658032
+1398,Inis,"13 Rookwood Way, Fish Island, London, England E3 2XT",Infatuation,51.5410964,-0.0228088
+1399,Massis Lebanese Grill & Bar,"9 Sheldon Sq, London, Greater London W2 6HY",Infatuation,51.518967,-0.1797639
+1400,Evi's,"18 North Cross Road, London, England SE22 9EU",Infatuation,51.4576601,-0.07239509999999999
+1401,Hut Negril,"Christchurch Way, London, England SE10",Infatuation,51.4880399,0.0043974
+1402,Paesan,"2 Exmouth Market, London, Greater London EC1R 4PX",Infatuation,51.5250475,-0.1103013
+1403,Grodzinski,"168-170 Clapton Common, London, Greater London E5 9AG",Infatuation,51.57340199999999,-0.071518
+1404,Colbeh Restaurant,"6 Porchester Pl, Paddington, Greater London W2 2BS",Infatuation,51.5148604,-0.1650769
+1405,Dorian,"105 Talbot Road, London, null W11 2AT",Infatuation,51.51660159999999,-0.2006305
+1406,Kaosarn,"Brixton Village, Brixton, Greater London SW9 8PS",Infatuation,51.4624931,-0.1118135
+1407,Mercato Metropolitano,"42 Newington Causeway, London, Greater London SE1 6DR",Infatuation,51.4985114,-0.0984307
+1408,Happy Face,"14 Handyside Street, London, Greater London N1C 4DF",Infatuation,51.5374853,-0.1238696
+1409,Cicchetti,"6 Hans Rd, London, null SW3 1RX",Infatuation,51.4988055,-0.1641115
+1410,Union Viet Cafe,"120 Union St, London, England SE1 0FR",Infatuation,51.5038498,-0.09850249999999999
+1411,Demitasse,"21 High Street Wimbledon, London, Greater London SW19 5DX",Infatuation,51.4250519,-0.2170938
+1412,Hyderabadi Spice,"309, High Street North, Manor Park, Greater London E12 6SL",Infatuation,51.5428867,0.04969519999999999
+1413,The Prince ,"14 Lillie Rd, London,  SW6 1TT",Infatuation,51.48708300000001,-0.1971525
+1414,Camille,"2-3 Stoney Street, London, England SE1 9AA",Infatuation,51.50501740000001,-0.09084489999999999
+1415,Barrafina Borough Yards,"2 Dirty Lane, London, Greater London null",Infatuation,51.5057275,-0.091764
+1416,'O ver,"44-46 Southwark St, Greater London,  SE1 1UN",Infatuation,51.5049375,-0.09425689999999999
+1417,Wiltons,"55 Jermyn St, London, Greater London SW1Y 6LX",Infatuation,51.50774699999999,-0.1391345
+1418,Cirilo Filipino Kainan,"4 Cable St., London, Greater London E1",Infatuation,51.5107309,-0.0681772
+1419,Dosa N Chutney,"68 Tooting High St, London, Greater London SW17 0RN",Infatuation,51.4274701,-0.1689376
+1420,Prestige Patisserie,"Unit 20 Enterprise Row, London, Greater London N15 4LU",Infatuation,51.5819565,-0.0682449
+1421,Richoux,"172 Piccadilly, Piccadilly, Greater London W1J 9EJ",Infatuation,51.5080578,-0.1395221
+1422,Mihbaj Cafe,"153 Praed St, London, Greater London W2 1RL",Infatuation,51.51616019999999,-0.1744095
+1423,Iris & June,"1 Howick Pl, City of Westminster, Greater London SW1P 1WG",Infatuation,51.49680439999999,-0.1360728
+1424,A Bar With Shapes For A Name,"232 Kingsland Rd, Hackney, Greater London E2 8AX",Infatuation,51.5356581,-0.07666619999999999
+1425,73 Enid Street,"73 Enid St, Bermondsey, Greater London SE16 3RA",Infatuation,51.4977007,-0.07247379999999999
+1426,Bistro Union,"40 Abbeville Road, London, Greater London SW4 6NG",Infatuation,51.454324,-0.1397354
+1427,The Happening Bagel Bakery,"284a Seven Sisters Rd, London, Greater London N4 2AA",Infatuation,51.56474189999999,-0.1040555
+1428,Min Tea 抿茶,"34 Newport Court, London, Greater London WC2H 7PQ",Infatuation,51.5119688,-0.128926
+1429,Lizzy's on the Green,"Newington Green, London, Greater London N16 9PX",Infatuation,51.5515188,-0.0860185
+1430,The Rosebery at Mandarin Oriental Hyde Park,"66 Knightsbridge, London, England SW1X 7QT",Infatuation,51.5015698,-0.1616687
+1431,Chiltern Firehouse,"1 Chiltern St, London, Greater London W1U 7PA",Infatuation,51.5185105,-0.1544973
+1432,Seto,"5-6 Plender St, London, Greater London NW1 0JT",Infatuation,51.5362105,-0.1390582
+1433,Hunan,"51 Pimlico Rd, London, Greater London SW1W 8NE",Infatuation,51.4904558,-0.1527766
+1434,Fish Central,"149-151 Central St, London, Greater London EC1V 8BY",Infatuation,51.5276855,-0.09692769999999999
+1435,Phoenicia Mediterranean Food Hall,"186 - 182 Kentish Town Road, London, Greater London NW5 2AE",Infatuation,51.5475536,-0.1413105
+1436,Rabbit,"172 King's Road, London, Greater London SW3 4UP",Infatuation,51.4887032,-0.1660769
+1437,The Real Al Company & Taproom,"Unit 4 Ravenswood Industrial Estate, London, Greater London E17 9HQ",Infatuation,51.5838698,-0.0082688
+1438,Piazza,"Bow Street, London, null WC2E 9DD",Infatuation,51.5133174,-0.1220692
+1439,Emilia's Crafted Pasta,"Unit C3 Ivory House St. Katharine Docks London, London,  E1W 1AT",Infatuation,51.5064168,-0.0718167
+1440,Climpson & Sons Spitalfields,"Pod 3, Old Spitalfields Market, London, Greater London E1 6EW",Infatuation,51.5196569,-0.0755469
+1441,Kimchimama,"28 Upper Tachbrook St, London, England SW1V 1SW",Infatuation,51.4928048,-0.139388
+1442,Rye Lane Bagels,"100 Rye Lane, London, England SE15 4RZ",Infatuation,51.469345,-0.068252
+1443,Breddo's Tacos,"82 Goswell Rd, London, Greater London EC1V 7DB",Infatuation,51.523716,-0.0987004
+1444,Mother,"Battersea Power Station,  2 Arches Lane Circus West Village, London,  SW11 8AB",Infatuation,51.4833349,-0.147145
+1445,La Camionera,"243 Well Street, London, England E9 6RG",Infatuation,51.54446489999999,-0.046901
+1446,The Lacy Nook,"Wood Street Studios, Barrett Rd, London E17 3FU, Waltham Forest, London E17 3FU",Infatuation,51.585043,-0.003412
+1447,Taste Of Peshawar,"62 Harrow Road, Wembley, England HA9 6PL",Infatuation,51.5468048,-0.2741875
+1448,Happy Lamb Hot Pot,"2 Oxford St, London, Greater London WC1A 2SL",Infatuation,51.51643019999999,-0.1303727
+1449,Manze’s Deptford,"204 Deptford High St, London, Greater London SE8 3PR",Infatuation,51.4809096,-0.0261684
+1450,Etles Uyghur Restaurant,"235 Hoe St, London, Greater London E17 9PP",Infatuation,51.5818688,-0.0181835
+1451,Paolina Thai Cuisine,"181 King's Cross Road, London, England WC1X 9BZ",Infatuation,51.53054479999999,-0.1184645
+1452,Bussey Rooftop Bar,"Roof A, Bussey Building, 133 Rye Lane, London, London SE15 4ST",Infatuation,51.4699545,-0.0672488
+1453,"Farm Shop, Mayfair","64 South Audley Street, London, England W1K 2QT",Infatuation,51.5087858,-0.1515736
+1454,Maison Bertaux,"28 Greek St, London, Greater London W1D 5DQ",Infatuation,51.5132833,-0.1302178
+1455,Holborn Dining Room,"252 High Holborn, Holborn and Covent Garden, Greater London WC1V 7EN",Infatuation,51.5176982,-0.1178235
+1456,Beijing Dumpling,"23 Lisle St, London, Greater London WC2H 7BA",Infatuation,51.5117017,-0.1301309
+1457,Flotsam & Jetsam,"4 Bellevue Parade, Wandsworth Common, Greater London SW17 7EQ",Infatuation,51.4443144,-0.1671936
+1458,Trinity,"4 The Polygon, London, Greater London SW4 0JG",Infatuation,51.4635076,-0.1414181
+1459,The Tent (At The End Of The Universe),"17 Little Portland St, London, Greater London W1W 8BP",Infatuation,51.5170071,-0.1419004
+1460,Luca,"88 St John St, London, Greater London EC1M 4EL",Infatuation,51.5220164,-0.1016769
+1461,It's All Greek To Me,"101 Praed St, London, Greater London W2 1NT",Infatuation,51.5171706,-0.1725271
+1462,Arlington,"Arlington House, Arlington St, London, Greater London SW1A 1RJ",Infatuation,51.50654369999999,-0.1410205
+1463,Fink’s Gillespie,"88 Gillespie Rd, London, Greater London N5 1DN",Infatuation,51.5595553,-0.1023369
+1464,A Toca Restaurant,"341 Wandsworth Rd, London, Greater London SW8 2JH",Infatuation,51.4753596,-0.1311737
+1465,Swiss Butter,"114-118 Southampton Row, London, England WC1B 5AA",Infatuation,51.5205803,-0.122664
+1466,'O ver St. James's ,"1 Norris Street, London, England SW1Y 4RJ",Infatuation,51.50900919999999,-0.1328395
+1467,The Watergate,"7 Watergate St, London, United Kingdom SE8 3HR",Infatuation,51.4817292,-0.0262539
+1468,Counter By Naroon,"63 Great Titchfield St, London, England W1W 7PR",Infatuation,51.5188217,-0.1409334
+1469,Beppe's Café,"23 West Smithfield, London, Greater London EC1A 9HY",Infatuation,51.5177661,-0.1018118
+1470,M.Manze,"87 Tower Bridge Rd, London, England SE1 4TW",Infatuation,51.4963107,-0.0828476
+1471,Damascene Bakery,"264 Uxbridge Road, London,  W12 7JA",Infatuation,51.5062118,-0.2295345
+1472,Jerk Munchies,"189 Broad Ln, London, Greater London N15 4FR",Infatuation,51.5875639,-0.06373469999999999
+1473,Timmy Green,"Buckingham Palace Rd, Victoria, Greater London SW1E 5DD",Infatuation,51.497562,-0.144248
+1474,Lomond Coffee,"Arch 7, 4 Market yard, London, Greater London SE8 4BX",Infatuation,51.4785786,-0.0268644
+1475,The Rail House Cafe,"8 Sir Simon Milton Sq, Victoria, Greater London SW1E 5DJ",Infatuation,51.49744889999999,-0.1434731
+1476,Bottega Caruso,"2-4 Broad St, Margate, Kent CT9 1EW",Infatuation,51.3897584,1.3822108
+1477,Bob's Cafe,"43 Muswell Hill Broadway, London, Greater London N10 3HA",Infatuation,51.5897759,-0.1447958
+1478,The Kernel,"Arch 7, Dockley Road Industrial Estate, London, Greater London SE16 3FJ",Infatuation,51.4956979,-0.0693149
+1479,Scootercaffe,"132 Lower Marsh, Waterloo, Greater London SE1 7AE",Infatuation,51.5004044,-0.1138771
+1480,La Poule Au Pot,"231 Ebury St, London, Greater London SW1W 8UT",Infatuation,51.4909736,-0.1526481
+1481,Bottles,"67 Brushfield Street , London,  E1 6AA",Infatuation,51.5191855,-0.07512479999999999
+1482,Smsh Bn,"126 Charing Cross Road, London, England WC2H 0LA",Infatuation,51.5151969,-0.1298536
+1483,Queen Elizabeth Hall Roof Garden,"Festival Pier, London, England SE1 8XZ",Infatuation,51.5067582,-0.1173145
+1484,Bierschenke,"London Wall Buildings, London, Greater London EC2M 5NT",Infatuation,51.5171825,-0.0853111
+1485,Chestnut Bakery Belgravia,"17-21 Elizabeth Street, London, Greater London SW1W 9RP",Infatuation,51.49288319999999,-0.1494291
+1486,Yori,"86 The Broadway, London,  SW19 1RH",Infatuation,51.4196102,-0.201505
+1487,Chez Bruce,"2 Bellevue Rd, London, Greater London SW17 7EG",Infatuation,51.4459466,-0.1655742
+1488,Frequency Coffee,"37 The Point, North Wharf Road, London, United Kingdom W2 1AF",Infatuation,51.5185503,-0.1768245
+1489,Ottolenghi Chelsea,"261 Pavilion Road, London,  SW1X 0HH",Infatuation,51.49282849999999,-0.1585033
+1490,Tarim Uyghur Restaurant,"35 Theobalds Road, ,  WC1X 8SP",Infatuation,51.5201538,-0.1180052
+1491,Ngopi,"78 Dalston Ln, London, Greater London E8 3AH",Infatuation,51.5461047,-0.07025479999999999
+1492,Forts Cafe,"8 Cliff Terrace, Margate, Kent CT9 1RU",Infatuation,51.3917724,1.3894369
+1493,The Hummingbird Bakery,"47 Old Brompton Rd., Queen's Gate, Greater London SW7 3JP",Infatuation,51.4933002,-0.1754698
+1494,Elliot’s,"121-123 Mare St, London, Greater London E8 3QD",Infatuation,51.5380434,-0.05754529999999999
+1495,Chequers,"47 Bedford St, London, United Kingdom WC2E 9HA",Infatuation,51.5100515,-0.1236685
+1496,Plateau,"1 Bartholomews, Brighton and Hove, Brighton BN1 1HG",Infatuation,50.8210112,-0.1399842
+1497,Pure Indian Cooking,"67 Fulham High St, London, Greater London SW6 3JJ",Infatuation,51.4694577,-0.2098829
+1498,Ochi Caribbean Takeaway,"226 Uxbridge Rd, Shepherds Bush, Greater London W12 7jp",Infatuation,51.505886,-0.2275162
+1499,Peppers & Spice,"N17 6SD, London, United Kingdom N17 6SD",Infatuation,51.59481719999999,-0.06951689999999999
+1500,La Fogata,"32 New Kent Road, Southwark, London SE1 6TJ",Infatuation,51.49481,-0.09876449999999999
+1501,CheeMc,"310 Walworth Rd, London, Greater London SE17 2NA",Infatuation,51.4864285,-0.09497950000000001
+1502,Feijão Do Luis,"20 Hanway St, London, England W1T 1UG",Infatuation,51.5168484,-0.1319516
+1503,Maria G's,"Coe House, 2-4 Warwick Ln, London, null  W14 8FN",Infatuation,51.4943237,-0.2034047
+1504,Three Uncles,"Devonshire Row, London, Greater London EC2M 4RH",Infatuation,51.5170554,-0.0808608
+1505,Sonoma,"London Gatwick Airport, Gatwick, England null",Infatuation,51.1536621,-0.1820629
+1506,Flatboys at The Crown,"176 Trafalgar Road, London, England SE10 9TZ",Infatuation,51.4850778,0.0047046
+1507,Sushinoen,"2 White Church Ln, London, Greater London E1 7QR",Infatuation,51.5159935,-0.0691265
+1508,Palatino,"71 Central Street, London, Greater London EC1V 8AB",Infatuation,51.5267973,-0.0968723
+1509,75 Slices,"199 Cambridge Heath Road, London, England E2 0EL",Infatuation,51.52477260000001,-0.0548805
+1510,Banh Mi Leo,"19 Lovibond Lane, London, England SE10 9FY",Infatuation,51.4774784,-0.0157278
+1511,The White Hart,"22 Great Suffolk St, Southwark, Greater London SE1 0UG",Infatuation,51.5049946,-0.1015552
+1512,Light Bite,"31 Bernard Rd, London, Greater London N15 4NE",Infatuation,51.5820684,-0.0688517
+1513,Spicy Basil,"165 Kilburn High Rd., , Greater London NW6 7HY",Infatuation,51.54087759999999,-0.1970124
+1514,The Rose & Crown,"71-73 Torriano Ave, Kentish Town, Greater London NW5 2SG",Infatuation,51.5503153,-0.1329315
+1515,Yard Sale Pizza,"105 Lower Clapton Rd, London, Greater London E5 0NP",Infatuation,51.5520581,-0.0525284
+1516,The Alley 鹿角巷,"Unit 3, 272 High Holborn, London, Greater London WC1V 7EX",Infatuation,51.51772099999999,-0.1163469
+1517,Lahori Nihaari,"50 Plashet Grove, London, United Kingdom E6 1AE",Infatuation,51.5369642,0.0366456
+1518,Antepliler Künefe Salonu,"46 Grand Parade, Greater London, Greater London N4 1AG",Infatuation,51.5798413,-0.09896579999999999
+1519,Soif,"27 Battersea Rise, London, Greater London SW11 1HG",Infatuation,51.4608299,-0.1636861
+1520,Sam Sandwiches,"9 Shepherd's Bush Market, London,  W12 8DE",Infatuation,51.5050194,-0.2269584
+1521,Aguamiel,"24 Wellington St, London, England WC2E 7DD",Infatuation,51.5120465,-0.1201086
+1522,Uncle John's Bakery,"76 West Green Rd, London, Greater London N15 5NS",Infatuation,51.5846099,-0.076255
+1523,Beit El Zaytoun - On The Go,"17 Knightsbridge Green, London, England SW1X 7QL",Infatuation,51.50118490000001,-0.1622726
+1524,Fare Bar and Canteen,"11 Old Street, London, Greater London EC1V 9HL",Infatuation,51.5234824,-0.09826009999999999
+1525,The Zetter Marylebone,"28-30 Seymour St, Marylebone, Greater London W1H 7JB",Infatuation,51.5148598,-0.15857
+1526,Cup + Lid,"10 Gee's Court, London, England W1U 1JJ",Infatuation,51.5145429,-0.1500391
+1527,Pavyllon,"Hamilton Pl, Greater, London W1J 7DR, City of Westminster, London W1J 7DR",Infatuation,51.5041353,-0.1500715
+1528,Detroit Pizza London,"75 Commercial Street, London, Greater London E1 6BD",Infatuation,51.5181274,-0.07438159999999999
+1529,Palmeira,"234 High Rd Leyton, Leyton, Greater London E10 5PS",Infatuation,51.5588419,-0.007089799999999999
+1530,escocesa,"67 Stoke Newington Church St, London, Greater London N16 0AR",Infatuation,51.5621374,-0.07683609999999999
+1531,Makimayo,"75 West Green Road, London, Greater London N15 5DA",Infatuation,51.5845676,-0.07671059999999999
+1532,Shola Karachi Kitchen,"White City Place, Shepherds Bush, Greater London W12 7TU",Infatuation,51.5141492,-0.2271227
+1533,The Fryer's Delight,"19 Theobalds Rd, London, Greater London WC1X 8SL",Infatuation,51.5203566,-0.1172637
+1534,True Craft,"68 West Green Rd, Tottenham, Greater London N15 5NR",Infatuation,51.5844629,-0.0757313
+1535,Elystan Street,"43 Elystan St, London, Greater London SW3 3NT",Infatuation,51.4915801,-0.1677161
+1536,Cue Point,"Orbit Brewery and Taproom, London,  SE17 3HD",Infatuation,51.4850127,-0.0959363
+1537,Donutelier by Roladin,"50 Charing Cross Rd, London, Greater London WC2H 0BS",Infatuation,51.511996,-0.1282365
+1538,Falafel Hut,"49 Shepherd's Bush Market, London,  W12 8DG",Infatuation,51.50312779999999,-0.2265409
+1539,Frank's Cafe,"10th Floor, Multi-Story Carpark, Peckham, Greater London SE15 4ST",Infatuation,51.47110319999999,-0.06795949999999999
+1540,En Root,"28 Peckham Rye, London, England SE15 4NS",Infatuation,51.46578419999999,-0.066569
+1541,Panzer's Delicatessen,"13-19 Circus Rd, St John's Wood, Greater London NW8 6PB",Infatuation,51.5334757,-0.1721875
+1542,Flavour Hubb,"Cranbrook Road, London, England SW19",Infatuation,51.4173329,-0.2138513
+1543,Yuki Bar,"426 Reading Lane, London, England E8 1DS",Infatuation,51.5444896,-0.0584945
+1544,Frank's,"34 Duke Street, London, null SW1Y 6DF",Infatuation,51.5075599,-0.1381832
+1545,Mama's Kubo,"250 Finchley Road, London, Greater London NW3 6HJ",Infatuation,51.5527976,-0.1874673
+1546,Profile Coffee,"1B Highbury Park, London, England N5 1QJ",Infatuation,51.5535107,-0.0984823
+1547,Coleman Coffee Roasters,"20 Lower Marsh, London, Greater London SE1 7RJ",Infatuation,51.5006409,-0.1129554
+1548,Hala Restaurant,"29 Grand Parade, London, Greater London N4 1LG",Infatuation,51.5804126,-0.0991872
+1549,Chez Roux,"1C Portland Place, London, England W1B 1JA",Infatuation,51.5175891,-0.1438754
+1550,Maison St. Cassien,"71 High St., Wimbledon, Greater London SW19 5DX",Infatuation,51.4255204,-0.2177208
+1551,Dionysus Kebab House,"44 High Street, London, Greater London N14 6EB",Infatuation,51.6271563,-0.1253538
+1552,The Tamil Prince,"115 Hemingford Road, London, null N1 1BZ",Infatuation,51.5409321,-0.1137141
+1553,Catalyst Coffee Roasters + Cafe,"48 Gray's Inn Rd, Holborn and Covent Garden, Greater London WC1X 8LT",Infatuation,51.5198209,-0.1119744
+1554,Henri,"15 Henrietta Street, London, England WC2E 8QG",Infatuation,51.510904,-0.1238952
+1555,Bar Bruno,"101 Wardour St, London, Greater London W1F 0UG",Infatuation,51.5130014,-0.1338366
+1556,Kate’s Cafe,"174 B166, London, United Kingdom null",Infatuation,51.5275521,0.0240497
+1557,Daisy,"19 Cliff Terrace, Margate, Kent CT9 1RU",Infatuation,51.3920031,1.3900467
+1558,Happy Endings,"E9 7DE, London, London E9 7DE",Infatuation,51.5334526,-0.041905
+1559,Olle,"88 Shaftesbury Avenue, London, Greater London W1D",Infatuation,51.5120671,-0.1314853
+1560,Pomus,"9 The Centre, Margate, England CT9 1JG",Infatuation,51.3872934,1.3817071
+1561,Ant House,"97 Kingsland Rd, London,  E2 8AG",Infatuation,51.53054849999999,-0.07741819999999999
+1562,Snackbar,"20 Dalston Lane, London,  E8 3AZ",Infatuation,51.54611,-0.0732323
+1563,Cafe Cecilia,"32 Andrews Rd, London, Greater London E8 4QF",Infatuation,51.53455599999999,-0.060123
+1564,The Abingdon,"54 Abingdon Road, London, England W8 6AP",Infatuation,51.4975667,-0.1961507
+1565,Grounded Burger,"90 High St, London, England W3 6QX",Infatuation,51.5068891,-0.2684095
+1566,Karamay Uyghur Kitchen,"14 New London St, London, Greater London EC3R 7NA",Infatuation,51.5112824,-0.07920619999999999
+1567,Mukkebi,"152A Seven Sisters Road, London, England N7 7PL",Infatuation,51.5611551,-0.11292
+1568,Seed Library,"100 Shoreditch high street, London, Greater London E1 6JN",Infatuation,51.5254162,-0.07728489999999999
+1569,Aroma Lounge,"96 Llanover Road, Wembley, England HA9 7LT",Infatuation,51.56195289999999,-0.3021355
+1570,Hana,"West End Lane, London, Greater London NW6 1lt",Infatuation,51.552179,-0.1918133
+1571,Baban's Naan,"51a Blackstock Rd, London, Greater London N4 2JW",Infatuation,51.56319209999999,-0.1017844
+1572,Wheelcake Island,"Westfield Shopping Centre Ariel Way, London,  W12 7GF",Infatuation,51.5072656,-0.2190019
+1573,Il Portico,"277 Kensington High St, London, Greater London W8 6NA",Infatuation,51.4985478,-0.1999238
+1574,NoNo,"24 Brunswick Park, London, England SE5 7RH",Infatuation,51.475499,-0.0855534
+1575,Where The Pancakes Are,"85a Southwark Bridge Rd, Southwark, Greater London SE1 0NQ",Infatuation,51.5044675,-0.0951242
+1576,Park’s Kitchen,"24 The Green, London, United Kingdom W5 5DA",Infatuation,51.51059679999999,-0.305301
+1577,House Of Momo,"52 Boleyn Rd, London, Greater London N16 8JN",Infatuation,51.5485298,-0.0767882
+1578,Tooting Market,"Tooting Market, 21-23 Tooting High St, London, United Kingdom SW17 0RH",Infatuation,51.4288527,-0.16594
+1579,Aladin Kebabish,"147-149 W Hendon Broadway, London, United Kingdom NW9 7EA",Infatuation,51.5767998,-0.2390854
+1580,Pipoca Vegan,"224 Brixton Road, London, England SW9 6AH",Infatuation,51.4720574,-0.1129941
+1581,Boisdale of Belgravia,"15 Eccleston St, Belgravia, Greater London SW1W 9LX",Infatuation,51.494452,-0.1480576
+1582,Marcella,"165A Deptford High Street, London, Greater London SE8",Infatuation,51.4795807,-0.0262851
+1583,Bombay Delight,"271-273 The Broadway, Merton, London SW19 1SD",Infatuation,51.4194001,-0.1945783
+1584,Rosslyn Coffee,"78 Queen Victoria St, London,  EC4N 4SJ",Infatuation,51.5125334,-0.0936588
+1585,The Midnight Apothecary,"Brunel Museum, Railway Ave, London, Greater London SE16 4LF",Infatuation,51.501591,-0.052866
+1586,Pizzeria Pappagone Sud,"Elephant Rd, London, Greater London SE17 1LB",Infatuation,51.493882,-0.0983854
+1587,The Divine,"33 Stoke Newington Road, London, England N16 8BJ",Infatuation,51.5517897,-0.0753553
+1588,The Spurstowe Arms,"68 Greenwood Rd, London, Greater London E8 1AB",Infatuation,51.5453747,-0.0632078
+1589,Wondertree,"South Terminal, Crawley, West Sussex RH6 0NP",Infatuation,51.15611699999999,-0.163
+1590,Solis,"1st Floor, 330 The Power Station, Circus Rd S, London, England SW11 8DD",Infatuation,51.4818235,-0.1443983
+1591,Velho Portugal,"Unit 12a, Victoria Mansions, London, England SW8",Infatuation,51.4803054,-0.1240089
+1592,The Prince,"59 Kynaston Rd, Stoke Newington, Greater London N16 0AB",Infatuation,51.56003,-0.0783465
+1593,Bao Kings Cross,"4 Pancras Square, London, Greater London N1C 4AG",Infatuation,51.5338447,-0.1255902
+1594,Kuro Bakery,"95a, Notting Hill Gate, London, Greater London W11 3JZ",Infatuation,51.5087027,-0.1975489
+1595,Bread Ahead,"Borough Market, London, Greater London null",Infatuation,51.5055826,-0.09048080000000001
+1596,The Prince Alfred,"5A Formosa St, London, Greater London W9 1EE",Infatuation,51.5244238,-0.1848794
+1597,Akira Back,"22 Hanover Square, London, England W1S 1JB",Infatuation,51.5134027,-0.1441532
+1598,Rasa Sayang,"5 Macclesfield St, London, Greater London W1D 6AY",Infatuation,51.51197939999999,-0.1314781
+1599,Casa do Frango,"32 Southwark St, London,  SE1 1TU",Infatuation,51.5049313,-0.0927279
+1600,Alhaji Suya Brixton,"9 Brixton Station Road, London, England SW9 8PA",Infatuation,51.4634838,-0.1140575
+1601,Banaadiri Restaurant,"342 Uxbridge Road, London, United Kingdom W12 7LL",Infatuation,51.5065683,-0.2333211
+1602,Sargasso,"Stone Pier, Margate,  CT 1AP",Infatuation,51.38964600000001,1.3868339
+1603,Shake Shack Gatwick,"North Terminal, Gatwick, England null",Infatuation,51.1604723,-0.1778582
+1604,Keren View Vegan Restaurant,"201 Holloway Road, London, Greater London N7 8DJ",Infatuation,51.5507265,-0.1100093
+1605,The Collab,"198 Hoe St, Walthamstow, Greater London E17 4BF",Infatuation,51.5853871,-0.0198011
+1606,Cliffs,"172 Northdown Road, Margate, Kent CT9 2QN",Infatuation,51.3881417,1.3950292
+1607,Signor Sassi,"14 Knightsbridge, London, England SW1X 7QL",Infatuation,51.501323,-0.1624692
+1608,B Street Deli,"88 Bermondsey St, London, Greater London SE1 3UB",Infatuation,51.5009637,-0.0820682
+1609,Anglo,"30, St. Cross St, London, Greater London EC1N 8UH",Infatuation,51.5206567,-0.1093905
+1610,Tiroler Hut,"27 Westbourne Grove, London, W2 4UA",Timeout,51.5155316,-0.1895438
+1611,Dim Sum Duck,"124 King's Cross Rd, London, WC1X 9DS",Timeout,51.5302333,-0.1163992
+1612,Rasa,"55 Stoke Newington Church Street, London, N16 0AR",Timeout,51.5620919,-0.0763626
+1613,Sune,"129A Pritchard's Rd, London, E2 9AP",Timeout,51.5354104,-0.0627228
+1614,Mount St Restaurant,"First Floor, 41-43 Mount St, London, W1K 2RX",Timeout,51.50971089999999,-0.1516125
+1615,Oslo Court Restaurant,"Charlbert St, London, NW8 7EN",Timeout,51.5340245,-0.1676796
+1616,Diwana Bhel Poori House,"121-123 Drummond Street, London, NW1 2HL",Timeout,51.5270912,-0.1364575
+1617,Lulu’s,"291 Railton Rd, London, SE24 0JP",Timeout,51.45327529999999,-0.102732
+1618,Upstairs at the French House,"49 Dean St, London, W1D 5BG",Timeout,51.5127472,-0.1317317
+1619,Normah’s,"23, 25 Queensway, London, W2 4QJ",Timeout,51.511163,-0.1873842
+1620,Café Cecilia,"32 Andrews Rd, London, E8 4RL",Timeout,51.53455599999999,-0.060123
+1621,Otto’s French Restaurant,"182, Grays Inn Rd, London, WC1X 8EW, ",Timeout,51.5228908,-0.1142208
+1622,Nandine,"82 Vestry Road, London, SE5 8PQ",Timeout,51.4709729,-0.0824433
+1623,Real Beijing Food House,"46 Gerrard St, London, W1D 5QH",Timeout,51.5120031,-0.1299891
+1624,Etles,"235 Hoe Street, Walthamstow, London, E17 9PP",Timeout,51.5818688,-0.0181835
+1625,Chuku's,"274 High Road, London, N15 4RR",Timeout,51.58592429999999,-0.0713549
+1626,FKA Black Axe Mangal,"156 Canonbury Rd, London, N1 2UP",Timeout,51.5459125,-0.1019831
+1627,Koya,"50 Frith Street, London, W1D 4SQ",Timeout,51.5136433,-0.1316949
+1628,Chet’s,"65 Shepherd’s Bush Green, London, W12 8QE",Timeout,51.5047417,-0.2248481
+1629,Brunswick House,"30 Wandsworth Road, London, SW8 2LG, Vauxhall Cross",Timeout,51.4847537,-0.1265278
+1630,St John,"26 St John Street, London, EC1M 4AY",Timeout,51.52048199999999,-0.1014579
+1631,Tofu Vegan,"105 Upper St, London, N1 1QN",Timeout,51.53785389999999,-0.1029022
+1632,Mangal 2,"4 Stoke Newington Rd, London, N16 8BH, Dalston Kingsland Overground or bus 76, 149, 243",Timeout,51.5508022,-0.07488620000000001
+1633,Restaurant St Barts,"63 Bartholomew Cl, London, EC1A 7BF",Timeout,51.5183984,-0.09924229999999999

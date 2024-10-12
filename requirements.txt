@@ -1,0 +1,5 @@
+firebase_admin==6.5.0
+pandas==2.2.3
+protobuf==5.28.2
+pydeck==0.9.1
+streamlit==1.38.0
