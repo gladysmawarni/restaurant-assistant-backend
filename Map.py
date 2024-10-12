@@ -73,6 +73,7 @@ for filename in os.listdir(folder_path):
         
         # Check if the file is older than 24 hours
         if current_time - file_mod_time > time_threshold:
+            st.write('here1')
             # Fetch the data from Firestore
             rests = [i.id.strip() for i in db.collection("restaurants").get()][:10]
             addresses = [i.to_dict()['Address'] for i in db.collection("restaurants").get()][:10]
@@ -93,6 +94,7 @@ for filename in os.listdir(folder_path):
             
         
         else:
+            st.write('here2')
             # Read the latest CSV file from the folder
             csv_path = os.path.join(folder_path, filename)
             df = pd.read_csv(csv_path)
