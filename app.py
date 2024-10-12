@@ -89,7 +89,7 @@ for filename in os.listdir(folder_path):
 
 ### ---DATA---
 df['Restaurant'] = df['Restaurant'].str.strip()
-st.dataframe(df[['Restaurant', 'Address', 'Appears on']])
+st.dataframe(df[['Restaurant', 'Address', 'Appears on']], hide_index=True)
 st.write(f'Total restaurant in database: {len(df)}')
 
 ### ---MAP---           
