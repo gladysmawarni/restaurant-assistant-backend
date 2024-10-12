@@ -43,9 +43,6 @@ current_time = time.time()
 # Define a time threshold (24 hours = 86400 seconds)
 time_threshold = 24 * 60 * 60
 
-# Initialize Firestore client
-db = firestore.Client()
-
 # Iterate over the files in the folder
 for filename in os.listdir(folder_path):
     file_path = os.path.join(folder_path, filename)
@@ -79,6 +76,7 @@ for filename in os.listdir(folder_path):
             st.dataframe(df[['Restaurant Name', 'Address', 'Appears on']])
         
         else:
+            st.write('here')
             # Read the latest CSV file from the folder
             csv_path = os.path.join(folder_path, filename)
             df = pd.read_csv(csv_path)
