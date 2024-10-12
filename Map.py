@@ -1,6 +1,7 @@
 import streamlit as st
 import os
-from firebase_admin import firestore
+import firebase_admin
+from firebase_admin import credentials, firestore
 import pandas as pd
 import time
 import pydeck as pdk
@@ -11,7 +12,11 @@ import pydeck as pdk
 env = 'PROD'
 
 if env == 'PROD':
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = st.secrets["GOOGLE_CREDENTIALS"] 
+    cred = credentials.Certificate(st.secrets["GOOGLE_CREDENTIALS"])
+    # Initialize the Firebase app with the credentials
+    # Check if the app is already initialized to avoid errors in a Streamlit rerun
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app(cred)
 elif env == 'DEV':
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "secrets/credentials.json"
 
