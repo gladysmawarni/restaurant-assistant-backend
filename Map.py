@@ -8,49 +8,38 @@ import pydeck as pdk
 # import folium
 # from streamlit_folium import st_folium
 
-# Debug: Check if secrets are being read correctly
-st.write("Loading credentials...")
-
-# Load credentials from Streamlit secrets and verify the content structure
-try:
-    cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
-    st.write("Credentials loaded successfully.")
-except Exception as e:
-    st.error(f"Error loading credentials: {e}")
-    st.stop()  # Stop the Streamlit script if there's an issue with credentials
-
-# Debug: Check Firebase initialization status
-st.write("Initializing Firebase app...")
-
-# Initialize the Firebase app with the credentials
-if not firebase_admin._apps:
-    try:
-        firebase_admin.initialize_app(cred)
-        st.write("Firebase app initialized successfully.")
-    except Exception as e:
-        st.error(f"Error initializing Firebase app: {e}")
-        st.stop()  # Stop the Streamlit script if there's an issue with initialization
-else:
-    st.write("Firebase app is already initialized.")
-
-# Now you can use Firestore
-try:
-    db = firestore.client()
-    st.write("Firestore client created successfully.")
-except Exception as e:
-    st.error(f"Error creating Firestore client: {e}")
-    st.stop()  # Stop the script if there's an issue with the Firestore client
 
 env = 'PROD'
 
 if env == 'PROD':
-    cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+        # Debug: Check if secrets are being read correctly
+    st.write("Loading credentials...")
+
+    # Load credentials from Streamlit secrets and verify the content structure
+    try:
+        cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+    except Exception as e:
+        st.error(f"Error loading credentials: {e}")
+
     # Initialize the Firebase app with the credentials
-    # Check if the app is already initialized to avoid errors in a Streamlit rerun
     if not firebase_admin._apps:
-        firebase_admin.initialize_app(cred)
+        try:
+            firebase_admin.initialize_app(cred)
+        except Exception as e:
+            st.error(f"Error initializing Firebase app: {e}")
+            st.stop()  # Stop the Streamlit script if there's an issue with initialization
+
+    # Now you can use Firestore
+    try:
+        db = firestore.client()
+    except Exception as e:
+        st.error(f"Error creating Firestore client: {e}")
+        st.stop()  # Stop the script if there's an issue with the Firestore client
+        
 elif env == 'DEV':
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "secrets/credentials.json"
+    # Initialize Firestore client
+    db = firestore.Client()
 
 # Specify the folder path
 folder_path = 'data'
@@ -58,9 +47,6 @@ folder_path = 'data'
 current_time = time.time()
 # Define a time threshold (24 hours = 86400 seconds)
 time_threshold = 24 * 60 * 60
-
-# Initialize Firestore client
-db = firestore.Client()
 
 # Iterate over the files in the folder
 for filename in os.listdir(folder_path):
