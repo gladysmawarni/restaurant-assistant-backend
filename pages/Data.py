@@ -9,6 +9,7 @@ import time
 env = 'PROD'
 
 if env == 'PROD':
+    print(env)
     # Load credentials from Streamlit secrets and verify the content structure
     try:
         cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
@@ -35,7 +36,7 @@ elif env == 'DEV':
     # Initialize Firestore client
     db = firestore.Client()
 
-
+print('here1')
 # Specify the folder path
 folder_path = 'data'
 # Get the current time
