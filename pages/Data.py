@@ -3,20 +3,37 @@ import os
 from firebase_admin import firestore
 import pandas as pd
 import time
-import pydeck as pdk
 
-env = 'DEV'
+
+env = 'PROD'
 
 if env == 'PROD':
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = st.secrets["GOOGLE_CREDENTIALS"] 
+    # Load credentials from Streamlit secrets and verify the content structure
+    try:
+        cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+    except Exception as e:
+        st.error(f"Error loading credentials: {e}")
+
+    # Initialize the Firebase app with the credentials
+    if not firebase_admin._apps:
+        try:
+            firebase_admin.initialize_app(cred)
+        except Exception as e:
+            st.error(f"Error initializing Firebase app: {e}")
+            st.stop()  # Stop the Streamlit script if there's an issue with initialization
+
+    # Now you can use Firestore
+    try:
+        db = firestore.client()
+    except Exception as e:
+        st.error(f"Error creating Firestore client: {e}")
+        st.stop()  # Stop the script if there's an issue with the Firestore client
+
 elif env == 'DEV':
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "secrets/credentials.json"
+    # Initialize Firestore client
+    db = firestore.Client()
 
-import os
-import time
-from google.cloud import firestore
-import pandas as pd
-import streamlit as st
 
 # Specify the folder path
 folder_path = 'data'

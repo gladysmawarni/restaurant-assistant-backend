@@ -12,9 +12,6 @@ import pydeck as pdk
 env = 'PROD'
 
 if env == 'PROD':
-        # Debug: Check if secrets are being read correctly
-    st.write("Loading credentials...")
-
     # Load credentials from Streamlit secrets and verify the content structure
     try:
         cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
@@ -35,7 +32,7 @@ if env == 'PROD':
     except Exception as e:
         st.error(f"Error creating Firestore client: {e}")
         st.stop()  # Stop the script if there's an issue with the Firestore client
-        
+
 elif env == 'DEV':
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "secrets/credentials.json"
     # Initialize Firestore client
@@ -59,7 +56,6 @@ for filename in os.listdir(folder_path):
         
         # Check if the file is older than 24 hours
         if current_time - file_mod_time > time_threshold:
-            st.write('here1')
             # Fetch the data from Firestore
             rests = [i.id.strip() for i in db.collection("restaurants").get()][:10]
             addresses = [i.to_dict()['Address'] for i in db.collection("restaurants").get()][:10]
@@ -80,7 +76,6 @@ for filename in os.listdir(folder_path):
             
         
         else:
-            st.write('here2')
             # Read the latest CSV file from the folder
             csv_path = os.path.join(folder_path, filename)
             df = pd.read_csv(csv_path)
