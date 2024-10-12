@@ -40,6 +40,7 @@ def check_password():
 
 ### ---DATA---
 if env == 'PROD':
+    st.write('password')
     # Check password in prod, continue if password is correct
     if not check_password():
         st.stop() 
