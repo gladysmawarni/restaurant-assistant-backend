@@ -1,4 +1,5 @@
 import streamlit as st
+import hmac
 import os
 import firebase_admin
 from firebase_admin import credentials, firestore
@@ -9,10 +10,40 @@ import pydeck as pdk
 # import folium
 # from streamlit_folium import st_folium
 
-
+st.title('Backend')
 env = 'PROD'
 
+
+### ---PASSWORD---
+def check_password():
+    """Returns `True` if the user had the correct password."""
+
+    def password_entered():
+        """Checks whether a password entered by the user is correct."""
+        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # Don't store the password.
+        else:
+            st.session_state["password_correct"] = False
+
+    # Return True if the password is validated.
+    if st.session_state.get("password_correct", False):
+        return True
+
+    # Show input for password.
+    st.text_input(
+        "Password", type="password", on_change=password_entered, key="password"
+    )
+    if "password_correct" in st.session_state:
+        st.error("😕 Password incorrect")
+    return False
+
+### ---DATA---
 if env == 'PROD':
+    # Check password in prod, continue if password is correct
+    if not check_password():
+        st.stop() 
+
     # Load credentials from Streamlit secrets and verify the content structure
     try:
         cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
