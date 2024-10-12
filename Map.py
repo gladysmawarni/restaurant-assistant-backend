@@ -4,6 +4,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import pandas as pd
 import time
+from datetime import datetime
 import pydeck as pdk
 # import folium
 # from streamlit_folium import st_folium
@@ -53,9 +54,13 @@ for filename in os.listdir(folder_path):
     if os.path.isfile(file_path):
         # Get the file's modification time
         file_mod_time = os.path.getmtime(file_path)
+         # Convert the modification time to a readable format
+        last_updated = datetime.fromtimestamp(file_mod_time).strftime('%Y-%m-%d %H:%M:%S')
         
         # Check if the file is older than 24 hours
         if current_time - file_mod_time > time_threshold:
+            st.write(f"Data was last retrieved on {last_updated} and is older than 24 hours. Retrieving latest data...")
+
             # Fetch the data from Firestore
             rests = [i.id.strip() for i in db.collection("restaurants").get()][:10]
             addresses = [i.to_dict()['Address'] for i in db.collection("restaurants").get()][:10]
@@ -76,6 +81,7 @@ for filename in os.listdir(folder_path):
             
         
         else:
+            st.write(f"Data was last retrieved on {last_updated}")
             # Read the latest CSV file from the folder
             csv_path = os.path.join(folder_path, filename)
             df = pd.read_csv(csv_path)
