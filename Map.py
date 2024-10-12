@@ -9,6 +9,20 @@ import pydeck as pdk
 # import folium
 # from streamlit_folium import st_folium
 
+# Debug: Check if secrets are being read correctly
+st.write("Loading credentials...")
+
+# Load credentials from Streamlit secrets and verify the content structure
+try:
+    cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+    st.write("Credentials loaded successfully.")
+except Exception as e:
+    st.error(f"Error loading credentials: {e}")
+    st.stop()  # Stop the Streamlit script if there's an issue with credentials
+
+# Debug: Check Firebase initialization status
+st.write("Initializing Firebase app...")
+
 env = 'PROD'
 
 if env == 'PROD':
