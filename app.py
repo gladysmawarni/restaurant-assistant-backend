@@ -73,7 +73,6 @@ elif env == 'DEV':
 
 # Fetch the data from Firestore in a single call
 restaurants_data = db.collection("restaurants").get()[:10]
-
 # Process the data locally
 rests = [i.id.strip() for i in restaurants_data]
 addresses = [i.to_dict().get('Address') for i in restaurants_data]
@@ -89,7 +88,7 @@ for i in reviews:
 
 reviews_content = []
 for i in reviews:
-    cntn = src = set([x['text'] for x in i])
+    cntn = set([x['text'] for x in i])
     reviews_content.append(', '.join(list(cntn)))
 
 # Create a DataFrame and save it to a CSV file
