@@ -85,14 +85,14 @@ for i in reviews:
     reviews_sources.append(', '.join(list(src)))
 
 # Create a DataFrame and save it to a CSV file
-data_dict = {'Restaurant Name': rests, 'Address': addresses, 'Appears on': reviews_sources, 'Lat_lng': lat_long}
+data_dict = {'Restaurant': rests, 'Address': addresses, 'Appears on': reviews_sources, 'Reviews': reviews, 'Lat_lng': lat_long}
 df = pd.DataFrame(data_dict)
 
 
 
 ### ---DATA---
 df['Restaurant'] = df['Restaurant'].str.strip()
-st.dataframe(df[['Restaurant', 'Address', 'Appears on']], hide_index=True)
+st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews']], hide_index=True)
 st.write(f'Total restaurant in database: {len(df)}')
 
 ### ---MAP---           
