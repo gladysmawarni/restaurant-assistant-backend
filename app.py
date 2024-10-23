@@ -89,7 +89,7 @@ for i in reviews:
 reviews_content = []
 for i in reviews:
     cntn = set([x['text'] for x in i])
-    reviews_content.append(', '.join(list(cntn)))
+    reviews_content.append('\n'.join(list(cntn)))
 
 # Create a DataFrame and save it to a CSV file
 data_dict = {'Restaurant': rests, 'Address': addresses, 
