@@ -71,12 +71,15 @@ elif env == 'DEV':
     # Initialize Firestore client
     db = firestore.Client()
 
+# Fetch the data from Firestore in a single call
+restaurants_data = db.collection("restaurants").get()[:10]
 
-# Fetch the data from Firestore
-rests = [i.id.strip() for i in db.collection("restaurants").get()][:10]
-addresses = [i.to_dict()['Address'] for i in db.collection("restaurants").get()][:10]
-reviews = [i.to_dict()["Reviews"] for i in db.collection("restaurants").get()][:10]
-lat_long = [[i.to_dict()["Latitude"], i.to_dict()['Longitude']] for i in db.collection("restaurants").get()][:10]
+# Process the data locally
+rests = [i.id.strip() for i in restaurants_data]
+addresses = [i.to_dict().get('Address') for i in restaurants_data]
+reviews = [i.to_dict().get("Reviews") for i in restaurants_data]
+latitude = [i.to_dict().get("Latitude") for i in restaurants_data]
+longitude = [i.to_dict().get("Longitude") for i in restaurants_data]
 
 # Extract review sources
 reviews_sources = []
@@ -84,10 +87,16 @@ for i in reviews:
     src = set([x['source'] for x in i])
     reviews_sources.append(', '.join(list(src)))
 
-# Create a DataFrame and save it to a CSV file
-data_dict = {'Restaurant': rests, 'Address': addresses, 'Appears on': reviews_sources, 'Reviews': reviews, 'Lat_lng': lat_long}
-df = pd.DataFrame(data_dict)
+reviews_content = []
+for i in reviews:
+    cntn = src = set([x['text'] for x in i])
+    reviews_content.append(', '.join(list(cntn)))
 
+# Create a DataFrame and save it to a CSV file
+data_dict = {'Restaurant': rests, 'Address': addresses, 
+             'Appears on': reviews_sources, 'Reviews': reviews_content, 
+             'latitude': latitude, 'longitude': longitude}
+df = pd.DataFrame(data_dict)
 
 
 ### ---DATA---
