@@ -79,6 +79,7 @@ addresses = [i.to_dict().get('Address') for i in restaurants_data]
 reviews = [i.to_dict().get("Reviews") for i in restaurants_data]
 latitude = [i.to_dict().get("Latitude") for i in restaurants_data]
 longitude = [i.to_dict().get("Longitude") for i in restaurants_data]
+instagram = [i.to_dict().get("Instagram") for i in restaurants_data]
 
 
 # Extract review sources
@@ -100,14 +101,15 @@ for i in reviews:
 
 # Create a DataFrame and save it to a CSV file
 data_dict = {'Restaurant': rests, 'Address': addresses, 
-             'Appears on': reviews_sources, 'Reviews': reviews_content, 
+             'Appears on': reviews_sources, 'Reviews': reviews_content,
+             'Instagram': instagram,
              'latitude': latitude, 'longitude': longitude}
 df = pd.DataFrame(data_dict)
 
 
 ### ---DATA---
 df['Restaurant'] = df['Restaurant'].str.strip()
-st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews']], hide_index=True)
+st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews', 'Instagram']], hide_index=True)
 st.write(f'Total restaurant in database: {len(df)}')
 
 ### ---MAP---           
