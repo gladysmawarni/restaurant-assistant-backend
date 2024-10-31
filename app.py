@@ -80,16 +80,23 @@ reviews = [i.to_dict().get("Reviews") for i in restaurants_data]
 latitude = [i.to_dict().get("Latitude") for i in restaurants_data]
 longitude = [i.to_dict().get("Longitude") for i in restaurants_data]
 
+
 # Extract review sources
 reviews_sources = []
 for i in reviews:
-    src = set([x['source'] for x in i])
-    reviews_sources.append(', '.join(list(src)))
+    try:
+        src = set([x['source'] for x in i])
+        reviews_sources.append(', '.join(list(src)))
+    except:
+        reviews_sources.append('None')
 
 reviews_content = []
 for i in reviews:
-    cntn = set([x['text'] for x in i])
-    reviews_content.append('\n---\n'.join(list(cntn)))
+    try:
+        cntn = set([x['text'] for x in i])
+        reviews_content.append('\n---\n'.join(list(cntn)))
+    except:
+        reviews_content.append('None')
 
 # Create a DataFrame and save it to a CSV file
 data_dict = {'Restaurant': rests, 'Address': addresses, 
