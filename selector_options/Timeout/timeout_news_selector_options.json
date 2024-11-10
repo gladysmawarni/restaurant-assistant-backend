@@ -1,0 +1,30 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "venues_selector": "div[id='content'][data-component='annotation']",
+        "venue_name_selector": "h2 + h2",
+        "venue_review_selector": "h2 + p",
+        "venue_address_selector": "h2 + p + p"
+    },
+    "option_two": {
+        "option_name": "option two",
+        "venues_selector": "div[id='content'][data-component='annotation']",
+        "venue_name_selector": "h2",
+        "venue_review_selector": "h2 + p",
+        "venue_address_selector": "h2 + p + p"
+    },
+    "option_three": {
+        "option_name": "option three",
+        "venues_selector": "div[id='content'][data-component='annotation']",
+        "venue_name_selector": "h2 + h2",
+        "venue_review_selector": "h2 + p",
+        "venue_address_selector": "h2 + p + p , h2 + p + meta +p "
+    },
+    "option_four": {
+        "option_name": "option four",
+        "venues_selector": "div[id='content'][data-component='annotation']",
+        "venue_name_selector": "h2",
+        "venue_review_selector": "h2 + p",
+        "venue_address_selector": "h2 + p + p , h2 + p + meta +p "
+    }
+}

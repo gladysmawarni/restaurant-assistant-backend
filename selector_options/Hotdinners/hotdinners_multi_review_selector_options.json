@@ -1,0 +1,30 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "venues_selector" : "div[itemprop='articleBody']",
+        "venue_name_selector": "h2[class='contentheading']",
+        "venue_review_selector": "h2[class='contentheading']~p:has(~p[class='article_separator'], ~p[class='subheading']):not(.article_separator):not(h2[class='contentheading']+p):not(:has(a))",
+        "venue_address_selector": "h2 + p"
+    },
+    "option_two": {
+        "option_name": "option two",
+        "venues_selector" : "div[itemprop='articleBody']",
+        "venue_name_selector": "h2[class='contentheading']",
+        "venue_review_selector": "h2[class='contentheading'] + p + p",
+        "venue_address_selector": "h2 + p"
+    },
+    "option_three": {
+        "option_name": "option three",
+        "venues_selector" : "div[itemprop='articleBody']",
+        "venue_name_selector": "h2[class='contentheading'],h2[class='contentheading header-bottom'], p[class='contentheading']",
+        "venue_review_selector": "h2[class='contentheading'] + p + p, p[class='contentheading'] + p + p, h2[class='contentheading header-bottom'] + p + p",
+        "venue_address_selector": "h2 + p, p[class='contentheading'] + p"
+    },
+    "option_four": {
+        "option_name": "option four",
+        "venues_selector" : "div[itemprop='articleBody']",
+        "venue_name_selector": "h3[class='articleheading']",
+        "venue_review_selector": "h3[class='articleheading'] + p",
+        "venue_address_selector": "h3[class='articleheading'] + p"
+    }
+}

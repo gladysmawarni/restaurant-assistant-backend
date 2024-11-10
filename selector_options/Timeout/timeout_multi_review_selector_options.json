@@ -1,0 +1,20 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "base_url": "https://www.timeout.com",
+        "venues_selector": "div[class^='articleContent']",
+        "venue_name_selector": "h3[data-testid='tile-title_testID']",
+        "venue_summary_review_selector": "div[class^='_summaryContainer'] p",
+        "venue_url_selector": "a[data-testid='tile-link_testID']",
+        "venue_address_selector": ""
+    },
+    "option_two": {
+        "option_name": "option two",
+        "base_url": "https://www.timeout.com",
+        "venues_selector": "div[class^='articleContent']",
+        "venue_name_selector": "x",
+        "venue_summary_review_selector": "x",
+        "venue_url_selector": "x",
+        "venue_address_selector": "x"
+    }
+}

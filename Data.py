@@ -1,75 +1,45 @@
 import streamlit as st
-import hmac
 import os
 import firebase_admin
 from firebase_admin import credentials, firestore
 import pandas as pd
-import time
-from datetime import datetime
+
 import pydeck as pdk
+from utils import check_password
 # import folium
 # from streamlit_folium import st_folium
 
 st.set_page_config(page_title="Backend")
 st.title('Data')
-env = 'PROD'
 
 
-### ---PASSWORD---
-def check_password():
-    """Returns `True` if the user had the correct password."""
-
-    def password_entered():
-        """Checks whether a password entered by the user is correct."""
-        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]  # Don't store the password.
-        else:
-            st.session_state["password_correct"] = False
-
-    # Return True if the password is validated.
-    if st.session_state.get("password_correct", False):
-        return True
-
-    # Show input for password.
-    st.text_input(
-        "Password", type="password", on_change=password_entered, key="password"
-    )
-    if "password_correct" in st.session_state:
-        st.error("😕 Password incorrect")
-    return False
 
 ### ---DATA---
-if env == 'PROD':
-    # Check password in prod, continue if password is correct
-    if not check_password():
-        st.stop() 
+# Check password in prod, continue if password is correct
+if not check_password():
+    st.stop() 
 
-    # Load credentials from Streamlit secrets and verify the content structure
+# Load credentials from Streamlit secrets and verify the content structure
+try:
+    cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+except Exception as e:
+    st.error(f"Error loading credentials: {e}")
+
+# Initialize the Firebase app with the credentials
+if not firebase_admin._apps:
     try:
-        cred = credentials.Certificate(dict(st.secrets["GOOGLE_CREDENTIALS"]))
+        firebase_admin.initialize_app(cred)
     except Exception as e:
-        st.error(f"Error loading credentials: {e}")
+        st.error(f"Error initializing Firebase app: {e}")
+        st.stop()  # Stop the Streamlit script if there's an issue with initialization
 
-    # Initialize the Firebase app with the credentials
-    if not firebase_admin._apps:
-        try:
-            firebase_admin.initialize_app(cred)
-        except Exception as e:
-            st.error(f"Error initializing Firebase app: {e}")
-            st.stop()  # Stop the Streamlit script if there's an issue with initialization
+# Now you can use Firestore
+try:
+    db = firestore.client()
+except Exception as e:
+    st.error(f"Error creating Firestore client: {e}")
+    st.stop()  # Stop the script if there's an issue with the Firestore client
 
-    # Now you can use Firestore
-    try:
-        db = firestore.client()
-    except Exception as e:
-        st.error(f"Error creating Firestore client: {e}")
-        st.stop()  # Stop the script if there's an issue with the Firestore client
-
-elif env == 'DEV':
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "secrets/credentials.json"
-    # Initialize Firestore client
-    db = firestore.Client()
 
 # Fetch the data from Firestore in a single call
 restaurants_data = db.collection("restaurants").get()

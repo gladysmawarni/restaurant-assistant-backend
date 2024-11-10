@@ -1,0 +1,20 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "base_url": "https://www.theinfatuation.com",
+        "venues_selector": "div[data-testid='venue-venueCard']",
+        "venue_name_selector": "div[data-testid='venue-venueLink'] a > h2",
+        "venue_summary_review_selector": "",
+        "venue_url_selector": "div[data-testid='venue-venueLink'] a",
+        "venue_address_selector": "div[data-testid='caption-captionDetails'] a > p"
+    },
+    "option_two": {
+        "option_name": "option two",
+        "base_url": "https://www.theinfatuation.com",
+        "venues_selector": "div[data-testid='venue-venueCard']",
+        "venue_name_selector": "div[data-testid='venue-venueLink'] a > h2",
+        "venue_summary_review_selector": "",
+        "venue_url_selector": "div[data-testid='venue-venueLink'] a",
+        "venue_address_selector": "div[data-testid='caption-captionDetails'] a > p"
+    }
+}

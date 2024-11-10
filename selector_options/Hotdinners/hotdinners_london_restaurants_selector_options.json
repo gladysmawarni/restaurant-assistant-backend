@@ -1,0 +1,16 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "aricle_body_selector": "div[class='com-content-article__body']",
+        "venue_name_selector": "h1[class='contentheading']",
+        "venue_review_selector": "div[id='whatweknow'] p:not(.subheading) ",
+        "venue_address_selector": "div[id='moreinfo']  div:first-child"
+    },
+    "option_two": {
+        "option_name": "option two (variation not yeat created)",
+        "aricle_body_selector": "div[itemprop='articleBody']",
+        "venue_name_selector": "x",
+        "venue_review_selector": "x",
+        "venue_address_selector": "x"
+    }
+}

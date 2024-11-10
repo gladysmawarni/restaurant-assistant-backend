@@ -1,0 +1,16 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "aricle_body_selector": "div[itemprop='articleBody']",
+        "venue_name_selector": "p[class='subheading']",
+        "venue_review_selector": "p:has(~ p[class='subheading']):not(:has(img)):not(p[style^='text-align']), li",
+        "venue_address_selector": "p[class='subheading'] + p:has(strong)"
+    },
+    "option_two": {
+        "option_name": "option two (variation not yeat created)",
+        "aricle_body_selector": "div[itemprop='articleBody']",
+        "venue_name_selector": "x",
+        "venue_review_selector": "x",
+        "venue_address_selector": "x"
+    }
+}

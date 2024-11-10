@@ -1,0 +1,18 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "aricle_body_selector": "div[class^='styles_postContent']",
+        "venue_name_selector": "h1[data-testid='venue-title']",
+        "venue_review_selector": "div[class^='styles_richText'] > p",
+        "googleMaps_url_selector" :"a[data-testid='venue-googleMapUrl']",
+        "venue_address_selector": "a[data-testid='venue-googleMapUrl']"
+    },
+    "option_two": {
+        "option_name": "option two (variation not yeat created)",
+        "aricle_body_selector": "div[class^='styles_postContent']",
+        "venue_name_selector": "x",
+        "venue_review_selector": "x",
+        "googleMaps_url_selector" :"x",
+        "venue_address_selector": "x"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "option_one": {
+        "option_name": "option one",
+        "aricle_body_selector": "section[class^='_main_content_']",
+        "venue_name_selector": "h1[data-testid='article-title_testID']",
+        "venue_review_selector": "section[data-section-name='review'] div[data-component^='annotation'] > p",
+        "venue_address_selector": "section[data-section-name='details'] div[data-section='details'] > dl > dd"
+    },
+    "option_two": {
+        "option_name": "option two (variation not yeat created)",
+        "aricle_body_selector": "section[class^='_main_content_']",
+        "venue_name_selector": "x",
+        "venue_review_selector": "x",
+        "venue_address_selector": "x"
+    }
+}
