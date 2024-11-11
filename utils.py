@@ -54,7 +54,6 @@ def router(url: str, **kwargs) -> None:
             | ("/bars-and-pubs/" in url)
             | ("/restaurants/" in url)
         ):
-            print("food-and-drink or bars-and-pubs or restaurants route")
             return muilti_review_scraper(
                 website=website,
                 url=url,
@@ -67,7 +66,6 @@ def router(url: str, **kwargs) -> None:
         #     print("bars-and-pubs or restaurants route")
         #     return timeout_muilti_review_scraper(url=url, save=save)
         elif "/news/" in url:
-            print("news route")
             return multi_sigle_block_reviews_scraper(
                 website=website,
                 url=url,
@@ -77,14 +75,12 @@ def router(url: str, **kwargs) -> None:
                 ),
             )
         else:
-            print("Url unkown")
             return "There is no information for that url"
 
     def infatuation_routes():
         website = "Infatuation"
 
         if "/guides/" in url:
-            print("guides route")
             return muilti_review_scraper(
                 website=website,
                 url=url,
@@ -95,7 +91,6 @@ def router(url: str, **kwargs) -> None:
             )
 
         elif "/reviews/" in url:
-            print("reviews route")
             return single_review_scraper(
                 website=website,
                 url=url,
@@ -111,7 +106,6 @@ def router(url: str, **kwargs) -> None:
     def hotdinners_routes():
         website = "Hotdinners"
         if "/Features/" in url:
-            print("Features route")
             return multi_sigle_block_reviews_scraper(
                 website=website,
                 url=url,
@@ -121,7 +115,6 @@ def router(url: str, **kwargs) -> None:
                 ),
             )
         elif "/Gastroblog/" in url:
-            print("Gastroblog route")
             return single_review_scraper(
                 website=website,
                 url=url,
@@ -131,7 +124,6 @@ def router(url: str, **kwargs) -> None:
                 ),
             )
         elif "/London-restaurants/" in url:
-            print("London-restaurants route")
             return single_review_scraper(
                 website=website,
                 url=url,
@@ -141,7 +133,6 @@ def router(url: str, **kwargs) -> None:
                 ),
             )
         else:
-            print("Url unkown")
             return "There is no information for that url"
 
     base_url_dict = {
@@ -152,7 +143,6 @@ def router(url: str, **kwargs) -> None:
 
     # select the website that is the root of the link to access the speccific routes to scrape
     base_url = list(filter(lambda x: x in url, base_url_dict.keys()))[0]
-    print(f"Accessing {base_url} webpage!")
     st.session_state.source = "Infatuation" if base_url=="https://www.theinfatuation.com" else "Timeout" if base_url=="https://www.timeout.com" else "Hot Dinners"
 
     list_of_venues_scrapped = base_url_dict[base_url]()
@@ -235,7 +225,6 @@ def find_ig(name):
         'cx': st.secrets['cx'],
         'q': f"{name} restaurant uk / london instagram user site:instagram.com",
     }
-    print(name)
 
     try:
         x = requests.get(url, params=params)
@@ -253,7 +242,6 @@ def find_ig(name):
     
     data = [(links, titles) for links, titles in list(zip(ig_links_cleaned, ig_titles))]
     response = check(data, params['q'])
-    print(response)
     
     return response
 

@@ -47,45 +47,59 @@ if st.button('Scrape'):
     existing = []
     for scraped in scraped_venue_data:
         venue = scraped['Venue'].lower()
-    
+        
         exist = db.collection("restaurants").document(venue).get().to_dict()
         if exist:
-            ## if it exist, check if there's new review
-            all_venue_reviews = {
-                    review["text"] for review in exist["Reviews"]
-                }
-            for review in scraped["Reviews"]:
-                scrapped_review_set = {review["text"]}
+            if ("Reviews" in exist):
+                ## if it exist, check if there's new review
+                try:
+                    all_venue_reviews = {
+                            review["text"] for review in exist["Reviews"]
+                        }
+                except TypeError:
+                    ## FIX TYPE ERROR
+                    print('fix')
+                    exist["Reviews"] = [exist['Reviews']]
+                    db.collection("restaurants").document(venue).delete()
+                    db.collection("restaurants").document(venue).set(exist)
 
-                # if the scrapped reviews is in the database then we should  have a empty set in the diference
-                new_reviews_set = scrapped_review_set.difference(all_venue_reviews)
+                    all_venue_reviews = {
+                            review["text"] for review in exist["Reviews"]
+                        }
 
-                # NEW REVIEWS
-                if new_reviews_set != set():
-                    temp = {}
-                    temp['Restaurant'] = venue
-                    temp['Status'] = "NEW REVIEW"
-                    temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-                    temp['Address'] = scraped['Address']
-                    temp['Instagram'] = '-'
-                    temp['Place ID'] = '-'
-                    temp['Latitude'], temp['Longitude'] = '-', '-'
-                    temp['Source'] = st.session_state.source
+                for review in scraped["Reviews"]:
+                    scrapped_review_set = {review["text"]}
 
-                    st.session_state.new_data.append(temp)
-                
-                # EXIST
-                else:
-                    temp = {}
-                    temp['Restaurant'] = venue
-                    temp['Status'] = "EXIST"
-                    temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-                    temp['Address'] = scraped['Address']
+                    # if the scrapped reviews is in the database then we should  have a empty set in the diference
+                    new_reviews_set = scrapped_review_set.difference(all_venue_reviews)
 
-                    st.session_state.existing_data.append(temp)
+                    # NEW REVIEWS
+                    if new_reviews_set != set():
+                        temp = {}
+                        temp['Restaurant'] = venue
+                        temp['Status'] = "NEW REVIEW"
+                        temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                        temp['Address'] = scraped['Address']
+                        temp['Instagram'] = '-'
+                        temp['Place ID'] = '-'
+                        temp['Latitude'], temp['Longitude'] = '-', '-'
+                        temp['Source'] = st.session_state.source
+
+                        st.session_state.new_data.append(temp)
+                    
+                    # EXIST
+                    else:
+                        temp = {}
+                        temp['Restaurant'] = venue
+                        temp['Status'] = "EXIST"
+                        temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                        temp['Address'] = scraped['Address']
+
+                        st.session_state.existing_data.append(temp)
         
         # NEW VENUE
         else:
+
             temp = {}
             temp['Restaurant'] = venue
             temp['Status'] = "NEW VENUE"
@@ -100,7 +114,6 @@ if st.button('Scrape'):
 
 
 if len(st.session_state.new_data) > 0:
-    print(len(st.session_state.new_data))
     st.success('New Venues / Reviews')
    
     new_df = pd.DataFrame(st.session_state.new_data)
@@ -121,12 +134,11 @@ if len(st.session_state.new_data) > 0:
                     rest_reviews = db.collection("restaurants").document(i['Restaurant'].strip()).get().to_dict()['Reviews']
                     tmp = {'text': i['Reviews'], 'source': i['Source']}
                     rest_reviews.append(tmp)
-                    print(rest_reviews)
 
                     db.collection("restaurants").document(i['Restaurant'].strip()).set({'Reviews': rest_reviews}, merge=True)
                 
                 elif i['Status'] == 'NEW VENUE':
-                    reviews = {'text': i['Reviews'], 'source': i['Source']}
+                    reviews = [{'text': i['Reviews'], 'source': i['Source']}]
                     db.collection("restaurants").document(i['Restaurant'].strip()).set({'Address': i['Address'], 
                                                                                         'Latitude': i['Latitude'],
                                                                                         'Longitude': i['Longitude'],
