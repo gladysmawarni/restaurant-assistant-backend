@@ -6,3 +6,4 @@ streamlit==1.38.0
 stqdm==0.0.5
 beautifulsoup4==4.12.2
 openai==1.51.2
+lxml
