@@ -4,3 +4,6 @@ protobuf==5.28.2
 pydeck==0.9.1
 streamlit==1.38.0
 stqdm==0.0.5
+bs4==4.12.3
+openai==1.51.2
+stqdm==0.0.5
