@@ -58,7 +58,6 @@ if st.button('Scrape'):
                         }
                 except TypeError:
                     ## FIX TYPE ERROR
-                    print('fix')
                     exist["Reviews"] = [exist['Reviews']]
                     db.collection("restaurants").document(venue).delete()
                     db.collection("restaurants").document(venue).set(exist)
