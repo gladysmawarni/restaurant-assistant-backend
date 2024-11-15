@@ -26,5 +26,12 @@
         "venue_name_selector": "h3[class='articleheading']",
         "venue_review_selector": "h3[class='articleheading'] + p",
         "venue_address_selector": "h3[class='articleheading'] + p"
+    },
+    "option_five": {
+        "option_name": "option five",
+        "venues_selector" : "div[itemprop='articleBody']",
+        "venue_name_selector": "h2[class='contentheadingjreviews']",
+        "venue_review_selector": "div[class='jrModuleFieldDiv jrReviewsummary']",
+        "venue_address_selector": "div[class='jrModuleFieldDiv jrAddress']"
     }
 }

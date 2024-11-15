@@ -41,75 +41,76 @@ except Exception as e:
 url = st.text_input('input URL')
 
 if st.button('Scrape'):
-    scraped_venue_data = router(url=url, save=False)
+    with st.spinner('Scraping...'):
+        scraped_venue_data = router(url=url, save=False)
 
-    new = []
-    existing = []
-    for scraped in scraped_venue_data:
-        venue = scraped['Venue'].lower()
-        
-        exist = db.collection("restaurants").document(venue).get().to_dict()
-        if exist:
-            if ("Reviews" in exist):
-                ## if it exist, check if there's new review
-                try:
-                    all_venue_reviews = {
-                            review["text"] for review in exist["Reviews"]
-                        }
-                except TypeError:
-                    ## FIX TYPE ERROR
-                    exist["Reviews"] = [exist['Reviews']]
-                    db.collection("restaurants").document(venue).delete()
-                    db.collection("restaurants").document(venue).set(exist)
+        new = []
+        existing = []
+        for scraped in scraped_venue_data:
+            venue = scraped['Venue'].lower()
+            
+            exist = db.collection("restaurants").document(venue).get().to_dict()
+            if exist:
+                if ("Reviews" in exist):
+                    ## if it exist, check if there's new review
+                    try:
+                        all_venue_reviews = {
+                                review["text"] for review in exist["Reviews"]
+                            }
+                    except TypeError:
+                        ## FIX TYPE ERROR
+                        exist["Reviews"] = [exist['Reviews']]
+                        db.collection("restaurants").document(venue).delete()
+                        db.collection("restaurants").document(venue).set(exist)
 
-                    all_venue_reviews = {
-                            review["text"] for review in exist["Reviews"]
-                        }
+                        all_venue_reviews = {
+                                review["text"] for review in exist["Reviews"]
+                            }
 
-                for review in scraped["Reviews"]:
-                    scrapped_review_set = {review["text"]}
+                    for review in scraped["Reviews"]:
+                        scrapped_review_set = {review["text"]}
 
-                    # if the scrapped reviews is in the database then we should  have a empty set in the diference
-                    new_reviews_set = scrapped_review_set.difference(all_venue_reviews)
+                        # if the scrapped reviews is in the database then we should  have a empty set in the diference
+                        new_reviews_set = scrapped_review_set.difference(all_venue_reviews)
 
-                    # NEW REVIEWS
-                    if new_reviews_set != set():
-                        temp = {}
-                        temp['Restaurant'] = venue
-                        temp['Status'] = "NEW REVIEW"
-                        temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-                        temp['Address'] = scraped['Address']
-                        temp['Instagram'] = '-'
-                        temp['Place ID'] = '-'
-                        temp['Latitude'], temp['Longitude'] = '-', '-'
-                        temp['Source'] = st.session_state.source
+                        # NEW REVIEWS
+                        if new_reviews_set != set():
+                            temp = {}
+                            temp['Restaurant'] = venue
+                            temp['Status'] = "NEW REVIEW"
+                            temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                            temp['Address'] = scraped['Address']
+                            temp['Instagram'] = '-'
+                            temp['Place ID'] = '-'
+                            temp['Latitude'], temp['Longitude'] = '-', '-'
+                            temp['Source'] = st.session_state.source
 
-                        st.session_state.new_data.append(temp)
-                    
-                    # EXIST
-                    else:
-                        temp = {}
-                        temp['Restaurant'] = venue
-                        temp['Status'] = "EXIST"
-                        temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-                        temp['Address'] = scraped['Address']
+                            st.session_state.new_data.append(temp)
+                        
+                        # EXIST
+                        else:
+                            temp = {}
+                            temp['Restaurant'] = venue
+                            temp['Status'] = "EXIST"
+                            temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                            temp['Address'] = scraped['Address']
 
-                        st.session_state.existing_data.append(temp)
-        
-        # NEW VENUE
-        else:
+                            st.session_state.existing_data.append(temp)
+            
+            # NEW VENUE
+            else:
 
-            temp = {}
-            temp['Restaurant'] = venue
-            temp['Status'] = "NEW VENUE"
-            temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-            temp['Address'] = scraped['Address']
-            temp['Instagram'] = find_ig(venue)
-            temp['Place ID'] = get_placeid(venue + ' , ' + scraped['Address'])
-            temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
-            temp['Source'] = st.session_state.source
+                temp = {}
+                temp['Restaurant'] = venue
+                temp['Status'] = "NEW VENUE"
+                temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                temp['Address'] = scraped['Address']
+                temp['Instagram'] = find_ig(venue)
+                temp['Place ID'] = get_placeid(venue + ' , ' + scraped['Address'])
+                temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
+                temp['Source'] = st.session_state.source
 
-            st.session_state.new_data.append(temp)
+                st.session_state.new_data.append(temp)
 
 
 if len(st.session_state.new_data) > 0:

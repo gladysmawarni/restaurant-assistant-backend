@@ -351,7 +351,7 @@ def multi_sigle_block_reviews_scraper(
 
     def multi_data_block_scrapper(soup: BeautifulSoup, option_dict: dict) -> list:
 
-        print(f"trying to scrape using {option_dict["option_name"]}")
+        # print(f"trying to scrape using {option_dict["option_name"]}")
 
         venues_selector = option_dict["venues_selector"]
         venues_soup = soup.select_one(venues_selector)
@@ -363,19 +363,20 @@ def multi_sigle_block_reviews_scraper(
         # Venue name
         venue_name_selector = option_dict["venue_name_selector"]
         venue_name_list = venues_soup.select(venue_name_selector)
-        venue_name_list = [name.text for name in venue_name_list]
+        venue_name_list = [name.text for name in venue_name_list if not ('the best' in name.text.lower() and 'restaurant' in name.text.lower())]
         raw_data_list.append(venue_name_list)
 
         # Venue Review
         venue_review_selector = option_dict["venue_review_selector"]
         venue_review_list = venues_soup.select(venue_review_selector)
         venue_review_list = [
-            review.text
+            review.text.strip()
             for review in venue_review_list
             if (review.text != "\xa0") and (review.text != "")
         ]
         # for option four of the selector - hotdinners multi review
         venue_review_list = [review.split("Why should you care? ")[1] if "Why should you care? " in review else review for review in venue_review_list]
+        venue_review_list = [review.split("What We Know:  ")[1] if "What We Know:  " in review else review for review in venue_review_list]
         raw_data_list.append(venue_review_list)
 
         # Venue address
@@ -383,11 +384,12 @@ def multi_sigle_block_reviews_scraper(
             "venue_address_selector"
         ]  # the address appeares as the first simbling tag of an h2 tag
         venue_address_list = venues_soup.select(venue_address_selector)
-        venue_address_list = [address.text for address in venue_address_list]
+        venue_address_list = [address.text.strip() for address in venue_address_list]
         
         # for option four of the selector - hotdinners multi review
         venue_address_list = [address.split("Why should you care? ")[0] if "Why should you care? " in address else address for address in venue_address_list]
         venue_address_list = [address.split("Where is it? ")[1] if "Where is it? " in address else address for address in venue_address_list]
+        venue_address_list = [address.split("Address:  ")[1] if "Address:  " in address else address for address in venue_address_list]
 
         raw_data_list.append(venue_address_list)
 
