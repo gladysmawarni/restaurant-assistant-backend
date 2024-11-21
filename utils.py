@@ -261,3 +261,12 @@ def get_lat_lng(address):
     lng = geodata['results'][0]['geometry']['location']['lng']
 
     return lat, lng
+
+
+import unicodedata
+
+def remove_accents(input_str):
+    # Normalize the string to 'NFD' (Normalization Form Decomposed)
+    normalized_str = unicodedata.normalize('NFD', input_str)
+    # Filter out characters with the 'Mn' (Mark, Nonspacing) unicode category
+    return ''.join(char for char in normalized_str if unicodedata.category(char) != 'Mn')

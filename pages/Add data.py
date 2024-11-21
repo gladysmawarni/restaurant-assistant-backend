@@ -3,7 +3,7 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 
-from utils import router, check_password, get_placeid, find_ig, get_lat_lng
+from utils import router, check_password, get_placeid, find_ig, get_lat_lng, remove_accents
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:
@@ -139,7 +139,8 @@ if len(st.session_state.new_data) > 0:
                 
                 elif i['Status'] == 'NEW VENUE':
                     reviews = [{'text': i['Reviews'], 'source': i['Source']}]
-                    db.collection("restaurants").document(i['Restaurant'].strip()).set({'Address': i['Address'], 
+                    venue = remove_accents(i['Restaurant'].lower())
+                    db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'], 
                                                                                         'Latitude': i['Latitude'],
                                                                                         'Longitude': i['Longitude'],
                                                                                         'Reviews': reviews,
