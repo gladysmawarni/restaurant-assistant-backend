@@ -176,6 +176,7 @@ def get_placeid(query):
     
     return placeid
 
+
 def get_website(place_id):
     url = f"https://places.googleapis.com/v1/places/{place_id}"
 
