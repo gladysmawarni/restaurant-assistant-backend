@@ -190,10 +190,12 @@ def get_website(place_id):
     params = {
         "key": st.secrets['GOOGLE_API_KEY']
     }
-
-    response = requests.get(url, params=params, headers=headers).json()
-
-    website = response.get('websiteUri', 'N/A')
+    
+    try:
+        response = requests.get(url, params=params, headers=headers).json()
+        website = response.get('websiteUri', 'N/A')
+    except:
+        website = 'N/A'
 
     return website
 
