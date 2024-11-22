@@ -158,7 +158,7 @@ def get_placeid(query):
     # Define the headers
     headers = {
         "Content-Type": "application/json",
-        "X-Goog-Api-Key": st.secrets['GOOGLE_API_KEY'],  # Replace with your actual API key
+        "X-Goog-Api-Key": st.secrets['GOOGLE_API_KEY'],  
         "X-Goog-FieldMask": "places.id"
     }
 
@@ -175,6 +175,26 @@ def get_placeid(query):
         placeid = 'N/A'
     
     return placeid
+
+def get_website(place_id):
+    url = f"https://places.googleapis.com/v1/places/{place_id}"
+
+    # Define the headers
+    headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Goog-FieldMask": "websiteUri",
+    }
+
+    # Define the headers
+    params = {
+        "key": st.secrets['GOOGLE_API_KEY']
+    }
+
+    response = requests.get(url, params=params, headers=headers).json()
+
+    website = response.get('websiteUri', 'N/A')
+
+    return website
 
 
 ### ---- CHECK IG ----

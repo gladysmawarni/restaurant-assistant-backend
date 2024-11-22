@@ -3,7 +3,7 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 
-from utils import router, check_password, get_placeid, find_ig, get_lat_lng, remove_accents
+from utils import router, check_password, get_placeid, find_ig, get_lat_lng, remove_accents, get_website
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:
@@ -70,7 +70,7 @@ if st.button('Scrape'):
                     for review in scraped["Reviews"]:
                         scrapped_review_set = {review["text"]}
 
-                        # if the scrapped reviews is in the database then we should  have a empty set in the diference
+                        # if the scrapped reviews is in the database then we should have a empty set in the diference
                         new_reviews_set = scrapped_review_set.difference(all_venue_reviews)
 
                         # NEW REVIEWS
@@ -109,6 +109,7 @@ if st.button('Scrape'):
                 temp['Place ID'] = get_placeid(venue + ' , ' + scraped['Address'])
                 temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
                 temp['Source'] = st.session_state.source
+                temp['Website'] = get_website(temp['Place ID'])
 
                 st.session_state.new_data.append(temp)
 
@@ -145,7 +146,8 @@ if len(st.session_state.new_data) > 0:
                                                                                         'Longitude': i['Longitude'],
                                                                                         'Reviews': reviews,
                                                                                         'Place ID': i['Place ID'],
-                                                                                        'Instagram': i['Instagram']},merge=True)
+                                                                                        'Instagram': i['Instagram'],
+                                                                                        'Website': i['Website']},merge=True)
         
         st.success('Database updated')
 
