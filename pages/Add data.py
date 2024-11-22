@@ -38,6 +38,30 @@ except Exception as e:
     st.error(f"Error creating Firestore client: {e}")
     st.stop()  # Stop the script if there's an issue with the Firestore client
 
+
+
+
+### ---- APP ----
+st.title('Scrape Data')
+st.divider()
+
+st.subheader('Acceptable links:')
+
+explanation = """
+- Infatuation  
+`london/guides`, `london/reviews` 
+
+- Hot Dinners  
+`Features`, `Gastroblog`, `London-restaurants`
+
+- Timeout  
+`london/food-and-drink`, `london/restaurants`, `london/news`
+"""
+
+st.markdown(explanation)
+
+st.divider()
+
 url = st.text_input('input URL')
 
 if st.button('Scrape'):
