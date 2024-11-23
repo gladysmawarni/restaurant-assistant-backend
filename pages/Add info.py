@@ -100,6 +100,10 @@ if update_rsvp:
             time.sleep(0.4)
 
             db.collection('status').document('reservation').set({'updated': datetime.now(),
-                                                         'point': rsvp_last_point + 1}, merge=True)
+                                                         'point': rsvp_last_point}, merge=True)
 
     st.success(f'Reservation links updated for {leap} restaurants')
+
+    if rsvp_last_point == len(complete_data):
+        db.collection('status').document('reservation').set({'updated': datetime.now(),
+                                                         'point': 0}, merge=True)
