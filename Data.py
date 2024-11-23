@@ -11,6 +11,8 @@ from utils import check_password
 st.set_page_config(page_title="Backend")
 st.title('Data')
 
+if 'restaurant_db' not in st.session_state:
+    st.session_state.restaurant_db = None
 
 
 ### ---DATA---
@@ -41,14 +43,16 @@ except Exception as e:
 
 
 # Fetch the data from Firestore in a single call
-restaurants_data = db.collection("restaurants").get()
+if st.session_state.restaurant_db == None:
+    st.session_state.restaurant_db = db.collection("restaurants").get()
+
 # Process the data locally
-rests = [i.id.strip() for i in restaurants_data]
-addresses = [i.to_dict().get('Address') for i in restaurants_data]
-reviews = [i.to_dict().get("Reviews") for i in restaurants_data]
-latitude = [i.to_dict().get("Latitude") for i in restaurants_data]
-longitude = [i.to_dict().get("Longitude") for i in restaurants_data]
-instagram = [i.to_dict().get("Instagram") for i in restaurants_data]
+rests = [i.id.strip() for i in st.session_state.restaurant_db]
+addresses = [i.to_dict().get('Address') for i in st.session_state.restaurant_db]
+reviews = [i.to_dict().get("Reviews") for i in st.session_state.restaurant_db]
+latitude = [i.to_dict().get("Latitude") for i in st.session_state.restaurant_db]
+longitude = [i.to_dict().get("Longitude") for i in st.session_state.restaurant_db]
+instagram = [i.to_dict().get("Instagram") for i in st.session_state.restaurant_db]
 
 
 # Extract review sources
