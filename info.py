@@ -226,3 +226,85 @@ def find_reservation(query):
     response = check_reservation(menu_links_cleaned, params['q'])
     
     return response
+
+
+## ---- GET MENU ----
+# Function to generate answer based on user's question and context
+def check_menu(data, query):
+    system_message = """
+        Task: Identify the Menu Page of a Restaurant
+
+        From the provided list of links, identify and return the one that corresponds to the menu page of a restaurant or food establishment based on the query. Follow these guidelines carefully:
+
+        1. Menu Page Only:
+        Select a link only if it clearly leads to the restaurant's menu page.
+
+        2. Official Website:
+        The selected link must belong to the restaurant's official website. Avoid links from personal blogs, food review sites, third-party delivery platforms, or other unofficial sources.
+
+        3. Include "Menu" in URL:
+        The selected link should explicitly include the word "menu" in its URL to ensure relevance.
+
+        4. Exclude Product-Specific Links:
+        Avoid links that lead to pages focused on a single product or item rather than the full menu.
+
+        Handle Uncertainty:
+        - If none of the links clearly match the menu page, return 'None'.
+        - If you are uncertain about the match, return 'None'.
+
+        Exclude Provided URL:
+        - Do not consider the exact URL that has already been given as input.
+        - Do NOT consider url that is different from what is given
+
+        Output:
+        Return only the selected link (if it meets all criteria) or 'None'.
+    """
+
+
+    # Define the assistant's role and set up the messages for the API call
+    messages = [
+        {
+            "role": "system",
+            "content": system_message
+        },
+        {
+            "role": "user",
+            "content": f"query: {query}, links: {data}"
+        }
+    ]
+
+    try:
+        # Call the OpenAI API
+        client = OpenAI()
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages, 
+            temperature=0.5
+        )
+
+        # Extract content from the response
+        assistant_message = response.choices[0].message.content
+        
+        return assistant_message
+
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+
+def find_menu(params):
+    url = 'https://www.googleapis.com/customsearch/v1'
+    params = {
+        'key': st.secrets['GOOGLE_API_KEY'],
+        'cx': '663fe7e803e114294',
+        'q': params,
+    }
+
+    try:
+        x = requests.get(url, params=params)
+        menu_links = [i['link'] for i in x.json()['items']]
+        menu_links_cleaned = [i.split('p/')[0] if 'p/' in i else i.split('reel/')[0] if 'reel/' in i else i for i in menu_links]
+    except:
+        return 'None'
+
+    
+    return menu_links_cleaned
