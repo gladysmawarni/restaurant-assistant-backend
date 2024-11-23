@@ -139,7 +139,7 @@ def get_lat_lng(address):
     return lat, lng
 
 
-# --- Reservation --- 
+# ----- GET RESERVATION ----- 
 def check_reservation(data, query):
     system_message = """
         Task: Select the most appropriate link for a restaurant booking or reservation from a provided list of links. Follow these criteria to determine the correct link:
@@ -160,11 +160,13 @@ def check_reservation(data, query):
         - Exclusions: Do not return any link that does not include the name of the restaurant.
         - Uncertainty: If none of the provided links match the criteria or you are unsure, return 'None'.
         - No Fabrication: Use only the links provided. Do not create or infer new links.
-        - DO NOT return the link if you are unsure. Remember the name of the restaurant should match exactly with the url 
+        - DO NOT return the link if you are unsure. Remember the name of the restaurant should match exactly the same in the URL.
+        - It's not enough for the link to partially match the restaurant name. The full name of the restaurant should be in the URL. 
         
         Example what not to get:
-        - brothers cafe -> https://www.thefork.com/restaurant/brothers-marcus is not the same
-        - bono -> https://www.thefork.com/restaurant/bonoo is not the same
+        - 'brothers cafe' and 'link/brothers-marcus' is not correct
+        - 'bono' and 'link/bonoo' is not correct
+        - 'k kitchen' and 'link/tamarind-kitchen' is not correct
         
         Output:
         - Return only the selected link as your answer.
