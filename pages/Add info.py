@@ -100,7 +100,7 @@ if update_menu:
             db.collection('status').document('menu').set({'updated': datetime.now(),
                                                          'point': menu_last_point}, merge=True)
 
-    st.success(f'Reservation links updated for {leap_menu} restaurants')
+    st.success(f'Menu links updated')
 
     if rsvp_last_point == len(complete_data):
         db.collection('status').document('menu').set({'updated': datetime.now(),
@@ -145,7 +145,7 @@ if update_rsvp:
             db.collection('status').document('reservation').set({'updated': datetime.now(),
                                                          'point': rsvp_last_point}, merge=True)
 
-    st.success(f'Reservation links updated for {leap_rsvp} restaurants')
+    st.success(f'Reservation links updated')
 
     if rsvp_last_point == len(complete_data):
         db.collection('status').document('reservation').set({'updated': datetime.now(),
