@@ -102,7 +102,7 @@ if update_menu:
 
     st.success(f'Menu links updated')
 
-    if rsvp_last_point == len(complete_data):
+    if menu_last_point == len(complete_data):
         db.collection('status').document('menu').set({'updated': datetime.now(),
                                                          'point': 0}, merge=True)
 
