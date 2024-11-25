@@ -64,7 +64,7 @@ left, right = st.columns(2)
 
 
 ## LEFT -- MENU
-leap_menu = 100
+leap_menu = 200
 progress_divider_menu = len(complete_data) / 100
 progress_val_menu = int(menu_last_point / progress_divider_menu)
 
@@ -108,7 +108,7 @@ if update_menu:
 
 
 ## RIGHT -- RESERVATION
-leap_rsvp = 100
+leap_rsvp = 200
 progress_divider_rsvp = len(complete_data) / 100
 progress_val_rsvp = int(rsvp_last_point / progress_divider_rsvp)
 
