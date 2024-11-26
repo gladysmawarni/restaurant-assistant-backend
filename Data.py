@@ -84,13 +84,14 @@ df = pd.DataFrame(data_dict)
 
 ### ---DATA---
 df['Restaurant'] = df['Restaurant'].str.strip()
-st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews', 'Instagram']], hide_index=True)
-st.write(f'Total restaurant in database: {len(df)}')
+st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews', 'Instagram', 'Reservation', 'Menu']], hide_index=True)
+st.write(f'Total restaurant in database: {len(df)}\n')
 
 ### Null counts
-st.write(f"Instagram null count: {instagram.count('None')}")
-st.write(f"Menu null count: {menu.count('None')}")
-st.write(f"Reservation null count: {rsvp.count('None')}")
+st.write(f"Instagram null count: `{instagram.count('None')} ({round((instagram.count('None')/len(rests)) *100, 2)} %)`")
+st.write(f"Reservation null count: `{rsvp.count('None')} ({round((rsvp.count('None')/len(rests)) *100, 2)} %)`")
+st.write(f"Menu null count: `{menu.count('None')} ({round((menu.count('None')/len(rests)) *100, 2)} %)`")
+
 
 
 ### ---MAP---           
