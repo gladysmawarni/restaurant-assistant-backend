@@ -36,7 +36,7 @@ assistant_agent = Agent(
     name="Assistant Agent",
     instructions="""You are a restaurant critics, your job is to recommend restaurants to user based on the data we have. 
                     make sure the recommendation is from our database and is retrieved by considering the user preference and location.
-                    if the user does not specify their location, ask until they specify an area or address in London, UK.
+                    if the user does not specify their location or their food/restaurant preference, ask until they specify their preference and an area or address in London, UK.
                     Do not made up information not in the database.
                 """,
     functions = [transfer_to_get_context]
@@ -55,7 +55,7 @@ def assistant_msg(messages):
         if message["content"]:
             st.session_state.memories.append({"role": "assistant", "content": message["content"]})
             with st.chat_message("assistant"):
-                st.write(message["content"])
+                st.write_stream(stream_data(message["content"]))
 
 
 ### ----------- APP -------------
