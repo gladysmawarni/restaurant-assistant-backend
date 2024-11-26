@@ -7,3 +7,4 @@ stqdm==0.0.5
 beautifulsoup4==4.12.2
 openai==1.51.2
 lxml
+git+https://github.com/openai/swarm.git
