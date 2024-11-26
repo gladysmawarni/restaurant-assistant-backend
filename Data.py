@@ -77,7 +77,7 @@ for i in reviews:
 # Create a DataFrame and save it to a CSV file
 data_dict = {'Restaurant': rests, 'Address': addresses, 
              'Appears on': reviews_sources, 'Reviews': reviews_content,
-             'Instagram': instagram,
+             'Instagram': instagram, 'Menu': menu, 'Reservation': rsvp,
              'latitude': latitude, 'longitude': longitude}
 df = pd.DataFrame(data_dict)
 
