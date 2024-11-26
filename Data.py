@@ -53,6 +53,8 @@ reviews = [i.to_dict().get("Reviews") for i in st.session_state.restaurant_db]
 latitude = [i.to_dict().get("Latitude") for i in st.session_state.restaurant_db]
 longitude = [i.to_dict().get("Longitude") for i in st.session_state.restaurant_db]
 instagram = [i.to_dict().get("Instagram") for i in st.session_state.restaurant_db]
+menu = [i.to_dict().get("Menu") for i in st.session_state.restaurant_db]
+rsvp = [i.to_dict().get("Reservation") for i in st.session_state.restaurant_db]
 
 
 # Extract review sources
@@ -84,6 +86,12 @@ df = pd.DataFrame(data_dict)
 df['Restaurant'] = df['Restaurant'].str.strip()
 st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews', 'Instagram']], hide_index=True)
 st.write(f'Total restaurant in database: {len(df)}')
+
+### Null counts
+st.write(f"Instagram null count: {instagram.count('None')}")
+st.write(f"Menu null count: {menu.count('None')}")
+st.write(f"Reservation null count: {rsvp.count('None')}")
+
 
 ### ---MAP---           
 # Set initial view state for the map with a specified zoom level
