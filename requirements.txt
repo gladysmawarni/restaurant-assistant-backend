@@ -10,6 +10,6 @@ lxml
 langchain_community
 langchain_core
 langchain_openai
-langchain_pineone
+langchain-pinecone
 pinecone
 git+https://github.com/openai/swarm.git
