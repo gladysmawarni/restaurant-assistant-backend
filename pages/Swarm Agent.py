@@ -139,7 +139,7 @@ def show_map(df):
     view_state = pdk.ViewState(
         latitude=st.session_state.map_point['lat'],  # Latitude 
         longitude=st.session_state.map_point['lng'],  # Longitude
-        zoom=114
+        zoom=14
         ,  # Adjust zoom level as needed
         pitch=0
         )
