@@ -60,9 +60,8 @@ def area_bounds(loc):
 def area_info(loc):
     model = ChatOpenAI(model="gpt-4o")
     prompt = f"""
-            Provide a short information (50 words) about the location: {loc}, UK.
-            Such as the public transportation available and the northeast and southwest area bound.
-            Mention the name of the location on the first line.
+            Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
+            Mention the location first then the coordinates with exactly 7 decimal places.
             """
     response_text = model.invoke(prompt).content
     return response_text
