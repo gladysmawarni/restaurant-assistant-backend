@@ -139,7 +139,7 @@ def show_map(df):
     view_state = pdk.ViewState(
         latitude=st.session_state.map_point['lat'],  # Latitude 
         longitude=st.session_state.map_point['lng'],  # Longitude
-        zoom=12
+        zoom=114
         ,  # Adjust zoom level as needed
         pitch=0
         )
@@ -149,7 +149,7 @@ def show_map(df):
         'ScatterplotLayer',
         data=df,
         get_position='[longitude, latitude]',
-        get_radius=60,
+        get_radius=30,
         get_color='[200, 30, 0, 160]',
         pickable=True
     )
