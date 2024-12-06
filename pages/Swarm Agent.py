@@ -1,12 +1,13 @@
 import streamlit as st
 import time
 from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import FAISS
 import requests
+from langchain_openai import ChatOpenAI
 import pandas as pd
 import pydeck as pdk
 import ast
-import json
+from pinecone import Pinecone
+from langchain_pinecone import PineconeVectorStore
 
 from swarm import Swarm, Agent
 
@@ -18,11 +19,17 @@ if 'start' not in st.session_state:
     st.session_state.start = False
 if 'map_point' not in st.session_state:
     st.session_state.map_point = None
+if 'area_info' not in st.session_state:
+    st.session_state.area_info = None
+
 
 # Vector DB
-embeddings = OpenAIEmbeddings()
-faiss_db = FAISS.load_local("faiss_db", embeddings, allow_dangerous_deserialization=True)
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+pc = Pinecone(st.secrets['PINECONE_API_KEY'])
+index = pc.Index('restaurants')
+vector_store = PineconeVectorStore(index=index, embedding=embeddings)
 
+# Google Maps API
 gmap_api = st.secrets['GOOGLE_API_KEY']
 
 def stream_data(response):
@@ -30,116 +37,105 @@ def stream_data(response):
         yield word + " "
         time.sleep(0.04)
 
-def get_geolocation(area):
-    """Get area boundary."""
-    geocoding_url = "https://maps.googleapis.com/maps/api/geocode/json?"
 
-    # Define the parameters
-    params = {
-        "address": area,
-        "region": "GB",
-        "components": "locality:london|country:GB",
-        "key": gmap_api, # Replace with your actual API key
+def area_bounds(loc):
+    model = ChatOpenAI(model="gpt-4o")
+    prompt = f"""
+            Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
+            And the center point of the location.
+            Format the latitude & longitude response with exactly 7 decimal places.
+
+            Example output:
+            northeast: latitude longitude & southwest: latitude longitude // center: latitude longitude
+
+            Only return the coordinates in the specified format, nothing else.
+            """
+
+    response_text = model.invoke(prompt).content
+    bounds , center = response_text.split(' // ')
+    center_point = center.strip('center: ').split()
+
+    return bounds, {'lat': float(center_point[0]), 'lng': float(center_point[1])}
+
+def area_info(loc):
+    model = ChatOpenAI(model="gpt-4o")
+    prompt = f"""
+            Provide a short information (50 words) about the location: {loc}, UK.
+            Such as the public transportation available and the northeast and southwest area bound.
+            Mention the name of the location on the first line.
+            """
+    response_text = model.invoke(prompt).content
+    return response_text
+
+
+def filter_location(bound):
+    parts = bound.split("&")
+
+    # Extract northeast and southwest parts
+    northeast = parts[0].split(":")[1].strip()
+    southwest = parts[1].split(":")[1].strip()
+
+    # Split into latitude and longitude
+    northeast_lat, northeast_lon = map(float, northeast.split())
+    southwest_lat, southwest_lon = map(float, southwest.split())
+
+    latitude_filter = {
+    "$and": [
+        {"latitude": {"$lte": northeast_lat}},
+        {"latitude": {"$gte": southwest_lat}}
+    ]
     }
-    response = requests.get(geocoding_url, params=params)
-    geodata=response.json()
 
-    return geodata['results'][0]['geometry']['bounds'], geodata['results'][0]['geometry']['location']
+    longitude_filter = {
+        "$and": [
+            {"longitude": {"$lte": northeast_lon}},
+            {"longitude": {"$gte": southwest_lon}}
+        ]
+    }
 
-# def filter_location(bound, db):
-#     latitude_filter = {
-#     "$and": [
-#         {"latitude": {"$lte": bound['northeast']['lat']}},
-#         {"latitude": {"$gte": bound['southwest']['lat']}}
-#     ]
-#     }
+    # Combine filters using $and operator
+    combined_filter = {
+        "$and": [
+            latitude_filter,
+            longitude_filter
+        ]
+    }
 
-#     longitude_filter = {
-#         "$and": [
-#             {"longitude": {"$lte": bound['northeast']['lng']}},
-#             {"longitude": {"$gte": bound['southwest']['lng']}}
-#         ]
-#     }
+    return combined_filter
 
-#     # Combine filters using $and operator
-#     combined_filter = {
-#         "$and": [
-#             latitude_filter,
-#             longitude_filter
-#         ]
-#     }
 
-#     # Modify the as_retriever method to include the filter in search_kwargs
-#     base_retriever = db.as_retriever(search_kwargs={'filter': combined_filter})
-
-#     return base_retriever
-
-# def get_context(food:str, location="London") -> dict:
-#     """Retrieve data from database based on user's preference and location."""
-#     bounds, st.session_state.map_point = get_geolocation(location)
-#     retriever = filter_location(bounds, faiss_db)
-#     docs = retriever.invoke(food)
-
-#     merged_result = [{**i.metadata, "reviews": i.page_content} for i in docs]
-    
-#      # Convert to a DataFrame
-#     st.session_state.df = pd.DataFrame(merged_result)
-
-#     return st.session_state.df.to_dict(orient='records')
-
-def get_context(food:str, location="London") -> list:
+def get_context(preference:str, location="London") -> dict:
     """Retrieve data from database based on user's preference and location."""
-    preference = food + ', ' + location
-    docs_faiss = faiss_db.similarity_search_with_relevance_scores(preference, k=20)
+    print(preference, ',' , location)
+    
+    bounds, st.session_state.map_point = area_bounds(location)
+    filter = filter_location(bounds)
 
-    merged_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in docs_faiss]
-    # st.session_state.context = result
+    results = vector_store.similarity_search_with_relevance_scores(
+            preference,
+            filter=filter,
+            k=1000,
+    )
 
-    # Extract data into a list of dictionaries
-    data_for_df = [
-        {
-            "name": info['name'],
-            "address": info['address'],
-            "score": info['score'],
-            "reviews": info['reviews'],
-            "instagram": info['instagram'],
-            "website": info['website'],
-            "reservation": info['reservation'],
-            "menu": info['menu'],
-            "latitude": float(info['latitude']),
-            "longitude": float(info['longitude']),
-            "placeid": info['place_id']
-        }
-        for info in merged_result
-    ]
-
+    all_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results]
+    top5_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:5]]
+    
     # Convert to a DataFrame
-    df = pd.DataFrame(data_for_df)
+    st.session_state.all_df = pd.DataFrame(all_result)
+    st.session_state.top5_df = pd.DataFrame(top5_result)
 
-    bounds, st.session_state.map_point = get_geolocation(location)
-    # Extract bounds
-    min_lat = float(bounds['southwest']['lat'])
-    max_lat = float(bounds['northeast']['lat'])
-    min_lng = float(bounds['southwest']['lng'])
-    max_lng = float(bounds['northeast']['lng'])
+    st.session_state.area_info = area_info(location)
+    with st.chat_message("assistant"):
+        st.write_stream(stream_data(st.session_state.area_info))
 
-    # Filter dataframe
-    st.session_state.df = df[
-        (df['latitude'] >= min_lat) & 
-        (df['latitude'] <= max_lat) & 
-        (df['longitude'] >= min_lng) & 
-        (df['longitude'] <= max_lng)
-    ]
-
-    return st.session_state.df.to_dict(orient='records')
-
+    return top5_result
 
 
 def show_map(df):
     view_state = pdk.ViewState(
         latitude=st.session_state.map_point['lat'],  # Latitude 
         longitude=st.session_state.map_point['lng'],  # Longitude
-        zoom=13,  # Adjust zoom level
+        zoom=12,  # Adjust zoom level
         pitch=0
         )
 
@@ -148,8 +144,8 @@ def show_map(df):
         'ScatterplotLayer',
         data=df,
         get_position='[longitude, latitude]',
-        get_radius=30,
-        get_color='[200, 30, 0, 160]',
+        get_radius=50,
+        get_color='[200, 30, 160]',
         pickable=True
     )
 
@@ -161,6 +157,7 @@ def show_map(df):
     )
 
     st.pydeck_chart(map)
+
 
 def assistant_msg(messages):
     if len(messages) <= 1:
@@ -174,11 +171,15 @@ def assistant_msg(messages):
         for message in messages:
             if  message['role'] == 'tool' and message['tool_name'] == 'get_context':
                 context = ast.literal_eval(message['content'])
-                st.dataframe(pd.DataFrame(context))
-                show_map(st.session_state.df)
+
+                st.subheader('all restaurant in the location')
+                st.dataframe(st.session_state.all_df)
+                st.subheader('top 5 restaurant based on relevance')
+                st.dataframe(st.session_state.top5_df)
+                show_map(st.session_state.all_df)
 
                 st.session_state.chat_memories.append({"role": "tool", "content": context})
-                st.session_state.chat_memories.append({"role": "map", "content": st.session_state.df})
+                st.session_state.chat_memories.append({"role": "map", "content": st.session_state.all_df})
 
             elif message["role"] == "assistant":
                 if message["content"]:
@@ -249,10 +250,11 @@ if user_input := st.chat_input("Say Something"):
     
     with st.spinner('Loading..'):
         response = client.run(
-        agent=assistant_agent,
-        messages=st.session_state.agent_memories,
-        context_variables={},
+            agent=assistant_agent,
+            messages=st.session_state.agent_memories,
+            context_variables={},
         )
 
         assistant_msg(response.messages)
+
 

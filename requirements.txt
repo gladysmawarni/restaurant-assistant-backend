@@ -10,6 +10,6 @@ lxml
 langchain_community
 langchain_core
 langchain_openai
-faiss-cpu
-crewai
+langchain_pineone
+pinecone
 git+https://github.com/openai/swarm.git
