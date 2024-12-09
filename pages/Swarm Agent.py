@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 from langchain_openai import OpenAIEmbeddings
-import requests
 from langchain_openai import ChatOpenAI
 import pandas as pd
 import pydeck as pdk
@@ -117,17 +116,18 @@ def get_context(preference:str, location="London") -> dict:
     )
 
     all_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results]
-    top5_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:5]]
+    top_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:20]]
     
     # Convert to a DataFrame
-    st.session_state.all_df = pd.DataFrame(all_result)
-    st.session_state.top5_df = pd.DataFrame(top5_result)
+    st.session_state.all_df = pd.DataFrame(all_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram', 'latitude', 'longitude']]
+    st.session_state.top_df = pd.DataFrame(top_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram',  'latitude', 'longitude']]
+
 
     st.session_state.area_info = area_info(location)
     with st.chat_message("assistant"):
         st.write_stream(stream_data(st.session_state.area_info))
 
-    return top5_result
+    return top_result
 
 
 def show_map(df):
@@ -173,12 +173,13 @@ def assistant_msg(messages):
 
                 st.subheader('all restaurant in the location')
                 st.dataframe(st.session_state.all_df)
-                st.subheader('top 5 restaurant based on relevance')
-                st.dataframe(st.session_state.top5_df)
+                st.subheader('top 20 restaurant based on relevance')
+                st.dataframe(st.session_state.top_df)
                 show_map(st.session_state.all_df)
 
                 st.session_state.chat_memories.append({"role": "tool", "content": context})
                 st.session_state.chat_memories.append({"role": "map", "content": st.session_state.all_df})
+                st.session_state.chat_memories.append({"role": "map", "content": st.session_state.top_df})
 
             elif message["role"] == "assistant":
                 if message["content"]:
