@@ -139,9 +139,23 @@ def get_lat_lng(address):
     return lat, lng
 
 
-# ----- GET RESERVATION ----- 
-def check_reservation(data, query):
-    system_message = """
+
+class ReservationFinder:
+    """
+    A class to handle the process of identifying and retrieving reservation links for restaurants.
+    """
+
+    def __init__(self, google_api_key, search_engine_id):
+        """
+        Initialize the ReservationFinder with necessary credentials.
+
+        Args:
+            google_api_key (str): API key for Google Custom Search.
+            search_engine_id (str): Search engine ID for Google Custom Search.
+        """
+        self.google_api_key = google_api_key
+        self.search_engine_id = search_engine_id
+        self.system_message = """
         Task: Select the most appropriate link for a restaurant booking or reservation from a provided list of links. Follow these criteria to determine the correct link:
 
         Criteria for Selection:
@@ -163,69 +177,92 @@ def check_reservation(data, query):
         - DO NOT return the link if you are unsure. Remember the name of the restaurant should match exactly the same in the URL.
         - It's not enough for the link to partially match the restaurant name. The full name of the restaurant should be in the URL. 
         
-        Example what not to get:
-        - 'brothers cafe' and 'link/brothers-marcus' is not correct
-        - 'bono' and 'link/bonoo' is not correct
-        - 'k kitchen' and 'link/tamarind-kitchen' is not correct
-        
         Output:
         - Return only the selected link as your answer.
         - If no suitable link is found, return 'None'.
-    """
+        """
 
+    @retry_on_failure(retries=5, delay=3)
+    def search_reservation_links(self, query):
+        """
+        Search for reservation links using Google Custom Search API.
 
-    # Define the assistant's role and set up the messages for the API call
-    messages = [
-        {
-            "role": "system",
-            "content": system_message
-        },
-        {
-            "role": "user",
-            "content": f"query: {query}, links: {data}"
+        Args:
+            query (str): Search query for Google Custom Search API.
+
+        Returns:
+            list: A cleaned list of links retrieved from the API.
+        """
+        url = 'https://www.googleapis.com/customsearch/v1'
+        params = {
+            'key': self.google_api_key,
+            'cx': self.search_engine_id,
+            'q': query,
+            'num': 5
         }
-    ]
 
-    try:
-        # Call the OpenAI API
-        client = OpenAI()
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=messages, 
-            temperature=0.5
-        )
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            links = [item['link'] for item in response.json().get('items', [])]
+            return links
+        except requests.RequestException as e:
+            return []
 
-        # Extract content from the response
-        assistant_message = response.choices[0].message.content
-        
-        return assistant_message
 
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
-    
+    def identify_reservation_link(self, links, query):
+        """
+        Use a system prompt to identify the reservation link from a list of links.
 
-@retry_on_failure(retries=5, delay=3)
-def find_reservation(query):
-    url = 'https://www.googleapis.com/customsearch/v1'
-    params = {
-        'key': st.secrets['GOOGLE_API_KEY'],
-        'cx': '663fe7e803e114294',
-        # 'q': f"opentable reservation {rest}",
-        # 'q': f"{website} reserve book",
-        'q': query,
-        'num': 5,
-    }
+        Args:
+            links (list): List of candidate links.
+            query (str): User's query.
 
-    try:
-        x = requests.get(url, params=params)
-        menu_links = [i['link'] for i in x.json()['items']]
-        menu_links_cleaned = [i.split('p/')[0] if 'p/' in i else i.split('reel/')[0] if 'reel/' in i else i for i in menu_links]
-    except:
+        Returns:
+            str: Identified reservation link or 'None' if no match is found.
+        """
+        messages = [
+            {"role": "system", "content": self.system_message},
+            {"role": "user", "content": f"query: {query}, links: {links}"}
+        ]
+
+        try:
+            client = OpenAI()
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=messages,
+                temperature=0.5
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            return 'None'
+
+    def get_reservation(self, restaurant_name, website=None):
+        """
+        Main method to retrieve the reservation link for a restaurant.
+
+        Args:
+            restaurant_name (str): Name of the restaurant.
+            website (str, optional): Official website of the restaurant.
+
+        Returns:
+            str: The identified reservation link or 'None' if no match is found.
+        """
+        queries = [
+            f"{website} reserve book" if website else f"{restaurant_name} reserve book",
+            f"sevenrooms reservation {restaurant_name} london uk",
+            f"opentable reservation {restaurant_name} london uk",
+            f"thefork reservation {restaurant_name} london uk"
+        ]
+
+        for query in queries:
+            links = self.search_reservation_links(query)
+            reservation_link = self.identify_reservation_link(links, query)
+            if reservation_link != 'None':
+                return reservation_link
+
         return 'None'
 
-    response = check_reservation(menu_links_cleaned, params['q'])
-    
-    return response
 
 
 class MenuFinder:
@@ -292,22 +329,10 @@ class MenuFinder:
             response = requests.get(url, params=params)
             response.raise_for_status()
             links = [item['link'] for item in response.json().get('items', [])]
-            return self._clean_links(links)
+            return links
         except requests.RequestException as e:
             return []
 
-    def _clean_links(self, links):
-        """
-        Clean links by removing unnecessary parts like "p/" or "reel/".
-
-        Args:
-            links (list): List of URLs.
-
-        Returns:
-            list: Cleaned URLs.
-        """
-        
-        return links
 
     def identify_menu_link(self, links, query):
         """

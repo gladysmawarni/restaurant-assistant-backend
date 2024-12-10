@@ -4,7 +4,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 
 from utils import router, check_password, remove_accents
-from info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder
+from info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder, ReservationFinder
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:
@@ -138,6 +138,9 @@ if st.button('Scrape'):
 
                 menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                 temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
+
+                reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
+                temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
 
                 st.session_state.new_data.append(temp)
 

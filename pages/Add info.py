@@ -6,7 +6,7 @@ from datetime import datetime
 import time
 from stqdm import stqdm
 
-from info import find_reservation,MenuFinder
+from info import ReservationFinder,MenuFinder
 from utils import  check_password
 
 ### -------- SESSION STATE ---------
@@ -85,7 +85,6 @@ if update_menu:
             key, val = list(rests.items())[0]
             menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
             menu_link = menu_finder.get_menu(key, val['Website'])
-            print(key, menu_link)
 
             db.collection("restaurants").document(key.strip().lower()).set({'Menu': menu_link},
                                                                                     merge=True)
@@ -124,15 +123,11 @@ if update_rsvp:
     with st.spinner('Updating reservation links...'):
         for rests in stqdm(complete_data[rsvp_last_point: end_range_rsvp]):
             key, val = list(rests.items())[0]
-            reserve = find_reservation( f"{val['Website']} reserve book")
-            if reserve == 'None':
-                reserve = find_reservation(f"sevenrooms reservation {key} london uk")
-                if reserve == 'None':
-                    reserve = find_reservation(f"opentable reservation {key} london uk")
-                    if reserve == 'None':
-                        reserve = find_reservation(f"thefork reservation {key} london uk")
+            reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
+            reservation_link = reservation_finder.get_reservation(key, val['Website'])
+            print(key, reservation_link)
 
-            db.collection("restaurants").document(key.strip().lower()).set({'Reservation': reserve},
+            db.collection("restaurants").document(key.strip().lower()).set({'Reservation': reservation_link},
                                                                                     merge=True)
             
             rsvp_last_point += 1
