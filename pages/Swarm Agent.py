@@ -5,6 +5,7 @@ from langchain_openai import ChatOpenAI
 import pandas as pd
 import pydeck as pdk
 import ast
+import json
 from pinecone import Pinecone
 from langchain_pinecone import PineconeVectorStore
 
@@ -38,80 +39,77 @@ def stream_data(response):
 
 
 def area_bounds(loc):
-    model = ChatOpenAI(model="gpt-4o")
+    model = ChatOpenAI(model="gpt-4o", model_kwargs={"response_format": {"type": "json_object"}}, temperature=0)
+
     prompt = f"""
-            Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
-            And the center point of the location.
-            Format the latitude & longitude response with exactly 7 decimal places.
+    Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
 
-            Example output:
-            northeast: latitude longitude & southwest: latitude longitude // center: latitude longitude
+    - If the location is not a specific location, return three distinct location.
+    - For each area, provide:
+        - The name of the area
+        - The northeast boundary coordinates ("lat" and "lon")
+        - The southwest boundary coordinates ("lat" and "lon")
+    
+    - If the user specify one specific location, return only one area with its details.
+    - Format latitude and longitude values with exactly 7 decimal places.
+    - Return the output as a **valid JSON object**, with no additional text or formatting.
+    - The main key of the JSON should be 'locations'
+    """
 
-            Only return the coordinates in the specified format, nothing else.
-            """
 
+    # Generate the response
     response_text = model.invoke(prompt).content
-    bounds , center = response_text.split(' // ')
-    center_point = center.strip('center: ').split()
 
-    return bounds, {'lat': float(center_point[0]), 'lng': float(center_point[1])}
+    # Parse the response as JSON
+    response_json = json.loads(response_text)
 
-def area_info(loc):
-    model = ChatOpenAI(model="gpt-4o")
-    prompt = f"""
-            Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
-            Mention the location first then the coordinates with exactly 7 decimal places.
-            """
-    response_text = model.invoke(prompt).content
-    return response_text
+    # print the area info
+    st.session_state.area_info = response_json
+    with st.chat_message("assistant"):
+        st.write(st.session_state.area_info)
+
+    return response_json
 
 
-def filter_location(bound):
-    parts = bound.split("&")
+def make_filter(bound):
+    # Initialize a list to hold individual filters for each location
+    filters = []
 
-    # Extract northeast and southwest parts
-    northeast = parts[0].split(":")[1].strip()
-    southwest = parts[1].split(":")[1].strip()
+    for point in bound.get('locations', []):
+        # Combine latitude and longitude filters for the current location
+        location_filter = {
+            "$and": [
+                {"latitude": {"$lte": point['northeast']['lat']}},
+                {"latitude": {"$gte": point['southwest']['lat']}},
+                {"longitude": {"$lte": point['northeast']['lon']}},
+                {"longitude": {"$gte": point['southwest']['lon']}}
+            ]
+        }
+        # Add the location filter to the list of filters
+        filters.append(location_filter)
 
-    # Split into latitude and longitude
-    northeast_lat, northeast_lon = map(float, northeast.split())
-    southwest_lat, southwest_lon = map(float, southwest.split())
+    if len(filters) > 1:
+        # Combine all location filters using the $or operator
+        combined_filter = {
+            "$or": filters
+        }
 
-    latitude_filter = {
-    "$and": [
-        {"latitude": {"$lte": northeast_lat}},
-        {"latitude": {"$gte": southwest_lat}}
-    ]
-    }
+        return combined_filter
+    else:
+        return location_filter
 
-    longitude_filter = {
-        "$and": [
-            {"longitude": {"$lte": northeast_lon}},
-            {"longitude": {"$gte": southwest_lon}}
-        ]
-    }
-
-    # Combine filters using $and operator
-    combined_filter = {
-        "$and": [
-            latitude_filter,
-            longitude_filter
-        ]
-    }
-
-    return combined_filter
 
 
 def get_context(preference:str, location="London") -> dict:
     """Retrieve data from database based on user's preference and location."""
     print(preference, ',' , location)
     
-    bounds, st.session_state.map_point = area_bounds(location)
-    filter = filter_location(bounds)
+    bounds = area_bounds(location)
+    filt = make_filter(bounds)
 
     results = vector_store.similarity_search_with_relevance_scores(
             preference,
-            filter=filter,
+            filter=filt,
             k=1000,
     )
 
@@ -122,19 +120,14 @@ def get_context(preference:str, location="London") -> dict:
     st.session_state.all_df = pd.DataFrame(all_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram', 'latitude', 'longitude']]
     st.session_state.top_df = pd.DataFrame(top_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram',  'latitude', 'longitude']]
 
-
-    st.session_state.area_info = area_info(location)
-    with st.chat_message("assistant"):
-        st.write_stream(stream_data(st.session_state.area_info))
-
     return top_result
 
 
 def show_map(df):
     view_state = pdk.ViewState(
-        latitude=st.session_state.map_point['lat'],  # Latitude 
-        longitude=st.session_state.map_point['lng'],  # Longitude
-        zoom=12,  # Adjust zoom level
+        latitude=51.50735,
+        longitude=-0.12776,
+        zoom=11,  # Adjust zoom level
         pitch=0
         )
 
@@ -200,15 +193,25 @@ def transfer_to_get_context():
 # Main Agent
 assistant_agent = Agent(
     name="Assistant Agent",
-    instructions="""You are a restaurant critics, your job is to recommend restaurants to user based on the data we have. 
-                    make sure the recommendation is from our database and is retrieved by considering the user preference and location.
-                    if the user does not specify their location or their food/restaurant preference, ask until they specify their preference and an area or address in London, UK.
-                    Do not made up information not in the database. 
-                    Do not call the function unless it is very necessary.
-                """,
+    instructions = """
+        You are a restaurant critic. Your primary role is to recommend restaurants to users based on the information available in our database. 
 
-    functions = [transfer_to_get_context]
-)
+        Follow these guidelines:
+
+        1. All recommendations must be sourced exclusively from the database and tailored to the user's preferences, location(s), and any additional details they provide.
+
+        2. If the user does not specify their food or restaurant preferences, ask clarifying questions to gather the necessary details before proceeding.
+
+        3. Strictly use the user's stated preferences without modification.
+
+        4. Do not create or fabricate information that is not present in the database.
+
+        5. Get the context considering all location specified by the user, at once. Do not redundantly get the context multiple times.
+
+    """,
+
+    functions = [transfer_to_get_context])
+
 
 def transfer_back_to_assistant():
     return assistant_agent
@@ -241,6 +244,7 @@ if st.session_state.start == False:
 
 if user_input := st.chat_input("Say Something"):
     st.session_state.input = user_input
+
     # Add user message to chat history
     st.session_state.chat_memories.append({"role": "user", "content": user_input})
     st.session_state.agent_memories.append({"role": "user", "content": user_input})
