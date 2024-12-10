@@ -6,7 +6,7 @@ from datetime import datetime
 import time
 from stqdm import stqdm
 
-from info import find_reservation, find_menu, check_menu
+from info import find_reservation,MenuFinder
 from utils import  check_password
 
 ### -------- SESSION STATE ---------
@@ -83,13 +83,11 @@ if update_menu:
         for rests in stqdm(complete_data[menu_last_point: end_range_menu]):
             all_menu_links = []
             key, val = list(rests.items())[0]
-            all_menu_links.append(find_menu(f"{val['Website']} menu"))
-            all_menu_links.append(find_menu(f"{key} london restaurant menu"))
+            menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
+            menu_link = menu_finder.get_menu(key, val['Website'])
+            print(key, menu_link)
 
-
-            menu = check_menu(all_menu_links, f"{val['Website']} menu")
-
-            db.collection("restaurants").document(key.strip().lower()).set({'Menu': menu},
+            db.collection("restaurants").document(key.strip().lower()).set({'Menu': menu_link},
                                                                                     merge=True)
             
             menu_last_point += 1

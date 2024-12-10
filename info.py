@@ -228,23 +228,33 @@ def find_reservation(query):
     return response
 
 
-## ---- GET MENU ----
-# Function to generate answer based on user's question and context
-def check_menu(data, query):
-    system_message = """
+class MenuFinder:
+    """
+    A class to handle the process of identifying and retrieving menu links for restaurants.
+    """
+
+    def __init__(self, google_api_key, search_engine_id):
+        """
+        Initialize the MenuFinder with necessary credentials.
+        """
+        self.google_api_key = google_api_key
+        self.search_engine_id = search_engine_id
+        self.system_message = """
         Task: Identify the Menu Page of a Restaurant
 
         From the provided list of links, identify and return the one that corresponds to the menu page of a restaurant or food establishment based on the query. Follow these guidelines carefully:
 
-        1. Menu Page Only:
-        Select a link only if it clearly leads to the restaurant's menu page.
-
-        2. Official Website:
-        The selected link must belong to the restaurant's official website. Avoid links from personal blogs, food review sites, third-party delivery platforms, or other unofficial sources.
-
-        3. Include "Menu" in URL:
-        The selected link should explicitly include the word "menu" in its URL to ensure relevance.
-
+        1. Official Website:
+        - If the query specifies the restaurant's name, the link must have the name of the restaurant (official website).
+        - The link should have 'menu' in it.
+        - Do not return the website without 'menu'
+        
+        2. Third-Party Platforms:
+        - If the query mentions platforms like 'justeat', or 'deliveroo' ensure the link contains the name of the restaurant and corresponds to the platform mentioned.
+        
+        3. Location Specificity:
+        - The restaurant is located in London, UK. Avoid links that do not correspond to this location.
+        
         4. Exclude Product-Specific Links:
         Avoid links that lead to pages focused on a single product or item rather than the full menu.
 
@@ -254,57 +264,100 @@ def check_menu(data, query):
 
         Exclude Provided URL:
         - Do not consider the exact URL that has already been given as input.
-        - Do NOT consider url that is different from what is given
+        - Do not consider a different base URL that is given as an input.
 
         Output:
         Return only the selected link (if it meets all criteria) or 'None'.
-    """
+        """
 
+    @retry_on_failure(retries=5, delay=3)
+    def search_menu_links(self, query):
+        """
+        Search for menu links using Google Custom Search API.
 
-    # Define the assistant's role and set up the messages for the API call
-    messages = [
-        {
-            "role": "system",
-            "content": system_message
-        },
-        {
-            "role": "user",
-            "content": f"query: {query}, links: {data}"
+        Args:
+            query (str): Search query for Google Custom Search API.
+
+        Returns:
+            list: A cleaned list of links retrieved from the API.
+        """
+        url = 'https://www.googleapis.com/customsearch/v1'
+        params = {
+            'key': self.google_api_key,
+            'cx': self.search_engine_id,
+            'q': query,
         }
-    ]
 
-    try:
-        # Call the OpenAI API
-        client = OpenAI()
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=messages, 
-            temperature=0.5
-        )
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            links = [item['link'] for item in response.json().get('items', [])]
+            return self._clean_links(links)
+        except requests.RequestException as e:
+            return []
 
-        # Extract content from the response
-        assistant_message = response.choices[0].message.content
+    def _clean_links(self, links):
+        """
+        Clean links by removing unnecessary parts like "p/" or "reel/".
+
+        Args:
+            links (list): List of URLs.
+
+        Returns:
+            list: Cleaned URLs.
+        """
         
-        return assistant_message
+        return links
 
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
+    def identify_menu_link(self, links, query):
+        """
+        Use a system prompt to identify the menu link from a list of links.
 
+        Args:
+            links (list): List of candidate links.
+            query (str): User's query.
 
-def find_menu(params):
-    url = 'https://www.googleapis.com/customsearch/v1'
-    params = {
-        'key': st.secrets['GOOGLE_API_KEY'],
-        'cx': '663fe7e803e114294',
-        'q': params,
-    }
+        Returns:
+            str: Identified menu link or 'None' if no match is found.
+        """
+        messages = [
+            {"role": "system", "content": self.system_message},
+            {"role": "user", "content": f"query: {query}, links: {links}"}
+        ]
 
-    try:
-        x = requests.get(url, params=params)
-        menu_links = [i['link'] for i in x.json()['items']]
-        menu_links_cleaned = [i.split('p/')[0] if 'p/' in i else i.split('reel/')[0] if 'reel/' in i else i for i in menu_links]
-    except:
+        try:
+            client = OpenAI()
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=messages,
+                temperature=0.5
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            return 'None'
+
+    def get_menu(self, restaurant_name, website=None):
+        """
+        Main method to retrieve the menu link for a restaurant.
+
+        Args:
+            restaurant_name (str): Name of the restaurant.
+            website (str, optional): Official website of the restaurant.
+
+        Returns:
+            str: The identified menu link or 'None' if no match is found.
+        """
+        queries = [
+            f"{website} menu" if website else f"{restaurant_name} menu",
+            f"{restaurant_name} london restaurant menu",
+            f"{restaurant_name} london justeat menu",
+            f"{restaurant_name} london deliveroo menu"
+        ]
+
+        for query in queries:
+            links = self.search_menu_links(query)
+            menu_link = self.identify_menu_link(links, query)
+            if menu_link != 'None':
+                return menu_link
+
         return 'None'
-
-    
-    return menu_links_cleaned
