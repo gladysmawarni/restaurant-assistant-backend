@@ -3,8 +3,8 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 
-from utils import router, check_password, remove_accents
-from info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder, ReservationFinder
+from helper.utils import router, check_password, remove_accents
+from helper.info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder, ReservationFinder
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:

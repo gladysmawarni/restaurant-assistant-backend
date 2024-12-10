@@ -6,8 +6,8 @@ from datetime import datetime
 import time
 from stqdm import stqdm
 
-from info import ReservationFinder,MenuFinder
-from utils import  check_password
+from helper.info import ReservationFinder,MenuFinder
+from helper.utils import  check_password
 
 ### -------- SESSION STATE ---------
 if 'restaurant_db' not in st.session_state:

@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 from openai import OpenAI
-from utils import retry_on_failure
+from helper.utils import retry_on_failure
 
 ### ----- PLACE ID -------
 def get_placeid(query):
