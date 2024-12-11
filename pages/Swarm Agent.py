@@ -107,7 +107,7 @@ def get_context(preference:str, location="London") -> dict:
     bounds = area_bounds(location)
     filt = make_filter(bounds)
 
-    results = vector_store.similarity_search_with_relevance_scores(
+    results = vector_store.similarity_search_with_score(
             preference,
             filter=filt,
             k=1000,
@@ -116,9 +116,21 @@ def get_context(preference:str, location="London") -> dict:
     all_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results]
     top_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:20]]
     
-    # Convert to a DataFrame
+    # All data
+    st.subheader(f'All {preference} restaurants in {location}')
     st.session_state.all_df = pd.DataFrame(all_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram', 'latitude', 'longitude']]
+    st.dataframe(st.session_state.all_df)
+
+    # Top 20 data
+    st.subheader(f'Top 20 {preference} restaurants in {location}')
     st.session_state.top_df = pd.DataFrame(top_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram',  'latitude', 'longitude']]
+    st.dataframe(st.session_state.top_df)
+
+    show_map(st.session_state.all_df)
+
+    st.session_state.chat_memories.append({"role": "tool", "content": top_result})
+    st.session_state.chat_memories.append({"role": "map", "content": st.session_state.all_df})
+    st.session_state.chat_memories.append({"role": "map", "content": st.session_state.top_df})
 
     return top_result
 
@@ -161,20 +173,7 @@ def assistant_msg(messages):
                 st.write_stream(stream_data(message["content"]))
     else:
         for message in messages:
-            if  message['role'] == 'tool' and message['tool_name'] == 'get_context':
-                context = ast.literal_eval(message['content'])
-
-                st.subheader('all restaurant in the location')
-                st.dataframe(st.session_state.all_df)
-                st.subheader('top 20 restaurant based on relevance')
-                st.dataframe(st.session_state.top_df)
-                show_map(st.session_state.all_df)
-
-                st.session_state.chat_memories.append({"role": "tool", "content": context})
-                st.session_state.chat_memories.append({"role": "map", "content": st.session_state.all_df})
-                st.session_state.chat_memories.append({"role": "map", "content": st.session_state.top_df})
-
-            elif message["role"] == "assistant":
+            if message["role"] == "assistant":
                 if message["content"]:
                     st.session_state.agent_memories.append({"role": "assistant", "content": message["content"]})
 
@@ -190,6 +189,8 @@ context_agent = Agent(
 def transfer_to_get_context():
     return context_agent
 
+
+## TODO: check the tools output if there's more than 1 calls
 # Main Agent
 assistant_agent = Agent(
     name="Assistant Agent",
@@ -198,7 +199,7 @@ assistant_agent = Agent(
 
         Follow these guidelines:
 
-        1. All recommendations must be sourced exclusively from the database and tailored to the user's preferences, location(s), and any additional details they provide.
+        1. All recommendations must be sourced exclusively from the database and tailored to the user's preferences, locations, and any additional details they provide.
 
         2. If the user does not specify their food or restaurant preferences, ask clarifying questions to gather the necessary details before proceeding.
 
@@ -206,7 +207,6 @@ assistant_agent = Agent(
 
         4. Do not create or fabricate information that is not present in the database.
 
-        5. Get the context considering all location specified by the user, at once. Do not redundantly get the context multiple times.
 
     """,
 
