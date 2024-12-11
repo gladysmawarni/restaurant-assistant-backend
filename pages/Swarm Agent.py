@@ -130,7 +130,6 @@ def get_context(preference:str, location="London") -> dict:
 
     st.session_state.chat_memories.append({"role": "tool", "content": top_result})
     st.session_state.chat_memories.append({"role": "map", "content": st.session_state.all_df})
-    st.session_state.chat_memories.append({"role": "map", "content": st.session_state.top_df})
 
     return top_result
 
