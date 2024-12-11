@@ -139,7 +139,42 @@ def get_lat_lng(address):
     return lat, lng
 
 
+### ------ GOOGLE INFO ------
+def get_google_info(place_id):
+    url = f"https://places.googleapis.com/v1/places/{place_id}"
 
+    # Define the headers
+    headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood",
+    }
+
+    # Define the headers
+    params = {
+        "key": st.secrets['GOOGLE_API_KEY']
+    }
+    
+    response = requests.get(url, params=params, headers=headers).json()
+
+    restaurant_data = {}
+    restaurant_data['restaurant'] = response.get('displayName', {}).get('text', 'N/A')
+    restaurant_data['address'] = response.get('formattedAddress', 'N/A')
+    restaurant_data['phone number'] = response.get('internationalPhoneNumber', 'N/A')
+    try:
+        price_level = response.get('priceLevel', 'N/A')
+        restaurant_data['price level'] = price_level.split('_')[-1]
+    except:
+        restaurant_data['price level'] = 'N/A'
+    # restaurant_data['reservable'] = response.get('reservable', 'N/A')
+    restaurant_data['servesVegetarianFood'] = response.get('servesVegetarianFood', 'N/A')
+    restaurant_data['google maps uri'] = response.get('googleMapsUri', 'N/A')
+    restaurant_data['opening hours'] = response.get('regularOpeningHours', {}).get('weekdayDescriptions', 'N/A')
+    restaurant_data['website uri'] = response.get('websiteUri', 'N/A')
+    
+    return restaurant_data
+
+
+### ----- RESERVATION --------
 class ReservationFinder:
     """
     A class to handle the process of identifying and retrieving reservation links for restaurants.
