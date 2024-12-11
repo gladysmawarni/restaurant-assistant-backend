@@ -114,7 +114,7 @@ def get_context(preference:str, location="London") -> dict:
     )
 
     all_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results]
-    top_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:20]]
+    top_result = [{**i[0].metadata, "reviews": i[0].page_content, "score": i[1]} for i in results[:10]]
     
     # All data
     st.subheader(f'All {preference} restaurants in {location}')
@@ -122,7 +122,7 @@ def get_context(preference:str, location="London") -> dict:
     st.dataframe(st.session_state.all_df)
 
     # Top 20 data
-    st.subheader(f'Top 20 {preference} restaurants in {location}')
+    st.subheader(f'Top 10 {preference} restaurants in {location}')
     st.session_state.top_df = pd.DataFrame(top_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram',  'latitude', 'longitude']]
     st.dataframe(st.session_state.top_df)
 
