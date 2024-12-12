@@ -182,7 +182,7 @@ if update_google:
             google_last_point += 1
             google_progress_bar.progress(progress_val_google, text= f"{google_last_point} / {len(complete_data)}")
 
-            time.sleep(0.4)
+            time.sleep(0.6)
 
             db.collection('status').document('google_data').set({'updated': datetime.now(),
                                                          'point': google_last_point}, merge=True)
