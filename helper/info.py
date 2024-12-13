@@ -91,7 +91,7 @@ def check(data, query):
         return assistant_message
 
     except Exception as e:
-        return f"An error occurred: {str(e)}"
+        raise f"An error occurred: {str(e)}"
 
 ### ---- FIND IG ----
 def find_ig(name):
@@ -140,13 +140,46 @@ def get_lat_lng(address):
 
 
 ### ------ GOOGLE INFO ------
+def summarize_reviews(reviews):
+    system_message = """
+    Summarize the five provided Google reviews into a single concise sentence. Highlight the key positive and negative aspects of the restaurant.
+    """
+    # Define the assistant's role and set up the messages for the API call
+    messages = [
+        {
+            "role": "system",
+            "content": system_message
+        },
+        {
+            "role": "user",
+            "content": f"Reviews: {reviews}"
+        }
+    ]
+
+    try:
+        # Call the OpenAI API
+        client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages, 
+            temperature=0.5
+        )
+
+        # Extract content from the response
+        assistant_message = response.choices[0].message.content
+        return assistant_message
+
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+
 def get_google_info(place_id):
     url = f"https://places.googleapis.com/v1/places/{place_id}"
 
     # Define the headers
     headers = {
         "Content-Type": "application/json; charset=utf-8",
-        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood",
+        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,reviews,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood",
     }
 
     # Define the headers
@@ -159,17 +192,30 @@ def get_google_info(place_id):
     restaurant_data = {}
     restaurant_data['restaurant'] = response.get('displayName', {}).get('text', 'N/A')
     restaurant_data['address'] = response.get('formattedAddress', 'N/A')
-    restaurant_data['phone number'] = response.get('internationalPhoneNumber', 'N/A')
+    restaurant_data['phone_number'] = response.get('internationalPhoneNumber', 'N/A')
     try:
         price_level = response.get('priceLevel', 'N/A')
-        restaurant_data['price level'] = price_level.split('_')[-1]
+        restaurant_data['price_level'] = price_level.split('_')[-1]
     except:
-        restaurant_data['price level'] = 'N/A'
+        restaurant_data['price_level'] = 'N/A'
+
+    restaurant_data['google_rating'] = response.get('rating', 'N/A')
+    restaurant_data['google_rating_count'] = response.get('userRatingCount', 'N/A')
+    try:
+        reviews = response.get('reviews', 'N/A')
+        restaurant_data['google_reviews'] = [{'rating': i['rating'], 'review':i['text']['text'], 'published': i['publishTime'].split('T')[0]} for i in reviews]
+        restaurant_data['google_reviews_summary'] = summarize_reviews(restaurant_data['google_reviews'])
+        restaurant_data['last5_google_rating'] = sum([float(i['rating']) for i in reviews]) / len(reviews)
+    except:
+        restaurant_data['google_reviews'] = 'N/A'
+        restaurant_data['google_reviews_summary'] = 'N/A'
+        restaurant_data['last5_google_rating'] = 'N/A'
+
     # restaurant_data['reservable'] = response.get('reservable', 'N/A')
-    restaurant_data['servesVegetarianFood'] = response.get('servesVegetarianFood', 'N/A')
-    restaurant_data['google maps uri'] = response.get('googleMapsUri', 'N/A')
-    restaurant_data['opening hours'] = response.get('regularOpeningHours', {}).get('weekdayDescriptions', 'N/A')
-    restaurant_data['website uri'] = response.get('websiteUri', 'N/A')
+    restaurant_data['serves_vegetarian'] = response.get('servesVegetarianFood', 'N/A')
+    restaurant_data['google_maps_uri'] = response.get('googleMapsUri', 'N/A')
+    restaurant_data['opening_hours'] = response.get('regularOpeningHours', {}).get('weekdayDescriptions', 'N/A')
+    restaurant_data['website_uri'] = response.get('websiteUri', 'N/A')
     
     return restaurant_data
 
