@@ -5,6 +5,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 from stqdm import stqdm
+import lxml.etree
 
 def open_json(path: str) -> json:
     with open(path, mode="r") as f:
@@ -15,7 +16,7 @@ def open_json(path: str) -> json:
 ######### MULTIPLE REVIEW #########
 # INFATUATION - /guides
 # TIMEOUT - /food-and-drink , /restaurants (some subdomains), 
-def muilti_review_scraper(
+def multi_review_scraper(
     website: str,
     url: str,
     selector_options: json,
@@ -462,3 +463,138 @@ def multi_sigle_block_reviews_scraper(
             return single_venue_data
 
     return all_venue_data
+
+
+### CNtraveller Scraper
+def cntraveller_scraper(url):
+    final = []
+    source = 'CN Traveller'
+    review_2 = ''
+
+    headers = {
+    'Cookie': 'CN_geo_country_code=EG',
+    'accept-language': 'en-US,en;q=0.9,ar;q=0.8',
+    'priority': 'u=0, i',
+    'referer': 'https://www.cntraveller.com/topic/eating-drinking',
+    'sec-ch-ua': '"Microsoft Edge";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/244.178.44.111 Safari/537.36 Edg/131.0.16299.15'
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    dom = lxml.etree.HTML(response.text)
+    containers = dom.xpath('//div[@class="body__inner-container"]')
+    if len(containers) == 0:
+        containers = dom.xpath('//div[@data-testid="BodyWrapper"]')
+    elements = dom.xpath('//div[@class="body__inner-container"]/h2 | //div[@class="body__inner-container"]/p')
+    if len(elements) == 0:
+        elements = dom.xpath('//div[@data-testid="BodyWrapper"]/div/h2 | //div[@data-testid="BodyWrapper"]/div/p')
+    if len(elements) < 7:
+        elements = dom.xpath('//div[@class="GallerySlideFigCaption-dOeyTg gWbVWR"]//h2 | //div[@class="GallerySlideFigCaption-dOeyTg gWbVWR"]//p')
+    if len(elements) == 7:
+        elements = dom.xpath('//figure//h2 | //figure//p')
+
+
+    for element in elements:
+        address = ''
+        # try: 
+        if element.tag == 'h2':
+            title = ''.join(element.xpath('.//text()'))
+            # clean title
+            pattern = r"^\d+\.\s*|,\s.*$"
+            title = re.sub(pattern, "", title).strip()
+            if 'The best' in title or 'Best new' in title or 'How we' in title or len(title) < 1:
+                continue
+            #  need the next element in the list elements
+            next_element = elements[elements.index(element) + 1]
+            if next_element.tag == 'p':
+                review_1 = ''.join(next_element.xpath('.//text()'))
+            
+            try:
+                next_element = elements[elements.index(element) + 2]
+                if next_element.tag == 'p':
+                    if 'Address' in ''.join(next_element.xpath('.//text()')):
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+                    if 'Website' not in ''.join(next_element.xpath('.//text()')):
+                        review_2 = ''.join(next_element.xpath('.//text()'))
+                
+                    if address == '':
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+            except:
+                pass
+            try:
+                next_element = elements[elements.index(element) + 3]
+                if next_element.tag == 'p' and address == '':
+                    address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+                    if address == '':
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+    
+            except:
+                pass
+            try:
+                next_element = elements[elements.index(element) + 4]
+                if next_element.tag == 'p' and address == '':
+                    address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+                    if address == '':
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+
+            except:
+                pass
+            try:
+                next_element = elements[elements.index(element) + 5]
+                if next_element.tag == 'p' and address == '':
+                    address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+                    if address == '':
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+            except:
+                pass
+            try:
+                next_element = elements[elements.index(element) + 6]
+                if next_element.tag == 'p' and address == '':
+                    address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+                    if address == '':
+                        address = ''.join(next_element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+            except:
+                pass
+            if title == '':
+                continue
+
+            if title in address:
+                address = address.strip(title).strip(', ')
+
+            if address != '':
+                final.append({
+                    "Venue": title,
+                    "Reviews": [{'text': (review_1 + '\n' + review_2).strip(),
+                                'source': source}],
+                    "Address": address
+                })
+    
+
+    if len(final) < 2:
+        elemnts = dom.xpath('//div[@class="GallerySlideCaptionDek-cXnbPe blsCCS"]/div')
+        for element in elemnts:
+            title = ''.join(element.xpath('./p[1]//text()'))
+            pattern = r"^\d+\.\s*|,\s.*$"
+            title = re.sub(pattern, "", title).strip()
+            review_1 = ''.join(element.xpath('./p[2]//text()'))
+            review_2 = ''.join(element.xpath('./p[3]//text()'))
+            address = ''.join(element.xpath(".//strong[contains(text(),'Address')]//following-sibling::text()[1]")[:1]).replace(':', '').strip()
+            if address == '':
+                address = ''.join(element.xpath(".//strong[contains(text(),'Address')]//following-sibling::a/text()[1]")[:1])
+
+            if address != '':
+                final.append({
+                        "Venue": title,
+                        "Reviews": [{'text': (review_1 + '\n' + review_2).strip(),
+                                    'source': source}],
+                        "Address": address
+                    })
+    
+    return final

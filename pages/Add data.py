@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
+from stqdm import stqdm
 
 from helper.utils import router, check_password, remove_accents
 from helper.info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder, ReservationFinder
@@ -11,6 +12,8 @@ if 'new_data' not in st.session_state:
     st.session_state.new_data = []
 if 'existing_data' not in st.session_state:
     st.session_state.existing_data = []
+if 'not_acceptable_data' not in st.session_state:
+    st.session_state.not_acceptable_data = []
 
 
 ### ---DATA---
@@ -71,7 +74,7 @@ if st.button('Scrape'):
 
         new = []
         existing = []
-        for scraped in scraped_venue_data:
+        for scraped in stqdm(scraped_venue_data):
             venue = scraped['Venue'].lower()
             
             exist = db.collection("restaurants").document(venue).get().to_dict()
@@ -124,25 +127,36 @@ if st.button('Scrape'):
             
             # NEW VENUE
             else:
+                try:
+                    temp = {}
+                    temp['Restaurant'] = venue
+                    temp['Status'] = "NEW VENUE"
+                    temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
+                    temp['Address'] = scraped['Address']
+                    temp['Instagram'] = find_ig(venue)
+                    temp['Place ID'] = get_placeid(venue + ' , ' + ", London, UK")
+                    temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
+                    temp['Source'] = st.session_state.source
+                    temp['Website'] = get_website(temp['Place ID'])
 
-                temp = {}
-                temp['Restaurant'] = venue
-                temp['Status'] = "NEW VENUE"
-                temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
-                temp['Address'] = scraped['Address']
-                temp['Instagram'] = find_ig(venue)
-                temp['Place ID'] = get_placeid(venue + ' , ' + ", London, UK")
-                temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
-                temp['Source'] = st.session_state.source
-                temp['Website'] = get_website(temp['Place ID'])
+                    menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
+                    temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
 
-                menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-                temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
+                    reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
+                    temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
 
-                reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-                temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
+                    st.session_state.new_data.append(temp)
 
-                st.session_state.new_data.append(temp)
+                except Exception as e:
+                    temp = {}
+                    temp['Restaurant'] = venue
+                    temp['Status'] = "NOT ACCEPTABLE"
+                    temp['Address'] = scraped['Address']
+                    temp['Error'] = str(e)
+
+                    st.session_state.not_acceptable_data.append(temp)
+
+
 
 
 if len(st.session_state.new_data) > 0:
@@ -183,6 +197,11 @@ if len(st.session_state.new_data) > 0:
         st.success('Database updated')
 
 if len(st.session_state.existing_data) > 0:
-    st.error('Venue already exist, no new reviews')
+    st.warning('Venue already exist, no new reviews')
     df = pd.DataFrame(st.session_state.existing_data)
+    st.data_editor(df, hide_index=True)
+
+if len(st.session_state.not_acceptable_data) > 0:
+    st.error('Error')
+    df = pd.DataFrame(st.session_state.not_acceptable_data)
     st.data_editor(df, hide_index=True)

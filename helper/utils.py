@@ -1,8 +1,9 @@
 import json
-from scrapers import (
-    muilti_review_scraper,
+from helper.scrapers import (
+    multi_review_scraper,
     multi_sigle_block_reviews_scraper,
     single_review_scraper,
+    cntraveller_scraper
 )
 import streamlit as st
 import hmac
@@ -57,7 +58,7 @@ def router(url: str, **kwargs) -> None:
             | ("/bars-and-pubs/" in url)
             | ("/restaurants/" in url)
         ):
-            return muilti_review_scraper(
+            return multi_review_scraper(
                 website=website,
                 url=url,
                 save=save,
@@ -67,7 +68,7 @@ def router(url: str, **kwargs) -> None:
             )
         # elif ("/bars-and-pubs/" in url) | ("/restaurants/" in url):
         #     print("bars-and-pubs or restaurants route")
-        #     return timeout_muilti_review_scraper(url=url, save=save)
+        #     return timeout_multi_review_scraper(url=url, save=save)
         elif "/news/" in url:
             return multi_sigle_block_reviews_scraper(
                 website=website,
@@ -80,11 +81,15 @@ def router(url: str, **kwargs) -> None:
         else:
             return "There is no information for that url"
 
+    def cntraveller_routes():
+        return cntraveller_scraper(url)
+
+
     def infatuation_routes():
         website = "Infatuation"
 
         if "/guides/" in url:
-            return muilti_review_scraper(
+            return multi_review_scraper(
                 website=website,
                 url=url,
                 save=save,
@@ -142,11 +147,12 @@ def router(url: str, **kwargs) -> None:
         "https://www.theinfatuation.com": infatuation_routes,
         "https://www.timeout.com": timeout_routes,
         "https://www.hot-dinners.com": hotdinners_routes,
+        "https://www.cntraveller.com": cntraveller_routes
     }
 
     # select the website that is the root of the link to access the speccific routes to scrape
     base_url = list(filter(lambda x: x in url, base_url_dict.keys()))[0]
-    st.session_state.source = "Infatuation" if base_url=="https://www.theinfatuation.com" else "Timeout" if base_url=="https://www.timeout.com" else "Hot Dinners"
+    st.session_state.source = "Infatuation" if base_url=="https://www.theinfatuation.com" else "Timeout" if base_url=="https://www.timeout.com" else "CN Traveler" if base_url=="https://www.cntraveller.com" else "Hot Dinners"
 
     list_of_venues_scrapped = base_url_dict[base_url]()
 
