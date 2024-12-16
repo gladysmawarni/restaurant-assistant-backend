@@ -42,19 +42,20 @@ def area_bounds(loc):
     model = ChatOpenAI(model="gpt-4o", model_kwargs={"response_format": {"type": "json_object"}}, temperature=0)
 
     prompt = f"""
-    Provide the approximate boundary coordinates (northeast and southwest) for the location: {loc}, UK.
+    Provide the approximate boundary coordinates (northeast and southwest) for the given location: {loc}, UK.
 
-    - If the location is not a specific location, return three distinct location.
-    - For each area, provide:
-        - The name of the area
-        - The northeast boundary coordinates ("lat" and "lon")
-        - The southwest boundary coordinates ("lat" and "lon")
-    
-    - If the user specify one specific location, return only one area with its details.
-    - Format latitude and longitude values with exactly 7 decimal places.
-    - Return the output as a **valid JSON object**, with no additional text or formatting.
-    - The main key of the JSON should be 'locations'
+    - If the location is ambiguous (e.g., "Halfway between Willesden Green and Stratford"), return details for at least **three distinct areas**. For each area, include:
+    - The name of the area
+    - Northeast boundary coordinates ("lat" and "lon")
+    - Southwest boundary coordinates ("lat" and "lon")
+
+    - If the location is specific, return details for only that area.
+
+    - Ensure latitude and longitude values are formatted with exactly **7 decimal places**.
+    - Return the response as a **valid JSON object** with no additional text or formatting. 
+    - The JSON object must use 'locations' as the main key.
     """
+
 
 
     # Generate the response
@@ -121,7 +122,7 @@ def get_context(preference:str, location="London") -> dict:
     st.session_state.all_df = pd.DataFrame(all_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram', 'latitude', 'longitude']]
     st.dataframe(st.session_state.all_df)
 
-    # Top 20 data
+    # Top n data
     st.subheader(f'Top 10 {preference} restaurants in {location}')
     st.session_state.top_df = pd.DataFrame(top_result)[['score', 'name', 'address', 'reviews', 'review_source', 'website', 'instagram',  'latitude', 'longitude']]
     st.dataframe(st.session_state.top_df)
@@ -205,8 +206,6 @@ assistant_agent = Agent(
         3. Strictly use the user's stated preferences without modification.
 
         4. Do not create or fabricate information that is not present in the database.
-
-
     """,
 
     functions = [transfer_to_get_context])

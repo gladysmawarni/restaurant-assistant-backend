@@ -60,6 +60,8 @@ explanation = """
 
 - Timeout  
 `london/food-and-drink`, `london/restaurants`, `london/news`
+
+- CN Traveller
 """
 
 st.markdown(explanation)
