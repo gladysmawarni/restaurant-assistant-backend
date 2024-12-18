@@ -5,7 +5,7 @@ from firebase_admin import credentials, firestore
 from stqdm import stqdm
 
 from helper.utils import router, check_password, remove_accents
-from helper.info import get_placeid, find_ig, get_lat_lng, get_website, MenuFinder, ReservationFinder
+from helper.info import get_placeid, find_ig, get_lat_lng, get_website, get_google_info, MenuFinder, ReservationFinder
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:
@@ -52,17 +52,17 @@ st.divider()
 st.subheader('Acceptable links:')
 
 explanation = """
-- Infatuation  
-`london/guides`, `london/reviews` 
+        - Infatuation  
+        `london/guides`, `london/reviews` 
 
-- Hot Dinners  
-`Features`, `Gastroblog`, `London-restaurants`
+        - Hot Dinners  
+        `Features`, `Gastroblog`, `London-restaurants`
 
-- Timeout  
-`london/food-and-drink`, `london/restaurants`, `london/news`
+        - Timeout  
+        `london/food-and-drink`, `london/restaurants`, `london/news`
 
-- CN Traveller
-"""
+        - CN Traveller
+        """
 
 st.markdown(explanation)
 
@@ -147,6 +147,8 @@ if st.button('Scrape'):
                     reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                     temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
 
+                    temp['Google Data']  = get_google_info(temp['Place ID'])
+
                     st.session_state.new_data.append(temp)
 
                 except Exception as e:
@@ -188,13 +190,16 @@ if len(st.session_state.new_data) > 0:
                 elif i['Status'] == 'NEW VENUE':
                     reviews = [{'text': i['Reviews'], 'source': i['Source']}]
                     venue = remove_accents(i['Restaurant'].lower())
-                    db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'], 
-                                                                                        'Latitude': i['Latitude'],
-                                                                                        'Longitude': i['Longitude'],
-                                                                                        'Reviews': reviews,
-                                                                                        'Place ID': i['Place ID'],
-                                                                                        'Instagram': i['Instagram'],
-                                                                                        'Website': i['Website']},merge=True)
+                    db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'],
+                                                                              'Google Data': i['Google Data'],
+                                                                                'Latitude': i['Latitude'],
+                                                                                'Longitude': i['Longitude'],
+                                                                                'Reviews': reviews,
+                                                                                'Place ID': i['Place ID'],
+                                                                                'Menu': i['Menu'],
+                                                                                'Reservation': i['Reservation'],
+                                                                                'Instagram': i['Instagram'],
+                                                                                'Website': i['Website']},merge=True)
         
         st.success('Database updated')
 

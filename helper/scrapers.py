@@ -405,7 +405,7 @@ def multi_sigle_block_reviews_scraper(
             all_venue_data = []
             for venue_name, review, address in venue_info_list:
 
-                ### DATYA STRUCTURE ###
+                ### DATA STRUCTURE ###
                 venue_data = {
                     "Venue": venue_name,
                     "Reviews": [
@@ -421,7 +421,7 @@ def multi_sigle_block_reviews_scraper(
 
             return all_venue_data
         else:
-            # could get anny review using structrure for multi reviews
+            # could not get anny review using structrure for multi reviews
             return None
 
     # create a list with all selector options available
