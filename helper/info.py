@@ -358,35 +358,40 @@ class MenuFinder:
         self.google_api_key = google_api_key
         self.search_engine_id = search_engine_id
         self.system_message = """
-        Task: Identify the Menu Page of a Restaurant
+                Task: Identify the Menu Page of a Restaurant
 
-        From the provided list of links, identify and return the one that corresponds to the menu page of a restaurant or food establishment based on the query. Follow these guidelines carefully:
+                From the provided list of links, identify and return the one that corresponds to the menu page of a restaurant or food establishment based on the query. Follow these guidelines strictly:
 
-        1. Official Website:
-        - If the query specifies the restaurant's name, the link must have the name of the restaurant (official website).
-        - The link should have 'menu' in it.
-        - Do not return the website without 'menu'
-        
-        2. Third-Party Platforms:
-        - If the query mentions platforms like 'justeat', or 'deliveroo' ensure the link contains the name of the restaurant and corresponds to the platform mentioned.
-        
-        3. Location Specificity:
-        - The restaurant is located in London, UK. Avoid links that do not correspond to this location.
-        
-        4. Exclude Product-Specific Links:
-        Avoid links that lead to pages focused on a single product or item rather than the full menu.
+                1. **Official Website**:
+                - If the query specifies the restaurant's **official website**, the selected link must meet **all** the following criteria:
+                    - Belongs to the restaurant’s official website (the base domain matches exactly).
+                    - Contains the **full name** of the restaurant.
+                    - Includes the word **'menu'** in the URL path.
+                - **Do not return** any link from the official website that does not include 'menu'.
 
-        Handle Uncertainty:
-        - If none of the links clearly match the menu page, return 'None'.
-        - If you are uncertain about the match, return 'None'.
+                2. **Third-Party Platforms**:
+                - If the query mentions specific platforms like **JustEat** or **Deliveroo**, the selected link must:
+                    - Belong to the mentioned platform (e.g., JustEat or Deliveroo).
+                    - Contain the restaurant’s **full name**.
+                    - Make sure it is full name! do not assume a restaurant is the same if the name is not exactly the same.
+                - **Do not consider** links from unmentioned platforms or any other sources (e.g., Quandoo).
 
-        Exclude Provided URL:
-        - Do not consider the exact URL that has already been given as input.
-        - Do not consider a different base URL that is given as an input.
+                3. **Location Specificity**:
+                - The restaurant must be located in **London, UK**.
+                - Avoid links that do not correspond to this location.
 
-        Output:
-        Return only the selected link (if it meets all criteria) or 'None'.
-        """
+                4. **Handle Uncertainty**:
+                - If none of the links clearly match the menu page, return **'None'**.
+                - If you are uncertain about the match, return **'None'**.
+
+                5. **Exclude Provided URL**:
+                - Do not consider the exact URL that has already been given as input.
+                - Do not consider a link with a different base URL than the input provided.
+
+                **Output**:
+                - Return only the selected link (if it meets all criteria) or **'None'**.
+
+                """
 
     @retry_on_failure(retries=5, delay=3)
     def search_menu_links(self, query):
@@ -457,7 +462,8 @@ class MenuFinder:
             f"{website} menu" if website else f"{restaurant_name} menu",
             f"{restaurant_name} london restaurant menu",
             f"{restaurant_name} london justeat menu",
-            f"{restaurant_name} london deliveroo menu"
+            f"{restaurant_name} london deliveroo menu",
+            f"{restaurant_name} london ubereats menu"
         ]
 
         for query in queries:
@@ -465,5 +471,6 @@ class MenuFinder:
             menu_link = self.identify_menu_link(links, query)
             if menu_link != 'None':
                 return menu_link
+            
 
         return 'None'
