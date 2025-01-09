@@ -179,7 +179,7 @@ def get_google_info(place_id):
     # Define the headers
     headers = {
         "Content-Type": "application/json; charset=utf-8",
-        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,reviews,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood",
+        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,reviews,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood,goodForChildren,allowsDogs,goodForGroups,goodForWatchingSports,menuForChildren,servesBreakfast,servesBrunch,servesLunch,servesDinner,outdoorSeating",
     }
 
     # Define the headers
@@ -211,11 +211,22 @@ def get_google_info(place_id):
         restaurant_data['google_reviews_summary'] = 'N/A'
         restaurant_data['last5_google_rating'] = 'N/A'
 
-    # restaurant_data['reservable'] = response.get('reservable', 'N/A')
+    restaurant_data['reservable'] = response.get('reservable', 'N/A')
     restaurant_data['serves_vegetarian'] = response.get('servesVegetarianFood', 'N/A')
     restaurant_data['google_maps_uri'] = response.get('googleMapsUri', 'N/A')
     restaurant_data['opening_hours'] = response.get('regularOpeningHours', {}).get('weekdayDescriptions', 'N/A')
     restaurant_data['website_uri'] = response.get('websiteUri', 'N/A')
+    restaurant_data['goodForChildren'] = response.get('goodForChildren', 'N/A')
+    restaurant_data['goodForGroups'] = response.get('goodForGroups', 'N/A')
+    restaurant_data['allowsDogs'] = response.get('allowsDogs', 'N/A')
+    restaurant_data['goodForWatchingSports'] = response.get('goodForWatchingSports', 'N/A')
+    restaurant_data['menuForChildren'] = response.get('menuForChildren', 'N/A')
+    restaurant_data['servesBreakfast'] = response.get('servesBreakfast', 'N/A')
+    restaurant_data['servesBrunch'] = response.get('servesBrunch', 'N/A')
+    restaurant_data['servesLunch'] = response.get('servesLunch', 'N/A')
+    restaurant_data['servesDinner'] = response.get('servesDinner', 'N/A')
+    restaurant_data['outdoorSeating'] = response.get('outdoorSeating', 'N/A')
+
     
     return restaurant_data
 
