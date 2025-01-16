@@ -175,7 +175,7 @@ if update_google:
             key, val = list(rests.items())[0]
             try:
                 google_info = get_google_info(val['Place ID'])
-                db.collection('restaurants').document(key.strip().lower()).set({'Website': google_info.pop('website_uri')}, merge=True)
+                # db.collection('restaurants').document(key.strip().lower()).set({'Website': google_info.pop('website_uri')}, merge=True)
                 db.collection('restaurants').document(key.strip().lower()).set({'Google Data': google_info}, merge=True)
             except JSONDecodeError:
                 db.collection('restaurants').document(key.strip().lower()).set({'Google Data': 'None'}, merge=True)
