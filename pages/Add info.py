@@ -90,7 +90,8 @@ if update_menu:
             all_menu_links = []
             key, val = list(rests.items())[0]
             menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-            menu_link = menu_finder.get_menu(key, val['Website'])
+            # menu_link = menu_finder.get_menu(key, val['Website'])
+            menu_link = menu_finder.get_menu(key, val['Google Data']['website_uri'])
 
             db.collection("restaurants").document(key.strip().lower()).set({'Menu': menu_link},
                                                                                     merge=True)
@@ -131,8 +132,8 @@ if update_rsvp:
         for rests in stqdm(complete_data[rsvp_last_point: end_range_rsvp]):
             key, val = list(rests.items())[0]
             reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-            reservation_link = reservation_finder.get_reservation(key, val['Website'])
-            # print(key, reservation_link)
+            # reservation_link = reservation_finder.get_reservation(key, val['Website'])
+            reservation_link = reservation_finder.get_reservation(key, val['Google Data']['website_uri'])
 
             db.collection("restaurants").document(key.strip().lower()).set({'Reservation': reservation_link},
                                                                                     merge=True)

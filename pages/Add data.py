@@ -140,13 +140,15 @@ if st.button('Scrape'):
                     temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
                     temp['Source'] = st.session_state.source
 
+                    temp['Google Data']  = get_google_info(temp['Place ID'])
+
                     menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-                    temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
+                    # temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
+                    temp['Menu']  = menu_finder.get_menu(venue, temp['Google Data']['website_uri'])
 
                     reservation_finder = ReservationFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
-                    temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
-
-                    temp['Google Data']  = get_google_info(temp['Place ID'])
+                    # temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Website'])
+                    temp['Reservation'] = reservation_finder.get_reservation(venue, temp['Google Data']['website_uri'])
 
                     st.session_state.new_data.append(temp)
 
