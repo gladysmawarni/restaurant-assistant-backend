@@ -5,7 +5,7 @@ from firebase_admin import credentials, firestore
 from stqdm import stqdm
 
 from helper.utils import router, check_password, remove_accents
-from helper.info import get_placeid, find_ig, get_lat_lng, get_website, get_google_info, MenuFinder, ReservationFinder
+from helper.info import get_placeid, find_ig, get_lat_lng, get_google_info, MenuFinder, ReservationFinder
 
 ### -------- SESSION STATE ---------
 if 'new_data' not in st.session_state:
@@ -139,7 +139,6 @@ if st.button('Scrape'):
                     temp['Place ID'] = get_placeid(venue + ' , ' + ", London, UK")
                     temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
                     temp['Source'] = st.session_state.source
-                    temp['Website'] = get_website(temp['Place ID'])
 
                     menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                     temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])

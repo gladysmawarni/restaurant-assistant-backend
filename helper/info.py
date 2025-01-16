@@ -29,29 +29,6 @@ def get_placeid(query):
     
     return placeid
 
-## --- WEBSITE ---
-def get_website(place_id):
-    url = f"https://places.googleapis.com/v1/places/{place_id}"
-
-    # Define the headers
-    headers = {
-        "Content-Type": "application/json; charset=utf-8",
-        "X-Goog-FieldMask": "websiteUri",
-    }
-
-    # Define the headers
-    params = {
-        "key": st.secrets['GOOGLE_API_KEY']
-    }
-    
-    try:
-        response = requests.get(url, params=params, headers=headers).json()
-        website = response.get('websiteUri', 'N/A')
-    except:
-        website = 'N/A'
-
-    return website
-
 
 ### ---- CHECK IG ----
 def check(data, query):
