@@ -156,15 +156,28 @@ def get_google_info(place_id):
     # Define the headers
     headers = {
         "Content-Type": "application/json; charset=utf-8",
-        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,reviews,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood,goodForChildren,allowsDogs,goodForGroups,goodForWatchingSports,menuForChildren,servesBreakfast,servesBrunch,servesLunch,servesDinner,outdoorSeating",
+        "X-Goog-FieldMask": "displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,websiteUri,googleMapsUri,regularOpeningHours,servesVegetarianFood,goodForChildren,allowsDogs,goodForGroups,goodForWatchingSports,menuForChildren,servesBreakfast,servesBrunch,servesLunch,servesDinner,outdoorSeating",
+        # "X-Goog-FieldMask": 'displayName,formattedAddress,internationalPhoneNumber,priceLevel,rating,userRatingCount,reviews,websiteUri,googleMapsUri,regularOpeningHours,servesBreakfast'
     }
 
     # Define the headers
     params = {
-        "key": st.secrets['GOOGLE_API_KEY']
+        "key": st.secrets['GOOGLE_API_KEY'],
     }
     
     response = requests.get(url, params=params, headers=headers).json()
+
+    url_reviews = f"https://maps.googleapis.com/maps/api/place/details/json?"
+
+    # Define the headers
+    params_reviews = {
+        "fields": "reviews",
+        "reviews_sort": "newest",
+        "place_id": place_id,
+        "key": st.secrets['GOOGLE_API_KEY'],
+    }
+
+    response_reviews = requests.get(url_reviews, params=params_reviews).json()
 
     restaurant_data = {}
     restaurant_data['restaurant'] = response.get('displayName', {}).get('text', 'N/A')
@@ -179,8 +192,8 @@ def get_google_info(place_id):
     restaurant_data['google_rating'] = response.get('rating', 'N/A')
     restaurant_data['google_rating_count'] = response.get('userRatingCount', 'N/A')
     try:
-        reviews = response.get('reviews', 'N/A')
-        restaurant_data['google_reviews'] = [{'rating': i['rating'], 'review':i['text']['text'], 'published': i['publishTime'].split('T')[0]} for i in reviews]
+        reviews = response_reviews['result']['reviews']
+        restaurant_data['google_reviews'] = [{'rating': i['rating'], 'review':i['text'], 'published': i['time']} for i in reviews]
         restaurant_data['google_reviews_summary'] = summarize_reviews(restaurant_data['google_reviews'])
         restaurant_data['last5_google_rating'] = sum([float(i['rating']) for i in reviews]) / len(reviews)
     except:
@@ -206,7 +219,6 @@ def get_google_info(place_id):
 
     
     return restaurant_data
-
 
 ### ----- RESERVATION --------
 class ReservationFinder:
