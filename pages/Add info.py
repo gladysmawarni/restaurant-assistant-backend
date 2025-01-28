@@ -174,11 +174,11 @@ if update_google:
         for rests in stqdm(complete_data[google_last_point: end_range_google]):
             key, val = list(rests.items())[0]
             try:
-                google_info = get_google_info(val['Place ID'])
+                google_info = get_google_info(val['PlaceID'])
                 db.collection('restaurants').document(key.strip().lower()).set({'Website': google_info.pop('website_uri')}, merge=True)
-                db.collection('restaurants').document(key.strip().lower()).set({'Google Data': google_info}, merge=True)
+                db.collection('restaurants').document(key.strip().lower()).set({'GoogleData': google_info}, merge=True)
             except JSONDecodeError:
-                db.collection('restaurants').document(key.strip().lower()).set({'Google Data': 'None'}, merge=True)
+                db.collection('restaurants').document(key.strip().lower()).set({'GoogleData': 'None'}, merge=True)
             
             google_last_point += 1
             google_progress_bar.progress(progress_val_google, text= f"{google_last_point} / {len(complete_data)}")

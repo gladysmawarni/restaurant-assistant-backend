@@ -111,7 +111,7 @@ if st.button('Scrape'):
                             temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
                             temp['Address'] = scraped['Address']
                             temp['Instagram'] = '-'
-                            temp['Place ID'] = '-'
+                            temp['PlaceID'] = '-'
                             temp['Latitude'], temp['Longitude'] = '-', '-'
                             temp['Source'] = st.session_state.source
 
@@ -136,13 +136,13 @@ if st.button('Scrape'):
                     temp['Reviews'] = "\n---\n".join([i['text'] for i in scraped['Reviews']])
                     temp['Address'] = scraped['Address']
                     temp['Instagram'] = find_ig(venue)
-                    temp['Place ID'] = get_placeid(venue + ' , ' + ", London, UK")
+                    temp['PlaceID'] = get_placeid(venue + ' , ' + ", London, UK")
                     temp['Latitude'], temp['Longitude'] = get_lat_lng(scraped['Address'])
                     temp['Source'] = st.session_state.source
 
-                    google_info = get_google_info(temp['Place ID'])
+                    google_info = get_google_info(temp['PlaceID'])
                     temp['Website'] = google_info.pop('website_uri')
-                    temp['Google Data']  = google_info
+                    temp['GoogleData']  = google_info
 
                     menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                     temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
@@ -194,11 +194,11 @@ if len(st.session_state.new_data) > 0:
                     reviews = [{'text': i['Reviews'], 'source': i['Source']}]
                     venue = remove_accents(i['Restaurant'].lower())
                     db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'],
-                                                                              'Google Data': i['Google Data'],
+                                                                              'GoogleData': i['GoogleData'],
                                                                                 'Latitude': i['Latitude'],
                                                                                 'Longitude': i['Longitude'],
                                                                                 'Reviews': reviews,
-                                                                                'Place ID': i['Place ID'],
+                                                                                'PlaceID': i['PlaceID'],
                                                                                 'Menu': i['Menu'],
                                                                                 'Reservation': i['Reservation'],
                                                                                 'Instagram': i['Instagram'],
