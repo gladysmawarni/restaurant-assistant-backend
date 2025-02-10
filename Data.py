@@ -55,6 +55,8 @@ longitude = [i.to_dict().get("Longitude") for i in st.session_state.restaurant_d
 instagram = [i.to_dict().get("Instagram") for i in st.session_state.restaurant_db]
 menu = [i.to_dict().get("Menu") for i in st.session_state.restaurant_db]
 rsvp = [i.to_dict().get("Reservation") for i in st.session_state.restaurant_db]
+websites = [i.to_dict().get("Website") for i in st.session_state.restaurant_db]
+googledata = [i.to_dict().get("GoogleData") for i in st.session_state.restaurant_db]
 
 
 # Extract review sources
@@ -88,9 +90,18 @@ st.dataframe(df[['Restaurant', 'Address', 'Appears on', 'Reviews', 'Instagram', 
 st.write(f'Total restaurant in database: {len(df)}\n')
 
 ### Null counts
+st.write(f"Website null count: `{websites.count('N/A')} ({round((websites.count('N/A')/len(rests)) *100, 2)} %)`")
 st.write(f"Instagram null count: `{instagram.count('None')} ({round((instagram.count('None')/len(rests)) *100, 2)} %)`")
-st.write(f"Reservation null count: `{rsvp.count('None')} ({round((rsvp.count('None')/len(rests)) *100, 2)} %)`")
 st.write(f"Menu null count: `{menu.count('None')} ({round((menu.count('None')/len(rests)) *100, 2)} %)`")
+st.write(f"Reservation null count: `{rsvp.count('None')} ({round((rsvp.count('None')/len(rests)) *100, 2)} %)`")
+st.divider()
+st.write(f"Serves Vegetarian null count: `{[i['serves_vegetarian'] for i in googledata].count('N/A')} ({round(([i['serves_vegetarian'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
+st.write(f"Serves Breakfast null count: `{[i['servesBreakfast'] for i in googledata].count('N/A')} ({round(([i['servesBreakfast'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
+st.write(f"Serves Brunch null count: `{[i['servesBrunch'] for i in googledata].count('N/A')} ({round(([i['servesBrunch'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
+st.write(f"Serves Lunch null count: `{[i['servesLunch'] for i in googledata].count('N/A')} ({round(([i['servesLunch'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
+st.write(f"Serves Dinner null count: `{[i['servesDinner'] for i in googledata].count('N/A')} ({round(([i['servesDinner'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
+st.divider()
+st.write(f"Price level null count: `{[i['price_level'] for i in googledata].count('N/A')} ({round(([i['price_level'] for i in googledata].count('N/A')/len(rests)) *100, 2)} %)`")
 
 
 
