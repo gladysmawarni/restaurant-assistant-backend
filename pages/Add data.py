@@ -142,7 +142,7 @@ if st.button('Scrape'):
 
                     google_info = get_google_info(temp['PlaceID'])
                     temp['Website'] = google_info.pop('website_uri')
-                    temp['GoogleData']  = google_info
+                    temp['GoogleData']  = dict(google_info)
 
                     menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                     temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
@@ -194,7 +194,7 @@ if len(st.session_state.new_data) > 0:
                     reviews = [{'text': i['Reviews'], 'source': i['Source']}]
                     venue = remove_accents(i['Restaurant'].lower())
                     db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'],
-                                                                              'GoogleData': i['GoogleData'],
+                                                                              'GoogleData': dict(i['GoogleData']),
                                                                                 'Latitude': i['Latitude'],
                                                                                 'Longitude': i['Longitude'],
                                                                                 'Reviews': reviews,
