@@ -3,6 +3,7 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 from stqdm import stqdm
+import ast
 
 from helper.utils import router, check_password, remove_accents
 from helper.info import get_placeid, find_ig, get_lat_lng, get_google_info, MenuFinder, ReservationFinder
@@ -142,7 +143,7 @@ if st.button('Scrape'):
 
                     google_info = get_google_info(temp['PlaceID'])
                     temp['Website'] = google_info.pop('website_uri')
-                    temp['GoogleData']  = dict(google_info)
+                    temp['GoogleData']  = google_info if type(google_info) == dict else ast.literal_eval(google_info)
 
                     menu_finder = MenuFinder(st.secrets['GOOGLE_API_KEY'], st.secrets['cx'])
                     temp['Menu'] = menu_finder.get_menu(venue, temp['Website'])
@@ -194,7 +195,7 @@ if len(st.session_state.new_data) > 0:
                     reviews = [{'text': i['Reviews'], 'source': i['Source']}]
                     venue = remove_accents(i['Restaurant'].lower())
                     db.collection("restaurants").document(venue.strip()).set({'Address': i['Address'],
-                                                                              'GoogleData': dict(i['GoogleData']),
+                                                                              'GoogleData': i['GoogleData'] if type(i['GoogleData']) == dict else ast.literal_eval(i['GoogleData']),
                                                                                 'Latitude': i['Latitude'],
                                                                                 'Longitude': i['Longitude'],
                                                                                 'Reviews': reviews,
