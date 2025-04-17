@@ -1,4 +1,4 @@
-firebase_admin
+firebase-admin
 pandas
 protobuf==3.20.0
 pydeck
@@ -12,5 +12,5 @@ langchain_core
 langchain_openai
 langchain-pinecone
 pinecone
-google-cloud-firestore
+google-cloud-firestore==2.20.2
 git+https://github.com/openai/swarm.git
