@@ -1,3 +1,4 @@
+google-cloud-firestore
 firebase-admin
 pandas
 protobuf==3.20.0
@@ -12,5 +13,4 @@ langchain_core
 langchain_openai
 langchain-pinecone
 pinecone
-google-cloud-firestore
 git+https://github.com/openai/swarm.git
