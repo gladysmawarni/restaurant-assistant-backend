@@ -12,4 +12,5 @@ langchain_core
 langchain_openai
 langchain-pinecone
 pinecone
+google-cloud-firestore
 git+https://github.com/openai/swarm.git
