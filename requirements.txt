@@ -1,6 +1,6 @@
 firebase_admin
 pandas
-protobuf
+protobuf==3.20.0
 pydeck
 streamlit
 stqdm
