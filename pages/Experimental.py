@@ -14,6 +14,10 @@ pc = Pinecone(st.secrets['PINECONE_API_KEY'])
 index = pc.Index('testrestaurants')
 vector_store = PineconeVectorStore(index=index, embedding=embeddings)
 
+index2 = pc.Index('testrestaurantscuisine')
+vector_store2 = PineconeVectorStore(index=index2, embedding=embeddings)
+
+
 
 # OpenAI
 client = OpenAI()
@@ -96,7 +100,6 @@ def area_bounds(loc):
     response_format={ "type": "json_object" }
     )
 
-
     bound = json.loads(completion.choices[0].message.content)
     # with open('data.json', 'w', encoding='utf-8') as f:
     #     json.dump(bound, f, ensure_ascii=False, indent=4)
@@ -109,7 +112,7 @@ def area_bounds(loc):
 
     return area_filter
 
-def add_more_filter(area, dining: str = "None", vegetarian: bool = False, vegan: bool = False, price_level: str = "None"):
+def add_more_filter(dining: str = "None", vegetarian: bool = False, vegan: bool = False, price_level: str = "None"):
     key_map = {
         'breakfast': 'servesBreakfast',
         'lunch': 'servesLunch',
@@ -119,6 +122,7 @@ def add_more_filter(area, dining: str = "None", vegetarian: bool = False, vegan:
         'vegan': 'serves_vegan',
     }
 
+    final_filter = {}
     filters_to_add = []
 
     if dining != "None":
@@ -131,13 +135,13 @@ def add_more_filter(area, dining: str = "None", vegetarian: bool = False, vegan:
         filters_to_add.append({'price_level': price_level})
     
     if filters_to_add:
-        if '$or' in area:
-            for loc in area['$or']:
-                loc['$and'].extend(filters_to_add)
-        else:
-            area.setdefault('$and', []).extend(filters_to_add)
+        # if '$or' in area:
+        #     for loc in area['$or']:
+        #         loc['$and'].extend(filters_to_add)
+        # else:
+            final_filter.setdefault('$and', []).extend(filters_to_add)
     
-    return area
+    return final_filter
 
 
 def get_data(
@@ -163,21 +167,23 @@ def get_data(
 
 
     area_filter = area_bounds(location)
-    all_filter = add_more_filter(area_filter, dining_preference, vegetarian, vegan, price_level)
+    all_filter = add_more_filter( dining_preference, vegetarian, vegan, price_level)
+    # print(all_filter)
   
 
     keys_to_extract = [
        'restaurant'
     ]
 
+    st.divider()
     st.header('Data')
     results = vector_store.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results2 = vector_store2.similarity_search_with_score(specification, filter=all_filter, k=k)
 
-    st.write('Total restaurant in the area: ', len(results))
-    st.divider()
+    st.write('Total restaurant in the area: ', len(results)+1)
 
     new_results = []
-    for i in results[:5]:
+    for i in results[:10]:
         result_dict = {}
         result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
         result_dict['review'] = i[0].page_content
@@ -185,8 +191,17 @@ def get_data(
     
         new_results.append(result_dict)
 
+    new_results2 = []
+    for i in results2[:10]:
+        result_dict2 = {}
+        result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
+        result_dict2['review'] = i[0].page_content
+        result_dict2['score'] = i[1]
+    
+        new_results2.append(result_dict2)
 
-    return new_results
+
+    return new_results, new_results2
 
 
 
@@ -315,7 +330,7 @@ if user_input := st.chat_input("Say Something"):
 
         # try:
          # Fetch data based on arguments
-        data = get_data(
+        data, data2 = get_data(
             location=args['location'],
             specification=args['specification'],
             dining_preference=args['dining_preference'],
@@ -324,8 +339,11 @@ if user_input := st.chat_input("Say Something"):
             price_level= args['price_level']
         )
 
-        st.write('Top 5')
+        st.write('Top 10 (full database)')
         st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
+
+        st.write('Top 10 (cuisine-only database)')
+        st.dataframe(pd.DataFrame.from_dict(data2),  hide_index=True)
 
 
         # except Exception as e:
