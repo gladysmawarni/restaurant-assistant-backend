@@ -11,12 +11,18 @@ import streamlit as st
 # Vector DB
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 pc = Pinecone(st.secrets['PINECONE_API_KEY'])
-index = pc.Index('testrestaurants')
-vector_store = PineconeVectorStore(index=index, embedding=embeddings)
 
-index2 = pc.Index('testrestaurantscuisine')
-vector_store2 = PineconeVectorStore(index=index2, embedding=embeddings)
+index_all = pc.Index('testrestaurantsall')
+vector_all = PineconeVectorStore(index=index_all, embedding=embeddings)
 
+index_cuisine = pc.Index('testrestaurantscuisine')
+vector_cuisine = PineconeVectorStore(index=index_cuisine, embedding=embeddings)
+
+index_dishes = pc.Index('testrestaurantscuisinedishes')
+vector_dishes = PineconeVectorStore(index=index_dishes, embedding=embeddings)
+
+index_desc = pc.Index('testrestaurantsdesc')
+vector_desc = PineconeVectorStore(index=index_desc, embedding=embeddings)
 
 
 # OpenAI
@@ -177,8 +183,10 @@ def get_data(
 
     st.divider()
     st.header('Data')
-    results = vector_store.similarity_search_with_score(specification, filter=all_filter, k=k)
-    results2 = vector_store2.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results = vector_all.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results2 = vector_cuisine.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results3 = vector_dishes.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results4 = vector_desc.similarity_search_with_score(specification, filter=all_filter, k=k)
 
     st.write('Total restaurant in the area: ', len(results)+1)
 
@@ -199,9 +207,27 @@ def get_data(
         result_dict2['score'] = i[1]
     
         new_results2.append(result_dict2)
+    
+    new_results3 = []
+    for i in results3[:10]:
+        result_dict3 = {}
+        result_dict3['restaurant_name'] = i[0].metadata.get('restaurant')
+        result_dict3['review'] = i[0].page_content
+        result_dict3['score'] = i[1]
+    
+        new_results3.append(result_dict3)
+
+    new_results4 = []
+    for i in results4[:10]:
+        result_dict4 = {}
+        result_dict4['restaurant_name'] = i[0].metadata.get('restaurant')
+        result_dict4['review'] = i[0].page_content
+        result_dict4['score'] = i[1]
+    
+        new_results4.append(result_dict4)
 
 
-    return new_results, new_results2
+    return new_results, new_results2, new_results3, new_results4
 
 
 
@@ -330,7 +356,7 @@ if user_input := st.chat_input("Say Something"):
 
         # try:
          # Fetch data based on arguments
-        data, data2 = get_data(
+        data, data2, data3, data4 = get_data(
             location=args['location'],
             specification=args['specification'],
             dining_preference=args['dining_preference'],
@@ -342,8 +368,14 @@ if user_input := st.chat_input("Say Something"):
         st.write('Top 10 (full database)')
         st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
 
-        st.write('Top 10 (cuisine-only database)')
+        st.write('Top 10 (cuisine database)')
         st.dataframe(pd.DataFrame.from_dict(data2),  hide_index=True)
+
+        st.write('Top 10 (cuisine-dishes database)')
+        st.dataframe(pd.DataFrame.from_dict(data3),  hide_index=True)
+
+        st.write('Top 10 (other description database)')
+        st.dataframe(pd.DataFrame.from_dict(data4),  hide_index=True)
 
 
         # except Exception as e:
