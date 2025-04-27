@@ -152,7 +152,8 @@ def add_more_filter(dining: str = "None", vegetarian: bool = False, vegan: bool 
 
 def get_data(
         location: str,
-        specification: str,
+        cuisine_specification: str,
+        other_specification: str,
         dining_preference: str = "None",
         vegetarian: bool = False,
         vegan: bool = False,
@@ -161,7 +162,8 @@ def get_data(
     ) -> list:
 
     info = {}
-    info['cuisine'] = specification
+    info['cuisine'] = cuisine_specification
+    info['details'] = other_specification
     info['location'] = location
     info['dining time'] = dining_preference
     info['vegetarian'] = vegetarian
@@ -176,17 +178,12 @@ def get_data(
     all_filter = add_more_filter( dining_preference, vegetarian, vegan, price_level)
     # print(all_filter)
   
-
-    keys_to_extract = [
-       'restaurant'
-    ]
-
     st.divider()
     st.header('Data')
-    results = vector_all.similarity_search_with_score(specification, filter=all_filter, k=k)
-    results2 = vector_cuisine.similarity_search_with_score(specification, filter=all_filter, k=k)
-    results3 = vector_dishes.similarity_search_with_score(specification, filter=all_filter, k=k)
-    results4 = vector_desc.similarity_search_with_score(specification, filter=all_filter, k=k)
+    results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
+    results2 = vector_cuisine.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
+    results3 = vector_dishes.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
+    results4 = vector_desc.similarity_search_with_score(other_specification, filter=all_filter, k=k)
 
     st.write('Total restaurant in the area: ', len(results)+1)
 
@@ -246,9 +243,13 @@ tools = [{
                     "type": "string",
                     "description": "City or location or areas in London, England. e.g 'Near Wimbledon', 'Central London'"
                 },
-                "specification": {
+                "cuisine_specification": {
                     "type": "string",
-                    "description": "Cuisine or restaurant preference e.g asian food, hidden gems restaurant"
+                    "description": "Cuisine preference e.g asian food"
+                },
+                "other_specification": {
+                    "type": "string",
+                    "description": "Restaurant or other preferences preference e.g hidden gems restaurant"
                 },
                 "dining_preference": {
                     "type": "string",
@@ -272,7 +273,7 @@ tools = [{
                 }
             },
             "required": [
-                "location", "specification", "dining_preference", "vegetarian", "vegan", "price_level"
+                "location", "cuisine_specification", "other_specification", "dining_preference", "vegetarian", "vegan", "price_level"
             ],
             "additionalProperties": False
         },
@@ -358,23 +359,24 @@ if user_input := st.chat_input("Say Something"):
          # Fetch data based on arguments
         data, data2, data3, data4 = get_data(
             location=args['location'],
-            specification=args['specification'],
+            cuisine_specification=args['cuisine_specification'],
+            other_specification=args['other_specification'],
             dining_preference=args['dining_preference'],
             vegetarian=args['vegetarian'],
             vegan=args['vegan'],
             price_level= args['price_level']
         )
 
-        st.write('Top 10 (full database)')
+        st.write('Top 10 (full database) - prompt: cuisine + details')
         st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
 
-        st.write('Top 10 (cuisine database)')
+        st.write('Top 10 (cuisine database) - prompt: cuisine')
         st.dataframe(pd.DataFrame.from_dict(data2),  hide_index=True)
 
-        st.write('Top 10 (cuisine-dishes database)')
+        st.write('Top 10 (cuisine-dishes database) - prompt: cuisine')
         st.dataframe(pd.DataFrame.from_dict(data3),  hide_index=True)
 
-        st.write('Top 10 (other description database)')
+        st.write('Top 10 (other description database) - prompt: details')
         st.dataframe(pd.DataFrame.from_dict(data4),  hide_index=True)
 
 
