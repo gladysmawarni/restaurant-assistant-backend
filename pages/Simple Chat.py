@@ -31,6 +31,7 @@ context_agent = Agent(
     instructions="Get the restaurant data based on user's preference.",
     functions=[get_context],
 )
+
 def transfer_to_get_context():
     return context_agent
 

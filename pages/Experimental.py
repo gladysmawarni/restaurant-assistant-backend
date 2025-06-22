@@ -175,56 +175,115 @@ def get_data(
 
 
     area_filter = area_bounds(location)
-    all_filter = add_more_filter( dining_preference, vegetarian, vegan, price_level)
+    all_filter = add_more_filter(dining_preference, vegetarian, vegan, price_level)
     # print(all_filter)
-  
+    
     st.divider()
     st.header('Data')
-    results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
-    results2 = vector_cuisine.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
-    results3 = vector_dishes.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
-    results4 = vector_desc.similarity_search_with_score(other_specification, filter=all_filter, k=k)
+    cuisine = vector_cuisine.similarity_search_with_score(cuisine_specification, k=k)
 
-    st.write('Total restaurant in the area: ', len(results)+1)
-
+    # can be optimized??
     new_results = []
-    for i in results[:10]:
-        result_dict = {}
-        result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
-        result_dict['review'] = i[0].page_content
-        result_dict['score'] = i[1]
+    REST_NAMES = []
+    for i in cuisine:
+        if i[1] > 0.4:
+            result_dict = {}
+            result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
+            REST_NAMES.append(i[0].metadata.get('restaurant'))
+            result_dict['review'] = i[0].page_content
+            result_dict['dining time'] = i[0].metadata.get('restaurant')
+            result_dict['vegetarian'] = i[0].metadata.get('serves_vegetarian')
+            result_dict['vegan'] = i[0].metadata.get('serves_vegan')
+            result_dict['price_level'] = i[0].metadata.get('price_level')
+            result_dict['score'] = i[1]
+        
+            new_results.append(result_dict)
     
-        new_results.append(result_dict)
 
     new_results2 = []
-    for i in results2[:10]:
-        result_dict2 = {}
-        result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
-        result_dict2['review'] = i[0].page_content
-        result_dict2['score'] = i[1]
+    if other_specification != "":
+        others = vector_all.similarity_search_with_score(other_specification, k=k)
+        for i in others:
+            if (i[1] > 0.3) & (i[0].metadata.get('restaurant') in REST_NAMES):
+                result_dict2 = {}
+                result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
+                result_dict2['vegetarian'] = i[0].metadata.get('serves_vegetarian')
+                result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
+                result_dict2['price_level'] = i[0].metadata.get('price_level')
+                result_dict2['review'] = i[0].page_content
+                result_dict2['score'] = i[1]
+            
+                new_results2.append(result_dict2)
     
-        new_results2.append(result_dict2)
     
-    new_results3 = []
-    for i in results3[:10]:
-        result_dict3 = {}
-        result_dict3['restaurant_name'] = i[0].metadata.get('restaurant')
-        result_dict3['review'] = i[0].page_content
-        result_dict3['score'] = i[1]
-    
-        new_results3.append(result_dict3)
+    def add_filter(li):
+        filtered_results = []
 
-    new_results4 = []
-    for i in results4[:10]:
-        result_dict4 = {}
-        result_dict4['restaurant_name'] = i[0].metadata.get('restaurant')
-        result_dict4['review'] = i[0].page_content
-        result_dict4['score'] = i[1]
+        for i in li:
+            keep = True
+
+            if vegan != False:
+                vegan_pref = i['vegan']
+                if vegan_pref is False:
+                    keep = False
+            
+            if vegetarian != False:
+                vegetarian_pref = i['vegetarian']
+                if vegetarian_pref is False:
+                    keep = False
+            
+            # Check price level
+            if price_level != "None":
+                item_price_level = i['price_level']
+                if item_price_level != price_level:
+                    keep = False
+
+
+            if keep == True:
+                filtered_results.append(i)
+        
+        return filtered_results
+
+
+    if len(new_results2) > 3:
+        filtered = add_filter(new_results2)
+
+
+    else:
+        filtered = []
+
+
+    # results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
+    # results2 = vector_cuisine.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
+    # results3 = vector_dishes.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
+    # results4 = vector_desc.similarity_search_with_score(other_specification, filter=all_filter, k=k)
+
+    # st.write('Total restaurant in the area: ', len(results)+1)
+
     
-        new_results4.append(result_dict4)
+
+    
+    # new_results3 = []
+    # for i in results3[:10]:
+    #     result_dict3 = {}
+    #     result_dict3['restaurant_name'] = i[0].metadata.get('restaurant')
+    #     result_dict3['review'] = i[0].page_content
+    #     result_dict3['score'] = i[1]
+    
+    #     new_results3.append(result_dict3)
+
+    # new_results4 = []
+    # for i in results4[:10]:
+    #     result_dict4 = {}
+    #     result_dict4['restaurant_name'] = i[0].metadata.get('restaurant')
+    #     result_dict4['review'] = i[0].page_content
+    #     result_dict4['score'] = i[1]
+    
+    #     new_results4.append(result_dict4)
 
 
-    return new_results, new_results2, new_results3, new_results4
+    return new_results, new_results2, filtered
+
 
 
 
@@ -249,7 +308,7 @@ tools = [{
                 },
                 "other_specification": {
                     "type": "string",
-                    "description": "Restaurant or other preferences preference e.g hidden gems restaurant"
+                    "description": "Restaurant or other preferences preference, or any specific cuisine e.g hidden gems restaurant, chicken curry"
                 },
                 "dining_preference": {
                     "type": "string",
@@ -357,7 +416,7 @@ if user_input := st.chat_input("Say Something"):
 
         # try:
          # Fetch data based on arguments
-        data, data2, data3, data4 = get_data(
+        result1, result2, result3 = get_data(
             location=args['location'],
             cuisine_specification=args['cuisine_specification'],
             other_specification=args['other_specification'],
@@ -367,17 +426,20 @@ if user_input := st.chat_input("Say Something"):
             price_level= args['price_level']
         )
 
-        st.write('Top 10 (full database) - prompt: cuisine + details')
-        st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
+        # st.write('Top 10 (full database) - prompt: cuisine + details')
+        # st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
 
-        st.write('Top 10 (cuisine database) - prompt: cuisine')
-        st.dataframe(pd.DataFrame.from_dict(data2),  hide_index=True)
+        st.write('cuisine database - prompt: cuisine')
+        st.dataframe(pd.DataFrame.from_dict(result1),  hide_index=True)
 
-        st.write('Top 10 (cuisine-dishes database) - prompt: cuisine')
-        st.dataframe(pd.DataFrame.from_dict(data3),  hide_index=True)
+        # st.write('Top 10 (cuisine-dishes database) - prompt: cuisine')
+        # st.dataframe(pd.DataFrame.from_dict(data3),  hide_index=True)
 
-        st.write('Top 10 (other description database) - prompt: details')
-        st.dataframe(pd.DataFrame.from_dict(data4),  hide_index=True)
+        st.write('other description database - prompt: details')
+        st.dataframe(pd.DataFrame.from_dict(result2),  hide_index=True)
+
+        st.write('filtered (dining time, vegetarian, vegan, price level)')
+        st.dataframe(pd.DataFrame.from_dict(result3),  hide_index=True)
 
 
         # except Exception as e:
