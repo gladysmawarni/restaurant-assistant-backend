@@ -308,7 +308,7 @@ tools = [{
                 },
                 "other_specification": {
                     "type": "string",
-                    "description": "Restaurant or other preferences preference, or any specific cuisine e.g hidden gems restaurant, chicken curry"
+                    "description": "Restaurant or other preferences, or any specific cuisine except cuisine type and location e.g hidden gems restaurant, chicken curry. "
                 },
                 "dining_preference": {
                     "type": "string",
