@@ -12,16 +12,13 @@ import streamlit as st
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 pc = Pinecone(st.secrets['PINECONE_API_KEY'])
 
-index_all = pc.Index('testrestaurantsall')
+index_all = pc.Index('complete')
 vector_all = PineconeVectorStore(index=index_all, embedding=embeddings)
 
-index_cuisine = pc.Index('testrestaurantscuisine')
+index_cuisine = pc.Index('cuisine')
 vector_cuisine = PineconeVectorStore(index=index_cuisine, embedding=embeddings)
 
-index_dishes = pc.Index('testrestaurantscuisinedishes')
-vector_dishes = PineconeVectorStore(index=index_dishes, embedding=embeddings)
-
-index_desc = pc.Index('testrestaurantsdesc')
+index_desc = pc.Index('description')
 vector_desc = PineconeVectorStore(index=index_desc, embedding=embeddings)
 
 
@@ -89,12 +86,12 @@ def area_bounds(loc):
     1 - For between/midpoint of two places, plot the journey on a tfl tube map and work out the total journey time. Once calculated, halve the journey time and then suggest suitable locations that are the same journey time to within +/- 5 minutes for both people. Please suggest as many areas as possible 
     2 - Specific location: return area, expand by 0.25 sq miles if <0.25 sq miles. 
     3 - 'Near/around/close to': include area + surroundings within 0.3 miles. 
-    List each area: name, northeast coords ("lat", "lon"), southwest coords ("lat", "lon". Return JSON, no text/format, 'locations' key.
+    List each area: name, northeast: keys ("lat", "lon"), southwestL keys ("lat", "lon"). Return JSON, no text/format, 'locations' key.
     """
 
 
-    completion = grok_client.chat.completions.create(
-    model="grok-2-latest",
+    completion = client.chat.completions.create(
+    model="gpt-4.1",
     messages=[
         {"role": "system", "content": prompt},
         {
@@ -107,7 +104,8 @@ def area_bounds(loc):
     )
 
     bound = json.loads(completion.choices[0].message.content)
-    # with open('data.json', 'w', encoding='utf-8') as f:
+    print(bound)
+    # with open('data.json', 'w', encoding='utf-8') as f:   
     #     json.dump(bound, f, ensure_ascii=False, indent=4)
 
     st.header('Area')
@@ -175,12 +173,14 @@ def get_data(
 
 
     area_filter = area_bounds(location)
-    all_filter = add_more_filter(dining_preference, vegetarian, vegan, price_level)
+    print(area_filter)
+    # all_filter = add_more_filter(dining_preference, vegetarian, vegan, price_level)
     # print(all_filter)
     
     st.divider()
     st.header('Data')
-    cuisine = vector_cuisine.similarity_search_with_score(cuisine_specification, k=k)
+
+    cuisine = vector_cuisine.similarity_search_with_score(cuisine_specification, k=k, filter=area_filter)
 
     # can be optimized??
     new_results = []
@@ -204,7 +204,7 @@ def get_data(
     if other_specification != "":
         others = vector_all.similarity_search_with_score(other_specification, k=k)
         for i in others:
-            if (i[1] > 0.3) & (i[0].metadata.get('restaurant') in REST_NAMES):
+            if (i[1] > 0.25) & (i[0].metadata.get('restaurant') in REST_NAMES):
                 result_dict2 = {}
                 result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
                 result_dict2['vegetarian'] = i[0].metadata.get('serves_vegetarian')
@@ -224,12 +224,12 @@ def get_data(
 
             if vegan != False:
                 vegan_pref = i['vegan']
-                if vegan_pref is False:
+                if vegan_pref != True:
                     keep = False
             
             if vegetarian != False:
                 vegetarian_pref = i['vegetarian']
-                if vegetarian_pref is False:
+                if vegetarian_pref != True:
                     keep = False
             
             # Check price level
@@ -250,7 +250,7 @@ def get_data(
 
 
     else:
-        filtered = []
+        filtered = new_results2
 
 
     # results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
@@ -308,7 +308,7 @@ tools = [{
                 },
                 "other_specification": {
                     "type": "string",
-                    "description": "Restaurant or other preferences, or any specific cuisine except cuisine type and location e.g hidden gems restaurant, chicken curry. "
+                    "description": "Restaurant or other preferences, or any specific cuisine except cuisine type and location e.g hidden gems restaurant, suitable for dates. "
                 },
                 "dining_preference": {
                     "type": "string",
