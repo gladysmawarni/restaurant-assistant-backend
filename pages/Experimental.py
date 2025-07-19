@@ -116,6 +116,7 @@ def area_bounds(loc):
 
     return area_filter
 
+### not used
 def add_more_filter(dining: str = "None", vegetarian: bool = False, vegan: bool = False, price_level: str = "None"):
     key_map = {
         'breakfast': 'servesBreakfast',
@@ -165,7 +166,7 @@ def get_data(
     info['location'] = location
     info['dining time'] = dining_preference
     info['vegetarian'] = vegetarian
-    info['vegan'] = vegan
+    # info['vegan'] = vegan
     info['price level'] = price_level
     st.header('Prompt')
     st.dataframe(pd.DataFrame.from_dict([info]), hide_index=True)
@@ -192,7 +193,7 @@ def get_data(
             REST_NAMES.append(i[0].metadata.get('restaurant'))
             result_dict['review'] = i[0].page_content
             result_dict['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-            result_dict['vegan'] = i[0].metadata.get('serves_vegan')
+            # result_dict['vegan'] = i[0].metadata.get('serves_vegan')
             result_dict['price_level'] = i[0].metadata.get('price_level')
             result_dict['score'] = i[1]
         
@@ -207,7 +208,7 @@ def get_data(
                 result_dict2 = {}
                 result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
                 result_dict2['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-                result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
+                # result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
                 result_dict2['price_level'] = i[0].metadata.get('price_level')
                 result_dict2['review'] = i[0].page_content
                 result_dict2['score'] = i[1]
@@ -221,10 +222,10 @@ def get_data(
         for i in li:
             keep = True
 
-            if vegan != False:
-                vegan_pref = i['vegan']
-                if vegan_pref != True:
-                    keep = False
+            # if vegan != False:
+            #     vegan_pref = i['vegan']
+            #     if vegan_pref != True:
+            #         keep = False
             
             if vegetarian != False:
                 vegetarian_pref = i['vegetarian']
@@ -437,7 +438,7 @@ if user_input := st.chat_input("Say Something"):
         st.write('other description database - prompt: details')
         st.dataframe(pd.DataFrame.from_dict(result2),  hide_index=True)
 
-        st.write('filtered (dining time, vegetarian, vegan, price level)')
+        st.write('filtered (dining time, vegetarian, price level)')
         st.dataframe(pd.DataFrame.from_dict(result3),  hide_index=True)
 
 
