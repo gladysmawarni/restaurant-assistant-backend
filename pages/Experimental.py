@@ -191,7 +191,6 @@ def get_data(
             result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
             REST_NAMES.append(i[0].metadata.get('restaurant'))
             result_dict['review'] = i[0].page_content
-            result_dict['dining time'] = i[0].metadata.get('restaurant')
             result_dict['vegetarian'] = i[0].metadata.get('serves_vegetarian')
             result_dict['vegan'] = i[0].metadata.get('serves_vegan')
             result_dict['price_level'] = i[0].metadata.get('price_level')
