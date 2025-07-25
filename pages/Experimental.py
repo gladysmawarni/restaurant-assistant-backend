@@ -187,7 +187,7 @@ def get_data(
     new_results = []
     REST_NAMES = []
     for i in cuisine:
-        if i[1] > 0.3:
+        if i[1] > 0.35:
             result_dict = {}
             result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
             REST_NAMES.append(i[0].metadata.get('restaurant'))
