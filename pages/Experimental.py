@@ -104,7 +104,7 @@ def area_bounds(loc):
     )
 
     bound = json.loads(completion.choices[0].message.content)
-    print(bound)
+    # print(bound)
     # with open('data.json', 'w', encoding='utf-8') as f:   
     #     json.dump(bound, f, ensure_ascii=False, indent=4)
 
@@ -166,7 +166,7 @@ def get_data(
     info['location'] = location
     info['dining time'] = dining_preference
     info['vegetarian'] = vegetarian
-    # info['vegan'] = vegan
+    info['vegan'] = vegan
     info['price level'] = price_level
     st.header('Prompt')
     st.dataframe(pd.DataFrame.from_dict([info]), hide_index=True)
@@ -187,13 +187,13 @@ def get_data(
     new_results = []
     REST_NAMES = []
     for i in cuisine:
-        if i[1] > 0.4:
+        if i[1] > 0.3:
             result_dict = {}
             result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
             REST_NAMES.append(i[0].metadata.get('restaurant'))
             result_dict['review'] = i[0].page_content
             result_dict['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-            # result_dict['vegan'] = i[0].metadata.get('serves_vegan')
+            result_dict['vegan'] = i[0].metadata.get('serves_vegan')
             result_dict['price_level'] = i[0].metadata.get('price_level')
             result_dict['score'] = i[1]
         
@@ -201,14 +201,14 @@ def get_data(
     
 
     new_results2 = []
-    if other_specification != "":
-        others = vector_all.similarity_search_with_score(other_specification, k=k)
+    if (other_specification != "") and (other_specification != "None"):
+        others = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", k=k)
         for i in others:
             if (i[1] > 0.25) & (i[0].metadata.get('restaurant') in REST_NAMES):
                 result_dict2 = {}
                 result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
                 result_dict2['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-                # result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
+                result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
                 result_dict2['price_level'] = i[0].metadata.get('price_level')
                 result_dict2['review'] = i[0].page_content
                 result_dict2['score'] = i[1]
@@ -222,10 +222,10 @@ def get_data(
         for i in li:
             keep = True
 
-            # if vegan != False:
-            #     vegan_pref = i['vegan']
-            #     if vegan_pref != True:
-            #         keep = False
+            if vegan != False:
+                vegan_pref = i['vegan']
+                if vegan_pref != True:
+                    keep = False
             
             if vegetarian != False:
                 vegetarian_pref = i['vegetarian']
@@ -250,7 +250,7 @@ def get_data(
 
 
     else:
-        filtered = new_results2
+        filtered = add_filter(new_results)
 
 
     # results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
