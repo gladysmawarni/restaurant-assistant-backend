@@ -150,139 +150,107 @@ def add_more_filter(dining: str = "None", vegetarian: bool = False, vegan: bool 
 
 
 def get_data(
-        location: str,
-        cuisine_specification: str,
-        other_specification: str,
-        dining_preference: str = "None",
-        vegetarian: bool = False,
-        vegan: bool = False,
-        price_level: str = "None",
-        k: int = 100
-    ) -> list:
+    location: str,
+    cuisine_specification: str,
+    other_specification: str,
+    dining_preference: str = "None",
+    vegetarian: bool = False,
+    vegan: bool = False,
+    price_level: str = "None",
+    k: int = 10000
+) -> list:
 
-    info = {}
-    info['cuisine'] = cuisine_specification
-    info['details'] = other_specification
-    info['location'] = location
-    info['dining time'] = dining_preference
-    info['vegetarian'] = vegetarian
-    info['vegan'] = vegan
-    info['price level'] = price_level
+    def format_result(item):
+        """Convert (Document, score) into a dict."""
+        doc, score = item
+        return {
+            'restaurant_name': doc.metadata.get('restaurant'),
+            'review': doc.page_content,
+            'vegetarian': doc.metadata.get('serves_vegetarian'),
+            'vegan': doc.metadata.get('serves_vegan'),
+            'price_level': doc.metadata.get('price_level'),
+            'score': score
+        }
+
+    def add_filter(results):
+        """Apply dietary and price filters."""
+        return [
+            r for r in results
+            if (not vegan or r['vegan'] is True)
+            and (not vegetarian or r['vegetarian'] is True)
+            and (price_level == "None" or r['price_level'] == price_level)
+        ]
+
+    # --- Display prompt info ---
+    info = {
+        'cuisine': cuisine_specification,
+        'details': other_specification,
+        'location': location,
+        'dining time': dining_preference,
+        'vegetarian': vegetarian,
+        'vegan': vegan,
+        'price level': price_level
+    }
     st.header('Prompt')
-    st.dataframe(pd.DataFrame.from_dict([info]), hide_index=True)
+    st.dataframe(pd.DataFrame([info]), hide_index=True)
     st.divider()
 
-
+    # --- Search cuisine database ---
     area_filter = area_bounds(location)
-    print(area_filter)
-    # all_filter = add_more_filter(dining_preference, vegetarian, vegan, price_level)
-    # print(all_filter)
+    cuisine = vector_cuisine.similarity_search_with_score(
+        cuisine_specification, k=k, filter=area_filter
+    )
+    cuisine_all = vector_cuisine.similarity_search_with_score(
+        cuisine_specification, k=k
+    ) # no area filter
+
+    cuisine_all_results = [format_result(i) for i in cuisine_all if i[1] > 0.35] # no area filter
+    cuisine_results = [format_result(i) for i in cuisine if i[1] > 0.35]
+
     
-    st.divider()
     st.header('Data')
+    st.markdown(f"Number of **{cuisine_specification}** place in the database: {len(cuisine_all_results)}, min score = 0.35")
 
-    cuisine = vector_cuisine.similarity_search_with_score(cuisine_specification, k=k, filter=area_filter)
+    # --- Search other database ---
+    if other_specification and other_specification != "None":
+        others = vector_all.similarity_search_with_score(
+            f"{other_specification}", k=k, filter=area_filter
+        )
+        others_all = vector_all.similarity_search_with_score(
+            f"{other_specification}", k=k
+        ) # no area filter
 
-    # can be optimized??
-    new_results = []
-    REST_NAMES = []
-    for i in cuisine:
-        if i[1] > 0.35:
-            result_dict = {}
-            result_dict['restaurant_name'] = i[0].metadata.get('restaurant')
-            REST_NAMES.append(i[0].metadata.get('restaurant'))
-            result_dict['review'] = i[0].page_content
-            result_dict['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-            result_dict['vegan'] = i[0].metadata.get('serves_vegan')
-            result_dict['price_level'] = i[0].metadata.get('price_level')
-            result_dict['score'] = i[1]
-        
-            new_results.append(result_dict)
-    
+        other_results = [format_result(i) for i in others if i[1] > 0.30]
+        other_all_results = [format_result(i) for i in others_all if i[1] > 0.30]
 
-    new_results2 = []
-    if (other_specification != "") and (other_specification != "None"):
-        others = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", k=k)
-        for i in others:
-            if (i[1] > 0.25) & (i[0].metadata.get('restaurant') in REST_NAMES):
-                result_dict2 = {}
-                result_dict2['restaurant_name'] = i[0].metadata.get('restaurant')
-                result_dict2['vegetarian'] = i[0].metadata.get('serves_vegetarian')
-                result_dict2['vegan'] = i[0].metadata.get('serves_vegan')
-                result_dict2['price_level'] = i[0].metadata.get('price_level')
-                result_dict2['review'] = i[0].page_content
-                result_dict2['score'] = i[1]
-            
-                new_results2.append(result_dict2)
-    
-    
-    def add_filter(li):
-        filtered_results = []
+        st.markdown(f"Number of **{other_specification}** place in the database: {len(other_all_results)}, min score = 0.30")
+        st.divider()
 
-        for i in li:
-            keep = True
+        # Keep cuisine names in original order
+        rest_names_ordered = [r['restaurant_name'] for r in cuisine_results]
 
-            if vegan != False:
-                vegan_pref = i['vegan']
-                if vegan_pref != True:
-                    keep = False
-            
-            if vegetarian != False:
-                vegetarian_pref = i['vegetarian']
-                if vegetarian_pref != True:
-                    keep = False
-            
-            # Check price level
-            if price_level != "None":
-                item_price_level = i['price_level']
-                if item_price_level != price_level:
-                    keep = False
+        # Build overlap list
+        other_with_cuisine_result = [
+            format_result(i) for i in others
+            if i[1] > 0.30 and i[0].metadata.get('restaurant') in rest_names_ordered
+        ]
+
+        # Sort overlap by cuisine order
+        other_with_cuisine_result.sort(
+            key=lambda x: rest_names_ordered.index(x['restaurant_name'])
+        )
 
 
-            if keep == True:
-                filtered_results.append(i)
-        
-        return filtered_results
-
-
-    if len(new_results2) > 3:
-        filtered = add_filter(new_results2)
-
-
+    # --- Apply additional filters ---
+    if dining_preference != "None" or vegetarian or vegan or price_level != 'None':
+        if len(other_with_cuisine_result) > 3:
+            filtered = add_filter(other_with_cuisine_result)
+        else:
+            filtered = add_filter(cuisine_results)
     else:
-        filtered = add_filter(new_results)
+        filtered = None
 
-
-    # results = vector_all.similarity_search_with_score(f"{cuisine_specification}, {other_specification}", filter=all_filter, k=k)
-    # results2 = vector_cuisine.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
-    # results3 = vector_dishes.similarity_search_with_score(cuisine_specification, filter=all_filter, k=k)
-    # results4 = vector_desc.similarity_search_with_score(other_specification, filter=all_filter, k=k)
-
-    # st.write('Total restaurant in the area: ', len(results)+1)
-
-    
-
-    
-    # new_results3 = []
-    # for i in results3[:10]:
-    #     result_dict3 = {}
-    #     result_dict3['restaurant_name'] = i[0].metadata.get('restaurant')
-    #     result_dict3['review'] = i[0].page_content
-    #     result_dict3['score'] = i[1]
-    
-    #     new_results3.append(result_dict3)
-
-    # new_results4 = []
-    # for i in results4[:10]:
-    #     result_dict4 = {}
-    #     result_dict4['restaurant_name'] = i[0].metadata.get('restaurant')
-    #     result_dict4['review'] = i[0].page_content
-    #     result_dict4['score'] = i[1]
-    
-    #     new_results4.append(result_dict4)
-
-
-    return new_results, new_results2, filtered
+    return cuisine_results, other_results, other_with_cuisine_result, filtered
 
 
 
@@ -416,7 +384,7 @@ if user_input := st.chat_input("Say Something"):
 
         # try:
          # Fetch data based on arguments
-        result1, result2, result3 = get_data(
+        cuisine_results, other_results, other_with_cuisine_result, filtered = get_data(
             location=args['location'],
             cuisine_specification=args['cuisine_specification'],
             other_specification=args['other_specification'],
@@ -429,17 +397,20 @@ if user_input := st.chat_input("Say Something"):
         # st.write('Top 10 (full database) - prompt: cuisine + details')
         # st.dataframe(pd.DataFrame.from_dict(data),  hide_index=True)
 
-        st.write('cuisine database - prompt: cuisine')
-        st.dataframe(pd.DataFrame.from_dict(result1),  hide_index=True)
+        st.markdown(f'Cuisine database - prompt: **{args['cuisine_specification']}** in {args['location']} ({len(cuisine_results)})')
+        st.dataframe(pd.DataFrame.from_dict(cuisine_results),  hide_index=True)
 
-        # st.write('Top 10 (cuisine-dishes database) - prompt: cuisine')
-        # st.dataframe(pd.DataFrame.from_dict(data3),  hide_index=True)
 
-        st.write('other description database - prompt: details')
-        st.dataframe(pd.DataFrame.from_dict(result2),  hide_index=True)
+        st.markdown(f'Other description database - prompt: **{args['other_specification']}** in {args['location']} ({len(other_results)})')
+        st.dataframe(pd.DataFrame.from_dict(other_results),  hide_index=True)
 
-        st.write('filtered (dining time, vegetarian, price level)')
-        st.dataframe(pd.DataFrame.from_dict(result3),  hide_index=True)
+        st.write(f'Cuisine + Description Overlapped Results ({(len(other_with_cuisine_result))}), sorted by relevant cuisine')
+        st.dataframe(pd.DataFrame.from_dict(other_with_cuisine_result),  hide_index=True)
+
+        if filtered != None:
+            st.markdown(f'Data with additional filter (dining time / vegetarian / vegan / price level), ({len(filtered)})')
+            st.write('If there is no overlapped data or the result is less than 2, the cuisine results will be used.')
+            st.dataframe(pd.DataFrame.from_dict(filtered),  hide_index=True)
 
 
         # except Exception as e:
