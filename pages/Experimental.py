@@ -212,6 +212,8 @@ def get_data(
     st.markdown(f"Number of **{cuisine_specification}** place in the database: {len(cuisine_all_results)}, min score = 0.35")
 
     # --- Search other database ---
+    other_results = []
+    other_with_cuisine_result = []
     if other_specification and other_specification != "None":
         others = vector_all.similarity_search_with_score(
             f"{other_specification}", k=k, filter=area_filter
@@ -400,12 +402,12 @@ if user_input := st.chat_input("Say Something"):
         st.markdown(f'Cuisine database - prompt: **{args['cuisine_specification']}** in {args['location']} ({len(cuisine_results)})')
         st.dataframe(pd.DataFrame.from_dict(cuisine_results),  hide_index=True)
 
+        if args['other_specification'] != "":
+            st.markdown(f'Other description database - prompt: **{args['other_specification']}** in {args['location']} ({len(other_results)})')
+            st.dataframe(pd.DataFrame.from_dict(other_results),  hide_index=True)
 
-        st.markdown(f'Other description database - prompt: **{args['other_specification']}** in {args['location']} ({len(other_results)})')
-        st.dataframe(pd.DataFrame.from_dict(other_results),  hide_index=True)
-
-        st.write(f'Cuisine + Description Overlapped Results ({(len(other_with_cuisine_result))}), sorted by relevant cuisine')
-        st.dataframe(pd.DataFrame.from_dict(other_with_cuisine_result),  hide_index=True)
+            st.write(f'Cuisine + Description Overlapped Results ({(len(other_with_cuisine_result))}), sorted by relevant cuisine')
+            st.dataframe(pd.DataFrame.from_dict(other_with_cuisine_result),  hide_index=True)
 
         if filtered != None:
             st.markdown(f'Data with additional filter (dining time / vegetarian / vegan / price level), ({len(filtered)})')
