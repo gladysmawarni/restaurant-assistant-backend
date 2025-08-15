@@ -204,12 +204,12 @@ def get_data(
         cuisine_specification, k=k
     ) # no area filter
 
-    cuisine_all_results = [format_result(i) for i in cuisine_all if i[1] > 0.35] # no area filter
-    cuisine_results = [format_result(i) for i in cuisine if i[1] > 0.35]
+    cuisine_all_results = [format_result(i) for i in cuisine_all if i[1] > 0.45] # no area filter
+    cuisine_results = [format_result(i) for i in cuisine if i[1] > 0.45]
 
     
     st.header('Data')
-    st.markdown(f"Number of **{cuisine_specification}** place in the database: {len(cuisine_all_results)}, min score = 0.35")
+    st.markdown(f"Number of **{cuisine_specification}** place in the database: {len(cuisine_all_results)}, min score = 0.45")
 
     # --- Search other database ---
     other_results = []
@@ -324,7 +324,7 @@ system_prompt = """
     - If the user does not specify a location, ask for one once.
     - If they still do not provide one, default to London as the location.
     
-    4. Preserve User Wording (with Minor Corrections): Do not alter, exclude, or reinterpret any part of the user’s location or cuisine/restaurant input, including descriptors such as "near" or "around." However, correct minor typos while keeping the original meaning intact.
+    4. Keep User Wording (with Minor Fixes): Keep all location and cuisine terms (e.g., “near,” “around”) intact, correcting typos. If cuisine terms are vague or incorrect, replace with the correct category (e.g., add "cuisine" at the end) for clarity.
 
     5. No Fabrication: Never create or infer information that is not available in the database. If no matching results exist, inform the user honestly.
 
