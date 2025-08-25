@@ -165,6 +165,8 @@ def get_data(
         doc, score = item
         return {
             'restaurant_name': doc.metadata.get('restaurant'),
+            'website': doc.metadata.get('website'),
+            'instagram': doc.metadata.get('instagram'),
             'review': doc.page_content,
             'vegetarian': doc.metadata.get('serves_vegetarian'),
             'vegan': doc.metadata.get('serves_vegan'),
